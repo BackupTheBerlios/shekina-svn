@@ -21,4 +21,5 @@ as an admin
 * be able to give some privileges to others
 * receive notifications
 * lock out people
+* test
 
