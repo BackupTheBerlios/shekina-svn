@@ -1,2 +1,24 @@
-<h1>Diary#index</h1>
-<p>Find me in app/views/diary/index.rhtml</p>
+<html>
+<head>
+  <title>lxpDiary, un piccolo blog</title>
+  <link href="/stylesheets/mio.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<p>
+  <h2> lxpDiary deliri quotidiani</h2>
+</p>
+
+ <% for a in @articoli %>
+   <div class="articolo">
+
+     <h3> <%=a.titolo %></h3>
+     <p>  <%=a.testo  %></p>
+     <span>
+       <%=a.link %> :: <%= a.created_at %> :: <%= a.category_id %>
+     </span>
+   </div>
+ <% end %>
+
+</body>
+</html>
+
