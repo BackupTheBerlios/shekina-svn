@@ -1,0 +1,49 @@
+body {
+  margin-left:40px;
+  background-color: #eeffff;
+  font-family:       "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+   
+}
+body h2{
+ font-size: 40;
+ color: navy;
+ font-family: "URW Chancery L";
+}
+a {
+  color:             #758A5B;
+  text-decoration:   none;
+}
+
+textarea {
+ width: 100px;
+ height: 100px;
+}
+
+
+div.articolo {
+  -moz-border-radius-topright: 14px;
+  -moz-border-radius-bottomleft: 14px;
+  width: 500px ;
+  background-color: #ffffee ;
+  padding-left: 20px;
+  border: solid #e9e9d9 2px;
+  margin-top: 5px;
+  padding-bottom: 4px;
+}
+div.articolo h3 {
+  color: #777799;
+  padding-left: 30px;
+}
+
+div.articolo span {
+   color: navy;
+   font-size: 16;
+}
+
+textarea {
+	width:500px;
+	height:350px;
+}
+input {
+	width:400px;
+}
