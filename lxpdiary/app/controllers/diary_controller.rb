@@ -5,5 +5,6 @@ class DiaryController < ApplicationController
   end
 
   def view
+     @articolo= Article.find(@params['id'])
   end
 end

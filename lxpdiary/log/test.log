@@ -1,1 +1,9 @@
 nil
+  [4;33mArticle Load (0.000588)[m   [1;37mSELECT * FROM articles WHERE id = 1 LIMIT 1[m
+  [4;35mArticle Columns (0.000288)[m   [0;37mSHOW FIELDS FROM articles[m
+  [4;33mArticle Load (0.000472)[m   [1;37mSELECT * FROM articles WHERE id = 2 LIMIT 1[m
+  [4;35mArticle Load (0.000468)[m   [0;37mSELECT * FROM articles WHERE id = 1 LIMIT 1[m
+  [4;33mCategory Load (0.014011)[m   [1;37mSELECT * FROM categories WHERE id = 1 LIMIT 1[m
+  [4;35mCategory Columns (0.000242)[m   [0;37mSHOW FIELDS FROM categories[m
+  [4;33mCategory Load (0.000470)[m   [1;37mSELECT * FROM categories WHERE id = 2 LIMIT 1[m
+  [4;35mCategory Load (0.001259)[m   [0;37mSELECT * FROM categories WHERE id = 1 LIMIT 1[m
