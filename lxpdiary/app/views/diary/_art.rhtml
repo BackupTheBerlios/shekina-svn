@@ -3,7 +3,12 @@
  <h3> <%=art.titolo %></h3>
  <p>  <%=art.testo  %></p>
  <span>
-    <%=art.link %> :: <%= art.created_at %> :: <%= art.category_id %>
+  <%= link_to "Link",art.link %> :: 
+  <%= art.created_at.to_date %> :: 
+  <%= link_to art.category_id, 
+      "controller" => "category", 
+      "action" => "view",
+      "id" => art.category_id  %>
  </span>
 </div>
 
