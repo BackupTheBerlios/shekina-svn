@@ -1,9 +1,9 @@
 development:
   adapter: mysql
-  database: rails_development
+  database: lxpdiary_development
   host: localhost
   username: root
-  password: 
+  password: ""
 
 test:
   adapter: mysql
