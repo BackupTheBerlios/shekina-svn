@@ -1,5 +1,6 @@
 as a reader
 * be able to select pages based on meaning
+* be able to attach a comment to a page
 * have a pleasant user experience
 * be able to navigate clusters
 * follow feeds (for clusters ?)
@@ -7,6 +8,7 @@ as a reader
 * be able to print page
 * be able to print cluster
 * be able to see revisions
+* have mozilla sidebar
 
 as a writer:
 * be able to login
@@ -29,4 +31,5 @@ as an admin
 * receive notifications
 * lock out people
 * test
+* be able to edit pages withouth web, I want a text baqckup
 
