@@ -4828,3 +4828,2022 @@ ActionController::RoutingError (No route for path: "favicon.ico"):
 
 
 Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:23 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001347 (742 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:24 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001219 (820 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:24 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001225 (816 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:24 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001211 (825 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:24 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001367 (731 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:25 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001233 (811 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:25 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001348 (741 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:25 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001179 (848 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:26 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001333 (750 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:26 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001221 (818 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:26 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001273 (785 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:26 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001199 (834 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:27 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001330 (751 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:27 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001227 (815 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:27 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001210 (826 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:28 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001186 (843 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:28 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001326 (754 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:28 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001227 (814 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:28 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001214 (823 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:29 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001183 (845 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 18:59:29 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001337 (748 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:01:45 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003842 (260 reqs/sec) | Rendering: 0.002636 (68%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:01:45 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:12:10 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003609 (277 reqs/sec) | Rendering: 0.002387 (66%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:12:11 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:12:22 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003625 (275 reqs/sec) | Rendering: 0.002420 (66%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:12:23 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:12:38 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.004454 (224 reqs/sec) | Rendering: 0.003198 (71%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:12:39 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:12:55 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003998 (250 reqs/sec) | Rendering: 0.002748 (68%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:12:56 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:13:07 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.004170 (239 reqs/sec) | Rendering: 0.002801 (67%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:13:07 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:13:20 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.004281 (233 reqs/sec) | Rendering: 0.003077 (71%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:13:21 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:13:30 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003464 (288 reqs/sec) | Rendering: 0.002254 (65%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:13:30 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:13:41 CET 2005)
+  Parameters: {"user"=>{"pass"=>"ala\362a"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"ala\362a"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003771 (265 reqs/sec) | Rendering: 0.002346 (62%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:13:42 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:13:46 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003578 (279 reqs/sec) | Rendering: 0.002394 (66%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:13:47 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:14:18 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003959 (252 reqs/sec) | Rendering: 0.002655 (67%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:14:18 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:15:44 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003593 (278 reqs/sec) | Rendering: 0.002262 (62%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:15:45 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:16:42 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Rendering administration/login within layouts/application
+
+
+ActionView::TemplateError (undefined method `render_text' for #<ActionView::Base:0xb769325c>) on line #7 of /administration/login.rhtml:
+4:  <br>
+5:  <input type="submit" value="Login">
+6: </form>
+7: <%= render_text @params %>
+
+    (erb):7:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:265:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:275:in `rhtml_render'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `send'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `render_template'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:181:in `render_file'
+    /gems/actionpack-1.5.1/lib/action_controller/layout.rb:208:in `render_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:679:in `perform_action_without_filters'
+    /gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:16:43 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:17:57 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001339 (746 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:02 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001265 (790 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:11 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001215 (823 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:12 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.073984 (13 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:12 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001437 (695 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:12 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001236 (809 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:13 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001228 (814 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:13 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001232 (811 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:13 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001381 (724 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:13 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001222 (818 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:14 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001197 (835 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:14 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001191 (839 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:14 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001529 (654 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:15 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001237 (808 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:15 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001201 (832 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:15 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001217 (821 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:15 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001309 (763 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:16 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001230 (813 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:16 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001216 (822 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:16 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001185 (843 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:17 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001333 (750 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:17 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001237 (808 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:18:17 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001201 (832 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:34 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001221 (819 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:34 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001368 (730 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:34 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001246 (802 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:34 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001218 (820 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:35 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001355 (738 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:35 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001233 (811 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:35 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001704 (586 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:36 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001223 (817 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:36 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001335 (749 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:36 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001237 (808 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:37 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001363 (733 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:37 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001201 (832 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:37 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001330 (751 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:37 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001234 (810 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:38 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001207 (828 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:38 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001215 (823 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:38 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001366 (732 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:39 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001271 (786 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:39 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001476 (677 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:39 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001341 (745 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:19:40 CET 2005)
+  Parameters: {"user"=>{"pass"=>"pippo"}, "action"=>"login", "controller"=>"administration", "user[pass]"=>"pippo"}
+Redirected to 
+Completed in 0.001241 (805 reqs/sec)
+
+
+Processing AdministrationController#index (for 127.0.0.1 at Tue Mar 15 19:20:12 CET 2005)
+  Parameters: {"action"=>"index", "controller"=>"administration"}
+Rendering administration/index within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.014054 (71 reqs/sec) | Rendering: 0.012679 (90%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:20:12 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:20:16 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+    /home/ex/shekina/lxpdiary/app/controllers/administration_controller.rb:4:in `login'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:678:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:678:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:20:17 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:22:40 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+    /home/ex/shekina/lxpdiary/app/controllers/administration_controller.rb:4:in `login'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:678:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:678:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:22:40 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:22:51 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+    /home/ex/shekina/lxpdiary/app/controllers/administration_controller.rb:4:in `login'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:678:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:678:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:22:52 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:23:07 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #3 of /administration/login.rhtml:
+1: 
+2: <form action="/administration/login" >
+3:  <%= password_field "pass" %>
+4:  <br>
+5:  <input type="submit" value="Login">
+6: </form>
+
+    (erb):3:in `password_field'
+    (erb):3:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:265:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:275:in `rhtml_render'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `send'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `render_template'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:181:in `render_file'
+    /gems/actionpack-1.5.1/lib/action_controller/layout.rb:208:in `render_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:679:in `perform_action_without_filters'
+    /gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:23:08 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:23 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003721 (268 reqs/sec) | Rendering: 0.002490 (66%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:43:23 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:28 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001351 (740 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:29 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001370 (729 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:29 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001226 (815 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:29 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001334 (749 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:30 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001226 (815 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:30 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001247 (801 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:30 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001189 (841 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:30 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001350 (740 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:31 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001273 (785 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:31 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001196 (836 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:31 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001219 (820 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:32 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001359 (735 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:32 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001229 (813 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:32 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001203 (831 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:32 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001197 (835 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:33 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001349 (741 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:33 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001232 (811 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:33 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001215 (823 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:34 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001190 (840 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:34 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001336 (748 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:43:34 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001270 (787 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:40 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001201 (832 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:41 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001242 (805 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:41 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001290 (775 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:41 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001223 (817 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:42 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001197 (835 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:42 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.088873 (11 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:42 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001396 (716 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:42 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001233 (811 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:43 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001235 (809 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:43 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001485 (673 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:43 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001261 (793 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:44 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001201 (832 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:44 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001223 (817 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:44 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001335 (748 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:45 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001268 (788 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:45 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001205 (829 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:45 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001236 (809 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:46 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001421 (703 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:46 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001251 (799 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:46 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001215 (823 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:44:46 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001189 (841 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:34 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001324 (755 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:34 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001229 (813 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:34 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001216 (822 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:34 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001198 (834 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:35 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001345 (743 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:35 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001244 (803 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:35 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001214 (823 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:35 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001200 (833 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:36 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001328 (753 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:36 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001223 (817 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:36 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001217 (821 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:37 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001221 (819 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:37 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001308 (764 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:37 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001215 (823 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:38 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001369 (730 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:38 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001206 (829 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:38 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001326 (754 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:38 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001219 (820 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:39 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001272 (786 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:39 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001196 (836 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:39 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001345 (743 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:45:55 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003132 (319 reqs/sec) | Rendering: 0.001922 (61%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:45:56 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:00 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"ciao"}
+Rendering administration/login within layouts/application
+Rendering layouts/application (200 OK)
+Completed in 0.003058 (327 reqs/sec) | Rendering: 0.001879 (61%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 19:46:01 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:05 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001298 (770 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:06 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001209 (827 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:06 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001190 (840 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:06 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001330 (751 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:07 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001227 (814 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:07 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001239 (807 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:07 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001194 (837 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:07 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001321 (756 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:08 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001221 (819 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:08 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001363 (733 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:08 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001198 (834 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:09 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001451 (689 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:09 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001231 (812 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:09 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001203 (831 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:10 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001195 (836 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:10 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001629 (613 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:10 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001233 (810 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:11 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001212 (825 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:11 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001226 (815 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:11 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001326 (754 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:46:11 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration", "pass"=>"pippo"}
+Redirected to 
+Completed in 0.001224 (816 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:16 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001194 (837 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:17 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001187 (842 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:17 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001348 (741 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:17 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001272 (786 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:18 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001210 (826 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:18 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001181 (846 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:18 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001359 (735 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:18 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001214 (823 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:19 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001201 (832 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:19 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001212 (825 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:19 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001674 (597 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:20 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001338 (747 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:20 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001230 (813 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:20 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001199 (834 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:20 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001202 (831 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:21 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001327 (753 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:21 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001213 (824 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:21 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001239 (807 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:22 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001174 (851 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:22 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001396 (716 reqs/sec)
+
+
+Processing AdministrationController#login (for 127.0.0.1 at Tue Mar 15 19:47:22 CET 2005)
+  Parameters: {"action"=>"login", "controller"=>"administration"}
+Redirected to 
+Completed in 0.001218 (821 reqs/sec)
