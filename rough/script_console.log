@@ -1,0 +1,24 @@
+[ex@localhost lxpdiary]$ ./script/console
+Loading development environment.
+irb(main):001:0> art=Article.new
+=> #<Article:0x40390384 @attributes={"category_id"=>nil, "testo"=>"", "link"=>"", "titolo"=>"", "created_at"=>nil}, @new_record=true>
+irb(main):002:0> art.titolo="primo post"
+=> "primo post"
+irb(main):003:0> art.testo=" ho un sacco di cose da dire su questo webloh.. bla bla "
+=> " ho un sacco di cose da dire su questo webloh.. bla bla "
+irb(main):004:0> cat=Category.new
+=> #<Category:0x40768424 @attributes={"descrizione"=>""}, @new_record=true>
+irb(main):005:0> cat.id="personale"
+=> "personale"
+irb(main):006:0> cat.descrizione="post relativi alla mia persona"
+=> "post relativi alla mia persona"
+irb(main):007:0> art.category=cat
+=> #<Category:0x40768424 @attributes={"descrizione"=>"post relativi alla mia persona", "id"=>"personale"}, @new_record=true>
+irb(main):008:0> cat.save
+=> true
+irb(main):009:0> art.save
+=> true
+irb(main):010:0> a=Article.find(1)
+=> #<Article:0x40655f14 @attributes={"id"=>"1", "category_id"=>"linux", "testo"=>"bla bla bla bla bla bla bla bla ", "titolo"=>"primo post su linux", "link"=>"http://www.kernel.org", "created_at"=>"2005-02-21 18:29:04"}>
+irb(main):011:0>
+

@@ -1,1 +1,12 @@
 nil
+  [4;33mArticle Columns (0.125952)[m   [1;37mSHOW FIELDS FROM articles[m
+  [4;35mArticle Columns (0.000479)[m   [0;37mSHOW FIELDS FROM articles[m
+  [4;33mCategory Columns (0.043605)[m   [1;37mSHOW FIELDS FROM categories[m
+  [4;35mCategory Columns (0.000450)[m   [0;37mSHOW FIELDS FROM categories[m
+  [4;33mSQL (0.000300)[m   [1;37mBEGIN[m
+  [4;35mSQL (0.080168)[m   [0;37mINSERT INTO categories (`descrizione`, `id`) VALUES('post relativi alla mia persona', 'personale')[m
+  [4;33mSQL (0.000155)[m   [1;37mCOMMIT[m
+  [4;35mSQL (0.000285)[m   [0;37mBEGIN[m
+  [4;33mSQL (0.032551)[m   [1;37mINSERT INTO articles (`category_id`, `testo`, `titolo`, `link`, `created_at`) VALUES(NULL, ' ho un sacco di cose da dire su questo webloh.. bla bla ', 'primo post', '', '2005-03-05 12:09:51')[m
+  [4;35mSQL (0.000345)[m   [0;37mCOMMIT[m
+  [4;33mArticle Load (0.058520)[m   [1;37mSELECT * FROM articles WHERE id = 1 LIMIT 1[m

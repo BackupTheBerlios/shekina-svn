@@ -1,0 +1,7 @@
+[ex@localhost lxpdiary]$ ./script/generate model Category
+      exists  app/models/
+      exists  test/unit/
+      exists  test/fixtures/
+      create  app/models/category.rb
+      create  test/unit/category_test.rb
+      create  test/fixtures/categories.yml
