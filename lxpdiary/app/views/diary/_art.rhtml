@@ -1,6 +1,10 @@
 <div class="articolo">
 
- <h3> <%=art.titolo %></h3>
+ <h3> <%= link_to art.titolo, 
+          "action" => "view",
+          "id" => art.id
+       %>
+ </h3>
  <p>  <%=art.testo  %></p>
  <span>
   <%= link_to "Link",art.link %> :: 
@@ -8,7 +12,8 @@
   <%= link_to art.category_id, 
       "controller" => "category", 
       "action" => "view",
-      "id" => art.category_id  %>
+      "id" => art.category_id  
+  %>
  </span>
 </div>
 
