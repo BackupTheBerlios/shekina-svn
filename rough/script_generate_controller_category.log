@@ -1,0 +1,20 @@
+[ex@localhost lxpdiary]$ ./script/generate controller Category view
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/category
+      exists  test/functional/
+      create  app/controllers/category_controller.rb
+      create  test/functional/category_controller_test.rb
+      create  app/helpers/category_helper.rb
+      create  app/views/category/view.rhtml
+[ex@localhost lxpdiary]$ cat >>../rough/
+[ex@localhost lxpdiary]$ ./script/generate controller Category view
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/category
+      exists  test/functional/
+      create  app/controllers/category_controller.rb
+      create  test/functional/category_controller_test.rb
+      create  app/helpers/category_helper.rb
+      create  app/views/category/view.rhtml
+[ex@localhost lxpdiary]$ cat >>../rough/
