@@ -20,5 +20,5 @@ as an admin
 * be able to do mass rollbacks
 * be able to give some privileges to others
 * receive notifications
-
+* lock out people
 
