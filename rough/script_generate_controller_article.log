@@ -1,0 +1,10 @@
+[ex@localhost lxpdiary]$ ./script/generate controller Diary view list
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/diary
+      exists  test/functional/
+      create  app/controllers/diary_controller.rb
+      create  test/functional/diary_controller_test.rb
+      create  app/helpers/diary_helper.rb
+      create  app/views/diary/view.rhtml
+      create  app/views/diary/list.rhtml

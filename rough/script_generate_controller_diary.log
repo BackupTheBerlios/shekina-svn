@@ -1,0 +1,22 @@
+[ex@localhost lxpdiary]$ ./script/generate controller Diary index view
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/diary
+      exists  test/functional/
+      create  app/controllers/diary_controller.rb
+      create  test/functional/diary_controller_test.rb
+      create  app/helpers/diary_helper.rb
+      create  app/views/diary/index.rhtml
+      create  app/views/diary/view.rhtml
+[ex@localhost lxpdiary]$
+[ex@localhost lxpdiary]$ ./script/generate controller Diary index view       exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/diary
+      exists  test/functional/
+      create  app/controllers/diary_controller.rb
+overwrite test/functional/diary_controller_test.rb? [Ynaq] y
+       force  test/functional/diary_controller_test.rb
+      create  app/helpers/diary_helper.rb
+      create  app/views/diary/index.rhtml
+      create  app/views/diary/view.rhtml
+[ex@localhost lxpdiary]$
