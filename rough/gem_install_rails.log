@@ -1,0 +1,19 @@
+[root@localhost shekina]# gem install rails
+Config file /root/.gemrc does not exist
+Attempting local installation of 'rails'
+Local gem file not found: rails*.gem
+Attempting remote installation of 'rails'
+Updating Gem source index for: http://gems.rubyforge.org
+Install required dependency activesupport? [Yn]  y
+Install required dependency activerecord? [Yn]  y
+Install required dependency actionpack? [Yn]  y
+Install required dependency actionmailer? [Yn]  y
+Install required dependency actionwebservice? [Yn]  y
+Successfully installed rails, version 0.10.0
+Installing RDoc documentation for rails-0.10.0...
+Installing RDoc documentation for activesupport-1.0.0...
+Installing RDoc documentation for activerecord-1.7.0...
+Installing RDoc documentation for actionpack-1.5.0...
+
+Installing RDoc documentation for actionmailer-0.7.0...
+Installing RDoc documentation for actionwebservice-0.5.0...

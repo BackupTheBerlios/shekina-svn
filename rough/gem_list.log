@@ -1,0 +1,36 @@
+[root@localhost shekina]# gem list
+Config file /root/.gemrc does not exist
+
+*** LOCAL GEMS ***
+
+actionmailer (0.7.0, 0.6.1, 0.5.0)
+    Service layer for easy email delivery and testing.
+
+actionpack (1.5.0, 1.4.0, 1.2.0)
+    Web-flow and rendering framework putting the VC in MVC.
+
+actionwebservice (0.5.0)
+    Web service support for Action Pack.
+
+activerecord (1.7.0, 1.6.0, 1.4.0)
+    Implements the ActiveRecord pattern for ORM.
+
+activesupport (1.0.0)
+    Support and utility classes used by the Rails framework.
+
+rails (0.10.0, 0.9.5, 0.9.3)
+    Web-application framework with template engine, control-flow layer,
+    and ORM.
+
+rake (0.4.15)
+    Ruby based make-like utility.
+
+rubygems-update (0.8.6)
+    RubyGems Update GEM
+
+sources (0.0.1)
+    This package provides download sources for remote gem installation
+
+sqlite-ruby (2.2.3)
+    SQLite/Ruby is a module to allow Ruby scripts to interface with a
+    SQLite database.
