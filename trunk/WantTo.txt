@@ -4,6 +4,9 @@ as a reader
 * be able to navigate clusters
 * follow feeds (for clusters ?)
 * be able to register
+* be able to print page
+* be able to print cluster
+* be able to see revisions
 
 as a writer:
 * be able to login
@@ -15,6 +18,8 @@ as a writer:
 * be able to create page clusters based on attributes
 * be able to post question and comments
 * be able to rollback changes
+* attach my name to the page
+
 
 as an admin
 * be able to delete pages
