@@ -1,0 +1,24 @@
+
+
+as a user (troppe cose!)
+* be able to create a page
+* be able to change a page
+* be able to attach meaning to a page
+* be able to relate two pages
+* be able to select pages based on meaning
+* be able to rollback changes
+* be able to post question and comments
+* be able to use a simple markup
+* have a pleasant user experience
+* be able to create page clusters based on attributes
+* be able to navigate clusters
+* follow feeds (for clusters ?)
+
+as an admin
+* be able to delete pages
+* be able to build page clusters such as "forum"
+* be able to do mass rollbacks
+* be able to give some privileges to others
+* receive notifications
+
+
