@@ -3045,3 +3045,392 @@ ActionController::RoutingError (No route for path: "favicon.ico"):
 
 
 Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;33mArticle Load (0.000748)[m   [1;37mSELECT * FROM articles WHERE 10 LIMIT 1[m
+  [4;35mArticle Columns (0.000294)[m   [0;37mSHOW FIELDS FROM articles[m
+  [4;33mArticle Load (0.000000)[m   [1;37mYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC ORDER BY 1' at line 1: SELECT * FROM articles WHERE created_at DESC ORDER BY 1 [m
+  [4;35mArticle Load (0.022621)[m   [0;37mSELECT * FROM articles ORDER BY created_at DESC LIMIT 1[m
+  [4;33mArticle Load (0.000694)[m   [1;37mSELECT * FROM articles ORDER BY 1 [m
+  [4;33mArticle Columns (0.001349)[m   [1;37mSHOW FIELDS FROM articles[m
+  [4;35mArticle Columns (0.000469)[m   [0;37mSHOW FIELDS FROM articles[m
+  [4;33mCategory Load (0.001748)[m   [1;37mSELECT * FROM categories WHERE id = 1 LIMIT 1[m
+  [4;35mCategory Load (0.000574)[m   [0;37mSELECT * FROM categories LIMIT 1[m
+  [4;33mCategory Columns (0.000247)[m   [1;37mSHOW FIELDS FROM categories[m
+  [4;35mArticle Columns (0.000489)[m   [0;37mSHOW FIELDS FROM articles[m
+  [4;33mArticle Columns (0.000466)[m   [1;37mSHOW FIELDS FROM articles[m
+  [4;35mSQL (0.000275)[m   [0;37mBEGIN[m
+  [4;33mSQL (0.015290)[m   [1;37mINSERT INTO articles (`category_id`, `testo`, `titolo`, `link`, `created_at`) VALUES('linux', 'bla bla bla ... bla bla', 'un altro post', 'http://foo', '2005-03-15 13:04:01')[m
+  [4;35mSQL (0.000153)[m   [0;37mCOMMIT[m
+  [4;33mSQL (0.000268)[m   [1;37mBEGIN[m
+  [4;35mArticle Update (0.021298)[m   [0;37mUPDATE articles SET `created_at` = '2005-03-15 13:04:01', `titolo` = 'un nuovo titolo!', `testo` = 'bla bla bla ... bla bla', `category_id` = 'linux', `link` = 'link link' WHERE id = 20[m
+  [4;33mSQL (0.001040)[m   [1;37mCOMMIT[m
+  [4;35mArticle Columns (0.000448)[m   [0;37mSHOW FIELDS FROM articles[m
+  [4;33mCategory Load (0.000863)[m   [1;37mSELECT * FROM categories [m
+  [4;35mCategory Columns (0.000476)[m   [0;37mSHOW FIELDS FROM categories[m
+  [4;33mCategory Columns (0.000428)[m   [1;37mSHOW FIELDS FROM categories[m
+  [4;35mCategory Columns (0.000428)[m   [0;37mSHOW FIELDS FROM categories[m
+  [4;33mCategory Columns (0.000415)[m   [1;37mSHOW FIELDS FROM categories[m
+  [4;35mSQL (0.000269)[m   [0;37mBEGIN[m
+  [4;33mSQL (0.009771)[m   [1;37mINSERT INTO categories (`descrizione`, `id`) VALUES('le meraviglie delle lingue morte', 'latino')[m
+  [4;35mSQL (0.000421)[m   [0;37mINSERT INTO articles (`category_id`, `testo`, `titolo`, `link`, `created_at`) VALUES('latino', 'in giro imus nocte et consumimur igni', 'palindromi latini', 'http://loala.ele', '2005-03-15 13:06:38')[m
+  [4;33mSQL (0.004693)[m   [1;37mCOMMIT[m
+
+
+Processing CategoryController#view (for 127.0.0.1 at Tue Mar 15 13:08:55 CET 2005)
+  Parameters: {"action"=>"view", "id"=>"linux", "controller"=>"category"}
+  [4;35mCategory Load (0.000663)[m   [0;37mSELECT * FROM categories WHERE id = 'linux' LIMIT 1[m
+  [4;33mCategory Columns (0.003891)[m   [1;37mSHOW FIELDS FROM categories[m
+Rendering category/view within layouts/application
+
+
+ActionView::TemplateError (String can't be coerced into Fixnum) on line #3 of /category/view.rhtml:
+1: <p>
+2:  Questa pagina e' relativa alla categoria:
+3:  <%= @cat.id+": "+ @cat.desc %>
+4: </p>
+5: I post relativi ad essa sono:
+6: <%=render_collection_of_partials "diary/art", @articoli %>
+
+    (erb):3:in `+'
+    (erb):3:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:265:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:275:in `rhtml_render'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `send'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `render_template'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:181:in `render_file'
+    /gems/actionpack-1.5.1/lib/action_controller/layout.rb:208:in `render_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:679:in `perform_action_without_filters'
+    /gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+  [4;35mArticle Load (0.002137)[m   [0;37mSELECT * FROM articles WHERE category_id = 'linux' [m
+  [4;33mArticle Columns (0.000361)[m   [1;37mSHOW FIELDS FROM articles[m
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 13:08:55 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing CategoryController#view (for 127.0.0.1 at Tue Mar 15 13:10:22 CET 2005)
+  Parameters: {"action"=>"view", "id"=>"linux", "controller"=>"category"}
+  [4;35mCategory Load (0.000449)[m   [0;37mSELECT * FROM categories WHERE id = 'linux' LIMIT 1[m
+  [4;33mCategory Columns (0.000239)[m   [1;37mSHOW FIELDS FROM categories[m
+Rendering category/view within layouts/application
+
+
+ActionView::TemplateError (undefined method `desc' for #<Category:0x40ae6260>) on line #3 of /category/view.rhtml:
+1: <p>
+2:  Questa pagina e' relativa alla categoria:
+3:  <%= @cat.id + ": "+ @cat.desc %>
+4: </p>
+5: I post relativi ad essa sono:
+6: <%=render_collection_of_partials "diary/art", @cat.articles %>
+
+    /gems/activerecord-1.8.0/lib/active_record/base.rb:1136:in `method_missing'
+    (erb):3:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:265:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:275:in `rhtml_render'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `send'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `render_template'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:181:in `render_file'
+    /gems/actionpack-1.5.1/lib/action_controller/layout.rb:208:in `render_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:679:in `perform_action_without_filters'
+    /gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 13:10:23 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing CategoryController#view (for 127.0.0.1 at Tue Mar 15 13:10:32 CET 2005)
+  Parameters: {"action"=>"view", "id"=>"linux", "controller"=>"category"}
+  [4;35mCategory Load (0.002193)[m   [0;37mSELECT * FROM categories WHERE id = 'linux' LIMIT 1[m
+  [4;33mCategory Columns (0.000347)[m   [1;37mSHOW FIELDS FROM categories[m
+Rendering category/view within layouts/application
+
+
+ActionView::TemplateError (undefined method `description' for #<Category:0x40b11050>) on line #3 of /category/view.rhtml:
+1: <p>
+2:  Questa pagina e' relativa alla categoria:
+3:  <%= @cat.id + ": "+ @cat.description %>
+4: </p>
+5: I post relativi ad essa sono:
+6: <%=render_collection_of_partials "diary/art", @cat.articles %>
+
+    /gems/activerecord-1.8.0/lib/active_record/base.rb:1136:in `method_missing'
+    (erb):3:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:265:in `evaluate_locals'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:275:in `rhtml_render'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `send'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:201:in `render_template'
+    /gems/actionpack-1.5.1/lib/action_view/base.rb:181:in `render_file'
+    /gems/actionpack-1.5.1/lib/action_controller/layout.rb:208:in `render_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:22:in `render'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:679:in `perform_action_without_filters'
+    /gems/actionpack-1.5.1/lib/action_controller/filters.rb:294:in `perform_action_without_benchmark'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `measure'
+    /gems/actionpack-1.5.1/lib/action_controller/benchmarking.rb:30:in `perform_action_without_rescue'
+    /gems/actionpack-1.5.1/lib/action_controller/rescue.rb:79:in `perform_action'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `send'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:320:in `process'
+    /gems/actionpack-1.5.1/lib/action_controller/base.rb:263:in `process'
+    /gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 13:10:33 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+  [4;33mCategory Load (0.000702)[m   [1;37mSELECT * FROM categories LIMIT 1[m
+  [4;35mCategory Columns (0.000262)[m   [0;37mSHOW FIELDS FROM categories[m
+
+
+Processing CategoryController#view (for 127.0.0.1 at Tue Mar 15 13:11:09 CET 2005)
+  Parameters: {"action"=>"view", "id"=>"linux", "controller"=>"category"}
+  [4;35mCategory Load (0.000458)[m   [0;37mSELECT * FROM categories WHERE id = 'linux' LIMIT 1[m
+  [4;33mCategory Columns (0.000245)[m   [1;37mSHOW FIELDS FROM categories[m
+Rendering category/view within layouts/application
+  [4;35mArticle Load (0.000574)[m   [0;37mSELECT * FROM articles WHERE category_id = 'linux' [m
+  [4;33mArticle Columns (0.000783)[m   [1;37mSHOW FIELDS FROM articles[m
+Rendering layouts/application (200 OK)
+Completed in 0.029749 (33 reqs/sec) | Rendering: 0.023116 (77%) | DB: 0.002060 (6%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 13:11:09 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing CategoryController#view (for 127.0.0.1 at Tue Mar 15 13:11:20 CET 2005)
+  Parameters: {"action"=>"view", "id"=>"linux", "controller"=>"category"}
+  [4;35mCategory Load (0.000583)[m   [0;37mSELECT * FROM categories WHERE id = 'linux' LIMIT 1[m
+  [4;33mCategory Columns (0.000259)[m   [1;37mSHOW FIELDS FROM categories[m
+Rendering category/view within layouts/application
+  [4;35mArticle Load (0.000558)[m   [0;37mSELECT * FROM articles WHERE category_id = 'linux' [m
+  [4;33mArticle Columns (0.000371)[m   [1;37mSHOW FIELDS FROM articles[m
+Rendering layouts/application (200 OK)
+Completed in 0.017021 (58 reqs/sec) | Rendering: 0.013136 (77%) | DB: 0.001771 (10%)
+
+
+Processing Base#index (for 127.0.0.1 at Tue Mar 15 13:11:20 CET 2005)
+  Parameters: {}
+
+
+ActionController::RoutingError (No route for path: "favicon.ico"):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/routing.rb:258:in `recognize!'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/dispatcher.rb:32:in `dispatch'
+    /home/ex/shekina/lxpdiary/public/dispatch.rb:10
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.0.1/lib/active_support/dependencies.rb:189:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:83:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:35:in `do_GET'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `__send__'
+    /usr/lib/ruby/1.8/webrick/httpservlet/abstract.rb:35:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-0.10.1/lib/webrick_server.rb:21:in `dispatch'
+    ./script/server:51
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.5.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)

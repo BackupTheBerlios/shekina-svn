@@ -1,3 +1,6 @@
-
- Tutti gli elementi nella categoria: <%= @params['id'] %>
-<%=render_collection_of_partials "diary/art", @articoli %>
+<p>
+ Questa pagina e' relativa alla categoria
+ <%= @cat.id + ": "+ @cat.descrizione %>
+</p>
+I post relativi ad essa sono:
+<%=render_collection_of_partials "diary/art", @cat.articles %>

@@ -1,5 +1,5 @@
 class CategoryController < ApplicationController
   def view
-     @articoli = Category.find(@params['id']).articles
+     @cat=Category.find @params['id']
   end
 end
