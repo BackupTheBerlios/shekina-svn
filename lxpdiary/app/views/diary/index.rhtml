@@ -1,13 +1,6 @@
 
  <% for a in @articoli %>
-   <div class="articolo">
-
-     <h3> <%=a.titolo %></h3>
-     <p>  <%=a.testo  %></p>
-     <span>
-       <%=a.link %> :: <%= a.created_at %> :: <%= a.category_id %>
-     </span>
-   </div>
+   <%= render_partial "art", a %>
  <% end %>
 
 
