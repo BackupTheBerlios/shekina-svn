@@ -1,16 +1,30 @@
-class Page
-  PAGES_DIR= File.join(RAILS_ROOT,'pages')
-  PAGES_EXT= '.text'
-  def page(name)
-    File.join(PAGES_DIR,name+PAGES_EXT)
-  end
+require 'db/file'
 
-  def self.find(name)
-    new name
+class Page < DB::File
+  STORE_DIR= 'pgaestore'
+  STORE = DB::File.new File.join(RAILS_ROOT,STORE_DIR)
+  
+  attr_accessor :key, :revision, :text
+  
+  class << self
+  # no revision, ATM
+    def get(name,rev)
+      STORE[name,rev]
+    end
+  
+    def set(key,rev,*args)
+      STORE[key,rev]=*args
+    end
+    def find(key, rev=nil)
+      new key, get(key,rev)
+    end
   end
   
-  def initialize(name)
-    @text= File.read page(name)
-    @tags= #Tag
+  def initialize(key,text,rev=nil)
+    @key,@revision,@text=key, rev, text
+  end
+  def save
+    Page.set @key, @revision, @text
+    self
   end
 end

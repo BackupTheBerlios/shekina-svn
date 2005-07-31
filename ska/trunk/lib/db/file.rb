@@ -9,11 +9,11 @@
 require 'md5'
 require 'monitor'
 require 'db/base'
-
+WikiNameTooLongError=Class.new(WikiError)
 
   module DB
     class File < Base
-      include MonitorMixin
+      #include MonitorMixin
       FILE_EXT='.text'
       
       def initialize(path)
@@ -25,25 +25,26 @@ require 'db/base'
       def set(key, value, opt=nil)
         return if value.nil?
         filename = fname(key)
-        synchronize do
+#        synchronize do
           if value.empty?
             ::File.unlink(filename)
           else
             ::File.open(filename, 'w') {|fp| fp.write(value) }
           end
-        end
+#        end
       rescue Errno::ENAMETOOLONG
-        raise RWikiNameTooLongError.new("name '#{key}' is too long for #{self.class}")
-      rescue
-        nil
+        raise WikiNameTooLongError.new("name '#{key}' is too long for #{self.class}")
+      #rescue
+      #  nil
       end
 
       def get(key, rev=nil)
         filename = fname(key)
-        synchronize do
+        #p filename
+        #synchronize do
           return nil unless ::File.exist?(filename)
           ::File.open(filename, 'r') {|fp| fp.read }
-        end
+        #end
       rescue
         nil
       end

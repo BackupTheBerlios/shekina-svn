@@ -23,6 +23,7 @@ require 'db/log'
       end
       
       def []=(*arg)
+        
         key = arg.shift
         value = arg.pop
         rev = arg.shift
@@ -32,7 +33,9 @@ require 'db/log'
       end
 
       def [](key, rev=nil)
+        #p 'rettreiev'
         retrieve(get(key, rev))
+        
       end
 
       def modifed(key)
