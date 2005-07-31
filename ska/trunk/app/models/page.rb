@@ -1,7 +1,7 @@
 require 'db/file'
-
-class Page < DB::File
-  STORE_DIR= 'pgaestore'
+PageNotFound=Class.new(StandardError)
+class Page 
+  STORE_DIR= 'pagestore'
   STORE = DB::File.new File.join(RAILS_ROOT,STORE_DIR)
   
   attr_accessor :key, :revision, :text
@@ -16,7 +16,11 @@ class Page < DB::File
       STORE[key,rev]=*args
     end
     def find(key, rev=nil)
-      new key, get(key,rev)
+      if page= get(key,rev)
+        new key, get(key,rev)
+      else
+        raise PageNotFound
+      end  
     end
   end
   
@@ -27,4 +31,7 @@ class Page < DB::File
     Page.set @key, @revision, @text
     self
   end
+  def delete
+    #nothing, atm
+  end  
 end

@@ -35,6 +35,10 @@ class PageTest < Test::Unit::TestCase
     assert_kind_of Page,  Page.find('pippo')
   end  
   
+  def test_find_failing
+    assert_raises (PageNotFound){Page.find 'nonexistent'}
+  end  
+  
   def test_slashn
     Page.set 'pippo',nil, 'testo'
     assert_equal Page.find('pippo').text,"testo\n"

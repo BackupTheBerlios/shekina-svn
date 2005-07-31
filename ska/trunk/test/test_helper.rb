@@ -6,12 +6,12 @@ require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'application'
 
 require 'test/unit'
-require 'active_record/fixtures'
+#require 'active_record/fixtures'
 require 'action_controller/test_process'
 require 'action_web_service/test_invoke'
 require 'breakpoint'
 
-Test::Unit::TestCase.fixture_path = File.dirname(__FILE__) + "/fixtures/"
+#Test::Unit::TestCase.fixture_path = File.dirname(__FILE__) + "/fixtures/"
 
 class Test::Unit::TestCase
   # Turn these on to use transactional fixtures with table_name(:fixture_name) instantiation of fixtures

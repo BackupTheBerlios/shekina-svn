@@ -1,3 +1,1359 @@
 nil
 C:/Documents and Settings/gabriele/Desktop/dev/shakine/ska/trunk
 C:/Documents and Settings/gabriele/Desktop/dev/shakine/ska/trunk
+
+
+Processing WikiController#index (for 127.0.0.1 at Sun Jul 31 17:52:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"index", "controller"=>"wiki"}
+
+
+ActionController::UnknownAction (No action responded to index):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing Base#index (for 127.0.0.1 at Sun Jul 31 17:53:49 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+NameError (undefined method `index' for class `WikiController'):
+    /app/controllers/wiki_controller.rb:8
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sun Jul 31 17:54:14 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+NameError (undefined method `index' for class `WikiController'):
+    /app/controllers/wiki_controller.rb:8
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sun Jul 31 17:54:16 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+NameError (undefined method `index' for class `WikiController'):
+    /app/controllers/wiki_controller.rb:8
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#index (for 127.0.0.1 at Sun Jul 31 17:54:32 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"index", "controller"=>"wiki"}
+
+
+ActionController::MissingTemplate (Missing template ./script/../config/../app/views//wiki/index.rhtml):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:827:in `assert_existance_of_template_file'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:586:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#index (for 127.0.0.1 at Sun Jul 31 17:54:58 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"index", "controller"=>"wiki"}
+
+
+ActionController::MissingTemplate (Missing template ./script/../config/../app/views//wiki/index.rhtml):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:827:in `assert_existance_of_template_file'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:586:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#index (for 127.0.0.1 at Sun Jul 31 17:55:00 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"index", "controller"=>"wiki"}
+
+
+ActionController::MissingTemplate (Missing template ./script/../config/../app/views//wiki/index.rhtml):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:827:in `assert_existance_of_template_file'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:586:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#index (for 127.0.0.1 at Sun Jul 31 17:55:13 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"index", "controller"=>"wiki"}
+Rendering wiki/index (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki]
+
+
+Processing WikiController#index (for 127.0.0.1 at Sun Jul 31 17:57:08 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"index", "controller"=>"wiki"}
+Rendering wiki/index (200 OK)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 17:57:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 17:59:33 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 17:59:38 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:00:32 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:00:35 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:02:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:02:22 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:07:30 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:08:05 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:08:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:08:56 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"cazzo", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:10:15 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"cazzo", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `key' for nil:NilClass) on line #1 of /wiki/view.rhtml:
+1: <h1><%= @page.key %></h1>
+2: <%=@params['id'] %>
+3: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):1:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:10:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"cazzo", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `text' for nil:NilClass) on line #3 of /wiki/view.rhtml:
+1: <h1><%# @page.key %></h1>
+2: <%=@params['id'] %>
+3: <%=textilize @page.text %>
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):3:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:11:06 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"cazzo", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/cazzo]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:11:08 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/a]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:11:58 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/a]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:12:09 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/a]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:12:11 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/a]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:13:06 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"a", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/a]
+
+
+Processing WikiController#index (for 127.0.0.1 at Sun Jul 31 18:13:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"index", "controller"=>"wiki"}
+Rendering wiki/index (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:14:09 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:15:02 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:15:06 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"miao", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/miao]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:15:13 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"miao", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/miao]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:15:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"miao", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/miao]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:15:58 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"miao", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/miao]
+
+
+Processing Base#index (for 127.0.0.1 at Sun Jul 31 18:16:21 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/wiki_controller.rb:4: syntax error
+   @page= Page.find(@params['id'] or 'home')
+                                    ^
+./script/../config/../app/controllers/wiki_controller.rb:4: syntax error
+./script/../config/../app/controllers/wiki_controller.rb:14: syntax error):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:16:32 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"miao", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.08100 (12 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/miao]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:16:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"miao", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/miao]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:16:58 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:19:40 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:20:30 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (49 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:21:35 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:22:18 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:42:12 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"p", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/p]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:42:17 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:43:55 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/]
