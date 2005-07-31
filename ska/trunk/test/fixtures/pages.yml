@@ -1,5 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 first_page:
-  id: 1
+  key: "pippo"
+  text: "testo"
 another_page:
-  id: 2
+  key: "pippo2"
+  text: "testo"

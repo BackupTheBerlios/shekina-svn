@@ -5,15 +5,24 @@ class PageTest < Test::Unit::TestCase
   fixtures :pages
 
   def setup
-    @page = Page.find(1)
+    @page = Page.find('pippo')
   end
 
   # Replace this with your real tests.
   def test_truth
     assert_kind_of Page,  @page
   end
-  def test_pagename
-    assert_equal Page.new('hello'), File.join(RAILS_ROOT,'hello.text')
+  def test_new
+    p=Page.new 'micione','testo'
+    assert_equal p.text, 'testo'
+    assert_equal p.key, 'micione'
+    assert_equal p.revision, nil
   end
-    
+  def test_get
+    Page.get 'pippo'
+  end
+  def test_set
+    Page.set 'pippo', 'nuovotesto'
+    assert_equal Page.get('pippo').text,'nuovotesto'
+  end  
 end
