@@ -23,7 +23,7 @@ class PageTest < Test::Unit::TestCase
   def test_new
     p=Page.new 'micione','testo'
     assert_equal p.text, 'testo'
-    assert_equal p.key, 'micione'
+    assert_equal p.name, 'micione'
     assert_equal p.revision, nil
   end
 
@@ -50,7 +50,7 @@ class PageTest < Test::Unit::TestCase
     p2 = p.save
     assert_equal p2, p
     p3 = Page.find( 'miao')
-    assert_equal p.key, p3.key 
+    assert_equal p.name, p3.name 
   end  
   
   def test_save_strange_chars
@@ -58,7 +58,7 @@ class PageTest < Test::Unit::TestCase
     p2 = p.save
     assert_equal p2, p
     p3 = Page.find( '\mi/\n//:ao')
-    assert_equal p.key, p3.key 
+    assert_equal p.name, p3.name 
     
   end    
 end

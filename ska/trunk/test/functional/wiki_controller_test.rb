@@ -21,6 +21,21 @@ class WikiControllerTest < Test::Unit::TestCase
     assert_not_nil assigns["page"]
     assert_template "wiki/view" 
     assert_response :success 
+    
+    assert_tag :tag => "div",
+               :attributes => { :id => "navigation" },
+               :parent => { :tag => "body"},
+               :descendant => { :tag => "a"}
+               
+    assert_tag :tag => "div",
+               :attributes => { :id => "body" },
+               :parent => { :tag => "body"}
+               
+               
+    assert_tag :tag => "div",
+               :attributes => { :id => "revision" },
+               :parent => { :tag => "body"}
+               
   end
   def test_view_no_id
     get :view
