@@ -1,0 +1,16 @@
+<div id="form-body">
+  <%= form_remote_tag   :url=> {:action=> :save_page_with_ajax, :id=>@page.name}, 
+                        :update=> {:success=>"body"},
+                        #:loading => visual_effect(:fade, "body", :duration => 0.5 ), 
+                        :complete => visual_effect(:highlight, "body", :duration => 1.5 )
+ 
+  %>
+  <%= text_area :page, :text %>
+  <br/>
+  <input type="submit" name="submit" id="form-submit-button" value="submit" class="button" />
+  <%= end_form_tag %>
+  
+  
+  </input>
+ </form>
+</div> 

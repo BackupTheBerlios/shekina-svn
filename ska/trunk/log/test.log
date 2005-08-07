@@ -231,3 +231,171 @@ Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 18:43:47 ora legale Eu
 Rendering  within layouts/application
 Rendering wiki/error (404 Page Not Found)
 Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:39:46 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:39:46 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:39:46 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:40:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:40:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:40:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:51:16 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.04000 (25 reqs/sec) | Rendering: 0.04000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:51:16 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:51:16 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:51:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:51:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:51:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:52:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (49 reqs/sec) | Rendering: 0.01000 (49%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:52:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:52:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:53:35 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:53:35 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:53:35 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:54:19 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:54:19 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Jul 31 19:54:19 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sat Aug 06 15:36:54 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sat Aug 06 15:36:54 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sat Aug 06 15:36:54 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/null]

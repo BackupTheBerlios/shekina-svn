@@ -1357,3 +1357,2029 @@ Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 18:43:55 ora legale 
 Rendering  within layouts/application
 Rendering wiki/view (200 OK)
 Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 19:46:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (compile error
+(erb):14: syntax error
+_erbout.concat "  ";  end ; _erbout.concat "\n"
+                         ^) on line #14 of /wiki/view.rhtml:
+11:                 {:action=> :edit , :id=> @page.name}, 
+12:                 {:class => 'navlink', :accesskey => 'E', :name => 'edit'}
+13:     %>
+14:   <% end %>
+15: </div>
+16: 
+17: <div id="body">
+
+    (erb):14:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:210:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 19:46:50 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `name' for #<Page:0x39483b8>) on line #2 of /wiki/view.rhtml:
+1: <h1>
+2:   Pagina: <%= @page.name %>
+3: </h1>
+4: 
+5: <div id="revision">
+
+    (erb):2:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:210:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 19:47:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.09000 (11 reqs/sec) | Rendering: 0.02000 (22%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 20:02:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.78100 (1 reqs/sec) | Rendering: 0.45100 (57%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 20:03:02 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (wrong number of arguments (4 for 3)) on line #10 of /wiki/view.rhtml:
+7: </div>
+8: 
+9: <div id="navigation">
+10:     <%= link_to_remote 'Edit', 
+11:                 {:action=> :edit , :id=> @page.name}, 
+12:                 {:update=>{ :success => "body", :failure => "error" }},
+13:                 {:class => 'navlink', :accesskey => 'E', :name => 'edit'}
+
+    (erb):10:in `link_to_remote'
+    (erb):10:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:210:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sun Jul 31 20:04:00 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/wiki_controller.rb:14: syntax error
+   "<form><input type="submit"></input></form>"
+                             ^):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sun Jul 31 20:04:10 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/wiki_controller.rb:14: syntax error
+   "<form><input type="submit"></input></form>"
+                             ^):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sun Jul 31 20:04:13 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/wiki_controller.rb:14: syntax error
+   "<form><input type="submit"></input></form>"
+                             ^):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sun Jul 31 20:04:27 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 12:59:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.01000 (9%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 12:59:16 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 12:59:19 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+TypeError (cannot convert nil into String):
+    /app/controllers/wiki_controller.rb:14:in `+'
+    /app/controllers/wiki_controller.rb:14:in `get_form_with_ajax'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 12:59:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 12:59:50 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+
+
+ActionController::MissingTemplate (Missing template ./script/../config/../app/views//wiki/get_form_with_ajax.rhtml):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:827:in `assert_existance_of_template_file'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:586:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:627:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:210:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:757:in `perform_action_without_filters'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sat Aug 06 13:01:29 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+NameError (undefined local variable or method `get_form_with_ajax' for WikiController:Class):
+    /app/controllers/wiki_controller.rb:3
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sat Aug 06 13:01:32 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+NameError (undefined local variable or method `get_form_with_ajax' for WikiController:Class):
+    /app/controllers/wiki_controller.rb:3
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sat Aug 06 13:01:35 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+NameError (undefined local variable or method `get_form_with_ajax' for WikiController:Class):
+    /app/controllers/wiki_controller.rb:3
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing Base#index (for 127.0.0.1 at Sat Aug 06 13:01:38 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+NameError (undefined local variable or method `get_form_with_ajax' for WikiController:Class):
+    /app/controllers/wiki_controller.rb:3
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:01:54 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 13:01:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionController::MissingTemplate (Missing template ./script/../config/../app/views//text.rhtml):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:827:in `assert_existance_of_template_file'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:586:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /app/controllers/wiki_controller.rb:16:in `get_form_with_ajax'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:02:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:02:52 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 13:02:53 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/get_form_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:04:03 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (49 reqs/sec) | Rendering: 0.01000 (49%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 13:04:05 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/get_form_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:08:27 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 13:08:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/get_form_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:09:33 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 13:09:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (`@#<Page:0x3a79cb0>' is not allowed as an instance variable name) on line #3 of /wiki/_form.rhtml:
+1: <div id="submitform">
+2:  <form>
+3:   <%= text_area @page, :text %>
+4:   <%= submit_tag  %>
+5:   <%= @params[id] %>
+6:   </input>
+
+    /gems/actionpack-1.9.1/lib/action_view/helpers/form_helper.rb:239:in `instance_variable_get'
+    /gems/actionpack-1.9.1/lib/action_view/helpers/form_helper.rb:239:in `object'
+    /gems/actionpack-1.9.1/lib/action_view/helpers/form_helper.rb:247:in `value_before_type_cast'
+    /gems/actionpack-1.9.1/lib/action_view/helpers/form_helper.rb:189:in `to_text_area_tag'
+    /gems/actionpack-1.9.1/lib/action_view/helpers/form_helper.rb:104:in `text_area'
+    (erb):3:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `get_form_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:09:56 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02100 (47 reqs/sec) | Rendering: 0.01100 (52%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 13:09:58 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/get_form_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:27:24 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.03000 (33 reqs/sec) | Rendering: 0.02000 (66%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#get_form_with_ajax (for 127.0.0.1 at Sat Aug 06 13:27:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"get_form_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/get_form_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:27:35 ora legale Europa occidentale 2005)
+  Parameters: {"commit"=>"Save changes", "action"=>"view", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\r\n fico fico "}}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home?page%5Btext%5D=testo+testo%0D%0A+fico+fico+&commit=Save+changes]
+
+
+Processing Base#index (for 127.0.0.1 at Sat Aug 06 13:30:10 ora legale Europa occidentale 2005)
+  Parameters: {}
+
+
+SyntaxError (./script/../config/../app/controllers/wiki_controller.rb:24: syntax error):
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:193:in `load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:38:in `require_or_load'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:21:in `depend_on'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:171:in `require_dependency'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:127:in `load_file!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:96:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `each'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:79:in `const_load!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/activesupport-1.1.1/lib/active_support/dependencies.rb:71:in `const_missing'
+    routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `eval'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:219:in `traverse_to_controller'
+    generated/routing/recognition.rb:3:in `recognize_path'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/routing.rb:433:in `recognize!'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/gems/1.8/gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:30:24 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:30:26 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:38:17 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:38:19 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):4: syntax error
+  <%= text_area :page, :text ).to_s); _erbout.concat "\n"
+   ^
+(erb):4: unterminated string meets end of file) on line #4 of /wiki/_form.rhtml:
+1: <div id="submitform">
+2:   <%= form_remote_tag  :url=> {:action=> :save_page_with_ajax, :id=> @page.name}, 
+3:                        :update=> "body"
+4:   <%= text_area :page, :text %>
+5:   <%= submit_to_remote 'invia ajax'  %>
+6:   <br/>
+7:   <%= @params[id] %>
+
+    (erb):4:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:39:09 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:39:10 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):4: syntax error
+  <%= text_area :page, :text ).to_s); _erbout.concat "\n"
+   ^
+(erb):4: unterminated string meets end of file) on line #4 of /wiki/_form.rhtml:
+1: <div id="submitform">
+2:   <%= form_remote_tag  :url=> {:action=> :save_page_with_ajax, :id=> @page.name}, 
+3:                        :update=> "body"
+4:   <%= text_area :page, :text %>
+5:   <%= submit_to_remote "invia ajax"  %>
+6:   <br/>
+7:   <%= @params['id'] %>
+
+    (erb):4:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:39:53 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:39:54 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):4: syntax error
+  <%= text_area :page, :text ).to_s); _erbout.concat "\n"
+   ^
+(erb):4: unterminated string meets end of file) on line #4 of /wiki/_form.rhtml:
+1: <div id="submitform">
+2:   <%= form_remote_tag  :url=> {:action=> :save_page_with_ajax, :id=> @page.name}, 
+3:                        :update=> "body"
+4:   <%= text_area :page, :text %>
+5:   <%= submit_to_remote "invia ajax"  %>
+6:   <br/>
+7:   <%= @params['id'] %>
+
+    (erb):4:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:41:05 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:41:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):4: syntax error
+  <%= text_area :page, :text ).to_s); _erbout.concat "\n"
+   ^
+(erb):4: unterminated string meets end of file) on line #4 of /wiki/_form.rhtml:
+1: <div id="submitform">
+2:   <%= form_remote_tag  :url=> {:action=> :save_page_with_ajax, :id=> @page.name}, 
+3:                        :update=> "body"
+4:   <%= text_area :page, :text %>
+5:   <%= submit_to_remote "invia ajax"  %>
+6:   <br/>
+7:   <%= @params['id'] %>
+
+    (erb):4:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:41:24 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:41:25 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):4: syntax error
+  <%= text_area 'page', 'text' ).to_s); _erbout.concat "\n"
+   ^
+(erb):4: unterminated string meets end of file) on line #4 of /wiki/_form.rhtml:
+1: <div id="submitform">
+2:   <%= form_remote_tag  :url=> {:action=> :save_page_with_ajax, :id=> @page.name}, 
+3:                        :update=> "body"
+4:   <%= text_area 'page', 'text' %>
+5:   <%= submit_to_remote "invia ajax"  %>
+6:   <br/>
+7:   <%= @params['id'] %>
+
+    (erb):4:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:41:50 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:41:53 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #6 of /wiki/_form.rhtml:
+3:                        :update=> "body"
+4:                        %>
+5:   <%= text_area :page, :text %>
+6:   <%= submit_to_remote "invia ajax"  %>
+7:   <br/>
+8:   <%= @params['id'] %>
+9:   </input>
+
+    (erb):6:in `submit_to_remote'
+    (erb):6:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:44:54 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:44:55 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:45:21 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:45:22 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 13:45:35 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 13:45:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 14:35:52 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 14:35:53 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:15:40 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:15:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.05000 (20 reqs/sec) | Rendering: 0.03000 (60%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:16:17 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:16:19 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:24:39 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:24:41 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:25:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:25:50 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:25:56 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nmiao"}}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #2 of /wiki/view.rhtml:
+1: <h1>
+2:   Pagina: <%= @page.name %>
+3: </h1>
+4: 
+5: <div id="revision">
+
+    /gems/activesupport-1.1.1/lib/active_support/whiny_nil.rb:30:in `method_missing'
+    (erb):2:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:588:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:591:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:604:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:210:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:24:in `save_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:27:00 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (49 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:27:02 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:27:08 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\ntesto ancora "}}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:28:33 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:28:34 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:28:43 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\npi\303\271 testo"}}
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:29:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.03000 (33 reqs/sec) | Rendering: 0.01000 (33%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:29:05 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:29:10 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nancora testo"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:29:37 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:29:39 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:29:42 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nmiao"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:30:09 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:30:10 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:30:16 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nancora testo"}}
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:30:21 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:30:24 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:30:36 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nancora *testo* http://foo.bar\n"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:30:40 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:30:45 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nancora *testo* \"link\":http://foo.bar\n"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:46:19 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:49:35 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:49:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):4: syntax error
+                        :loading => "loading()", 
+                                   ^
+(erb):4: syntax error
+                        :loading => "loading()", 
+                                                ^
+(erb):17: syntax error
+_erbout.concat "</div> "; _erbout
+                                 ^) on line #17 of /wiki/_form.rhtml:
+14:   
+15:   </input>
+16:  </form>
+17: </div> 
+    (erb):17:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:49:47 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:49:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):17: syntax error
+_erbout.concat "</div> "; _erbout
+                                 ^) on line #17 of /wiki/_form.rhtml:
+14:   
+15:   </input>
+16:  </form>
+17: </div> 
+    (erb):17:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:50:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:50:15 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+ActionView::TemplateError (compile error
+(erb):18: syntax error
+_erbout.concat "</div> "; _erbout
+                                 ^) on line #18 of /wiki/_form.rhtml:
+15:   
+16:   </input>
+17:  </form>
+18: </div> 
+    (erb):18:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:272:in `evaluate_locals'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:283:in `rhtml_render'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `send'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:208:in `render_template'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:173:in `render_file'
+    /gems/actionpack-1.9.1/lib/action_view/base.rb:188:in `render'
+    /gems/actionpack-1.9.1/lib/action_view/partials.rb:55:in `render_partial'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:618:in `render_with_no_layout'
+    /gems/actionpack-1.9.1/lib/action_controller/layout.rb:216:in `render_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:25:in `render'
+    ./script/../config/../app/controllers/wiki_controller.rb:17:in `edit_page_with_ajax'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:756:in `perform_action_without_filters'
+    /gems/actionpack-1.9.1/lib/action_controller/filters.rb:295:in `perform_action_without_benchmark'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `measure'
+    /gems/actionpack-1.9.1/lib/action_controller/benchmarking.rb:41:in `perform_action_without_rescue'
+    /gems/actionpack-1.9.1/lib/action_controller/rescue.rb:80:in `perform_action'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `send'
+    /gems/actionpack-1.9.1/lib/action_controller/base.rb:356:in `process'
+    /gems/rails-0.13.1/lib/dispatcher.rb:32:in `dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:105:in `handle_dispatch'
+    /gems/rails-0.13.1/lib/webrick_server.rb:71:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:155:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:144:in `start_thread'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:94:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `each'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:89:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    c:/programmi/ruby/lib/ruby/1.8/webrick/server.rb:79:in `start'
+    /gems/rails-0.13.1/lib/webrick_server.rb:57:in `dispatch'
+    script/server:49
+
+
+Rendering c:/programmi/ruby/lib/ruby/gems/1.8/gems/actionpack-1.9.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:50:58 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:50:59 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:51:02 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\n"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:55:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:55:52 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 15:55:55 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nca"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:55:59 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 15:56:05 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"new", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/new]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:10:38 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"new", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.05000 (20 reqs/sec) | Rendering: 0.02000 (40%) [http://127.0.0.1/wiki/view/new]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:10:41 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.04000 (25 reqs/sec) | Rendering: 0.04000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:10:43 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:10:47 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nca\nbxxb"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:13:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:13:08 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:13:12 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo\nca\nbxxb\nv"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:13:25 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:13:26 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:13:33 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciao\n\n"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:13:59 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:14:00 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:14:03 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n\n"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:15:24 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:15:25 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:15:27 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n\n"}}
+Completed in 0.03000 (33 reqs/sec) | Rendering: 0.01000 (33%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:15:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:15:33 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n\n"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:00 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:04 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n\n"}}
+Completed in 0.09000 (11 reqs/sec) | Rendering: 0.05000 (55%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:08 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:22 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:23 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:23 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:16:34 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:16:39 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n\n"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:02 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:17:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:06 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:08 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n\n"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:12 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01100 (90 reqs/sec) | Rendering: 0.01100 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:17:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:15 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:20 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n\nmiaoo"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#view (for 127.0.0.1 at Sat Aug 06 16:17:49 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/view/]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:17:56 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://127.0.0.1/wiki/save_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:19:37 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://127.0.0.1/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 127.0.0.1 at Sat Aug 06 16:19:40 ora legale Europa occidentale 2005)
+  Parameters: {"submit"=>"submit", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo testo ciaox\n"}}
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://127.0.0.1/wiki/save_page_with_ajax/home]

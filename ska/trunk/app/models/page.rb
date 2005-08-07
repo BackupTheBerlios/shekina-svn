@@ -4,7 +4,7 @@ class Page
   STORE_DIR= 'pagestore'
   STORE = DB::File.new File.join(RAILS_ROOT,STORE_DIR)
   
-  attr_accessor :key, :revision, :text
+  attr_accessor :name, :revision, :text
   
   class << self
   # no revision, ATM
@@ -12,23 +12,23 @@ class Page
       STORE[name,rev]
     end
   
-    def set(key,rev,*args)
-      STORE[key,rev]=*args
+    def set(name,rev,*args)
+      STORE[name,rev]=*args
     end
-    def find(key, rev=nil)
-      if page= get(key,rev)
-        new key, get(key,rev)
+    def find(name, rev=nil)
+      if page= get(name,rev)
+        new name, get(name,rev)
       else
         raise PageNotFound
       end  
     end
   end
   
-  def initialize(key,text,rev=nil)
-    @key,@revision,@text=key, rev, text
+  def initialize(name,text,rev=nil)
+    @name,@revision,@text=name, rev, text
   end
   def save
-    Page.set @key, @revision, @text
+    Page.set @name, @revision, @text
     self
   end
   def delete
