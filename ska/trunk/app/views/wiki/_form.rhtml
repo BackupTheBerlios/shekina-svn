@@ -1,8 +1,7 @@
-<div id="form-body">
+ <div id="page">
   <%= form_remote_tag   :url=> {:action=> :save_page_with_ajax, :id=>@page.name}, 
-                        :update=> {:success=>"body"},
-                        #:loading => visual_effect(:fade, "body", :duration => 0.5 ), 
-                        :complete => visual_effect(:highlight, "body", :duration => 1.5 )
+                        :update=> {:success=>"main"},
+                        :complete => visual_effect(:highlight, "main", :duration => 1.5 )
  
   %>
   <%= text_area :page, :text %>
@@ -11,6 +10,4 @@
   <%= end_form_tag %>
   
   
-  </input>
- </form>
-</div> 
+ </div> 

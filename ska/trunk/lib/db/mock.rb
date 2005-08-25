@@ -1,12 +1,12 @@
 # -*- indent-tabs-mode: nil -*-
 
-require 'monitor'
+#require 'monitor'
 require 'db/base'
  
 
   module DB
     class Mock < Base
-      include MonitorMixin
+#      include MonitorMixin
 
       class Entry
         def initialize(old, src, opt=nil)
@@ -73,14 +73,14 @@ require 'db/base'
       private
       def set(key, value, opt=nil)
         return if value.nil?
-        synchronize do
+        #synchronize do
           if value.empty?
             @db.delete(key)
           else
             @db[key] ||= []
             @db[key] << Entry.new(@db[key].last, value, opt)
           end
-        end
+        #end
         nil
       end
 
@@ -91,13 +91,13 @@ require 'db/base'
       end
 
       def fetch_entry(key, rev=nil)
-        synchronize do
+        #synchronize do
           entries = @db.fetch(key, @null_result)
           target = entries.find do |entry|
             entry.revision == rev
           end
           return yield(target || entries.last)
-        end
+        #end
       end
       
       public

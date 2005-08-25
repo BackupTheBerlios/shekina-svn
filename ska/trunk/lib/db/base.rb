@@ -6,7 +6,7 @@
 # rwiki/db/base.rb is copyrighted free software by Masatoshi SEKI.
 # You can redistribute it and/or modify it under the same term as Ruby.
 
-#require 'rwiki/rw-lib'
+
 WikiError=Class.new(StandardError)
 
 RevisionError =Class.new(WikiError)

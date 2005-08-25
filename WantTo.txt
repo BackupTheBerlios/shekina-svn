@@ -1,0 +1,34 @@
+as a reader
+* be able to select pages based on meaning
+* be able to attach a comment to a page
+* have a pleasant user experience
+* be able to navigate clusters
+* follow feeds (for clusters ?)
+* be able to register
+* be able to print page
+* be able to print cluster
+* be able to see revisions
+* have mozilla sidebar
+
+as a writer:
+* be able to login
+* be able to create a page
+* be able to change a page
+* be able to attach meaning to a page
+* be able to relate two pages
+* be able to use a simple markup
+* be able to create page clusters based on attributes
+* be able to post question and comments
+* be able to rollback changes
+* attach my name to the page
+
+
+as an admin
+* be able to delete pages
+* be able to build page clusters such as "forum"
+* be able to do mass rollbacks
+* be able to give some privileges to others
+* receive notifications
+* lock out people
+* be able to edit pages withouth web, I want a text baqckup
+

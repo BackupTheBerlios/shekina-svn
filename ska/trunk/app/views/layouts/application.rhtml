@@ -10,9 +10,40 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <body>
  <%= javascript_include_tag "prototype" %>
  <%= javascript_include_tag "effects" %>
- <%= @content_for_layout %>
- 
-<div id=footer>
- powered by: shekina
-</div>
+ <%= stylesheet_link_tag "default" %>
+
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <h1 id="sitename"><a href="/">SiteName- metterci una variabile</a></h1>
+                <h2 id="subtitle"> sottotitolo, metterci una variabile</h2>
+            </div>
+        </div>
+        <div id="content">
+            <div id="sidebar">
+                <%= link_to_remote 'Edit', 
+                    :url=> { :action=> :edit_page_with_ajax, :id=> @page.name}, 
+                    :update=> "main",
+                    :complete => visual_effect(:appear, "main", :duration => 1.5 )
+                    #{:class => 'navlink', :accesskey => 'E', :name => 'edit'}
+                    
+                %>
+                qui ci va:
+                <ul>
+                    <li>revisioni</li>
+                    <li>tags</li>
+                    <li>autore</li>
+                    <li>...</li>
+                    <li>format</li>
+                </ul>
+            </div>
+            <div id="main">
+                <%= @content_for_layout %>
+            </div>
+        </div>
+        <div id="footer">
+            powered by: shekina
+        </div>
+    </div>
 </body>
+</html>

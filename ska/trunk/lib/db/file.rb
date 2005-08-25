@@ -40,11 +40,10 @@ WikiNameTooLongError=Class.new(WikiError)
 
       def get(key, rev=nil)
         filename = fname(key)
-        #p filename
-        #synchronize do
-          return nil unless ::File.exist?(filename)
-          ::File.open(filename, 'r') {|fp| fp.read }
-        #end
+
+        return nil unless ::File.exist?(filename)
+        ::File.open(filename, 'r') {|fp| fp.read }
+
       rescue
         nil
       end

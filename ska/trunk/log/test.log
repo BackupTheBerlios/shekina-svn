@@ -399,3 +399,1055 @@ Processing WikiController#view (for 0.0.0.0 at Sat Aug 06 15:36:54 ora legale Eu
 Rendering  within layouts/application
 Rendering wiki/error (404 Page Not Found)
 Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:46:15 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:46:15 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:46:15 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:49:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:49:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (49 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:49:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:50:52 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:50:52 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:50:52 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:52:10 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:52:10 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:52:10 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:52:43 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:52:43 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:52:43 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:54:37 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:54:37 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:54:37 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:55:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:55:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:55:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:56:26 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:56:26 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:56:26 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:57:55 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:57:55 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:57:55 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:58:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:58:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:58:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:58:28 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:58:28 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 11:58:28 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:04:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:04:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:04:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:04:44 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:05:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:05:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:05:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:05:48 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:07:39 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:07:39 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:07:39 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:07:39 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:08:17 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:08:18 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:08:18 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:08:18 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:08:33 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:08:33 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:08:33 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:08:33 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:10:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01100 (90 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:10:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:10:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:10:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:10:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:12:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:12:14 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test", "controller"=>"wiki"}
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:12:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:12:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:12:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:26:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:26:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:26:36 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/save_page_with_ajax/test?text=bla+bla]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:26:36 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/save_page_with_ajax/test?text=bla+bla]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:26:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:26:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:26:36 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:27:47 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:27:47 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:27:47 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test?text=bla+bla]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:27:47 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/save_page_with_ajax/test?text=bla+bla]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:27:47 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.03000 (33 reqs/sec) | Rendering: 0.03000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:27:47 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:27:47 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:31:45 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:31:45 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:31:45 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?text=bla+bla]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:31:45 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?text=bla+bla]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:31:45 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:31:45 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:31:45 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:33:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:33:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:33:07 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:33:07 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?text=bla+bla]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:33:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:33:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:33:07 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:04 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:04 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?text=bla+bla]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:35:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:35:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:35:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:30 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:30 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:30 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:35:30 ora legale Europa occidentale 2005)
+  Parameters: {"text"=>"bla bla", "action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki"}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?text=bla+bla]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:35:30 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:35:30 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:35:30 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:36:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:36:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:36:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:36:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:36:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:36:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:36:04 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:39:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:39:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:39:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:39:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:39:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:39:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:39:42 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:20 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01100 (90 reqs/sec) | Rendering: 0.01100 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:29 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:42:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:42:57 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:43:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:43:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:43:14 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:26 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:26 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:27 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 12:43:27 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:43:27 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.01000 (50%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:43:27 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 12:43:27 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:22:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:22:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:22:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:22:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 14:22:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (99 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 14:22:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 14:22:31 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/view/null]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:49:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"home", "controller"=>"wiki"}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/edit_page_with_ajax/home]
+
+
+Processing WikiController#edit_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:49:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"edit_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.00010 (10000 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/edit_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:49:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"home", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/home?page=texttesto]
+
+
+Processing WikiController#save_page_with_ajax (for 0.0.0.0 at Sun Aug 07 14:49:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"save_page_with_ajax", "id"=>"test-non-.deve-esistere", "controller"=>"wiki", "page"=>{"text"=>"testo"}}
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.00000 (0%) [http://test.host/wiki/save_page_with_ajax/test-non-.deve-esistere?page=texttesto]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 14:49:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"home", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.02000 (50 reqs/sec) | Rendering: 0.02000 (100%) [http://test.host/wiki/view/home]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 14:49:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/view (200 OK)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view]
+
+
+Processing WikiController#view (for 0.0.0.0 at Sun Aug 07 14:49:51 ora legale Europa occidentale 2005)
+  Parameters: {"action"=>"view", "id"=>"null", "controller"=>"wiki"}
+Rendering  within layouts/application
+Rendering wiki/error (404 Page Not Found)
+Completed in 0.01000 (100 reqs/sec) | Rendering: 0.01000 (100%) [http://test.host/wiki/view/null]

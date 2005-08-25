@@ -1,8 +1,10 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'wiki_controller'
-
+require 'db/mock'
 # Re-raise errors caught by the controller.
 class WikiController; def rescue_action(e) raise e end; end
+$VERBOSE=nil
+Page.const_set :STORE, DB::Mock.new
 
 class WikiControllerTest < Test::Unit::TestCase
   def setup
@@ -23,18 +25,19 @@ class WikiControllerTest < Test::Unit::TestCase
     assert_response :success 
     
     assert_tag :tag => "div",
-               :attributes => { :id => "navigation" },
-               :parent => { :tag => "body"},
+               :attributes => { :id => "sidebar" },
+               :parent => { :tag => "div", :attributes=>{:id=>"container"} },
                :descendant => { :tag => "a"}
                
+    
     assert_tag :tag => "div",
-               :attributes => { :id => "body" },
-               :parent => { :tag => "body"}
+               :attributes => { :id => "main" },
+               :parent => { :tag => "div", :attributes=>{:id=>"container"} }
                
                
     assert_tag :tag => "div",
                :attributes => { :id => "revision" },
-               :parent => { :tag => "body"}
+               :parent => { :tag => "div", :attributes=>{:id=>"container"} }
                
   end
   def test_view_no_id
@@ -43,12 +46,49 @@ class WikiControllerTest < Test::Unit::TestCase
     assert_template "wiki/view" 
     assert_response :success 
   end
-
-  def test_view_wrong_id
-    #assert_raises(nil){
-    get :view,{'id'=>'null'}
-    #}
+  
+  def error_helper
     assert_template "wiki/error"
     assert_response 404
   end
+  def test_view_wrong_id
+    #assert_raises(nil){
+    get :view,{'id'=>'null'}
+    error_helper
+  end
+  
+  def test_edit_page_with_ajax
+    get :edit_page_with_ajax, {:id=>'home'}
+    assert_template "wiki/_form"
+    assert_not_nil assigns["page"]
+    assert_response :success 
+    assert_tag :tag => "div",
+               :attributes => { :id => "form-body" }
+               
+    assert_tag :tag => "form",
+               :descendant => { :tag => "textarea"}
+    assert_tag :tag => "form",
+               :descendant => { :tag => "input",:attributes=>{:type=>"submit"} }
+  end
+  
+  def test_edit_page_with_ajax_error
+    
+    get :edit_page_with_ajax, {:id=>'test-non-.deve-esistere',:page=>{:text=>'testo'}}
+    error_helper
+
+
+  end
+
+  def test_save_page_with_ajax
+    get :save_page_with_ajax, {:id=>'home',:page=>{:text=>'testo'}}
+    assert_template "wiki/_page"
+  end  
+  
+  
+  def test_save_page_with_ajax_wrong_id
+    get :save_page_with_ajax, {:id=>'test-non-.deve-esistere',:page=>{:text=>'testo'}}
+    error_helper
+  end
+  
+  
 end

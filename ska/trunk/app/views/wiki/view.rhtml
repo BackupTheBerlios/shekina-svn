@@ -1,21 +1,6 @@
-<h1>
-  Pagina: <%= @page.name %>
-</h1>
 
-<div id="revision">
-  <%= @page.revision %>
-</div>
 
-<div id="navigation">
-    <%= link_to_remote 'Edit', 
-                :url=> {:action=> :edit_page_with_ajax, :id=> @page.name}, 
-                :update=> "body"
-                #{:class => 'navlink', :accesskey => 'E', :name => 'edit'}
-                
-    %>
-  
-</div>
 
-<div id="body">
-<%= render :partial=>'page' %>
-</div>
+
+        <%= render :partial=>'page' %>
+
