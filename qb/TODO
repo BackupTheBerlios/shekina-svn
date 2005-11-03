@@ -1,9 +1,15 @@
 
-- tests tests tests
-- find and replace all FIXMEs
-- fix css view for wiki page (make em more central)
-- fix css view for edit page (make em stay in line)
-- add search box
+(+ priority )
+- need tests for version_controller
+- need tests for home_controller
+- find and delete all FIXMEs
 - use a partial view for latest news (i.e "read more")
-- add tagging
+- fix home/index.rhtml (remove inner div for newsitems)
+- fix css view for wiki/show page (make em more central)
+- fix css view for wiki/edit page (make em stay in line)
+- add search box top-right
+- add authentication (before wiki/:edit :authenticate )
+- add tagging (we need it for the main page, should find only paged tagged "news"
 - fix routes 
+
+(- priority )
