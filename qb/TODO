@@ -1,20 +1,25 @@
 
-(+ priority )
+(top priority )
 
 - need tests for version_controller
 - need tests for home_controller
 - need tests for model, maybe
 - find and delete all FIXMEs
 - use a partial view for latest news (i.e "read more")
-- fix home/index.rhtml (remove inner div newscontent)
++ fix home/index.rhtml (remove inner div newscontent)
 - fix css for home (replace -moz-border-radius with images)
-- fix css view for wiki/show page (make em more central)
-- fix css view for wiki/edit page (make em stay in line)
-- add search box top-right
++ fix css view for wiki/show page (make em more central)
++ fix css view for wiki/edit page (make em stay in line)
++ add search box top-right
+- add feed/validate love-ruby buttons  on the main page
 - investigate if we can have nested layouts
-- add authentication (before wiki/:edit :authenticate )
-- add tagging (we need it for the main page, should find only paged tagged "news"
++ a:dd authentication (before wiki/:edit :authenticate ) [done, but still should handle cookies]
+- add tagging (we need it for the main page, should find only pages tagged "news"
 - fix routes 
 - add caching 
++ remove AnonymousCoward ? [AnonimoRubyista è ok]
+- handle big images in the home (now they mess up the layout on low resolution
+- cleanup useless CSS stuff 
 
-(- priority )
+
+(least priority )

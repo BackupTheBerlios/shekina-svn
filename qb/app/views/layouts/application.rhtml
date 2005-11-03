@@ -10,15 +10,6 @@
 
   <%= auto_discovery_link_tag(:rss, feed_url) %>
 
-  <style type="text/css">
-    h1#pageName, .newWikiWord a, a.existingWikiWord, .newWikiWord a:hover, #TextileHelp h3 { 
-      color: #393; 
-    }
-
-    #Container, #Content {
-      width: <%= @content_width || "600" %>px;
-    }
-  </style>
 
   <%= stylesheet_link_tag 'instiki' %>
   <%= content_tag "style", @style_additions, :type => "text/css" %>
@@ -26,9 +17,6 @@
 
 <body>
       <h1 id="pageName"><%= page_heading %></h1>
-      <% if @tagline %>
-        <h3 id="tagline"> <%=@tagline%> </h3>
-      <% end %>
       <% unless @home %>
       <form class="navigation" id="navigationForm">
         <%= link_to_unless(@page && @page.title == "Home Page", "Home Page", home_url)  { content_tag('b', "Home Page", 'class' => 'navOn') } %> |

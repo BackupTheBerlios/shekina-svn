@@ -1,7 +1,8 @@
 class VersionsController < ApplicationController
   cache_sweeper :page_sweeper, :only => [ :create ]
 
-  before_filter :find_book
+  before_filter :authorize, :only=>[:new]
+
 
   def show
     @page    = Page.find_by_title(params[:page_title])
@@ -14,19 +15,26 @@ class VersionsController < ApplicationController
       @version = @page.find_or_build_version(params[:version_number])
     #end
     
-    @author_name = cookies[:author_name] || "Anonymous Coward"
   end
 
   def create
     #Book.transactiddon do
       @page   = Page.find_or_create(params[:page])
       version = @page.versions.build(params[:version])
-      version.author = Author.find_or_create(params[:author_name], request.remote_ip)
+      version.author = Author.find_or_create(cookies[:author_name], request.remote_ip)
       version.save
     #end
 
     cookies[:author_name] = { :value => params[:author_name], :expires => 20.years.from_now }
 
     redirect_to page_url(:page_title => @page)
+  end
+ private
+  def authorize
+    if not @session['authenticated']
+      flash["page_title"]    = @params[:page_title]
+      flash["version_number"]= @params[:version_number]
+      redirect_to(:controller =>'login') 
+    end
   end
 end

@@ -1,27 +1,42 @@
 
 
+<h3 id="tagline">La comunità italiana dedicata a ruby </h3>
+
 <div id="newsbar">
   <% for page in latest_news() %>
     <div id="newsitem">
-      <h3 ><%= page.title %> </h3>
+      <h3 ><%= wiki_link page.title %> </h3>
       <!-- has <p> already -->
-      
-      <div id="newscontent">
-        <%= markup(page.current_version.body) %> 
-      </div>
+        <%= markup(page.current_version.body) rescue nil%> 
     </div>
   <% end %>
 </div>
 
 <div id="sidebar">
-  
+  <div>
+    <%=wiki_link "Wiki" %> | 
+    <%= link_to "RSS", feed_url %> | 
+    Cerca 
+    <form action="http://www.google.com/search">
+      <input type="text" name="q" id="query" value="Cerca nel wiki" size="24" />
+      <input type="hidden" name="domains" value="www.ruby-it.org" />
+      <input type="hidden" name="sitesearch" value="www.ruby-it.org" />
+    </form>
+    
+  </div>
+  <div id="sideitem">
+    <h3> Ruby </h3>
+      <p> un linguaggio di programmazione dinamico, potente eppure semplice,
+          Leggi <%= wiki_link "perché ci piace ruby" %>
+      </p>
+  </div>
   <div id="sideitem">
     <h3>Noi</h3>
     <p>Il gruppo nasce per
       <ul>
-        <li> Aiutare la diffusione del linguaggio di programmazione Ruby in Italia</li>
+        <li> Aiutare la diffusione di ruby in Italia</li>
         <li> Sostenere i progetti sviluppati in tale linguaggio</li>
-        <li> Riunire gli utenti in lingua italiana di Ruby</li>
+        <li> Riunire gli utenti di lingua italiana</li>
       </ul>
     </p>
   </div>
@@ -43,6 +58,12 @@
         <% end %>
       </ul>
     <p>
+  </div>
+  <div id="sideitem">
+    <p><em>Si ringrazia <a href="http://www.unbit.it">UnBit.it</a> per l'hosting</em></p>
+  </div>
+  <div id="sideitem">
+   <h3 tutti i bottoncini </h3>
   </div>
 </div>
 

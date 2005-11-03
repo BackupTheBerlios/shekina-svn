@@ -11,8 +11,9 @@ class HomeControllerTest < Test::Unit::TestCase
     @response   = ActionController::TestResponse.new
   end
 
-  # Replace this with your real tests.
+  #FIXME: should test the presence of some news
   def test_truth
-    assert true
+    get 'index'
+    assert_tag 
   end
 end

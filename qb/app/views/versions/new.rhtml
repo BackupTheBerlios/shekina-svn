@@ -1,10 +1,9 @@
 <% 
   @title = "Creating '#{@page.title}'"
-  @content_width = 720
   @hide_navigation = true
 %>
 
-<div id="MarkupHelp" style="float: right; width: 250px; margin-top: 5px">
+<div id="markuphelp" >
   <%= render :partial => "textile_help" %>
 
   <h3>Wiki words</h3>
@@ -19,15 +18,19 @@
   </p>
 </div>
 
-<%= form_tag({ :action => "create" }, :id => 'editForm') %>
-  <%= hidden_field :page, :title %>
+<div id="editbox">
+  <%= form_tag({ :action => "create" }, :id => 'editForm') %>
+    <%= hidden_field :page, :title %>
 
-  <p><%= text_area :version, :body, :style => "width: 450px; height: 500px" %></p>
+    <p><%= text_area :version, :body  %></p>
 
-  <p>
-    <%= submit_tag "Save" %> as
-    <%= text_field_tag :author_name, @author_name, 
+    <p>
+      <%= submit_tag "Save" %> 
+<% if false %>
+      <%= text_field_tag :author_name, @author_name, 
           :onclick => "this.value == 'AnonymousCoward' ? this.value = '' : true" %>
-    or <%= link_to("Cancel", page_url(:page_title => @page)) %>
-  </p>
+<% end %>
+      or <%= link_to("Cancel", page_url(:page_title => @page)) %>
+    </p>
+</div>
 </form>
