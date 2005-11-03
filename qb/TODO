@@ -6,7 +6,7 @@
 - need tests for model, maybe
 - find and delete all FIXMEs
 - use a partial view for latest news (i.e "read more")
-- fix home/index.rhtml (remove inner div for newsitems)
+- fix home/index.rhtml (remove inner div newscontent)
 - fix css for home (replace -moz-border-radius with images)
 - fix css view for wiki/show page (make em more central)
 - fix css view for wiki/edit page (make em stay in line)
