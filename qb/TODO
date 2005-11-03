@@ -1,0 +1,9 @@
+
+- tests tests tests
+- find and replace all FIXMEs
+- fix css view for wiki page (make em more central)
+- fix css view for edit page (make em stay in line)
+- add search box
+- use a partial view for latest news (i.e "read more")
+- add tagging
+- fix routes 

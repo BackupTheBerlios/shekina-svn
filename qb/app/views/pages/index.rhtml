@@ -1,0 +1,9 @@
+<% @title = "All Pages" %>
+
+<div id="allPages">
+  <ul>
+    <% for page in all_pages %>
+      <li><%= link_to(page.title, page_url(:page_title => page)) %></li>
+    <% end %>
+  </ul>
+</div>

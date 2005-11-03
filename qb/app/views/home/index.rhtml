@@ -1,0 +1,49 @@
+
+
+<div id="newsbar">
+  <% for page in latest_news() %>
+    <div id="newsitem">
+      <h3 ><%= page.title %> </h3>
+      <!-- has <p> already -->
+      
+      <div id="newscontent">
+        <%= markup(page.current_version.body) %> 
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div id="sidebar">
+  
+  <div id="sideitem">
+    <h3>Noi</h3>
+    <p>Il gruppo nasce per
+      <ul>
+        <li> Aiutare la diffusione del linguaggio di programmazione Ruby in Italia</li>
+        <li> Sostenere i progetti sviluppati in tale linguaggio</li>
+        <li> Riunire gli utenti in lingua italiana di Ruby</li>
+      </ul>
+    </p>
+  </div>
+  <hr/> 
+  <div id="sideitem">
+    <h3>Partecipa</h3>
+    <p> Fai un giro nel <%= wiki_link("Wiki") %>,
+        iscriviti alla <a href="http://lists.ruby-it.org/mailman/listinfo/ml">mailing list</a>
+        o vieni a parlare su <%= wiki_link("irc") %>
+    </p>
+  </div>
+  <hr/>
+  <div id="sideitem">
+    <h3>Percorsi nel Wiki</h3>
+    <p>
+      <ul>
+        <% for page in %w{ Documentazione Links Progetti RubyQuiz RubyHaiku CookBook Persone} %>
+          <li> <%= wiki_link page %>  </li>
+        <% end %>
+      </ul>
+    <p>
+  </div>
+</div>
+
+       
