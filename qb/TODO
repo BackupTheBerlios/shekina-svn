@@ -15,5 +15,6 @@
 - add authentication (before wiki/:edit :authenticate )
 - add tagging (we need it for the main page, should find only paged tagged "news"
 - fix routes 
+- add caching 
 
 (- priority )
