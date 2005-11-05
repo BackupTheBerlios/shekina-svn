@@ -21,11 +21,12 @@ class VersionsController < ApplicationController
     #Book.transactiddon do
       @page   = Page.find_or_create(params[:page])
       version = @page.versions.build(params[:version])
-      version.author = Author.find_or_create(cookies[:author_name], request.remote_ip)
+      author  = Author.find_or_create(cookies[:author_name], request.remote_ip)
+      version.author =  author
       version.save
     #end
 
-    cookies[:author_name] = { :value => params[:author_name], :expires => 20.years.from_now }
+#    cookies[:author_name] = { :value => params[:author_name], :expires => 20.years.from_now }
 
     redirect_to page_url(:page_title => @page)
   end

@@ -3,9 +3,8 @@ class Version < ActiveRecord::Base
   
   belongs_to :page
   belongs_to :author
-
   after_save  :page_was_updated
-
+  validates_presence_of :author,:body, :page
   def page_links
     @page_links ||= body.scan(PAGE_LINK).flatten.reject { |link| link.empty? }
   end

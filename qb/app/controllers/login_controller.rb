@@ -5,7 +5,7 @@ class LoginController < ApplicationController
     @question, answer = question()
     flash["answer"]= answer
     @author_name = cookies[:author_name] || "AnonimoRubyista"
-    if @params["answer"] == flash["answer"] and  @params["name"]
+    if answer_ok?  
       @session["authenticated"]=true
       cookies[:author_name] = { :value => @params["name"], :expires =>(Time.now + 1.month) }
       redirect_to :controller     => 'versions', 
@@ -13,6 +13,10 @@ class LoginController < ApplicationController
                   :page_title     => flash['page_title'],
                   :version_number => flash["version_number"]
     end
+  end
+ private  
+  def answer_ok?
+    @params["answer"] == flash["answer"] and  @params["name"]
   end
 
   def question

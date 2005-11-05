@@ -17,12 +17,7 @@
     <%=wiki_link "Wiki" %> | 
     <%= link_to "RSS", feed_url %> | 
     Cerca 
-    <form action="http://www.google.com/search">
-      <input type="text" name="q" id="query" value="Cerca nel wiki" size="24" />
-      <input type="hidden" name="domains" value="www.ruby-it.org" />
-      <input type="hidden" name="sitesearch" value="www.ruby-it.org" />
-    </form>
-    
+    <%= search_box_tag %>
   </div>
   <div id="sideitem">
     <h3> Ruby </h3>
@@ -63,7 +58,7 @@
     <p><em>Si ringrazia <a href="http://www.unbit.it">UnBit.it</a> per l'hosting</em></p>
   </div>
   <div id="sideitem">
-   <h3 tutti i bottoncini </h3>
+   <h3> tutti i bottoncini </h3>
   </div>
 </div>
 

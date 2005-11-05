@@ -1,6 +1,18 @@
 require 'html_diff/lib/html_diff'
 
 module ApplicationHelper
+  def search_box_tag
+    string="Cerca nel Wiki"
+     %{
+    <form action="http://www.google.com/search">
+      <input type="text" name="q" id="query" value="%s" size="24" 
+         onclick="this.value == '%s' ? this.value = '' : true"
+      />
+      <input type="hidden" name="domains" value="www.ruby-it.org" />
+      <input type="hidden" name="sitesearch" value="www.ruby-it.org" />
+    </form>
+     }% [string, string]
+  end
   def latest_news
     Page.find( :all, :order=>"updated_at DESC", :limit=> 5)
   end
