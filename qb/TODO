@@ -19,9 +19,12 @@
 - change question in something meaningful
 - add tagging (we need it for the main page, should find only pages tagged "news"
 - fix routes 
-- add caching 
+- add caching for rendered pages.. 
+- remove caching for titles.. or not? see I2 rev 2859 commit log)
 + remove AnonymousCoward ? [AnonimoRubyista è ok]
 - handle big images in the home (now they mess up the layout on low resolution
+- merge modification for version/new.rhtml (onfocus)
+- check merging of helper/application_helper.rb from I2/alexey branch (rev 2858)
 - cleanup useless CSS stuff 
 
 
