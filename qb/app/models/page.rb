@@ -1,14 +1,17 @@
 class Page < ActiveRecord::Base
 
-  has_many :versions, :order => "created_at", :dependent => true
-  has_one  :current_version, :class_name => "Version", :order => "created_at DESC"
+  has_many :revisions, :order => "created_at", :dependent => true
+  has_one  :current_revision, :class_name => "Revision", :order => "created_at DESC"
   
-  def find_or_build_version(number = nil)
-    number ? versions[number.to_i - 1] : versions.build(:body => body)
+  #validates_presence_of :revisions
+  #validates_associated :current_revision
+
+  def find_or_build_revision(number = nil)
+    number ? revisions[number.to_i - 1] : revisions.build(:body => body)
   end
   
   def body
-    current_version ? current_version.body : nil
+    current_revision ? current_revision.body : nil
   end
   
   def to_param

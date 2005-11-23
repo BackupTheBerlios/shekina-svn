@@ -10,9 +10,9 @@ ActionController::Routing::Routes.draw do |map|
 =end
 
   map.connect  '', :controller => 'home', :action=>  'index'
-  map.rollback 'pages/:page_title/versions/new/:version_number', :controller => "versions", :action => "new", :requirements => { :version_number => /^\d+$/ }
-  map.new      'pages/:page_title/versions/new', :controller => "versions", :action => "new"
-  map.version  'pages/:page_title/versions/:version_number', :controller => "versions", :action => "show", :requirements => { :version_number => /^\d+$/ }
+  map.rollback 'pages/:page_title/revisions/new/:revision_number', :controller => "revisions", :action => "new", :requirements => { :revision_number => /^\d+$/ }
+  map.new      'pages/:page_title/revisions/new', :controller => "revisions", :action => "new"
+  map.revision  'pages/:page_title/revisions/:revision_number', :controller => "revisions", :action => "show", :requirements => { :revision_number => /^\d+$/ }
   map.recent   'recent', :controller => "pages", :action => "recent"
   map.pages    'pages', :controller => "pages", :action => "index"
   map.home     'home', :controller => "home" 

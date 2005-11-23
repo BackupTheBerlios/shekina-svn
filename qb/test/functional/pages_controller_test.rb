@@ -5,7 +5,7 @@ require 'pp'
 class PagesController; def rescue_action(e) raise e end; end
 
 class PagesControllerTest < Test::Unit::TestCase
-  fixtures :pages, :versions, :authors
+  fixtures :pages, :revisions, :authors
 
   def setup
     @controller = PagesController.new

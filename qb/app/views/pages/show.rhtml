@@ -1,21 +1,21 @@
 <% @title = @page.title %>
 
-<%= markup(@page.current_version.body) %>
+<%= markup(@page.current_revision.body) %>
 
 <div class="byline">
-  <%= @page.versions.size == 1 ? "Created" : "Updated" %>
-  on <%= @page.current_version.created_at.to_s(:long) %> 
-  by <%= link_to_author(@page.current_version.author) %>
+  <%= @page.revisions.size == 1 ? "Created" : "Updated" %>
+  on <%= @page.current_revision.created_at.to_s(:long) %> 
+  by <%= link_to_author(@page.current_revision.author) %>
 </div>
 
 <div class="navigation">
-  <%= link_to("Edit", :controller => "versions", :action => "new") %>
+  <%= link_to("Edit", :controller => "revisions", :action => "new") %>
 
-  <% if @page.versions.length > 1 %>
+  <% if @page.revisions.length > 1 %>
     | 
     <%= link_to("Back in time", 
-          version_url(:page_title => @page.title, :version_number => @page.versions.size - 1),
+          revision_url(:page_title => @page.title, :revision_number => @page.revisions.size - 1),
           :class => 'navlink') %>
-    <small>(<%= @page.versions.size - 1 %> older versions)</small>
+    <small>(<%= @page.revisions.size - 1 %> older revisions)</small>
   <% end %>
 </div>

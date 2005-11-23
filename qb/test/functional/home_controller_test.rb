@@ -7,7 +7,7 @@ class HomeController; def rescue_action(e) raise e end; end
 class HomeControllerTest < Test::Unit::TestCase
   # fixtures needed to hve news in the main page
   
-  fixtures :authors, :pages, :versions
+  fixtures :authors, :pages, :revisions
   def setup
     @controller = HomeController.new
     @request    = ActionController::TestRequest.new
@@ -17,12 +17,12 @@ class HomeControllerTest < Test::Unit::TestCase
   #FIXME: should test the presence of some news
   def test_news
     get 'index'
-    assert_tag :tag=>'div', :attributes=>{:id=>'newsitem'}
+    assert_tag :tag=>'div', :attributes=>{:class=>'newsitem'}
     assert_tag :tag=>'div', :attributes=>{:id=>'newsbar'}
   end
   def test_side
     get 'index'
-    assert_tag :tag=>'div', :attributes=>{:id=>'sideitem'}
+    assert_tag :tag=>'div', :attributes=>{:class=>'sideitem'}
     assert_tag :tag=>'div', :attributes=>{:id=>'sidebar'}
   end
   def test_little_stuff

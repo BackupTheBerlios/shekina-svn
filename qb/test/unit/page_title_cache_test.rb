@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class PageTitleCacheTest < Test::Unit::TestCase
-  fixtures :pages, :versions
+  fixtures :pages, :revisions
 
   def setup
   #  PageTitleCache.instance

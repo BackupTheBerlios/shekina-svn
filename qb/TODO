@@ -4,7 +4,7 @@
 + need tests for version_controller
 + need tests for login controller
 + need tests for home_controller
-- need MORE tests for version controller, and to find a workaround for cookies
++ need MORE tests for version controller, and to find a workaround for cookies
 - need tests for model, maybe
 - find and delete all FIXMEs
 - use a partial view for latest news (i.e "read more")
@@ -14,7 +14,7 @@
 + fix css view for wiki/edit page (make em stay in line)
 + add search box top-right
 - add feed/validate love-ruby buttons  on the main page
-- investigate if we can have nested layouts
++ investigate if we can have nested layouts
 + add authentication (before wiki/:edit :authenticate ) [done, but still should handle cookies]
 - change question in something meaningful
 - add tagging (we need it for the main page, should find only pages tagged "news"

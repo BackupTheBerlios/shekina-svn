@@ -7,14 +7,14 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
     xml.language "it-it"
     xml.ttl "40"
 
-    Version.find(:all, :limit => 25, :include => :page).each do |version|
+    Revision.find(:all, :limit => 25, :include => :page).each do |rev|
       xml.item do
-        xml.title(version.page.title)
-        xml.description(markup(version.body)) 
-        xml.pubDate(version.created_at)
-        xml.guid(page_url(:page_title => version.page) + "##{version.id}")
-        xml.link(page_url(:page_title => version.page) + "##{version.id}")
-        # xml.tag!("dc:creator", version.author_name)
+        xml.title(rev.page.title)
+        xml.description(markup(rev.body)) 
+        xml.pubDate(rev.created_at)
+        xml.guid(page_url(:page_title => rev.page) + "##{rev.id}")
+        xml.link(page_url(:page_title => rev.page) + "##{rev.id}")
+        # xml.tag!("dc:creator", rev.author_name)
       end
     end
   end

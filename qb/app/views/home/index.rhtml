@@ -7,7 +7,7 @@
     <div class="newsitem">
       <h3 ><%= wiki_link page.title %> </h3>
       <!-- has <p> already -->
-        <%= markup(page.current_version.body) rescue nil%> 
+        <%= markup(page.current_revision.body) rescue nil%> 
     </div>
   <% end %>
 </div>

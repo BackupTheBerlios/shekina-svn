@@ -1,5 +1,5 @@
 class Author < ActiveRecord::Base
-  has_many :versions
+  has_many :revisions
   validates_presence_of :name, :ip
   def to_param
     name

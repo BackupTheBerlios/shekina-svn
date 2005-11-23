@@ -22,14 +22,10 @@
   <%= form_tag({ :action => "create" }, :id => 'editForm') %>
     <%= hidden_field :page, :title %>
 
-    <p><%= text_area :version, :body  %></p>
+    <p><%= text_area :revision, :body  %></p>
 
     <p>
       <%= submit_tag "Save" %> 
-<% if false %>
-      <%= text_field_tag :author_name, @author_name, 
-          :onclick => "this.value == 'AnonymousCoward' ? this.value = '' : true" %>
-<% end %>
       or <%= link_to("Cancel", page_url(:page_title => @page)) %>
     </p>
 </div>

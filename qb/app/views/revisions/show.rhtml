@@ -1,0 +1,35 @@
+<% @title = "#{@page.title} (revision ##{@revision.number})" %>
+
+<div id="contentWithoutChanges">
+  <%= markup(@revision.body) %>
+</div>
+
+<div id="contentWithChanges">
+  <%= markup(@revision.body) %>
+</div>
+
+<div class="byline">
+  Created on <%= @revision.created_at.to_s(:long) %>
+  by <%= link_to_author(@revision.author) %>
+</div>
+
+<div class="navigation">
+  <%= link_to "Rollback", rollback_url(:page_title => @page, :revision_number => @revision.number) %>
+
+  <% if @revision.newer_revisions? && @revision.newer_revisions.size > 1 %>
+    | <%= nlink_to "Forward in time", 
+            revision_url(:page_title => @page.title, :revision_number => @revision.number + 1) %>
+    <small>(<%= @revision.newer_revisions.size %> more)</small>
+
+    | <%= nlink_to "See current", page_url(:page_title => @page) %>
+  <% elsif @revision.newer_revisions? %>
+    | <%= nlink_to "Forward in time", page_url(:page_title => @page) %>
+    <small>(<%= @revision.newer_revisions.size %> more)</small>
+  <% end %>
+
+  <% if @revision.older_revisions? %>
+    | <%= nlink_to "Back in time", 
+          revision_url(:page_title => @page, :revision_number => @revision.number - 1) %>
+    <small>(<%= @revision.older_revisions.size %> more)</small>
+  <% end %>
+</div>

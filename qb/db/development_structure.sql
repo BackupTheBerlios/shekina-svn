@@ -13,11 +13,7 @@ CREATE TABLE `pages` (
   PRIMARY KEY  (`id`)
 ) TYPE=InnoDB;
 
-CREATE TABLE `schema_info` (
-  `version` int(11) default NULL
-) TYPE=MyISAM;
-
-CREATE TABLE `versions` (
+CREATE TABLE `revisions` (
   `id` int(11) NOT NULL auto_increment,
   `page_id` int(11) default NULL,
   `author_id` int(11) default NULL,
@@ -25,5 +21,9 @@ CREATE TABLE `versions` (
   `body` text,
   PRIMARY KEY  (`id`)
 ) TYPE=InnoDB;
+
+CREATE TABLE `schema_info` (
+  `version` int(11) default NULL
+) TYPE=MyISAM;
 
 INSERT INTO schema_info (version) VALUES (8)

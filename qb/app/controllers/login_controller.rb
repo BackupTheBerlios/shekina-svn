@@ -7,11 +7,13 @@ class LoginController < ApplicationController
     @author_name = cookies[:author_name] || "AnonimoRubyista"
     if answer_ok?  
       @session["authenticated"]=true
-      cookies[:author_name] = { :value => @params["name"], :expires =>(Time.now + 1.month) }
-      redirect_to :controller     => 'versions', 
+      @session["author_name"] = cookies["author_name"] = {
+         :value => @params["name"], :expires =>(Time.now + 1.month) 
+      }
+      redirect_to :controller     => 'revisions', 
                   :action         => 'new',
                   :page_title     => flash['page_title'],
-                  :version_number => flash["version_number"]
+                  :revision_number => flash["revision_number"]
     end
   end
  private  

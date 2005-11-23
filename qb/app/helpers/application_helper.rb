@@ -68,7 +68,7 @@ module ApplicationHelper
 
   private
     def linkize(body, existing_titles)
-      body.gsub(Version::PAGE_LINK) do
+      body.gsub(Revision::PAGE_LINK) do
         page = title = $1
         title = $2 unless $2.empty?
         if existing_titles.include?(page)
