@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'pages_controller'
-
+require 'pp'
 # Re-raise errors caught by the controller.
 class PagesController; def rescue_action(e) raise e end; end
 
@@ -32,8 +32,9 @@ class PagesControllerTest < Test::Unit::TestCase
     assert_tag :tag=>"title", :content=>"Recently Revised"
   end
 
-  def xtest_feed
+  def test_feed
     get 'feed'
+    print @response.body
     assert_tag :tag=>"rss", :child=>{:tag=>"channel"}
   end
 

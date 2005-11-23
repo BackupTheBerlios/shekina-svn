@@ -6,7 +6,7 @@
   
 }
 
-#newsitem {
+div.newsitem {
   background-color:  #ffffef;
   border-style: solid;
   border-color: lightgray;
@@ -18,7 +18,7 @@
   #text-indent: 5%;
 }
 
-#newsitem h3 {
+div.newsitem h3 {
   #padding-right: 19%;
   #text-align: right;
   text-indent: 10%;
@@ -30,13 +30,13 @@
   padding-left 5%;
 }
 
-#sideitem {
+div.sideitem {
   dbackground-color: #ffeeff;
   padding: 3%;
 ackground-color: mistyrose;
 }
 
-#sideitem h3{
+div.sideitem h3{
   color: crimson;
   text-indent: 5%;
 }

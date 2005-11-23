@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   cache_sweeper :page_sweeper
   caches_page   :index, :recent
 
-  before_filter :find_book
   
   def index
   end

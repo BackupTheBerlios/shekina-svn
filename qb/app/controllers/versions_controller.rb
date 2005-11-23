@@ -10,21 +10,21 @@ class VersionsController < ApplicationController
   end
 
   def new
-    #Book.transaction do
+    Page.transaction do
       @page    = Page.find_or_build(params[:page_title])
       @version = @page.find_or_build_version(params[:version_number])
-    #end
+    end
     
   end
 
   def create
-    #Book.transactiddon do
+    Page.transaction do
       @page   = Page.find_or_create(params[:page])
       version = @page.versions.build(params[:version])
       author  = Author.find_or_create(cookies[:author_name], request.remote_ip)
       version.author =  author
       version.save
-    #end
+    end
 
 #    cookies[:author_name] = { :value => params[:author_name], :expires => 20.years.from_now }
 
