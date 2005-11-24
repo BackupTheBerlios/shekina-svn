@@ -3,8 +3,8 @@ class Revision < ActiveRecord::Base
   
   belongs_to :page
   belongs_to :author
- # after_save  :page_was_updated
-  validates_presence_of :author,:body
+  after_save  :page_was_updated
+  validates_presence_of :author,:body, :page
   validates_associated :author
 
   def page_links
