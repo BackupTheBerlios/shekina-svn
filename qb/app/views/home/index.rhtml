@@ -15,7 +15,7 @@
 <div id="sidebar">
   <div>
     <%=wiki_link "Wiki" %> | 
-    <%= link_to "RSS", feed_url %> | 
+    <%= link_to "RSS", feed_url , :class=>'existingWikiWord'%> | 
     Cerca 
     <%= search_box_tag %>
   </div>
@@ -27,7 +27,7 @@
   </div>
   <div class="sideitem">
     <h3>Noi</h3>
-    <p>Il gruppo nasce per</p>
+    <p><%=wiki_link "Il gruppo" %> nasce per</p>
       <ul>
         <li> Aiutare la diffusione di ruby in Italia</li>
         <li> Sostenere i progetti sviluppati in tale linguaggio</li>
@@ -39,7 +39,7 @@
   <div class="sideitem">
     <h3>Partecipa</h3>
     <p> Fai un giro nel <%= wiki_link("Wiki") %>,
-        iscriviti alla <a href="http://lists.ruby-it.org/mailman/listinfo/ml">mailing list</a>
+        iscriviti alla <a class="existingWikiWord" href="http://lists.ruby-it.org/mailman/listinfo/ml">mailing list</a>
         o vieni a parlare su <%= wiki_link("irc") %>
     </p>
   </div>

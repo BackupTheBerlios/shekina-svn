@@ -18,7 +18,7 @@
 + add authentication (before wiki/:edit :authenticate ) [done, but still should handle cookies]
 - change question in something meaningful
 - add tagging (we need it for the main page, should find only pages tagged "news"
-- fix routes 
++ fix routes 
 - add caching for rendered pages.. 
 - remove caching for titles.. or not? see I2 rev 2859 commit log)
 + remove AnonymousCoward ? [AnonimoRubyista è ok]
