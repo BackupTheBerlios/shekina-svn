@@ -125,10 +125,11 @@ blockquote {
   font-style: italic;  
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+code, pre {
+  background: #ebf2ff;
+  font-size: 1.1em;
+  margin: 1em 0;
+  font-family: monospace;
   overflow: auto;
 }
 

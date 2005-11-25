@@ -47,7 +47,7 @@
   <div class="sideitem">
     <h3>Percorsi nel Wiki</h3>
     <ul>
-      <% for page in %w{ Documentazione Links Progetti RubyQuiz RubyHaiku CookBook Persone} %>
+      <% for page in [ "Documentazione", "Links", "Progetti", "Ruby Quiz", "Ruby Haiku", "Cook Book", "Persone"] %>
         <li> <%= wiki_link page %>  </li>
       <% end %>
     </ul>
