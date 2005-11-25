@@ -1,3 +1,16 @@
+# this saves from rescueing everywhere
+class << nil
+  def body
+    ""
+  end
+  def created_at
+    Time.now
+  end
+  def author
+    Author.find_by_name "Ruby Fan"
+  end
+end
+
 class Page < ActiveRecord::Base
 
   has_many :revisions, :order => "created_at", :dependent => true

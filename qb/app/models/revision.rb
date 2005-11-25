@@ -38,7 +38,7 @@ class Revision < ActiveRecord::Base
   def number
     revision_index + 1
   end
-
+  
   protected
     def revision_index
       revisions.index(self)
