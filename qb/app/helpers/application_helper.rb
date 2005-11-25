@@ -43,7 +43,7 @@ module ApplicationHelper
   end
 
   def markup(body, existing_page_titles = Page.existing_page_titles)
-    textilize(linkize(auto_link(body), existing_page_titles))
+    my_textilize(linkize(auto_link(body), existing_page_titles))
   end
 
   def differences(original, new)
@@ -77,5 +77,9 @@ module ApplicationHelper
           content_tag("span", title + link_to("?", page_url(:page_title => page)), :class => "newWikiWord")
         end
       end
+    end
+    def my_textilize(body)
+      rc=RedCloth.new(body)
+      rc.to_html
     end
 end
