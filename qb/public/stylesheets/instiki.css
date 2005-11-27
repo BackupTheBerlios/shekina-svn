@@ -84,12 +84,14 @@ h1#pageName {
   line-height: 28px;
 }
 
+
 h1#pageName small {
-  color: #444;
-  line-height: 10px;
-  font-size: 10px;
-  padding: 0;
+  color: crimson;
+  line-height: 1em;
+  font-size: 0.6em;
+  margin-left: 200px;
 }
+
 
 
 #editbox {

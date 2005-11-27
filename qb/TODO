@@ -7,9 +7,9 @@
 + need MORE tests for version controller, and to find a workaround for cookies
 - need tests for model, maybe
 - find and delete all FIXMEs
-- use a partial view for latest news (i.e "read more")
+/ use a partial view for latest news (i.e "read more")
 + fix home/index.rhtml (remove inner div newscontent)
-- fix css for home (replace -moz-border-radius with images)
+/ fix css for home (replace -moz-border-radius with images)
 + fix css view for wiki/show page (make em more central)
 + fix css view for wiki/edit page (make em stay in line)
 + add search box top-right
@@ -20,11 +20,11 @@
 - add tagging (we need it for the main page, should find only pages tagged "news"
 + fix routes 
 - add caching for rendered pages.. 
-- remove caching for titles.. or not? see I2 rev 2859 commit log)
+/ remove caching for titles.. or not? see I2 rev 2859 commit log)
 + remove AnonymousCoward ? [AnonimoRubyista è ok]
-- handle big images in the home (now they mess up the layout on low resolution
+/ handle big images in the home (now they mess up the layout on low resolution
 - merge modification for version/new.rhtml (onfocus)
-- check merging of helper/application_helper.rb from I2/alexey branch (rev 2858)
++ check merging of helper/application_helper.rb from I2/alexey branch (rev 2858)
 - cleanup useless CSS stuff 
 
 

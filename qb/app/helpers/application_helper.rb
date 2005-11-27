@@ -21,29 +21,21 @@ module ApplicationHelper
   end
 
   def page_title
-    if @page && (@page.title == 'Home Page') && (%w( show published print ).include?(@controller.action_name))
+    if @controller.controller_name=="home"
       SITE_NAME
-    # FIXME: inutile
-    elsif @book
-      "#{@title} in #{@book.name}"
     else
-      @title
+      SITE_NAME+": #@title"
     end
   end
-  
   def page_heading
-    if @page && (@page.title == 'Home Page') && (%w( show published print ).include?(@controller.action_name))
-      SITE_NAME
-    #FIXME: inutile, e codice duplicato qua sopra
-    elsif @book
-      content_tag("small", @book.name) + tag("br") + @title
+    if @controller.controller_name=="home"
+      "Ruby-it"
     else
-      @title
+      content_tag("small", SITE_NAME) + tag("br") + @title
     end
   end
-
   def markup(body, existing_page_titles = Page.existing_page_titles)
-    my_textilize(linkize(auto_link(body), existing_page_titles))
+    RedCloth.new(linkize(auto_link(body), existing_page_titles)).to_html
   end
 
   def differences(original, new)
@@ -54,10 +46,6 @@ module ApplicationHelper
     link_to(author.name, page_url(:page_title => author)) + " (#{author.ip})"
   end
    
-  def all_pages
-    Page.find :all
-  end
-
   def recently_changed_pages
     Page.find(:all, :order => "updated_at DESC") 
   end
@@ -77,9 +65,5 @@ module ApplicationHelper
           content_tag("span", title + link_to("?", page_url(:page_title => page)), :class => "newWikiWord")
         end
       end
-    end
-    def my_textilize(body)
-      rc=RedCloth.new(body)
-      rc.to_html
     end
 end

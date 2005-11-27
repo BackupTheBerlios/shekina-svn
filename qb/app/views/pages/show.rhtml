@@ -1,11 +1,11 @@
 <% @title = @page.title %>
 
-<%= markup(@page.current_revision.body) %>
+<%= markup(@page.body) %>
 
 <div class="byline">
   <%= @page.revisions.size == 1 ? "Created" : "Updated" %>
-  on <%= @page.current_revision.created_at.to_s(:long) %> 
-  by <%= link_to_author(@page.current_revision.author) %>
+  on <%= @page.created_at.to_s(:long) %> 
+  by <%= link_to_author(@page.author) %>
 </div>
 
 <div class="navigation">

@@ -2,7 +2,7 @@
 
 <div id="allPages">
   <ul>
-    <% for page in all_pages %>
+    <% for page in Page.find_all %>
       <li><%= link_to(page.title, page_url(:page_title => page)) %></li>
     <% end %>
   </ul>
