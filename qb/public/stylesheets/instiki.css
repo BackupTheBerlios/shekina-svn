@@ -46,10 +46,17 @@ div.sideitem h3{
   text-indent: 5%;
   #color: crimson;
 }
-input, textarea, select {
+input, select {
   border: 1px solid #8ab3d1;
   background: #f9f9f9;
 }
+textarea{
+  border: 1px solid #8ab3d1;
+  background: #f9f9f9;
+  width: 100%;
+}
+
+
 body { 
   padding: 5%;
   background-color: #fdfdfd; 
@@ -133,6 +140,7 @@ code, pre {
   margin: 1em 0;
   font-family: monospace;
   overflow: auto;
+  width: 100%;
 }
 
 ol.setup {

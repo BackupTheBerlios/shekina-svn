@@ -31,7 +31,7 @@ module ApplicationHelper
     if @controller.controller_name=="home"
       "Ruby-it"
     else
-      content_tag("small", SITE_NAME) + tag("br") + @title
+      content_tag("small", SITE_NAME) + tag("br") + @title.to_s
     end
   end
   def markup(body, existing_page_titles = Page.existing_page_titles)
