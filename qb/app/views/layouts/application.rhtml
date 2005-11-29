@@ -1,6 +1,6 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,12 +19,12 @@
       <!-- <%= Config.constants %> -->
       <h1 id="pageName"><%= page_heading %></h1>
       <% unless @home %>
-      <form class="navigation" id="navigationForm">
+      <div class="navigation" id="navigationForm">
         <%= link_to_unless(@page && @page.title == "Home Page", "Home Page", home_url)  { content_tag('b', "Home Page", 'class' => 'navOn') } %> |
         <%= link_to_unless(@title == "All Pages", "All Pages", pages_url) { content_tag('b', "All Pages", 'class' => 'navOn') } %> |
         <%= link_to_unless(@title == "Recently Revised", "Recently Revised", recent_url) { content_tag('b', "Recently Revised", 'class' => 'navOn') } %> |
         <%= link_to("Feed", feed_url) %>
-      </form>
+      </div>
       <% end %>
       <%= @content_for_layout %>
 

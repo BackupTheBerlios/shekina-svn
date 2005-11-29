@@ -5,11 +5,13 @@ module ApplicationHelper
     string="Cerca nel Wiki"
      %{
     <form action="http://www.google.com/search">
-      <input type="text" name="q" id="query" value="%s" size="24" 
-         onclick="this.value == '%s' ? this.value = '' : true"
-      />
-      <input type="hidden" name="domains" value="www.ruby-it.org" />
-      <input type="hidden" name="sitesearch" value="www.ruby-it.org" />
+      <div>
+        <input type="text" name="q" id="query" value="%s" size="24" 
+           onclick="this.value == '%s' ? this.value = '' : true"
+        />
+        <input type="hidden" name="domains" value="www.ruby-it.org" />
+        <input type="hidden" name="sitesearch" value="www.ruby-it.org" />
+      </div>
     </form>
      }% [string, string]
   end

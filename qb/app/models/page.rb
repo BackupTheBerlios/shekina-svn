@@ -31,6 +31,6 @@ class Page < ActiveRecord::Base
     find_by_title(title) || create(:title => title)
   end
   def self.existing_page_titles
-    find_by_sql("SELECT title FROM pages")
+    connection.select_values("SELECT title FROM pages")
   end
 end
