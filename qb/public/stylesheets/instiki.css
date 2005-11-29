@@ -9,42 +9,35 @@
 div.newsitem {
   background-color:  #ffffef;
   border-style: solid;
-  border-color: lightgray;
+  border-color: #D3D3D3;
   border-width: 1px;
   -moz-border-radius: 3%;
   margin-bottom: 5%;
   padding-left: 3%;
   padding-right: 2%;
-  #text-indent: 5%;
 }
 
 div.newsitem h3 {
-  #padding-right: 19%;
-  #text-align: right;
   text-indent: 10%;
 }
+
 
 #sidebar {
   float: left;
   width: 30%;
-  padding-left 5%;
 }
 
 div.sideitem {
-  dbackground-color: #ffeeff;
   padding: 3%;
-ackground-color: mistyrose;
 }
 
 div.sideitem h3{
-  color: crimson;
+  color: #DC143C;
   text-indent: 5%;
 }
 
 #tagline {
-  #font-style: italic;
   text-indent: 5%;
-  #color: crimson;
 }
 input, select {
   border: 1px solid #8ab3d1;
@@ -71,8 +64,7 @@ body, p, ol, ul, td {
 }
 
 a { color: #000; }
-a:visited { color: #666; }
-
+a:hover, a.existingWikiWord:hover { color: #666; }
 
 .newWikiWord { background-color: #eee; }
 .newWikiWord a:hover { background-color: white; }
@@ -90,7 +82,7 @@ h1#pageName {
 
 
 h1#pageName small {
-  color: crimson;
+  color: #DC143C;
   line-height: 1em;
   font-size: 0.6em;
   margin-left: 200px;
@@ -109,7 +101,6 @@ h1#pageName small {
 #markuphelp {
   float: right;
   width: 30%;
-  padding-leaft 5%;
 }
 
 #version_body {
