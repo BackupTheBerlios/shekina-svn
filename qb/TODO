@@ -5,6 +5,7 @@
 + need tests for login controller
 + need tests for home_controller
 + need MORE tests for version controller, and to find a workaround for cookies
+- should add tags as meta keywords 
 - need tests for model, maybe
 - find and delete all FIXMEs
 / use a partial view for latest news (i.e "read more")
