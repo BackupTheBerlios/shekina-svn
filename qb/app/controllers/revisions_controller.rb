@@ -25,8 +25,6 @@ class RevisionsController < ApplicationController
       revision.save
     end
 
-    #cookies[:author_name] = { :value => params[:author_name], :expires => 20.years.from_now }
-
     redirect_to page_url(:page_title => @page)
   end
  private

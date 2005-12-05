@@ -1,4 +1,4 @@
-xml << %(<?xml version="1.0" encoding="ISO-8859-1"?>\n)
+xml << %(<?xml version="1.0"?>\n)
 xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
   xml.channel do
     xml.title(SITE_NAME)
@@ -7,14 +7,16 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
     xml.language "it-it"
     xml.ttl "40"
 
-    Revision.find(:all, :limit => 25, :include => :page).each do |rev|
+    latest_news.each do |page|
       xml.item do
-        xml.title(rev.page.title)
-        xml.description(markup(rev.body)) 
-        xml.pubDate(rev.created_at)
-        xml.guid(page_url(:page_title => rev.page) + "##{rev.id}")
-        xml.link(page_url(:page_title => rev.page) + "##{rev.id}")
-        # xml.tag!("dc:creator", rev.author_name)
+        xml.title(page.title)
+        xml.description(markup(page.body)) 
+        xml.pubDate(page.created_at.rfc822)
+        xml.guid( page_url(:page_title => page.title) + 
+                  "##{page.current_revision.id}")
+        xml.link( page_url(:page_title => page.title) + 
+                  "##{page.current_revision.id}")
+        # xml.tag!("dc:creator", page.author_name)
       end
     end
   end

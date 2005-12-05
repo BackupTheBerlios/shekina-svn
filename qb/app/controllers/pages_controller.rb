@@ -1,14 +1,4 @@
 class PagesController < ApplicationController
-  cache_sweeper :page_sweeper
-  caches_page   :index, :recent
-
-  
-  def index
-  end
-  
-  def recent
-  end
-
   def show
     if @page = Page.find_by_title(params[:page_title]) and (@page.current_revision != nil)
       render
@@ -17,6 +7,7 @@ class PagesController < ApplicationController
     end
   end
   def feed
+    headers["Content-Type"] = "application/rss+xml"
     render :layout => false
   end
 

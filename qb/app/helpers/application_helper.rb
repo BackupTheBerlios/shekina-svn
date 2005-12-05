@@ -23,18 +23,10 @@ module ApplicationHelper
   end
 
   def page_title
-    if @controller.controller_name=="home"
-      SITE_NAME
-    else
-      SITE_NAME+": #@title"
-    end
+    @home ? SITE_NAME :  SITE_NAME+": #@title"
   end
   def page_heading
-    if @controller.controller_name=="home"
-      "Ruby-it"
-    else
-      content_tag("small", SITE_NAME) + tag("br") + @title.to_s
-    end
+    @home ? "Ruby-it" : content_tag("small", SITE_NAME) + tag("br") + @title.to_s
   end
   def markup(body, existing_page_titles = Page.existing_page_titles)
     RedCloth.new(linkize(auto_link(body), existing_page_titles)).to_html
@@ -51,7 +43,6 @@ module ApplicationHelper
   def recently_changed_pages
     Page.find(:all, :order => "updated_at DESC") 
   end
-  #FIXME: fa davvero quello che deve fare?
   def wiki_link(page)
     link_to(page, page_url(:page_title =>page), :class => "existingWikiWord")
   end
