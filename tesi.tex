@@ -1,0 +1,94 @@
+% vim: encoding=utf-8
+% vim: fileencoding=utf-8
+\documentclass[pdftex,12pt,a4paper,italian]{article}
+\usepackage[italian]{babel}
+\linespread{1.6}
+%\renewcommand{\baselinestretch}{1.6}
+\usepackage[utf8]{inputenc}
+\usepackage{newcent}
+\title{implementazione di un MAC energy-efficient per reti di sensori wireless}
+\author{Gabriele Renzi}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Introduzione}
+L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per rispettare i vincoli iposti da una particolare tipologia di reti wireless, le reti di sensori.
+Una Wireless Sensor Network (WSN) è composta da un gran numero di dispositivi molto semplici, con limitate risorse computazionali e dotati di strumentazione per rilevare eventi (movimento, temperatura, video etc), per effettuare semplici elaborazioni e di eventuali meccanismi per inteagire con l'ambiente e per comunicare via radio. 
+Un sensore infatti non ha le risorse sufficienti a fornire un'elaborazione complessa delle 
+informazioni, e quindi una WSN viene organizzata come un albero nel quale i nodi e le foglie 
+raccolgono i dati e li inoltrano verso la radice dell'albero, verso un nodo denominato 
+\emph{Sink}, il quale sarà  connesso ad un elaboratore in grado di gestire le informazioni 
+raccolte in modo utile.
+Il protocollo implementato per questa tesi, DMAC, è appositamente pensato per una topologia di questo genere, e cerca di sfruttare delle euristiche per limitare sia la possibilità di errore 
+nella trasmissione, sia il consumo energetico, garantendo comunque una bassa latenza.
+%\subsection{Obiettivi  della tesi}
+
+\section{Il protocollo DMAC}
+\subsection{I problemi delle reti di sensori}
+In una topologia come quella appena descritta, è evidente che la parte più rilevante del 
+traffico è costituita dal flusso di pacchetti verso il \emph{Sink}, mentre le informazioni 
+trasmesse nel verso opposto sono limitate a rari pacchetti di controllo.
+
+I punti principali presi in considerazione dagli autori di DMAC sono
+\begin{itemize}
+
+\item \emph{latenza}, in alcune situazione, ad esempio la rilevazione in ambito medicale o 
+la videosorveglianza, è importante che le informazioni si propaghino velocemente dal nodo che le 
+rileva fino al Sink
+\item \emph{throughput}, applicazioni differenti possono avere necessità  di approcci differenti\ldots
+
+\item \emph{energia}, i sensori sono dispositivi a batterie, ed in configurazioni in cui il 
+numero di questi dispositivi è molto alto non è fattibile la sostituzione/ricarica ad 
+intervalli freguenti
+
+\end{itemize}
+
+Il punto principale da cui parte l'analisi del DMAC è l'energia, che è un vincolo particolarmenteimportante. DMAC, come già altri protocolli progettati in precedenza, parte dalla 
+considerazione che il traffico in una WSN è molto leggero per la maggior parte del tempo, e 
+che quindi è 
+possibile ed auspicabile che i nodi non coinvolti nel trasporto di dati rimangano spenti, 
+in modo da risparmiare energia. 
+Questo approccio è in contrasto però con l'intento di massimizzare latenza e throughput, 
+perché ogni nodo che si trovi a più di un hop dal Sink dovrà attendere che il nodo successivo 
+nel suo percorso entri in uno stato attivo. Questo approccio non sembra quindi essere in grado 
+di scalare a reti con molti nodi. 
+Un alternativa è quella di mettere in nodi uno stato di \emph{power saving} la 
+maggior parte del tempo e di portarli in uno stato attivo quando ricevono una richiesta di 
+comunicazione, ma lo spreco di energia in questo approccio è comunque molto maggiore di quello 
+relativo ad uno stato di spegnimento effettivo. 
+\subsection{Staggered wakeup nel DMAC}
+Il protocollo DMAC utilizza un meccanismo di scheduling a tre stati dei nodi, 
+ntroducendo però un meccanismo di \emph{staggered wakeup} per cui i nodi che si trovano ad un 
+hopcount maggiore dal Sink entrano nel loop di scheduling prima di quelli più vicini.
+Questo approccio ha dei vantaggi notevoli. Anzitutto il tempo di attesa per il forwarding di un pacchetto è molto limitato, perché quando un nodo si trova in una fase attiva il prossimo mote 
+che si trova nel suo percorso di routing verso il Sink sarà molto probabilmente nello stesso 
+stato, e lo stesso ricorsivamente fino al source. 
+\`E facile notare che un nodo che si trovi distante dall'azione resterà spento finché il 
+pacchetto non gli si avvicina, con un notevole risparmio energetico.
+Allo stesso tempo, il fatto che il pacchetto si propaghi in modo lineare permette di far si che 
+tutti i nodi nel percorso verso il Sink siano in grado di correggere tempestivamente il loro 
+scheduling se necessario, mentre i nodi non coinvolti nella trasmissione possono mantenere il 
+loro ciclo di attivazione/spegnimento originario. 
+
+
+\subsection{Stati nel DMAC}
+Un problema che rimane è però la contesa del canale, anche se ovviamente il fatto che livelli 
+differenti si attivino in momenti differenti riduce le dimensioni del problema.
+Per far si che il messaggio arrivi correttamente e che le interferenze tra i differenti 
+mote siano minimizzate, ognuno di essi può essere in tre differenti stati, suddividendo il 
+periodo di funzionamento attivo in una coppia di periodi di ricezione ed invio. 
+
+Nello stato di ricezione un nodo attende di ricevere un pacchetto, ed in caso questo accada 
+esso ne rimanda uno di ACK al mittente. I dati \emph{non} vengono inoltrati in questa fase ma 
+sono immagazzinati in una coda fino a che il nodo non entra nello stato di invio.
+Ovviamente un nodo nello stato di invio non fa altro che inoltrare un pacchetto ed attendere un 
+\texttt{ACK}. Nel caso che l'\texttt{ACK}  non venga ricevuto il pacchetto rimane nella coda e 
+verrà inviato nel prossimo slot di invio. 
+Nel periodo di sleep i nodi spengono completamente la radio, e quindi sono completamente isolati dalle trasmissioni. 
+
+I periodi di invio e ricezione hanno una stessa durata \mu che deve essere abbastanza affinché 
+un pacchetto possa essere inviato e ricevuto, e ciò sia possibile anche per il suo \texttt{ACK} 
+
+
+\end{document}
+
