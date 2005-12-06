@@ -83,11 +83,49 @@ esso ne rimanda uno di ACK al mittente. I dati \emph{non} vengono inoltrati in q
 sono immagazzinati in una coda fino a che il nodo non entra nello stato di invio.
 Ovviamente un nodo nello stato di invio non fa altro che inoltrare un pacchetto ed attendere un 
 \texttt{ACK}. Nel caso che l'\texttt{ACK}  non venga ricevuto il pacchetto rimane nella coda e 
-verrà inviato nel prossimo slot di invio. 
+verrà inviato nel prossimo slot di invio, aggiungendo delle opportune regole di drop nel caso 
+la trasmissione fallisca ripetutamente. 
 Nel periodo di sleep i nodi spengono completamente la radio, e quindi sono completamente isolati dalle trasmissioni. 
 
-I periodi di invio e ricezione hanno una stessa durata \mu che deve essere abbastanza affinché 
-un pacchetto possa essere inviato e ricevuto, e ciò sia possibile anche per il suo \texttt{ACK} 
+I periodi di invio e ricezione hanno una stessa durata $\mu$ che deve essere abbastanza affinché 
+un pacchetto possa essere inviato e ricevuto, e ciò sia possibile anche per il suo \texttt{ACK}.
+Ogni livello avrà poi un delay $d\mu$ aggiunto alla crescita dell'hop count per ogni livello. 
+ 
+Dunque ad ogni tempo $t$ teoricamente saranno solamente i nodi ad un certo livello a 
+trasmettere, limitando la contesa per il canale. 
+
+Il periodo di sleep ha una durata nettamente maggiore del periodo attivo, circa $18\mu$ [[]], a meno di \emph{burst} di pacchetti, come vedremo in seguito.
+Un meccanismo di questo tipo ha bisogno evidentemente di una sincronizzazione molto precisa, ma 
+esistono algoritmi validi che permettono di portare l'errore di sincronizzazione ad un millesimo 
+del tempo $\mu$, quindi questo non rappresenta un problema. 
+
+\subsection{Adattatività del DMAC}
+Nella maggior parte delle WSN è probabile che un nodo che raccolga informazioni attraversi dei
+periodi di \emph{burst} in cui esso ha parecchie informazioni da inoltrare, e si può notare che 
+con il meccanismo appena descritto un'informazione che abbia bisopgno di due pacchetti avrebbe 
+bisogno di almen 20 unità di tempo piuttosto che di 2 (il caso in cui i nodi fossero 
+costantemente attivi) [[]], il che significa aumentare notevolmente la latenza della rete. 
+Il protocollo prevede quindi dei meccanismi di autoregolazione del duty cycle basati su una flag 
+\texttt{more-to-send} presente nell'header dei pacchetti.
+
+Se un nodo ha diversi pacchetti da spedire oppure se ha ricevuto un pacchetto con questa flag
+già impostata, esso imposterà la flag nei pacchetti in uscita in modo in modo da indicare al 
+nodo seguente che ci sono altri dati in arrivo, e che esso dovrà prepararsi a riceverli. 
+Il meccanismo è chiaramente ricorsivo e fa si che l'informazione si propaghi fino al Sink 
+sulla base di sincronizzazioni locali, il che significa che nel caso un pacchetto dal nodo $X$ 
+al nodo $Y$ vada perso o sia danneggiato nesuno dei nodi da $Y$ al Sink verrà informato della necessità di  cambiare il proprio duty cycle, il che permette di evitare sprechi di risorse 
+aggiuntivi.
+
+Va sottolineato che nel DMAC, quando un nodo riceve un pacchetto \texttt{more-to-send} esso non 
+rimane attivo per il prossimo slot, bensi riduce il suo tempo di inattivita a $3\mu$ per poi tornare nello stato di ricezione. Questa attesa è necessaria affinché il pacchetto abbia il tempo di propagarsi tra i nodi seguenti, senza che ci siano collisioni con i pacchetti dei livelli precedenti. 
+% pippa sul fatto che potebber essre sprecato un periodo
+% pippa sul data prediction
+
+
+\section{La piattaforma TinyOS}
+
+\subsection{
+ 
 
 
 \end{document}
