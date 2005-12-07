@@ -5,9 +5,13 @@
 + need tests for login controller
 + need tests for home_controller
 + need MORE tests for version controller, and to find a workaround for cookies
+- can delete home controller completely, massive conceptual simplification
+- add caching for rendered pages.. 
+- check query to dbms (use piggyback)
 - should add tags as meta keywords 
+- add "new" insertion form
 - need tests for model, maybe
-- find and delete all FIXMEs
++ find and delete all FIXMEs
 / use a partial view for latest news (i.e "read more")
 + fix home/index.rhtml (remove inner div newscontent)
 / fix css for home (replace -moz-border-radius with images)
@@ -18,10 +22,8 @@
 + investigate if we can have nested layouts
 + add authentication (before wiki/:edit :authenticate ) [done, but still should handle cookies]
 - change question in something meaningful
-- add tagging (we need it for the main page, should find only pages tagged "news"
 + fix routes 
-- add caching for rendered pages.. 
-/ remove caching for titles.. or not? see I2 rev 2859 commit log)
++ remove caching for titles.. or not? see I2 rev 2859 commit log)
 + remove AnonymousCoward ? [AnonimoRubyista è ok]
 / handle big images in the home (now they mess up the layout on low resolution
 - merge modification for version/new.rhtml (onfocus)
