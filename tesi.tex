@@ -1,8 +1,8 @@
 % vim: encoding=utf-8
 % vim: fileencoding=utf-8
-\documentclass[pdftex,12pt,a4paper,italian]{article}
+\documentclass[pdftex,11pt,a4paper,italian]{book}
 \usepackage[italian]{babel}
-\linespread{1.6}
+\linespread{1.4}
 %\renewcommand{\baselinestretch}{1.6}
 \usepackage[utf8]{inputenc}
 \usepackage{newcent}
@@ -11,7 +11,7 @@
 \begin{document}
 \maketitle
 \tableofcontents
-\section{Introduzione}
+\chapter{Introduzione}
 L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per rispettare i vincoli iposti da una particolare tipologia di reti wireless, le reti di sensori.
 Una Wireless Sensor Network (WSN) è composta da un gran numero di dispositivi molto semplici, con limitate risorse computazionali e dotati di strumentazione per rilevare eventi (movimento, temperatura, video etc), per effettuare semplici elaborazioni e di eventuali meccanismi per inteagire con l'ambiente e per comunicare via radio. 
 Un sensore infatti non ha le risorse sufficienti a fornire un'elaborazione complessa delle 
@@ -23,8 +23,8 @@ Il protocollo implementato per questa tesi, DMAC, è appositamente pensato per u
 nella trasmissione, sia il consumo energetico, garantendo comunque una bassa latenza.
 %\subsection{Obiettivi  della tesi}
 
-\section{Il protocollo DMAC}
-\subsection{I problemi delle reti di sensori}
+\chapter{Il protocollo DMAC}
+\section{I problemi delle reti di sensori}
 In una topologia come quella appena descritta, è evidente che la parte più rilevante del 
 traffico è costituita dal flusso di pacchetti verso il \emph{Sink}, mentre le informazioni 
 trasmesse nel verso opposto sono limitate a rari pacchetti di controllo.
@@ -56,7 +56,7 @@ Un alternativa è quella di mettere in nodi uno stato di \emph{power saving} la
 maggior parte del tempo e di portarli in uno stato attivo quando ricevono una richiesta di 
 comunicazione, ma lo spreco di energia in questo approccio è comunque molto maggiore di quello 
 relativo ad uno stato di spegnimento effettivo. 
-\subsection{Staggered wakeup nel DMAC}
+\section{Staggered wakeup nel DMAC}
 Il protocollo DMAC utilizza un meccanismo di scheduling a tre stati dei nodi, 
 ntroducendo però un meccanismo di \emph{staggered wakeup} per cui i nodi che si trovano ad un 
 hopcount maggiore dal Sink entrano nel loop di scheduling prima di quelli più vicini.
@@ -71,7 +71,7 @@ scheduling se necessario, mentre i nodi non coinvolti nella trasmissione possono
 loro ciclo di attivazione/spegnimento originario. 
 
 
-\subsection{Stati nel DMAC}
+\section{Stati nel DMAC}
 Un problema che rimane è però la contesa del canale, anche se ovviamente il fatto che livelli 
 differenti si attivino in momenti differenti riduce le dimensioni del problema.
 Per far si che il messaggio arrivi correttamente e che le interferenze tra i differenti 
@@ -99,7 +99,7 @@ Un meccanismo di questo tipo ha bisogno evidentemente di una sincronizzazione mo
 esistono algoritmi validi che permettono di portare l'errore di sincronizzazione ad un millesimo 
 del tempo $\mu$, quindi questo non rappresenta un problema. 
 
-\subsection{Adattatività del DMAC}
+\section{Adattatività del DMAC}
 Nella maggior parte delle WSN è probabile che un nodo che raccolga informazioni attraversi dei
 periodi di \emph{burst} in cui esso ha parecchie informazioni da inoltrare, e si può notare che 
 con il meccanismo appena descritto un'informazione che abbia bisopgno di due pacchetti avrebbe 
@@ -122,10 +122,42 @@ rimane attivo per il prossimo slot, bensi riduce il suo tempo di inattivita a $3
 % pippa sul data prediction
 
 
-\section{La piattaforma TinyOS}
+\chapter{La piattaforma TinyOS}
 
-\subsection{
- 
+\section{Un sistema operativo per WS}
+Lo sviluppo della tecnologia dei sensori wireless pùò essere paragonato a quella delle 
+piattaforme PC domestiche. Ad un aumento costante della potenza di calcolo si è accompagnato un 
+aumento nella disponibilità di periferiche (memoria non volatile, attuatori, sensori di 
+luce/calore/movimento etc\ldots). \`E sorta quindi la possibilità di gestire i coponenti ad un 
+livello più alto di astrazione, esattamente come per i PC si è passati da sistemi operativi 
+ad hoc scritti in assembly a strutture stratificate in linguaggi di livello più alto. 
+
+TinyOS rappresenta appunto un sistema operativo "\emph{moderno}" per WS, che fornisce 
+utili astrazioni per la realizzazione di applicazioni, ad un tempo rendendole più 
+semplici da realizzare e facilmente portabili tra diversi modelli di sensore.
+
+Tra le funzionalità che TinyOS offre ci sono
+\begin{itemize}
+
+\item{Astrazione dei driver per sensori, radio, ed ogni altra periferica  }
+
+\item{Concorrenza (threading a stato condiviso}
+
+\item{Gestione della memoria e dello scheduling}
+
+\item{Un linguaggio di sviluppo (NesC) che supporti direttamente tutto questo}
+\end{itemize}
+
+
+\section{NesC un linguaggio per sensori}
+
+Sebbene il C sia ormai lo standard de facto come \emph{system language} esso è per molti versi 
+un linguaggio vecchio, che sebbene abbia conosciuto diverse revisioni mantiene comunque una 
+netta mancanza per costrutti di alto livello. 
+NesC è basato sul C, sia a livello sintattico che a livello semantico. 
+In effetti il compilatore NesC è effettivamente implementato come un frontend per GCC [[ ]].
+
+NesC estende prò il C in varie direzioni ortogonali, che rispecchiano le 
 
 
 \end{document}
