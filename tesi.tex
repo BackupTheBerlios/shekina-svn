@@ -2,7 +2,7 @@
 % vim: fileencoding=utf-8
 \documentclass[pdftex,12pt,a4paper,italian,openany]{book}
 \usepackage[italian]{babel}
-%è safe metterlo a 1.6
+%è safe metterlo a 1.6, con 13 pagine arrivo a 16
 \linespread{1.4}
 %\renewcommand{\baselinestretch}{1.6}
 \usepackage[utf8]{inputenc}
@@ -30,8 +30,24 @@
 \title{implementazione di un MAC energy-efficient per reti di sensori wireless}
 \author{Gabriele Renzi}
 \begin{document}
-\maketitle
-\tableofcontents
+%\maketitle
+\newlength{\centeroffset}
+\setlength{\centeroffset}{-0.5\oddsidemargin}
+\addtolength{\centeroffset}{0.5\evensidemargin}
+\thispagestyle{empty}
+%\vspace*{\stretch{1}}
+\noindent\hspace*{\centeroffset}\makebox[0pt][l]{\begin{minipage}{\textwidth}
+\flushright
+{\Huge\bfseries Implementazione di un MAC energy-efficient per reti di sensori wireless}
+\noindent\rule[-1ex]{\textwidth}{5pt}\\[2.5ex]
+\flushright
+{\bfseries 
+Gabriele Renzi\\[1.5ex]
+Anno Accademico 2004/2005}
+
+\end{minipage}}
+
+
 \chapter{Introduzione}
 L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per rispettare i vincoli iposti da una particolare tipologia di reti wireless, le reti di sensori.
 Una Wireless Sensor Network (WSN) è composta da un gran numero di dispositivi molto semplici, con limitate risorse computazionali e dotati di strumentazione per rilevare eventi (movimento, temperatura, video etc), per effettuare semplici elaborazioni e di eventuali meccanismi per inteagire con l'ambiente e per comunicare via radio. 
@@ -44,6 +60,7 @@ Il protocollo implementato per questa tesi, DMAC, è appositamente pensato per u
 nella trasmissione, sia il consumo energetico, garantendo comunque una bassa latenza.
 %\subsection{Obiettivi  della tesi}
 
+\tableofcontents
 \chapter{Il protocollo DMAC}
 \section{I problemi delle reti di sensori}
 In una topologia come quella appena descritta, è evidente che la parte più rilevante del 
