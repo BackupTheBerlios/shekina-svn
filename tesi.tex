@@ -8,6 +8,28 @@
 \usepackage[utf8]{inputenc}
 \usepackage{newcent}
 \usepackage{fancyhdr}
+
+
+
+\begin{document}
+%\maketitle
+\newlength{\centeroffset}
+\setlength{\centeroffset}{-0.5\oddsidemargin}
+\addtolength{\centeroffset}{0.5\evensidemargin}
+\thispagestyle{empty}
+%\vspace*{\stretch{1}}
+\noindent\hspace*{\centeroffset}\makebox[0pt][l]{\begin{minipage}{\textwidth}
+\flushright
+{\fontfamily{helvet}
+  {\Huge\bfseries Implementazione di un MAC energy-efficient per reti di sensori wireless}
+  \noindent\rule[-1ex]{\textwidth}{5pt}\\[2.5ex]
+  \flushright
+  {\bfseries\Large Gabriele Renzi\\[1.5ex]
+  Anno Accademico 2004/2005}
+}
+\end{minipage}}
+
+
 \pagestyle{fancy}
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
@@ -24,47 +46,35 @@
     \fancyhead{} % ignora, nello stile plain, le intestazioni
     \renewcommand{\headrulewidth}{0pt} % e la linea
 }
-
-
-
-\title{implementazione di un MAC energy-efficient per reti di sensori wireless}
-\author{Gabriele Renzi}
-\begin{document}
-%\maketitle
-\newlength{\centeroffset}
-\setlength{\centeroffset}{-0.5\oddsidemargin}
-\addtolength{\centeroffset}{0.5\evensidemargin}
-\thispagestyle{empty}
-%\vspace*{\stretch{1}}
-\noindent\hspace*{\centeroffset}\makebox[0pt][l]{\begin{minipage}{\textwidth}
-\flushright
-{\Huge\bfseries Implementazione di un MAC energy-efficient per reti di sensori wireless}
-\noindent\rule[-1ex]{\textwidth}{5pt}\\[2.5ex]
-\flushright
-{\bfseries 
-Gabriele Renzi\\[1.5ex]
-Anno Accademico 2004/2005}
-
-\end{minipage}}
-
+\newcommand{\sink}[0]{\emph{Sink}}
 
 \chapter{Introduzione}
-L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per rispettare i vincoli iposti da una particolare tipologia di reti wireless, le reti di sensori.
-Una Wireless Sensor Network (WSN) è composta da un gran numero di dispositivi molto semplici, con limitate risorse computazionali e dotati di strumentazione per rilevare eventi (movimento, temperatura, video etc), per effettuare semplici elaborazioni e di eventuali meccanismi per inteagire con l'ambiente e per comunicare via radio. 
+L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per 
+rispettare i vincoli imposti da una particolare tipologia di reti wireless, le reti di sensori.
+Una Wireless Sensor Network (WSN) è composta da un gran numero di dispositivi molto semplici, 
+con limitate risorse computazionali e dotati di strumentazione per rilevare eventi (movimento,
+temperatura, video etc), per effettuare semplici elaborazioni e di eventuali meccanismi per 
+inteagire con l'ambiente e per comunicare via radio. 
 Un sensore infatti non ha le risorse sufficienti a fornire un'elaborazione complessa delle 
 informazioni, e quindi una WSN viene organizzata come un albero nel quale i nodi e le foglie 
 raccolgono i dati e li inoltrano verso la radice dell'albero, verso un nodo denominato 
-\emph{Sink}, il quale sarà  connesso ad un elaboratore in grado di gestire le informazioni 
+\sink, il quale sarà  connesso ad un elaboratore in grado di gestire le informazioni 
 raccolte in modo utile.
-Il protocollo implementato per questa tesi, DMAC, è appositamente pensato per una topologia di questo genere, e cerca di sfruttare delle euristiche per limitare sia la possibilità di errore 
-nella trasmissione, sia il consumo energetico, garantendo comunque una bassa latenza.
+Il protocollo implementato per questa tesi, DMAC\cite{DMAC}, è appositamente pensato per una 
+topologia di questo genere, e cerca di sfruttare delle euristiche per limitare sia la 
+possibilità di errore nella trasmissione, sia il consumo energetico, garantendo comunque una 
+bassa latenza.
+Per l'implementazione del protocollo è stata utilizzata la piattaforma TinyOS, un ambiente per 
+o sviluppo di applicazioni per dispositivi embedded che comprende un semplice sistema operativo
+, un linguaggio di programmazione, e vari strumenti come simulatore, visualizzatori grafici, 
+ambienti di scripting e molto altro. 
 %\subsection{Obiettivi  della tesi}
 
 \tableofcontents
 \chapter{Il protocollo DMAC}
 \section{I problemi delle reti di sensori}
 In una topologia come quella appena descritta, è evidente che la parte più rilevante del 
-traffico è costituita dal flusso di pacchetti verso il \emph{Sink}, mentre le informazioni 
+traffico è costituita dal flusso di pacchetti verso il \sink, mentre le informazioni 
 trasmesse nel verso opposto sono limitate a rari pacchetti di controllo.
 
 I punti principali presi in considerazione dagli autori di DMAC sono
@@ -81,13 +91,14 @@ intervalli freguenti
 
 \end{itemize}
 
-Il punto principale da cui parte l'analisi del DMAC è l'energia, che è un vincolo particolarmenteimportante. DMAC, come già altri protocolli progettati in precedenza, parte dalla 
+Il punto principale da cui parte l'analisi del DMAC è l'energia, in quanto si tratta di un 
+vincolo particolarmente importante. DMAC, come già altri protocolli\cite{SMAC}\cite{TMAC} 
+progettati in precedenza, parte dalla 
 considerazione che il traffico in una WSN è molto leggero per la maggior parte del tempo, e 
 che quindi è 
-possibile ed auspicabile che i nodi non coinvolti nel trasporto di dati rimangano spenti, 
-in modo da risparmiare energia. 
+possibile ed auspicabile che i nodi non coinvolti nel trasporto di dati rimangano spenti quanto più possibile, in modo da risparmiare energia. 
 Questo approccio è in contrasto però con l'intento di massimizzare latenza e throughput, 
-perché ogni nodo che si trovi a più di un hop dal Sink dovrà attendere che il nodo successivo 
+perché ogni nodo che si trovi a più di un hop dal \sink dovrà attendere che il nodo successivo 
 nel suo percorso entri in uno stato attivo. Questo approccio non sembra quindi essere in grado 
 di scalare a reti con molti nodi. 
 Un alternativa è quella di mettere in nodi uno stato di \emph{power saving} la 
@@ -96,15 +107,16 @@ comunicazione, ma lo spreco di energia in questo approccio è comunque molto mag
 relativo ad uno stato di spegnimento effettivo. 
 \section{Staggered wakeup nel DMAC}
 Il protocollo DMAC utilizza un meccanismo di scheduling a tre stati dei nodi, 
-ntroducendo però un meccanismo di \emph{staggered wakeup} per cui i nodi che si trovano ad un 
-hopcount maggiore dal Sink entrano nel loop di scheduling prima di quelli più vicini.
-Questo approccio ha dei vantaggi notevoli. Anzitutto il tempo di attesa per il forwarding di un pacchetto è molto limitato, perché quando un nodo si trova in una fase attiva il prossimo mote 
-che si trova nel suo percorso di routing verso il Sink sarà molto probabilmente nello stesso 
-stato, e lo stesso ricorsivamente fino al source. 
+introducendo però un meccanismo di \emph{staggered wakeup} per cui i nodi che si trovano ad un 
+hopcount maggiore dal \sink entrano nel ciclo di scheduling prima di quelli più vicini.
+Questo approccio ha numerosi vantaggi, anzitutto il tempo di attesa per il forwarding di un
+pacchetto è molto limitato, perché quando un nodo si trova in una fase attiva il prossimo mote 
+che si trova nel suo percorso di routing verso il \sink sarà anch'esso attivo, e lo stesso 
+ricorsivamente fino al source. 
 \`E facile notare che un nodo che si trovi distante dall'azione resterà spento finché il 
 pacchetto non gli si avvicina, con un notevole risparmio energetico.
-Allo stesso tempo, il fatto che il pacchetto si propaghi in modo lineare permette di far si che 
-tutti i nodi nel percorso verso il Sink siano in grado di correggere tempestivamente il loro 
+Allo stesso tempo, il fatto che il pacchetto si propaghi in modo "lineare" permette di far si 
+che tutti i nodi nel percorso verso il Sink siano in grado di correggere tempestivamente il loro 
 scheduling se necessario, mentre i nodi non coinvolti nella trasmissione possono mantenere il 
 loro ciclo di attivazione/spegnimento originario. 
 
@@ -117,17 +129,23 @@ mote siano minimizzate, ognuno di essi può essere in tre differenti stati, sudd
 periodo di funzionamento attivo in una coppia di periodi di ricezione ed invio. 
 
 Nello stato di ricezione un nodo attende di ricevere un pacchetto, ed in caso questo accada 
-esso ne rimanda uno di ACK al mittente. I dati \emph{non} vengono inoltrati in questa fase ma 
-sono immagazzinati in una coda fino a che il nodo non entra nello stato di invio.
+esso ne manda uno di ACK al mittente. Il nodo ricevente \emph{non inoltrerà} i dati in questa 
+fase ma li immagazzinerà in una coda fino a che non si trovi nel suo stato di invio. 
 Ovviamente un nodo nello stato di invio non fa altro che inoltrare un pacchetto ed attendere un 
-\texttt{ACK}. Nel caso che l'\texttt{ACK}  non venga ricevuto il pacchetto rimane nella coda e 
+\texttt{ACK}. 
+
+Come già detto è evidente che un nodo ad $n$ hop dal sink si troverà in uno stato di invio 
+quando il nodo ad $n-1$ hop si trova in stato di ricezione. 
+Nel caso che l'\texttt{ACK}  non venga ricevuto il pacchetto rimane nella coda e 
 verrà inviato nel prossimo slot di invio, aggiungendo delle opportune regole di drop nel caso 
 la trasmissione fallisca ripetutamente. 
-Nel periodo di sleep i nodi spengono completamente la radio, e quindi sono completamente isolati dalle trasmissioni. 
+Nel periodo di inattività i nodi spengono completamente la radio, e quindi sono isolati dalle 
+trasmissioni, ma l'organizzazione temporale fa si che essi non abbiano comunque la possibilità 
+di ricevere dati in questo periodo. 
 
-I periodi di invio e ricezione hanno una stessa durata $\mu$ che deve essere abbastanza affinché 
-un pacchetto possa essere inviato e ricevuto, e ciò sia possibile anche per il suo \texttt{ACK}.
-Ogni livello avrà poi un delay $d\mu$ aggiunto alla crescita dell'hop count per ogni livello. 
+I periodi di invio e ricezione hanno una stessa durata $\mu$ che deve essere lunga abbastanza 
+affinché un pacchetto possa essere inviato e ricevuto, e ciò sia possibile anche per il 
+suo \texttt{ACK}. 
  
 Dunque ad ogni tempo $t$ teoricamente saranno solamente i nodi ad un certo livello a 
 trasmettere, limitando la contesa per il canale. 
@@ -266,6 +284,9 @@ programmi (il compilatore è in grado di individuare possibili \emph{race condit
 Il file 
 
 
-
+\begin{thebibliography}{99}
+\bibitem{DMAC} An energy bla bla
+\bibitem{foo} ofoo foo
+\end{thebibliography}
 \end{document}
 
