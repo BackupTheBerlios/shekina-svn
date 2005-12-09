@@ -1,11 +1,32 @@
 % vim: encoding=utf-8
 % vim: fileencoding=utf-8
-\documentclass[pdftex,11pt,a4paper,italian]{book}
+\documentclass[pdftex,12pt,a4paper,italian,openany]{book}
 \usepackage[italian]{babel}
+%è safe metterlo a 1.6
 \linespread{1.4}
 %\renewcommand{\baselinestretch}{1.6}
 \usepackage[utf8]{inputenc}
 \usepackage{newcent}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % rimuove l’attuale contenuto dell’intestazione
+             % e del pi\‘e di pagina
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % riserva spazio per la linea
+\fancypagestyle{plain}{%
+    \fancyhead{} % ignora, nello stile plain, le intestazioni
+    \renewcommand{\headrulewidth}{0pt} % e la linea
+}
+
+
+
 \title{implementazione di un MAC energy-efficient per reti di sensori wireless}
 \author{Gabriele Renzi}
 \begin{document}
@@ -157,7 +178,76 @@ netta mancanza per costrutti di alto livello.
 NesC è basato sul C, sia a livello sintattico che a livello semantico. 
 In effetti il compilatore NesC è effettivamente implementato come un frontend per GCC [[ ]].
 
-NesC estende prò il C in varie direzioni ortogonali, che rispecchiano le 
+NesC estende però il C in varie direzioni ortogonali, che rispecchiano da un lato le funzionalità
+sel SO sottostante e dall'altro le necessità dell'hardware particolare su cui esso deve funzionare. 
+
+\subsection{Concorrenza}
+TinyOS fornisce alcune primitive per la concorrenza che sono replicate nel design di NesC.
+Ogni mote può avere in esecuzione differenti \emph{task}, i quali vengono attivati secondo un 
+meccanismo di scheduling non preemptive, quindi funzionano finché la funzione associata non 
+raggiunge un \texttt{return}. Si tratta di un meccanismo di concorrenza a stato condiviso in cui 
+i task possono comunicare solamente tramite variabili globali, com \emph{pthread} o i thread in 
+Java, ma il compilatore è in grado di determinare staticamente la possibilità di race condition 
+(sebbene possa sbagliare). Va notato che non esistono meccanismi di sincronizazione esplicita 
+dei task (nessun "\emph{join}").
+
+\subsection{Eventi}
+I task possono essere attivati da qualunque punto del programma, ed in particolare è possibile 
+far si che essi vengano avviati quando accade qualcosa di rilevante. 
+TinyOS e NesC forniscono allo sviluppatore gli eventi. Praticamente ogni cosa può essere 
+rappresentata da un evento, l'arrivo di un segnale radio, l'avvio di un timer, l'inizio della ricezione di dati da un sensore etc...
+ 
+
+\subsection{Componenti ed Interfacce}
+TinyOS come molti altri SO usa e fornisce delle interfacce per rappresentare gli oggetti del 
+sistema (layer di rete, driver etc...). 
+Mentre però questo in molte piattaforme classiche (Win32, Linux, BSD) ciò è fatto informalmente 
+usando il linguaggio C, NesC è stato esteso per supportare sintatticamente l'idea di 
+programmazione a componenti. 
+Un'interfaccia dichiara di fornire un certo numero di 
+\begin{itemize}
+
+\item{eventi, il che significa che un componente che usi l'interfaccia deve fornire appropriati
+handler} 
+
+\item{comandi, cioè procedure o funzioni che verranno chiamate dal componente che usa l'interfaccia}
+\end{itemize}
+
+Un componente può implementare una o più interfacce (o implementare un'interfaccia più volte 
+con nomi diversi), ed è composto principalmente da due parti, una di configurazione 
+(dichiarazione di componenti ed interfacce usati) ed una di implementazione.
+La configurazione è il cuore della parte Component-Oriented di NesC, in quanto è l'unico punto 
+in cui si effettua il \emph{wiring} tra differenti componenti, offrendo una grande flessibilità.
+Componenti ed interfacce, infine possono essere parametrizzati, un qualsiasi valore può essere 
+incluso durante il wiring effettaundo una sorta di \emph{currying} dell'interfaccia. 
+In versioni più recenti di NesC è possibile avere anche type parameter, ma in questa tesi  
+il problema è stato aggirato [[]]
+
+
+[[ ed eventuali dichiarazioni 
+riguardo i rapporti tra determinate interfacce (è possibile dichiarare che il modulo 
+\texttt{RedBlackTree} equivale all'interfaccia \texttt{Dictionary} anche se nel primo non 
+c'è nessun  riferimento alla seconda);  ]]
+
+
+
+\subsection{Staticità}
+
+NesC è un linguaggio completamente statico, nel senso che la maggior parte delle attività 
+possibili è fatta a compile time. Con ciò non si intende solo un semplice type checking sui 
+moduli compilativi, ma anche una gestione statica della memoria (in realtà è possibile usare 
+\texttt{malloc()} e simili ma a patto di essere molto cauti) e con l'intero call graph disponibile a compile time. 
+
+NesC fa uso di \emph{whole program analisys and optimization} (WPA/WPO) per raggiungere alte 
+performance tramite ottimizzazioni interprocedurali (teoricamente è possibile aggiungerne altre 
+alla pipeline ma al momento esse non sono implementate).
+Allo stesso tempo grazie alla WPA esso puo offrire garanzie riguardo l'affidabilità dei 
+programmi (il compilatore è in grado di individuare possibili \emph{race condition} sui dati globali).
+
+
+\chapter{L'implementazione}
+Il file 
+
 
 
 \end{document}
