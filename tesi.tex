@@ -47,7 +47,7 @@
     \renewcommand{\headrulewidth}{0pt} % e la linea
 }
 \newcommand{\sink}[0]{\emph{Sink}}
-
+\newcommand{\ack}[0]{\texttt{ACK}}
 \chapter{Introduzione}
 L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per 
 rispettare i vincoli imposti da una particolare tipologia di reti wireless, le reti di sensori.
@@ -77,13 +77,14 @@ In una topologia come quella appena descritta, è evidente che la parte più ril
 traffico è costituita dal flusso di pacchetti verso il \sink, mentre le informazioni 
 trasmesse nel verso opposto sono limitate a rari pacchetti di controllo.
 
-I punti principali presi in considerazione dagli autori di DMAC sono
+I punti principali presi in considerazione dagli autori di DMAC sono:
+
 \begin{itemize}
 
 \item \emph{latenza}, in alcune situazione, ad esempio la rilevazione in ambito medicale o 
 la videosorveglianza, è importante che le informazioni si propaghino velocemente dal nodo che le 
 rileva fino al Sink
-\item \emph{throughput}, applicazioni differenti possono avere necessità  di approcci differenti\ldots
+\item \emph{throughput}, applicazioni differenti [[]]possono avere necessità  di approcci differenti\ldots
 
 \item \emph{energia}, i sensori sono dispositivi a batterie, ed in configurazioni in cui il 
 numero di questi dispositivi è molto alto non è fattibile la sostituzione/ricarica ad 
@@ -92,11 +93,11 @@ intervalli freguenti
 \end{itemize}
 
 Il punto principale da cui parte l'analisi del DMAC è l'energia, in quanto si tratta di un 
-vincolo particolarmente importante. DMAC, come già altri protocolli\cite{SMAC}\cite{TMAC} 
-progettati in precedenza, parte dalla 
-considerazione che il traffico in una WSN è molto leggero per la maggior parte del tempo, e 
-che quindi è 
-possibile ed auspicabile che i nodi non coinvolti nel trasporto di dati rimangano spenti quanto più possibile, in modo da risparmiare energia. 
+vincolo particolarmente importante. DMAC, come già altri protocolli \cite{SMAC} \cite{TMAC} 
+progettati in precedenza, parte dalla considerazione che il traffico in una WSN è molto leggero 
+per la maggior parte del tempo, e che quindi è 
+possibile ed auspicabile che i nodi non coinvolti nel trasporto di dati rimangano spenti 
+quanto più possibile, in modo da risparmiare energia. 
 Questo approccio è in contrasto però con l'intento di massimizzare latenza e throughput, 
 perché ogni nodo che si trovi a più di un hop dal \sink dovrà attendere che il nodo successivo 
 nel suo percorso entri in uno stato attivo. Questo approccio non sembra quindi essere in grado 
@@ -105,52 +106,64 @@ Un alternativa è quella di mettere in nodi uno stato di \emph{power saving} la
 maggior parte del tempo e di portarli in uno stato attivo quando ricevono una richiesta di 
 comunicazione, ma lo spreco di energia in questo approccio è comunque molto maggiore di quello 
 relativo ad uno stato di spegnimento effettivo. 
+
 \section{Staggered wakeup nel DMAC}
-Il protocollo DMAC utilizza un meccanismo di scheduling a tre stati dei nodi, 
-introducendo però un meccanismo di \emph{staggered wakeup} per cui i nodi che si trovano ad un 
-hopcount maggiore dal \sink entrano nel ciclo di scheduling prima di quelli più vicini.
-Questo approccio ha numerosi vantaggi, anzitutto il tempo di attesa per il forwarding di un
-pacchetto è molto limitato, perché quando un nodo si trova in una fase attiva il prossimo mote 
-che si trova nel suo percorso di routing verso il \sink sarà anch'esso attivo, e lo stesso 
-ricorsivamente fino al source. 
-\`E facile notare che un nodo che si trovi distante dall'azione resterà spento finché il 
-pacchetto non gli si avvicina, con un notevole risparmio energetico.
+Per massimizzare il risparmio di energia senza peggiorare troppo la latenza, 
+il protocollo DMAC utilizza un meccanismo di scheduling a tre stati per i nodi, 
+con l'aggiunta di un meccanismo di \emph{staggered wakeup} per cui i nodi che si trovano ad un 
+hopcount maggiore dal \sink entrano nel ciclo di scheduling prima di quelli più vicini, un 
+approccio che avrebbe numerosi vantaggi.
+
+ Anzitutto il tempo di attesa per il forwarding di un
+pacchetto è molto limitato, perché quando un nodo si trova in una fase attiva il mote seguente
+nel suo hop path verso il \sink sarà anch'esso attivo, mentre un pacchetto che si trova a parecchi hop di distanza sarà spento. 
+Con il procedere del pacchetto lungo l'hop path i nodi ancora da percorrere entrano uno alla 
+volta in uno stato di attività, mentre quelli che hanno già trasmesso possono entrare in uno 
+stato di inattività.
+\`E facile notare che questo approccio è implicitamente scalabile, in quanto all'aumentare della profondità dell'albero non c'è un aumento dell'overhead, ne' un peggioramento dal punto di vista energetico, in quanto un nodo che si trovi distante dall'azione resterà spento finché il 
+pacchetto non gli sia vicino.
 Allo stesso tempo, il fatto che il pacchetto si propaghi in modo "lineare" permette di far si 
 che tutti i nodi nel percorso verso il Sink siano in grado di correggere tempestivamente il loro 
 scheduling se necessario, mentre i nodi non coinvolti nella trasmissione possono mantenere il 
 loro ciclo di attivazione/spegnimento originario. 
-
+Va notato che questo meccanismo ha senso solamente in una certa classe di configurazioni 
+delle WSN, ovvero quando i nodi sono in un \emph{data gathering tree}, il che significa che il 
+flusso dei dati va principalmente dalle foglie al \sink (i dati vengono raccolti ed inviati per essere analizzati) con rari pacchetti di controllo inviati in senso opposto. 
 
 \section{Stati nel DMAC}
-Un problema che rimane è però la contesa del canale, anche se ovviamente il fatto che livelli 
-differenti si attivino in momenti differenti riduce le dimensioni del problema.
-Per far si che il messaggio arrivi correttamente e che le interferenze tra i differenti 
-mote siano minimizzate, ognuno di essi può essere in tre differenti stati, suddividendo il 
-periodo di funzionamento attivo in una coppia di periodi di ricezione ed invio. 
+Un problema che rimane è quello relativo alla contesa del canale, anche se ovviamente il fatto 
+che livelli differenti si attivino in momenti differenti riduce le dimensioni del problema.
+Per far si che il messaggio arrivi correttamente e che le interferenze tra i differenti livelli 
+dell'albero siano minimizzate, ogni \emph{mote} può essere in tre differenti stati, 
+suddividendo il  
+periodo di funzionamento attivo in una coppia di periodi,rispettivamente di ricezione e di invio.
 
 Nello stato di ricezione un nodo attende di ricevere un pacchetto, ed in caso questo accada 
-esso ne manda uno di ACK al mittente. Il nodo ricevente \emph{non inoltrerà} i dati in questa 
-fase ma li immagazzinerà in una coda fino a che non si trovi nel suo stato di invio. 
-Ovviamente un nodo nello stato di invio non fa altro che inoltrare un pacchetto ed attendere un 
-\texttt{ACK}. 
+esso ne manda uno di ACK al mittente. Il nodo ricevente \emph{non inoltra} i dati in questa 
+fase ma li immagazzina in una coda fino a che non si trovi nel suo stato di invio. 
+Ovviamente un nodo nello stato di invio non fa altro che inoltrare un pacchetto ed attendere il relativo \texttt{ACK}.  
 
-Come già detto è evidente che un nodo ad $n$ hop dal sink si troverà in uno stato di invio 
-quando il nodo ad $n-1$ hop si trova in stato di ricezione. 
-Nel caso che l'\texttt{ACK}  non venga ricevuto il pacchetto rimane nella coda e 
-verrà inviato nel prossimo slot di invio, aggiungendo delle opportune regole di drop nel caso 
-la trasmissione fallisca ripetutamente. 
+Gli stati si susseguono nell'ordine \emph{recv->send->sleep}, il che implica
+che un nodo ad $n$ hop dal sink si troverà in uno stato di invio quando il nodo ad $n-1$ 
+hop si trova in stato di ricezione. 
+Nel caso che l'\texttt{ACK}  non venga ricevuto il pacchetto rimane nella coda e, o
+arrivi danneggiato esso rimane nella coda di invio per essere 
+inviato nel prossimo slot di invio. 
+Apportune regole di drop possono essere introdotte in questo schema, ad esempio è possibile 
+abbandonare il tentativo di invio dopo che per un certo numero di volte si è inoltrato un pacchetto senza ricevere il relativo \ack
+ 
 Nel periodo di inattività i nodi spengono completamente la radio, e quindi sono isolati dalle 
-trasmissioni, ma l'organizzazione temporale fa si che essi non abbiano comunque la possibilità 
-di ricevere dati in questo periodo. 
+trasmissioni, ma l'organizzazione temporale fa si che essi non stiano aumentando la latenza ne abbattendo il throughput, visto che i nodi vicini con i quali potrebbero comunicare sono anch'essi in uno stato di analogo. 
 
 I periodi di invio e ricezione hanno una stessa durata $\mu$ che deve essere lunga abbastanza 
-affinché un pacchetto possa essere inviato e ricevuto, e ciò sia possibile anche per il 
-suo \texttt{ACK}. 
+affinché un pacchetto possa essere inviato, e  sia possibile per il mittente ricevere un  
+ \ack, il che è ovviamente dipendente dalla tipologia di dispositivi. 
  
 Dunque ad ogni tempo $t$ teoricamente saranno solamente i nodi ad un certo livello a 
 trasmettere, limitando la contesa per il canale. 
 
-Il periodo di sleep ha una durata nettamente maggiore del periodo attivo, circa $18\mu$ [[]], a meno di \emph{burst} di pacchetti, come vedremo in seguito.
+Il periodo di inattività ha una durata nettamente maggiore del periodo attivo (circa $18\mu$ in questa implementazione e nel prototipo originale discusso in \cite{DMAC}) a meno di 
+\emph{burst} di pacchetti, come vedremo in seguito.
 Un meccanismo di questo tipo ha bisogno evidentemente di una sincronizzazione molto precisa, ma 
 esistono algoritmi validi che permettono di portare l'errore di sincronizzazione ad un millesimo 
 del tempo $\mu$, quindi questo non rappresenta un problema. 
@@ -159,21 +172,27 @@ del tempo $\mu$, quindi questo non rappresenta un problema.
 Nella maggior parte delle WSN è probabile che un nodo che raccolga informazioni attraversi dei
 periodi di \emph{burst} in cui esso ha parecchie informazioni da inoltrare, e si può notare che 
 con il meccanismo appena descritto un'informazione che abbia bisopgno di due pacchetti avrebbe 
-bisogno di almen 20 unità di tempo piuttosto che di 2 (il caso in cui i nodi fossero 
-costantemente attivi) [[]], il che significa aumentare notevolmente la latenza della rete. 
+bisogno di almen 20 slot di tempo piuttosto che di 2 (il caso in cui i nodi fossero 
+costantemente attivi), il che significa aumentare notevolmente la latenza della rete. 
 Il protocollo prevede quindi dei meccanismi di autoregolazione del duty cycle basati su una flag 
 \texttt{more-to-send} presente nell'header dei pacchetti.
 
 Se un nodo ha diversi pacchetti da spedire oppure se ha ricevuto un pacchetto con questa flag
-già impostata, esso imposterà la flag nei pacchetti in uscita in modo in modo da indicare al 
-nodo seguente che ci sono altri dati in arrivo, e che esso dovrà prepararsi a riceverli. 
-Il meccanismo è chiaramente ricorsivo e fa si che l'informazione si propaghi fino al Sink 
-sulla base di sincronizzazioni locali, il che significa che nel caso un pacchetto dal nodo $X$ 
-al nodo $Y$ vada perso o sia danneggiato nesuno dei nodi da $Y$ al Sink verrà informato della necessità di  cambiare il proprio duty cycle, il che permette di evitare sprechi di risorse 
-aggiuntivi.
+già impostata, esso la imposterà a sua volta nei pacchetti in uscita in modo in modo da 
+indicare al nodo seguente che ci sono altri dati in arrivo, e che esso dovrà prepararsi a 
+riceverli. Il meccanismo è chiaramente ricorsivo e fa si che l'informazione si propaghi fino 
+al \sink sulla base di sincronizzazioni locali, il che significa che nel caso un pacchetto dal 
+nodo $X$ al nodo $Y$ vada perso o sia danneggiato nesuno dei nodiche si trovano sull'hop path da 
+$Y$ al \sink verrà informato della necessità di cambiare il proprio duty cycle, ed essi quindi 
+non sprecheranno risorse inutilmente rimanendo attivi in un periodo in cui non potrebbero 
+comunque ricevere altri dati. 
+
 
 Va sottolineato che nel DMAC, quando un nodo riceve un pacchetto \texttt{more-to-send} esso non 
-rimane attivo per il prossimo slot, bensi riduce il suo tempo di inattivita a $3\mu$ per poi tornare nello stato di ricezione. Questa attesa è necessaria affinché il pacchetto abbia il tempo di propagarsi tra i nodi seguenti, senza che ci siano collisioni con i pacchetti dei livelli precedenti. 
+rimane in uno degli stati attivi nello slot immediatamente seguente, bensi esso entra in uno stato di inattività ma riducendone la durata a  
+$3\mu$ per poi tornare nello stato di ricezione. Questa attesa è necessaria affinché il 
+pacchetto abbia il tempo di propagarsi tra i nodi seguenti, senza che ci siano collisioni con i
+pacchetti dei livelli precedenti. 
 % pippa sul fatto che potebber essre sprecato un periodo
 % pippa sul data prediction
 
@@ -183,9 +202,12 @@ rimane attivo per il prossimo slot, bensi riduce il suo tempo di inattivita a $3
 \section{Un sistema operativo per WS}
 Lo sviluppo della tecnologia dei sensori wireless pùò essere paragonato a quella delle 
 piattaforme PC domestiche. Ad un aumento costante della potenza di calcolo si è accompagnato un 
-aumento nella disponibilità di periferiche (memoria non volatile, attuatori, sensori di 
-luce/calore/movimento etc\ldots). \`E sorta quindi la possibilità di gestire i coponenti ad un 
-livello più alto di astrazione, esattamente come per i PC si è passati da sistemi operativi 
+aumento nella gamma di periferiche (memoria non volatile, attuatori, sensori di 
+luce/calore/movimento etc\ldots) ed un aumento della disponibilità di tale hardware.
+Esattamente come per l'informatica domestica, sono sorte quindi la possibilità e la necessità 
+di gestire i
+componenti ad un livello più alto di astrazione, esattamente come per i PC si è passati 
+da sistemi operativi 
 ad hoc scritti in assembly a strutture stratificate in linguaggi di livello più alto. 
 
 TinyOS rappresenta appunto un sistema operativo "\emph{moderno}" per WS, che fornisce 
@@ -195,48 +217,66 @@ semplici da realizzare e facilmente portabili tra diversi modelli di sensore.
 Tra le funzionalità che TinyOS offre ci sono
 \begin{itemize}
 
-\item{Astrazione dei driver per sensori, radio, ed ogni altra periferica  }
+\item{astrazione dei driver per sensori, radio, ed ogni altra periferica  }
 
-\item{Concorrenza (threading a stato condiviso}
+\item{vari meccanismi per la concorrenza }
 
-\item{Gestione della memoria e dello scheduling}
+\item{gestione della memoria e dello scheduling}
 
-\item{Un linguaggio di sviluppo (NesC) che supporti direttamente tutto questo}
+\item{un linguaggio di sviluppo (NesC) che supporti direttamente tutto questo}
 \end{itemize}
 
+TinyOS è software open source, disponibili a tutti  e con una comunità in crescita.
+Esso offre inoltre alcuni strumenti a corredo interessanti, tra i quali sono presenti 
+simulatori, visualizzatori, database, ed interfacce con numerosi linguaggio di programmazione. 
 
-\section{NesC un linguaggio per sensori}
+
+
+\section{NesC un linguaggio per dispositivi wireless embedded}
 
 Sebbene il C sia ormai lo standard de facto come \emph{system language} esso è per molti versi 
 un linguaggio vecchio, che sebbene abbia conosciuto diverse revisioni mantiene comunque una 
 netta mancanza per costrutti di alto livello. 
 NesC è basato sul C, sia a livello sintattico che a livello semantico. 
-In effetti il compilatore NesC è effettivamente implementato come un frontend per GCC [[ ]].
+In effetti il compilatore NesC è effettivamente implementato come un frontend per il noto compilatore multipiattaforma GCC \cite{nesc}.
 
 NesC estende però il C in varie direzioni ortogonali, che rispecchiano da un lato le funzionalità
-sel SO sottostante e dall'altro le necessità dell'hardware particolare su cui esso deve funzionare. 
+di TinyOS e dall'altro le necessità dell'hardware particolare su cui esso deve 
+funzionare. 
 
 \subsection{Concorrenza}
 TinyOS fornisce alcune primitive per la concorrenza che sono replicate nel design di NesC.
-Ogni mote può avere in esecuzione differenti \emph{task}, i quali vengono attivati secondo un 
+Ogni dispositivo può avere in esecuzione differenti \emph{task}, i quali vengono attivati 
+secondo un 
 meccanismo di scheduling non preemptive, quindi funzionano finché la funzione associata non 
 raggiunge un \texttt{return}. Si tratta di un meccanismo di concorrenza a stato condiviso in cui 
-i task possono comunicare solamente tramite variabili globali, com \emph{pthread} o i thread in 
-Java, ma il compilatore è in grado di determinare staticamente la possibilità di race condition 
-(sebbene possa sbagliare). Va notato che non esistono meccanismi di sincronizazione esplicita 
-dei task (nessun "\emph{join}").
+i task possono comunicare solamente tramite variabili condivise, in modo analogo a 
+\emph{pthread} o ai thread in Java/.NET, e sono presenti dei costrutti analoghi basati sui lock, come ad esmepio la possibilità di dichiarare una variabile o un blocco di codice come \texttt{atomic}.
+Una differenza importante è data dal fatto che ogni programma scritto in del NesC è soggetto ad 
+un'analisi globale che è teoricamente in grado di individuare possibili race condition e 
+condurre l'autore alla loro eliminazione, riducendo il numero di bug. 
+Questo meccanismo no è però infallibile, e può sbagliare producendo false positive 
+(eliminabili indicando esplicitamente al compilatore che non ci sono race condition) o non 
+individuando dei problemi[[]]. i
+Ogni task mantiene il controllo della CPU fino a che non termina, senza essere mai interrotto da un altro task, e non esiste un meccanismo di sincronizazione esplicita 
+dei task in stile "\emph{join}".
+Un task può però essere interrotto da un evento asincrono.
+
 
 \subsection{Eventi}
-I task possono essere attivati da qualunque punto del programma, ed in particolare è possibile 
-far si che essi vengano avviati quando accade qualcosa di rilevante. 
-TinyOS e NesC forniscono allo sviluppatore gli eventi. Praticamente ogni cosa può essere 
-rappresentata da un evento, l'arrivo di un segnale radio, l'avvio di un timer, l'inizio della ricezione di dati da un sensore etc...
+Lo scheduler di TinyOS può decidere di interrompere il funzionamento di un task se riceve un 
+evento hardware (preempting). Per modellare questi casi NesC offre il meccanismo degli eventi, 
+che sono speciali funzioni indicate appunto come eventi e che vengono richiamate in numerosi casi, l'arrivo di un segnale radio, l'avvio di un timer, l'inizio della ricezione di dati da un sensore etc...
+Gli eventi non sono necessariamente asincroni, e tipicamente eventi di bassa priorità (per esempio il segnalare che un pacchetto è stato inviato) non lo sono.
+\`E possibile definire propri eventi prependendo la keyword \texttt{event} ad una qualsiasi 
+funzione, a differenza dei task che possono essere applicati solamente a funzioni \texttt{void}
+
  
 
 \subsection{Componenti ed Interfacce}
 TinyOS come molti altri SO usa e fornisce delle interfacce per rappresentare gli oggetti del 
 sistema (layer di rete, driver etc...). 
-Mentre però questo in molte piattaforme classiche (Win32, Linux, BSD) ciò è fatto informalmente 
+Mentre però in molte piattaforme classiche (Win32, Linux, BSD) ciò è fatto informalmente 
 usando il linguaggio C, NesC è stato esteso per supportare sintatticamente l'idea di 
 programmazione a componenti. 
 Un'interfaccia dichiara di fornire un certo numero di 
@@ -249,20 +289,27 @@ handler}
 \end{itemize}
 
 Un componente può implementare una o più interfacce (o implementare un'interfaccia più volte 
-con nomi diversi), ed è composto principalmente da due parti, una di configurazione 
+con nomi diversi, il che fornisce una qualche similarità con la progrmmazione ad oggetti), 
+ed è composto principalmente da due parti, una di configurazione 
 (dichiarazione di componenti ed interfacce usati) ed una di implementazione.
-La configurazione è il cuore della parte Component-Oriented di NesC, in quanto è l'unico punto 
-in cui si effettua il \emph{wiring} tra differenti componenti, offrendo una grande flessibilità.
-Componenti ed interfacce, infine possono essere parametrizzati, un qualsiasi valore può essere 
-incluso durante il wiring effettaundo una sorta di \emph{currying} dell'interfaccia. 
-In versioni più recenti di NesC è possibile avere anche type parameter, ma in questa tesi  
-il problema è stato aggirato [[]]
+La configurazione è il cuore della parte \emph{Component-Oriented} di NesC, in quanto è 
+il punto in cui viene effettuata l'associazione tra componenti ed interfacce, indicato come 
+\emph{wiring}, offrendo una grande flessibilità. 
+La parte di implementazione contiene riferimento solamente ai nomi inhdicati nella configurazione
+, rendendo facilmente sostituibili i componenti.
+L'implementazione contiene poi ovviamente il codice di comandi ed eventi, e può contenere un 
+certo numero di variabili globali accessibili da tutte le funzioni del componente. 
+
+Per massimizzare il riuso e la semplicità di programmazione componenti ed interfacce possono 
+essere parametrizzati, un qualsiasi valore può essere 
+incluso in fase di configurazione effettuando una sorta di \emph{currying} dell'interfaccia. 
+In versioni più recenti di NesC è possibile avere anche type parameter, ma con la versione della piattaforma usata in questa tesi ciò non è stato possibile. 
 
 
-[[ ed eventuali dichiarazioni 
-riguardo i rapporti tra determinate interfacce (è possibile dichiarare che il modulo 
-\texttt{RedBlackTree} equivale all'interfaccia \texttt{Dictionary} anche se nel primo non 
-c'è nessun  riferimento alla seconda);  ]]
+%[[ ed eventuali dichiarazioni 
+%riguardo i rapporti tra determinate interfacce (è possibile dichiarare che il modulo 
+%\texttt{RedBlackTree} equivale all'interfaccia \texttt{Dictionary} anche se nel primo non 
+%c'è nessun  riferimento alla seconda);  ]]
 
 
 
@@ -273,20 +320,40 @@ possibili è fatta a compile time. Con ciò non si intende solo un semplice type
 moduli compilativi, ma anche una gestione statica della memoria (in realtà è possibile usare 
 \texttt{malloc()} e simili ma a patto di essere molto cauti) e con l'intero call graph disponibile a compile time. 
 
-NesC fa uso di \emph{whole program analisys and optimization} (WPA/WPO) per raggiungere alte 
-performance tramite ottimizzazioni interprocedurali (teoricamente è possibile aggiungerne altre 
-alla pipeline ma al momento esse non sono implementate).
+NesC fa uso di \emph{whole program analisys and optimization} (WPA/WPO) per raggiungere alte
+performance tramite ottimizzazioni interprocedurali, constant propagation, dead code 
+elimination etc (ma esse sono possibili in via teorica teoricamente, al momento molto poco 
+di ciò è implementato).
 Allo stesso tempo grazie alla WPA esso puo offrire garanzie riguardo l'affidabilità dei 
-programmi (il compilatore è in grado di individuare possibili \emph{race condition} sui dati globali).
+programmi (l'individuazione di possibili race condition sui dati condivisi è possibile proprio 
+in virtù di questo fatto).
 
+
+\section{TOSSIM, un simulatore per PC}
+TOSSIM\cite{TOSSIM} è un simulatore per personal computer  in grado di far funzionare lo 
+stesso codice NesC che è stato scritto per i dispositivi embedded. 
+I vantaggi di questo approccio è che il codice può essere scritto, debuggato e testato su 
+una normale macchina casalinga, e poi essere trasportato senza cambiamenti su un dispositivo 
+reale. 
+TOSSIM è in sostanza una libreria che viene connessa in fasi di link con il codice NesC 
+tradotto in codice C, e che fornisce il \texttt{main()} ed altro, producendo un 
+eseguibile nativo, per ogni applicazione TinyOS.
+
+TOSSIM è in grado di accettare in input un modello delle probabilità di perdita di pacchetti 
+tra due nodi qualunque, o di usare dei modelli teorici predefiniti, ma non comprende ne' 
+informazioni topologiche, ne' modelli di alto livello, i quali possono però essere sempre 
+definiti in termini di probabilità di perdita su un qualsiasi arco. 
 
 \chapter{L'implementazione}
 Il file 
 
 
 \begin{thebibliography}{99}
+\bibitem{TOSSIM} "TOSSIM: Accurate and Scalable Simulation of Entire TinyOS Applications", \emph{Philip Levis, Nelson Lee, Matt Welsh, and David Culler. In Proceedings of the First ACM Conference on Embedded Networked Sensor Systems (SenSys 2003)}.  
 \bibitem{DMAC} An energy bla bla
-\bibitem{foo} ofoo foo
+\bibitem{SMAC} smac
+\bibitem{TMAC} tmac
+\bibitem{nesc} "The nesC Language: A Holistic Approach to Networked Embedded Systems", \emph{David Gay, Phil Levis, Rob von Behren, Matt Welsh, Eric Brewer, and David Culler. Proceedings of Programming Language Design and Implementation (PLDI) 2003, June 2003}.
 \end{thebibliography}
 \end{document}
 
