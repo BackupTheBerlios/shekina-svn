@@ -1,14 +1,14 @@
 % vim: encoding=utf-8
 % vim: fileencoding=utf-8
-\documentclass[pdftex,12pt,a4paper,italian,openany]{book}
+\documentclass[pdftex,11pt,a4paper,italian,openany]{book}
 \usepackage[italian]{babel}
 %è safe metterlo a 1.6, con 13 pagine arrivo a 16
-\linespread{1.6}
+%\linespread{1.6}
 %\renewcommand{\baselinestretch}{1.6}
 \usepackage[utf8]{inputenc}
 \usepackage{newcent}
 \usepackage{fancyhdr}
-
+\usepackage{listings}
 
 
 \begin{document}
@@ -364,8 +364,48 @@ il che permette la realizzazione di semplici script (ma anche programmi compless
  
 
 \chapter{L'implementazione}
-Il file 
+\section{Visione d'insieme}
+Per realizzare l'applicazione il tutto è stato strutturato in due differenti moduli più 
+una semplice libreria C per la gestione di una coda.
 
+Il primo modulo si occupa dell'individuazione delle informazioni relative alla topologia, 
+mantenendo per ogni nodo informazioni sulla sua distanza dal \sink e su quale sia il prossimo 
+nodo nel suo hop path.  
+Quando l'albero è stato mappato inizia il loop principale dei mote, che è una 
+semplice macchina a stati finiti con tre stati implementata con degli \texttt{if/else}.
+Il codice fa uso di una coda per i pacchetti da inoltrare implementata nel file [[]], realizzata tramite una semplice lista collegata. Il fatto che 
+
+
+
+\newcommand{\treedata}{\texttt{TreeData}}
+\section{Il componente \treedata}
+
+
+
+\section{Il cuore dell'applicazione}
+\section{La simulazione}
+\chapter{Codice}
+%\begin{lstlisting}
+\lstset{
+%  stringspaces=false,
+  basicstyle=\small,
+%  language=C,
+%  basicstyle=\ttfamily,
+  numbers=left, 
+  stepnumber=5, 
+  numbersep=8pt,
+%  frame=single,
+%  numberblanklines=false,
+  frame=L,
+  xleftmargin=10pt,
+%  xrightmargin=20pt
+  }
+
+
+\lstinputlisting{Sink.h}
+\lstinputlisting{Sink.nc}
+\lstinputlisting{SinkM.nc}
+%\end{lstlisting}
 
 \begin{thebibliography}{99}
 \bibitem{TOSSIM} "TOSSIM: Accurate and Scalable Simulation of Entire TinyOS Applications", \emph{Philip Levis, Nelson Lee, Matt Welsh, and David Culler. In Proceedings of the First ACM Conference on Embedded Networked Sensor Systems (SenSys 2003)}.  
