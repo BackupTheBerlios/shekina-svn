@@ -3,7 +3,7 @@
 \documentclass[pdftex,12pt,a4paper,italian,openany]{book}
 \usepackage[italian]{babel}
 %è safe metterlo a 1.6, con 13 pagine arrivo a 16
-\linespread{1.4}
+\linespread{1.6}
 %\renewcommand{\baselinestretch}{1.6}
 \usepackage[utf8]{inputenc}
 \usepackage{newcent}
@@ -329,20 +329,39 @@ programmi (l'individuazione di possibili race condition sui dati condivisi è po
 in virtù di questo fatto).
 
 
-\section{TOSSIM, un simulatore per PC}
-TOSSIM\cite{TOSSIM} è un simulatore per personal computer  in grado di far funzionare lo 
+\newcommand{\tos}{\texttt{TOSSIM}}
+
+\section{\tos, un simulatore per PC}
+\tos\cite{TOSSIM} è un simulatore per personal computer  in grado di far funzionare lo 
 stesso codice NesC che è stato scritto per i dispositivi embedded. 
 I vantaggi di questo approccio è che il codice può essere scritto, debuggato e testato su 
 una normale macchina casalinga, e poi essere trasportato senza cambiamenti su un dispositivo 
 reale. 
-TOSSIM è in sostanza una libreria che viene connessa in fasi di link con il codice NesC 
+\tos è in sostanza una libreria che viene connessa in fasi di link con il codice NesC 
 tradotto in codice C, e che fornisce il \texttt{main()} ed altro, producendo un 
 eseguibile nativo, per ogni applicazione TinyOS.
 
-TOSSIM è in grado di accettare in input un modello delle probabilità di perdita di pacchetti 
+\tos è in grado di accettare in input un modello delle probabilità di perdita di pacchetti 
 tra due nodi qualunque, o di usare dei modelli teorici predefiniti, ma non comprende ne' 
 informazioni topologiche, ne' modelli di alto livello, i quali possono però essere sempre 
-definiti in termini di probabilità di perdita su un qualsiasi arco. 
+definiti in termini di probabilità di perdita su un qualsiasi arco.
+\newcommand{\tv}{\texttt{TinyViz}}
+Allo scopo di definire questi modelli, sono stati creati vari strumenti, tra i quali 
+\texttt{LossyBuilder}, un programma in grado di generare file di testo rappresentanti 
+la distribuzione di una rete di nodi in topologia a griglia, e \tv.
+\tv è in realtà un sistema molto più complesso, basato su un architettura a plugin. 
+
+\tos fornisce un'interfaccia modellata sui meccanismi di TinyOS, cioè comandi ed eventi, 
+che gli opermette di interoperare con dispositivi esterni, permettendo così l'implementazione in componenti separati di tutta una serie di funzionalità ad esempio l'analisi dei segnali, la visualizzazione di una topologia, l'iniezione di pacchetti radio e di informazioni per i sensori etc.. 
+\tv è un ambient grafico ralizzato in java che astrae i meccanismi di base di questa interazione 
+con \tos esponendoli tramite un'interfaccia non molto complessa ad una serie di plugin 
+caricabili a runtime.  La distribuzione di TinyOS comprende un insieme variegato di plugin che 
+però sono purtroppo in molti casi non mantenuti e non funzionano. Il codice di tinyviz è 
+in generale non troppo ben tenuto. 
+Durante la realizzazione di questa tesi è avvenuta una riscrittura di questo ambiente che lo ha 
+portato ad essere fondato su jython\cite{tython}, cioè un interprete python per JVM, 
+il che permette la realizzazione di semplici script (ma anche programmi complessi).
+ 
 
 \chapter{L'implementazione}
 Il file 
@@ -354,6 +373,7 @@ Il file
 \bibitem{SMAC} smac
 \bibitem{TMAC} tmac
 \bibitem{nesc} "The nesC Language: A Holistic Approach to Networked Embedded Systems", \emph{David Gay, Phil Levis, Rob von Behren, Matt Welsh, Eric Brewer, and David Culler. Proceedings of Programming Language Design and Implementation (PLDI) 2003, June 2003}.
+\bibitem{tython} "Tython: A Dynamic Simulation Environment for Sensor Networks", \emph{Michael Demmer and Phil Levis}
 \end{thebibliography}
 \end{document}
 
