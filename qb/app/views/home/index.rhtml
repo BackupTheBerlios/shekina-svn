@@ -2,15 +2,6 @@
 
 <h3 id="tagline">La comunità italiana dedicata a ruby </h3>
 
-<div id="newsbar">
-  <% for page in latest_news() %>
-    <div class="newsitem">
-      <h3 ><%= wiki_link page.title %> </h3>
-      <!-- has <p> already -->
-        <%= markup(page.current_revision.body) rescue nil%> 
-    </div>
-  <% end %>
-</div>
 
 <div id="sidebar">
   <div>
@@ -60,6 +51,15 @@
    <h3> tutti i bottoncini </h3>
   </div>
   -->
+</div>
+<div id="newsbar">
+  <% for page in latest_news() %>
+    <div class="newsitem">
+      <h3 ><%= wiki_link page.title %> </h3>
+      <!-- has <p> already -->
+        <%= markup(page.current_revision.body[/^(.*?\r\n\r\n){2}/])+"[link]" rescue nil%> 
+    </div>
+  <% end %>
 </div>
 
        
