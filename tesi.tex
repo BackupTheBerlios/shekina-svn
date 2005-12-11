@@ -3,7 +3,7 @@
 \documentclass[twoside,11pt,a4paper,italian,openany]{book}
 \usepackage[italian]{babel}
 %è safe metterlo a 1.6, con 13 pagine arrivo a 16
-%\linespread{1.6}
+\linespread{1.6}
 %\renewcommand{\baselinestretch}{1.6}
 \usepackage[utf8]{inputenc}
 \usepackage{newcent}
@@ -49,7 +49,10 @@
 }
 \newcommand{\sink}[0]{\emph{Sink}}
 \newcommand{\ack}[0]{\texttt{ACK}}
+
+\newcommand{\req}[0]{\texttt{REQ}}
 \mainmatter
+
 \chapter{Introduzione}
 L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per 
 rispettare i vincoli imposti da una particolare tipologia di reti wireless, le reti di sensori.
@@ -450,21 +453,83 @@ rende lo sviluppo usando il simulatore decisamente più problematico.
 
 
 \section{Il cuore dell'applicazione}
-Il componente DMAC implementa l'algoritmo descritto in \cite{DMAC} sebbene in realtà lo faccia 
+Il componente Dmac implementa l'algoritmo descritto in \cite{DMAC} sebbene in realtà lo faccia 
 a un livello più alto rispetto a quello corretto. Infatti andare a sostituire i layer di rete 
 più bassi sul simulatore è particolarmente complesso rispetto al farlo su un dispositivop reale, 
 oltre che assolutamente non documentato, ed in effetti non è neanche riuscito di trovare 
 un'implementazione sostitutiva dei layer basilari di \tos da prendere come esempio. 
 Sebbene quindi l'algoritmo funzioni correttamente, ci sono dei dettagli che non sono stati 
 considerati, ad esempio il CRC.
-Il modulo fra uso di due timer, del componente \texttt{GenericComm} 
+Il modulo fra uso di due timer, del componente \texttt{GenericComm}  che implementa le 
+primitive di invio di messaggi, ed ovviamante del componente \tree. 
+I due timer potrebbero in realtà essere sostituiti da un uno solo, ma sonob stai separati 
+per ottenwre una maggiore chiarezza del codice.
+Il ruolo del primo, \texttt{TreeTimer} è di controllare la durata del periodo necessario per
+acquisire i dati sulla topologia dei nodi, al termine del quale il componente \tree, avviato 
+nel momento in cui viene avviato il codice principale, viene fermato.
+Ovviamente la durata di questo periodo dovrebbe essere tarata basandosi sulla topologia fisica 
+dei dispositivi, sul loro numero e sulla reale frequenza di errore, ed è possibile farlo 
+tramite una definizione nel file \texttt{Dmac.h}.
+Il codice dell'evento \texttt{TreeTimer.fired()} si occupa anche di memorizzare i dati topologici
+e di avviare il loop principale preparando il timer principale. 
+Ogni volta che il timer principale scatta si effettua una transizione di stato e viene 
+impostato un nuovo tempo di attesa prima che il timer segnali di nuovo l'evento. 
+Il tempo di attesa è dipendente dallo stato del nodo, che è dato dall'unione di una variabile 
+di tipo \texttt{enum}, \texttt{myState} e di un valore booleano, \texttt{moreToSend}. 
+In teoria sarebbe stato possibile unire le due cose ottenenedo un automa a stati finiti a 
+5 stati, ma in assenza di vantaggi significativi si sarebbe aggiunta una complessità maggiore 
+del codice. 
+
+
+All'entrata nello stato di ricezione viene richiamato il task appropriato, 
+\texttt{forwardReq()}, il cui significato è ovvio.
+I messaggi vengono mantenuti in una coda implementata nel file \texttt{MyQueue.h}, 
+basata su una coppia di strutture ed un meccanismo molto emplice di lista collegata. 
+In teoria TinyOS non fornisce una primitiva per la funzione \texttt{malloc()} usata in questo 
+file, ne' garantisce una gestione corretta dell'heap, ma si limita a inoltrare la richiesta 
+alla libreria sottostante.  Nel nostro caso però sappiamo che il sistema operativo sottostante 
+(Unix-like o win32) offre questo meccanismo per cui possimo farne uso tranquillamente. 
+E' mia convinzione che dato che la gestione della memoria dinamica è demandata solamente a 
+questo singolo pezzo dell'applicazione non dovrebbero esserci problemi neanche con un porting 
+diretto, ma in alternativa è possibile sostituire facilmente il codice con uno che utilizzi un 
+array statico. 
+\texttt{forwardReq()} non effettua una "pop" dell'elemento in cima alla coda, 
+in quanto non è garantito il successo del comando \texttt{SendMsg.send()}, 
+ne' è garantito che il messaggio sia inviato con successo anche se questa funzione ha successo.
+D'altronde anche se il messaggio fosse inviato correttamente ( cioè venisse segnalata \texttt{SendMsg.sendDone()} con un valore di \texttt{SUCCESS} )  non avremo garanzie sulla ricezione da 
+parte del prossimo nodo. Dunque per eliminare un messaggio dalla coda aspettiamo di ricevere 
+un pacchetto di \ack, sapendo che esso sarà per forza relativo all'ultimo nostro pacchetto 
+inviato, giacché sappiamo che ne viene inviato soltanto uno per ogni slot. 
+
+Nel caso dunque non venga ricevuto un \ack il pacchetto rimane nella coda di invio in attesa 
+del prossimo slot libero. \`E certamente possibile che un nodo riceva un pacchetto di tipo \req 
+ma il relativo pacchetto di \ack vada perso, il che introdurrebbe dei duplicati nel ciclo, 
+ma questo è un problema che è semplice affrontare aggiungendo dei numeri sequenziali ad un 
+livello più alto dello stack di comunicazione. 
+
+
+La funzione \texttt{sendAck()} si occupa di impostare valori appropriati nel pacchetto di \ack 
+e di inviare il pacchetto tramite il layer sottostante 
+
+
+ 
+
+
+
+
+l'ack viene inviato basandoci sul valore della variabile globale \texttt{lastSender}, 
+in quanto sarebbe impossibile far arrivare al task l'informazione in un altro modo, vista la 
+natura asincrona dell'algoritmo.  
+In teoria invece di una singola variabile dovrebbe esserci una lista di indirizzi, 
+in quanto un nodo potrebbe ricevere differenti pacchetti in un solo slot di ricezione, il che implicherebbe la ne 
+
+
 
 
 \section{La simulazione}
 
 
-\backmatter
-\chapter{Codice}
+\appendix
 %\begin{lstlisting}
 \lstset{
 %  stringspaces=false,
@@ -480,16 +545,31 @@ Il modulo fra uso di due timer, del componente \texttt{GenericComm}
 %  xleftmargin=10pt,
 %  xrightmargin=20pt
   }
+%\addcontentsline{toc}{chapter}{Codice del componente DMac}
+\chapter{Codice del componente DMac}
+\section{DMac.h}
+\lstinputlisting{DMac.h}
+\section{DMac.nc}
+\lstinputlisting{DMac.nc}
+\section{DMacM.nc}
+\lstinputlisting{DMac.nc}
 
+\chapter{Codice del componente Tree}
+\section{TreeData.nc}
+\lstinputlisting{lib/TreeData.nc}
+\section{Tree.h}
+\lstinputlisting{lib/Tree.h}
+\section{Tree.nc}
+\lstinputlisting{lib/Tree.nc}
+\section{TreeM.nc}
+\lstinputlisting{lib/TreeM.nc}
 
-\lstinputlisting{Sink.h}
-\lstinputlisting{Sink.nc}
-\lstinputlisting{SinkM.nc}
 %\end{lstlisting}
 
+\backmatter
 \begin{thebibliography}{99}
+\bibitem{DMAC} "An Adaptive Energy-Efficient and Low-Latency MAC for Data Gathering in Sensor Networks", \emph{G Lu, B Krishnamachari, C Raghavendra - Workshop on Energy-Efficient Wireless Communications, 2004} 
 \bibitem{TOSSIM} "TOSSIM: Accurate and Scalable Simulation of Entire TinyOS Applications", \emph{Philip Levis, Nelson Lee, Matt Welsh, and David Culler. In Proceedings of the First ACM Conference on Embedded Networked Sensor Systems (SenSys 2003)}.  
-\bibitem{DMAC} An energy bla bla
 \bibitem{SMAC} smac
 \bibitem{TMAC} tmac
 \bibitem{nesc} "The nesC Language: A Holistic Approach to Networked Embedded Systems", \emph{David Gay, Phil Levis, Rob von Behren, Matt Welsh, Eric Brewer, and David Culler. Proceedings of Programming Language Design and Implementation (PLDI) 2003, June 2003}.
