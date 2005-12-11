@@ -1,6 +1,6 @@
 % vim: encoding=utf-8
 % vim: fileencoding=utf-8
-\documentclass[pdftex,11pt,a4paper,italian,openany]{book}
+\documentclass[twoside,11pt,a4paper,italian,openany]{book}
 \usepackage[italian]{babel}
 %è safe metterlo a 1.6, con 13 pagine arrivo a 16
 %\linespread{1.6}
@@ -12,6 +12,7 @@
 
 
 \begin{document}
+\frontmatter
 %\maketitle
 \newlength{\centeroffset}
 \setlength{\centeroffset}{-0.5\oddsidemargin}
@@ -48,6 +49,7 @@
 }
 \newcommand{\sink}[0]{\emph{Sink}}
 \newcommand{\ack}[0]{\texttt{ACK}}
+\mainmatter
 \chapter{Introduzione}
 L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per 
 rispettare i vincoli imposti da una particolare tipologia di reti wireless, le reti di sensori.
@@ -244,15 +246,14 @@ NesC estende però il C in varie direzioni ortogonali, che rispecchiano da un la
 di TinyOS e dall'altro le necessità dell'hardware particolare su cui esso deve 
 funzionare. 
 
-\subsection{Concorrenza}
+\subsection{Task}
 TinyOS fornisce alcune primitive per la concorrenza che sono replicate nel design di NesC.
 Ogni dispositivo può avere in esecuzione differenti \emph{task}, i quali vengono attivati 
 secondo un 
 meccanismo di scheduling non preemptive, quindi funzionano finché la funzione associata non 
 raggiunge un \texttt{return}. Si tratta di un meccanismo di concorrenza a stato condiviso in cui 
 i task possono comunicare solamente tramite variabili condivise, in modo analogo a 
-\emph{pthread} o ai thread in Java/.NET, e sono presenti dei costrutti analoghi basati sui lock, come ad esmepio la possibilità di dichiarare una variabile o un blocco di codice come \texttt{atomic}.
-Una differenza importante è data dal fatto che ogni programma scritto in del NesC è soggetto ad 
+\emph{pthread} o ai thread in Java/.NET, con la differenza importante che ogni programma scritto in  NesC è soggetto ad 
 un'analisi globale che è teoricamente in grado di individuare possibili race condition e 
 condurre l'autore alla loro eliminazione, riducendo il numero di bug. 
 Questo meccanismo no è però infallibile, e può sbagliare producendo false positive 
@@ -264,12 +265,19 @@ Un task può però essere interrotto da un evento asincrono.
 
 
 \subsection{Eventi}
-Lo scheduler di TinyOS può decidere di interrompere il funzionamento di un task se riceve un 
-evento hardware (preempting). Per modellare questi casi NesC offre il meccanismo degli eventi, 
-che sono speciali funzioni indicate appunto come eventi e che vengono richiamate in numerosi casi, l'arrivo di un segnale radio, l'avvio di un timer, l'inizio della ricezione di dati da un sensore etc...
+Lo scheduler di TinyOS può comunque sempre decidere di interrompere il funzionamento di un task 
+se esso riceve un evento hardware (preempting). 
+Per modellare questi casi NesC offre il meccanismo degli eventi, 
+che sono speciali funzioni annotate come tali e che vengono richiamate in numerosi 
+casi, l'arrivo di un segnale radio, l'avvio di un timer, l'inizio della ricezione di dati da un sensore etc...
 Gli eventi non sono necessariamente asincroni, e tipicamente eventi di bassa priorità (per esempio il segnalare che un pacchetto è stato inviato) non lo sono.
 \`E possibile definire propri eventi prependendo la keyword \texttt{event} ad una qualsiasi 
-funzione, a differenza dei task che possono essere applicati solamente a funzioni \texttt{void}
+funzione, a differenza dei task che possono essere applicati solamente a funzioni \texttt{void}.
+Poiché un evento asincrono potrebbe interrompere una funzione in un punto qualsiasi della sua esecuzione, NesC offre un meccanismo per garantire che un blocco di codice venga eseguito in 
+maniera atomica,  permettendo di annotare una qualsiasi variabile come \texttt{atomic} o 
+di inserire un blocco di codice indicate come tale in maniera simile a \texttt{synchronized} 
+in java.
+
 
  
 
@@ -329,7 +337,7 @@ programmi (l'individuazione di possibili race condition sui dati condivisi è po
 in virtù di questo fatto).
 
 
-\newcommand{\tos}{\texttt{TOSSIM}}
+\newcommand{\tos}{\texttt{TOSSIM} }
 
 \section{\tos, un simulatore per PC}
 \tos\cite{TOSSIM} è un simulatore per personal computer  in grado di far funzionare lo 
@@ -366,24 +374,96 @@ il che permette la realizzazione di semplici script (ma anche programmi compless
 \chapter{L'implementazione}
 \section{Visione d'insieme}
 Per realizzare l'applicazione il tutto è stato strutturato in due differenti moduli più 
-una semplice libreria C per la gestione di una coda.
+una libreria C elementare per la gestione di una coda.
 
 Il primo modulo si occupa dell'individuazione delle informazioni relative alla topologia, 
 mantenendo per ogni nodo informazioni sulla sua distanza dal \sink e su quale sia il prossimo 
 nodo nel suo hop path.  
 Quando l'albero è stato mappato inizia il loop principale dei mote, che è una 
 semplice macchina a stati finiti con tre stati implementata con degli \texttt{if/else}.
-Il codice fa uso di una coda per i pacchetti da inoltrare implementata nel file [[]], realizzata tramite una semplice lista collegata. Il fatto che 
+Il codice fa uso di una coda per i pacchetti da inoltrare implementata nel file [[]], realizzata tramite una semplice lista collegata. NesC nella versione utilizata non permette di parametrizzare un'interfaccia tramite tipi, il che significa che non era possibile implementare 
+un'interfaccia che fosse contemporaneamente type safe e generica, quindi all'interno del codice si fa riferimento esplicito ai tipi definiti nel resto del programma. 
 
 
 
 \newcommand{\treedata}{\texttt{TreeData}}
-\section{Il componente \treedata}
+\newcommand{\tree}{\texttt{Tree}}
 
+\section{Il componente \treedata}
+La mappatura dell'albero è affidata ad un componente apposito \tree, che implementa l'interfaccia
+\texttt{StdControl} e ne definisce una sua, \treedata.
+L'interfaccia \texttt{StdControl} è un'interfaccia generica per un componente NesC, che fornisce 
+comandi per attivare, inizare le operazioni e disattivare un componente.
+L'attivazione di \tree porta all'attivazione del componente di rete, \texttt{GenericComm}, 
+il quale fornisce implementazioni delle interfacce di basso livello per l'invio e la ricezione 
+di pacchetti. 
+Quando viene richiamato il comando \texttt{StdControl.start()} il modulo inizio la mappatura 
+dell'albero seguendo un processo molto semplice, a partire dal \sink. 
+Questo nodo invia un segnale broadcast indicando il suo indirizzo di rete ed il numero di hop 
+necessari a raggiungerlo ($1$, per il \sink). Ogni nodo che riceve questo messaggio provvede poi ad inoltrarlo  sua volta, di nuovo in broadcast, aggiornando ovviamente le informazioni su mittente ed hop count. 
+Quando un nodo riceve un messaggio viene segnalato l'evento 
+\texttt{ReceiveMsg.receive()}, ed è li che si trova la vera logica del componente. 
+Infatti il codice si occupa di impostare appropriatamente dele variabili globali 
+(a livello di componente) che rappresentano l'hop count ed il prosimo node nel percorso verso 
+il \sink, ma solamente nel caso che il messaggio ricevuto indichi la possibilità di raggiungerlo
+in un numero di hop minore rispetto a quello registrato precedentemente. 
+
+Il Sink, dal canto suo, continua ad inviare pacchetti ad intervalli regolari (cioè ogni volta 
+che viene segnalato \texttt{SinkTimer.fired()}, in modo da evitare eventuali errori dovuti alla 
+perdita di pacchetti o a problemi di trasmissione.
+Il processo continua fino a che il componente non viene fermato, tramite 
+\texttt{StdControl.stop()}, ed è il codice in \texttt{DmacM.nc} che si occupa di questo.
+
+Le informazioni immagazzinate da questo componente sono accessibili tramite i due comandi 
+definiti nell'interfaccia \treedata, e cioè \texttt{getNextHopToSink()} e \texttt{getNextHopToSink()}. 
+Alcune note aggiuntive su questa implementazione:
+\begin{itemize}
+\item{L'implementazione non specifica quale nodo sia il \sink, è il codice che usa questo 
+componente che può decidere quale sia il nodo che deve iniziare la mappatura dell'albero, 
+tramite \texttt{StdControl.start()}, il che rende il modulo più flessibile}
+
+\item{In realtà l'albero tracciato in questo modo non implica che un nodo al livello $n$ sia in 
+grado di inviare messaggi al livello $n-1$, perché è possibile che ci siano delle asimmetrie 
+nelle capacità di invio/ricezione; \tos supporta questo tipo di topologie, in quanto si 
+occupa solamente di percentuali di errore tra due archi generici, e gli archi $(a,b)$ e $(b,a)$ 
+vengono considerati differenti. Per questa simulazione non ci siamo occupati di questo problema,
+assumendo che se la comunicazione può avvenire in un verso possa funzionare anche nell'altro. 
+D'altro canto sarebbe relativamente semplice cambiare una parte dell'implementazione del modulo \tree utilizzando un algoritmo di mappatura più corretto mantenendo comunque la stessa 
+interfaccia.}
+
+\item{In questo codice, ed anche nel codice del resto del programma, si può notare la presenza 
+di una variabile di tipo \texttt{TOS\_Msg} che è dichiarata globalmente.
+Ciò è necessario poiché il meccanismo di invio di un pacchetto radio è organizzato in due fasi, 
+la prima viene attivata tramite il comando \texttt{SendMsg.send()}, che in realtà \emph{non} invia il messaggio ma lo mette in una coda di invio.
+La seconda fase viene effettuata dal layer sottostante, che una volta inviato il pacchetto 
+richiama l'evento \texttt{SendMsg.sendDone()}. 
+Se quindi la variabile che rappresenta il messaggio fosse dichiarata come locale in 
+\texttt{SinkTimer.fired()} essa verrebbe deallocata quando la funzione terminasse,  
+ed al momento dell'effettivo invio il layer sottostante si troverebbe un riferimento 
+ad una zona di memoria non valida.}
+\end{itemize}
+
+Infine, va detto che l'evento \texttt{SendMsg.sendDone()} viene richiamato passandogli un argomento che  dovrebbe rappresentare se l'invio è avvenuto correttamente o meno. 
+Nel simulatore questo valore non è affidabile, in quanto il valore \texttt{SUCCESS}, di ovvio significato, è cablato nel codice senza alcuna condizione. 
+Purtroppo sembra che in \tos siano state prese numerose scorciatoie di questo tipo, il che 
+rende lo sviluppo usando il simulatore decisamente più problematico. 
 
 
 \section{Il cuore dell'applicazione}
+Il componente DMAC implementa l'algoritmo descritto in \cite{DMAC} sebbene in realtà lo faccia 
+a un livello più alto rispetto a quello corretto. Infatti andare a sostituire i layer di rete 
+più bassi sul simulatore è particolarmente complesso rispetto al farlo su un dispositivop reale, 
+oltre che assolutamente non documentato, ed in effetti non è neanche riuscito di trovare 
+un'implementazione sostitutiva dei layer basilari di \tos da prendere come esempio. 
+Sebbene quindi l'algoritmo funzioni correttamente, ci sono dei dettagli che non sono stati 
+considerati, ad esempio il CRC.
+Il modulo fra uso di due timer, del componente \texttt{GenericComm} 
+
+
 \section{La simulazione}
+
+
+\backmatter
 \chapter{Codice}
 %\begin{lstlisting}
 \lstset{
@@ -397,7 +477,7 @@ Il codice fa uso di una coda per i pacchetti da inoltrare implementata nel file 
 %  frame=single,
 %  numberblanklines=false,
   frame=L,
-  xleftmargin=10pt,
+%  xleftmargin=10pt,
 %  xrightmargin=20pt
   }
 
