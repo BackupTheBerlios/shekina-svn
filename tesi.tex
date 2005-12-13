@@ -377,15 +377,20 @@ il che permette la realizzazione di semplici script (ma anche programmi compless
 \chapter{L'implementazione}
 \section{Visione d'insieme}
 Per realizzare l'applicazione il tutto è stato strutturato in due differenti moduli più 
-una libreria C elementare per la gestione di una coda.
+una libreria elementare in \texttt{C} per la gestione di una coda.
 
 Il primo modulo si occupa dell'individuazione delle informazioni relative alla topologia, 
 mantenendo per ogni nodo informazioni sulla sua distanza dal \sink e su quale sia il prossimo 
 nodo nel suo hop path.  
 Quando l'albero è stato mappato inizia il loop principale dei mote, che è una 
 semplice macchina a stati finiti con tre stati implementata con degli \texttt{if/else}.
-Il codice fa uso di una coda per i pacchetti da inoltrare implementata nel file [[]], realizzata tramite una semplice lista collegata. NesC nella versione utilizata non permette di parametrizzare un'interfaccia tramite tipi, il che significa che non era possibile implementare 
-un'interfaccia che fosse contemporaneamente type safe e generica, quindi all'interno del codice si fa riferimento esplicito ai tipi definiti nel resto del programma. 
+Il codice fa uso di una coda per i pacchetti da inoltrare implementata nel file \texttt{MyQueue.h}, realizzata tramite una semplice lista collegata.
+Era nelle intenzioni di realizzare un componente \texttt{Queue} usando dei type parameter, 
+il che avrebbe reso possibile il riuso dello stesso in situazioni in cui si dovessero gestire 
+code composte da pacchetti differenti, ma NesC nella versione utilizata non permette di 
+realizzare interfacce parametrizzate tramite tipi, e quindi sarebbe statop necessario ricorrere 
+ad un approccio non type safe, ad esempio usando dei cast da e verso \texttt{void *}, ma ciò avrebbe a sua volta introdotto complicazioni derivanti dall'uso di \texttt{sizeof()} essenzialmente inutili, quindi all'interno del codice si fa riferimento esplicito ai tipi definiti nel resto 
+del programma (\texttt{DataMsg} definito in \texttt{DMac.h}.
 
 
 
@@ -403,11 +408,13 @@ di pacchetti.
 Quando viene richiamato il comando \texttt{StdControl.start()} il modulo inizio la mappatura 
 dell'albero seguendo un processo molto semplice, a partire dal \sink. 
 Questo nodo invia un segnale broadcast indicando il suo indirizzo di rete ed il numero di hop 
-necessari a raggiungerlo ($1$, per il \sink). Ogni nodo che riceve questo messaggio provvede poi ad inoltrarlo  sua volta, di nuovo in broadcast, aggiornando ovviamente le informazioni su mittente ed hop count. 
+necessari a raggiungerlo ($1$, per il \sink). Ogni nodo che riceve questo messaggio provvede 
+poi ad inoltrarlo a sua volta, sempre come segnale broadcast, aggiornando le
+informazioni su mittente ed hop count. 
 Quando un nodo riceve un messaggio viene segnalato l'evento 
 \texttt{ReceiveMsg.receive()}, ed è li che si trova la vera logica del componente. 
-Infatti il codice si occupa di impostare appropriatamente dele variabili globali 
-(a livello di componente) che rappresentano l'hop count ed il prosimo node nel percorso verso 
+Infatti il codice si occupa di impostare appropriatamente delle variabili globali 
+(a livello di componente) che rappresentano l'hop count ed il prossimo node nel percorso verso 
 il \sink, ma solamente nel caso che il messaggio ricevuto indichi la possibilità di raggiungerlo
 in un numero di hop minore rispetto a quello registrato precedentemente. 
 
@@ -437,13 +444,14 @@ interfaccia.}
 \item{In questo codice, ed anche nel codice del resto del programma, si può notare la presenza 
 di una variabile di tipo \texttt{TOS\_Msg} che è dichiarata globalmente.
 Ciò è necessario poiché il meccanismo di invio di un pacchetto radio è organizzato in due fasi, 
-la prima viene attivata tramite il comando \texttt{SendMsg.send()}, che in realtà \emph{non} invia il messaggio ma lo mette in una coda di invio.
+la prima viene attivata tramite il comando \texttt{SendMsg.send()}, che in realtà \emph{non} 
+invia il messaggio ma lo mette in una coda di invio.
 La seconda fase viene effettuata dal layer sottostante, che una volta inviato il pacchetto 
 richiama l'evento \texttt{SendMsg.sendDone()}. 
 Se quindi la variabile che rappresenta il messaggio fosse dichiarata come locale in 
 \texttt{SinkTimer.fired()} essa verrebbe deallocata quando la funzione terminasse,  
 ed al momento dell'effettivo invio il layer sottostante si troverebbe un riferimento 
-ad una zona di memoria non valida.}
+ad una zona di memoria non valida. }
 \end{itemize}
 
 Infine, va detto che l'evento \texttt{SendMsg.sendDone()} viene richiamato passandogli un argomento che  dovrebbe rappresentare se l'invio è avvenuto correttamente o meno. 
@@ -456,13 +464,13 @@ rende lo sviluppo usando il simulatore decisamente più problematico.
 Il componente Dmac implementa l'algoritmo descritto in \cite{DMAC} sebbene in realtà lo faccia 
 a un livello più alto rispetto a quello corretto. Infatti andare a sostituire i layer di rete 
 più bassi sul simulatore è particolarmente complesso rispetto al farlo su un dispositivop reale, 
-oltre che assolutamente non documentato, ed in effetti non è neanche riuscito di trovare 
+oltre che assolutamente non documentato, ed in effetti non è neanche stato possibile trovare 
 un'implementazione sostitutiva dei layer basilari di \tos da prendere come esempio. 
-Sebbene quindi l'algoritmo funzioni correttamente, ci sono dei dettagli che non sono stati 
-considerati, ad esempio il CRC.
+Sebbene quindi il codice sia algoritmicamente corretto e funzionante,
+ci sono dei dettagli che non sono stati considerati, ad esempio il CRC. 
 Il modulo fra uso di due timer, del componente \texttt{GenericComm}  che implementa le 
 primitive di invio di messaggi, ed ovviamante del componente \tree. 
-I due timer potrebbero in realtà essere sostituiti da un uno solo, ma sonob stai separati 
+I due timer potrebbero in realtà essere sostituiti da un uno solo, ma sono stati separati 
 per ottenwre una maggiore chiarezza del codice.
 Il ruolo del primo, \texttt{TreeTimer} è di controllare la durata del periodo necessario per
 acquisire i dati sulla topologia dei nodi, al termine del quale il componente \tree, avviato 
@@ -476,15 +484,14 @@ Ogni volta che il timer principale scatta si effettua una transizione di stato e
 impostato un nuovo tempo di attesa prima che il timer segnali di nuovo l'evento. 
 Il tempo di attesa è dipendente dallo stato del nodo, che è dato dall'unione di una variabile 
 di tipo \texttt{enum}, \texttt{myState} e di un valore booleano, \texttt{moreToSend}. 
-In teoria sarebbe stato possibile unire le due cose ottenenedo un automa a stati finiti a 
+In teoria sarebbe stato possibile unire le due cose ottenendo un automa a stati finiti a 
 5 stati, ma in assenza di vantaggi significativi si sarebbe aggiunta una complessità maggiore 
 del codice. 
 
-
-All'entrata nello stato di ricezione viene richiamato il task appropriato, 
-\texttt{forwardReq()}, il cui significato è ovvio.
-I messaggi vengono mantenuti in una coda implementata nel file \texttt{MyQueue.h}, 
-basata su una coppia di strutture ed un meccanismo molto emplice di lista collegata. 
+\subsection{La coda di invio e \texttt{MIG}}
+I messaggi ricevuti vengono mantenuti in una struttura del tipo implementato in
+ \texttt{MyQueue.h}, 
+basata su una coppia di strutture ed un meccanismo molto semplice di lista collegata. 
 In teoria TinyOS non fornisce una primitiva per la funzione \texttt{malloc()} usata in questo 
 file, ne' garantisce una gestione corretta dell'heap, ma si limita a inoltrare la richiesta 
 alla libreria sottostante.  Nel nostro caso però sappiamo che il sistema operativo sottostante 
@@ -493,13 +500,43 @@ E' mia convinzione che dato che la gestione della memoria dinamica è demandata 
 questo singolo pezzo dell'applicazione non dovrebbero esserci problemi neanche con un porting 
 diretto, ma in alternativa è possibile sostituire facilmente il codice con uno che utilizzi un 
 array statico. 
-\texttt{forwardReq()} non effettua una "pop" dell'elemento in cima alla coda, 
-in quanto non è garantito il successo del comando \texttt{SendMsg.send()}, 
-ne' è garantito che il messaggio sia inviato con successo anche se questa funzione ha successo.
-D'altronde anche se il messaggio fosse inviato correttamente ( cioè venisse segnalata \texttt{SendMsg.sendDone()} con un valore di \texttt{SUCCESS} )  non avremo garanzie sulla ricezione da 
+L'uso esplicito di una coda per i messaggi in questo componente porta con se anche un 
+vantaggio importante in termini di semplicità di testing dell'applicazione, che a prima vista 
+potrebbe non essere evidente. 
+
+Per permettere l'interazione con i mote \tos viene fornito con una suite di strumenti tra cui due
+mirati specificamente all'invio o ricezione di dati di test al simulatore. 
+Il primo di essi, \texttt{SerialForwarder}, è un'applicazione java che si limita a fare da ponte 
+tra il canale di comunicazione (reale o virtuale) e generiche applicazioni nel computer, mentre 
+il secondo, \texttt{MIG} è uno strumento da riga di comando che dovrebbe teoricamente 
+permettere di trasformare la definizione di una \texttt{struct} che definisce il pacchetto, 
+necessaria per l'uso di \texttt{SendMsg} e \texttt{ReceiveMsg}, in un file \texttt{Java} che è 
+possibile inviare con le funzionalità del package \texttt{net.tinyos} o tramite l'interprete 
+python integrato in \tv. 
+Purtroppo, \texttt{MIG} sembra non essere in grado di produrre del codice appropriato per il 
+pacchetto usato nel nostro caso, producendo valori senza significato per praticamente qualsiasi 
+campo della struttura, il che ha richiesto la scrittura da zero di una classe appropriata. 
+Il vero problema è però di natura ancora più banale: affinché l'algoritmo funzioni correttamente 
+i nodi devono scartare un pacchetto ricevuto nello stato di inattività e quindi diventa scomodo
+cercare di cogliere al volo il breve periodo di ricezione. 
+
+Usando la coda di messaggi è invece molto semplice far si che dopo un certo periodo di tempo 
+i dati vengano introdotti in essa facendo si che il nodo si trovi, al seguente stato di invio, 
+nella condizione di dover inoltrare i dati permettendo una simulazione molto più agevole. 
+
+
+\subsection{L'inoltro delle richieste}
+All'entrata nello stato di invio viene richiamato il task appropriato, 
+\texttt{forwardReq()}, il cui significato è ovvio.
+\texttt{forwardReq()} inoltra il messaggio usando la primitiva di invio \texttt{SendMsg.send()},
+ma non non estrae l'elemento in cima alla coda in quanto questo comando si limita ad inserire 
+il messaggio in una coda di invio, e riporta solamente il successo di questa operazione 
+e non il successo dell'invio, compito demandato all'evento texttt{SendMsg.sendDone()}.
+D'altronde anche se il messaggio fosse inviato correttamente causando la segnalazione di 
+quest'ultimo con un valore \texttt{SUCCESS}  non ci sarebbero garanzie sulla ricezione da 
 parte del prossimo nodo. Dunque per eliminare un messaggio dalla coda aspettiamo di ricevere 
 un pacchetto di \ack, sapendo che esso sarà per forza relativo all'ultimo nostro pacchetto 
-inviato, giacché sappiamo che ne viene inviato soltanto uno per ogni slot. 
+inviato, giacché sappiamo che ne viene inviato solamente uno per ogni slot. 
 
 Nel caso dunque non venga ricevuto un \ack il pacchetto rimane nella coda di invio in attesa 
 del prossimo slot libero. \`E certamente possibile che un nodo riceva un pacchetto di tipo \req 
@@ -508,23 +545,49 @@ ma questo è un problema che è semplice affrontare aggiungendo dei numeri seque
 livello più alto dello stack di comunicazione. 
 
 
+
+\subsection{Invio e ricezione di \ack}
 La funzione \texttt{sendAck()} si occupa di impostare valori appropriati nel pacchetto di \ack 
-e di inviare il pacchetto tramite il layer sottostante 
+e di inviare il pacchetto tramite le primitive di \texttt{SendMsg}. 
 
+Il destinatario del pacchetto \ack viene inviato basandosi sul valore della variabile 
+globale \texttt{lastSender}, poiché i task non accettano argomenti in input ne' 
+restituiscono valori. 
+Potrebbe sembrare che questo meccanismo introduca una race condition nel caso l'evento 
+\texttt{ReceiveMsg.receive()} venga segnalato più volte prima dell'avvio di \texttt{sendAck()},
+ma in realtà non è così. L'evento \texttt{sendDone()} non è un evento hardware, e quindi non 
+è dichiarato come \emph{asincrono}, il che significa che esso non interromperà mai l'esecuzione 
+di un altro evento o task. 
+I task vengono eseguiti in rigido ordine FIFO, il che significa che un task $A$ posto nella coda 
+di scheduling da un task $B$ verrà eseguito sempre dopo di esso a meno di interruzioni asincrone.Ciò fa si che la variabile \texttt{lastSender} funzioni implicitamente come una coda senza 
+bisogno di meccanismi più complessi e dispendiosi. 
 
+La funzione \texttt{gotAck()} è semplicissima, limitandosi ad eliminare il primo elemento 
+nella coda, quando esiste la certezza che questo è stato ricevuto. 
+
+\subsection{Il problema dei pacchetti multipli}
+Secondo il documento originale un nodo dovrebbe intensificare il proprio duty cycle in due casi
+\begin{itemize}
+\item{se esso riceve un messaggio che indichi l'intenzione del nodo precedente di inviare altri 
+pacchetti}
+\item{se essendo lui intenzionato a inviare altri pacchetti esso riceve un \ack che indica che il nodo seguente è pronto ad intensificare il proprio duty cycle}
+\end{itemize}
+\`la seconda condizione è necessaria affinché un nodo non cominci ad intensificare il proprio 
+ritmo di funzionamento senza che il nodo seguente l'abbia fatto, sprecando cicli di attività e 
+quindi batteria. Ogni nodo però che si trovi lungo l'hop path è però forzato dalla prima 
+condizione a farlo nel momento in cui riceve un messaggio con la flag \texttt{more-to-send} 
+attiva, il che significa che l'unico nodo che deve prendere in considerazione la seconda 
+condizione è il nodo che effettua la rilevazione dei dati e che si appresta ad inoltrarli. 
+In questa implentazione però la seconda regola non è stata presa in considerazione, in quanto 
+essa avrebbe richiesto l'utilizzo di una ulteriore serie di componenti e strumenti dedicati alla 
+raccolta di dati sia a livello di codice che a livello di simulazione.
+
+L'aggiunta della logica per controllare la seconda condizione sarebbe d'altronde molto semplice, ed il codice è strutturato in modo da renderlo possibile.
+Si tratterebbe, sostanzialmente, di aggiungere alla funzione \texttt{gotAck()} un controllo sul 
+fatto che si stia attendendo l'arrivo di un \ack per la propria richiesta di aumentare il ritmo,
+possibile tramite una variabile globale o tramite un comando apposito delegato al componente di 
+raccolta dei dati.  
  
-
-
-
-
-l'ack viene inviato basandoci sul valore della variabile globale \texttt{lastSender}, 
-in quanto sarebbe impossibile far arrivare al task l'informazione in un altro modo, vista la 
-natura asincrona dell'algoritmo.  
-In teoria invece di una singola variabile dovrebbe esserci una lista di indirizzi, 
-in quanto un nodo potrebbe ricevere differenti pacchetti in un solo slot di ricezione, il che implicherebbe la ne 
-
-
-
 
 \section{La simulazione}
 
