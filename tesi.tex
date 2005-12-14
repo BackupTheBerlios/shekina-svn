@@ -364,9 +364,10 @@ la distribuzione di una rete di nodi in topologia a griglia, e \tv.
 
 \tos fornisce un'interfaccia modellata sui meccanismi di TinyOS, cioè comandi ed eventi, 
 che gli opermette di interoperare con dispositivi esterni, permettendo così l'implementazione in componenti separati di tutta una serie di funzionalità ad esempio l'analisi dei segnali, la visualizzazione di una topologia, l'iniezione di pacchetti radio e di informazioni per i sensori etc.. 
-\tv è un ambient grafico ralizzato in java che astrae i meccanismi di base di questa interazione 
-con \tos esponendoli tramite un'interfaccia non molto complessa ad una serie di plugin 
-caricabili a runtime.  La distribuzione di TinyOS comprende un insieme variegato di plugin che 
+\tv è un ambiente grafico ralizzato in java che astrae i meccanismi di base di questa 
+interazione con \tos esponendoli tramite un'interfaccia non molto complessa ad una serie 
+di plugin caricabili a runtime.  
+La distribuzione di TinyOS comprende un insieme variegato di plugin che 
 però sono purtroppo in molti casi non mantenuti e non funzionano. Il codice di tinyviz è 
 in generale non troppo ben tenuto. 
 Durante la realizzazione di questa tesi è avvenuta una riscrittura di questo ambiente che lo ha 
@@ -376,21 +377,24 @@ il che permette la realizzazione di semplici script (ma anche programmi compless
 
 \chapter{L'implementazione}
 \section{Visione d'insieme}
-Per realizzare l'applicazione il tutto è stato strutturato in due differenti moduli più 
+Per realizzare l'applicazione il codice è stato strutturato in due differenti moduli più 
 una libreria elementare in \texttt{C} per la gestione di una coda.
 
 Il primo modulo si occupa dell'individuazione delle informazioni relative alla topologia, 
 mantenendo per ogni nodo informazioni sulla sua distanza dal \sink e su quale sia il prossimo 
-nodo nel suo hop path.  
+nodo nel multihop path.  
 Quando l'albero è stato mappato inizia il loop principale dei mote, che è una 
 semplice macchina a stati finiti con tre stati implementata con degli \texttt{if/else}.
 Il codice fa uso di una coda per i pacchetti da inoltrare implementata nel file \texttt{MyQueue.h}, realizzata tramite una semplice lista collegata.
 Era nelle intenzioni di realizzare un componente \texttt{Queue} usando dei type parameter, 
 il che avrebbe reso possibile il riuso dello stesso in situazioni in cui si dovessero gestire 
 code composte da pacchetti differenti, ma NesC nella versione utilizata non permette di 
-realizzare interfacce parametrizzate tramite tipi, e quindi sarebbe statop necessario ricorrere 
-ad un approccio non type safe, ad esempio usando dei cast da e verso \texttt{void *}, ma ciò avrebbe a sua volta introdotto complicazioni derivanti dall'uso di \texttt{sizeof()} essenzialmente inutili, quindi all'interno del codice si fa riferimento esplicito ai tipi definiti nel resto 
-del programma (\texttt{DataMsg} definito in \texttt{DMac.h}.
+realizzare interfacce parametrizzate tramite tipi, e quindi sarebbe stato necessario ricorrere 
+ad un approccio non type safe, ad esempio usando dei cast da e verso \texttt{void *}, ma ciò 
+avrebbe a sua volta introdotto complicazioni derivanti dalla necessità di passare la dimensione 
+della struttura ad ogni operazione, aggiungendo poca utilità a questa applicazione e portanto 
+una complicazione inutile, quindi all'interno del codice si fa riferimento esplicito ai tipi 
+definiti nel resto del programma (\texttt{DataMsg} definito in \texttt{DMac.h}).
 
 
 
@@ -401,10 +405,14 @@ del programma (\texttt{DataMsg} definito in \texttt{DMac.h}.
 La mappatura dell'albero è affidata ad un componente apposito \tree, che implementa l'interfaccia
 \texttt{StdControl} e ne definisce una sua, \treedata.
 L'interfaccia \texttt{StdControl} è un'interfaccia generica per un componente NesC, che fornisce 
-comandi per attivare, inizare le operazioni e disattivare un componente.
+comandi per attivare o disattivare un componente, ed avviare operazioni specifiche.
 L'attivazione di \tree porta all'attivazione del componente di rete, \texttt{GenericComm}, 
 il quale fornisce implementazioni delle interfacce di basso livello per l'invio e la ricezione 
 di pacchetti. 
+Queste interfacce lavorano in termini di una struttura \texttt{TOS\_Msg} la quale possiede un 
+campo dedicato al contenimento di una struttura definita dall'utente, la quale in questo
+componente contiene solo due campi, uno contentente il numero sequenziale dell'hop count ed uno 
+con l'indirizzo del mittente. 
 Quando viene richiamato il comando \texttt{StdControl.start()} il modulo inizio la mappatura 
 dell'albero seguendo un processo molto semplice, a partire dal \sink. 
 Questo nodo invia un segnale broadcast indicando il suo indirizzo di rete ed il numero di hop 
@@ -414,7 +422,7 @@ informazioni su mittente ed hop count.
 Quando un nodo riceve un messaggio viene segnalato l'evento 
 \texttt{ReceiveMsg.receive()}, ed è li che si trova la vera logica del componente. 
 Infatti il codice si occupa di impostare appropriatamente delle variabili globali 
-(a livello di componente) che rappresentano l'hop count ed il prossimo node nel percorso verso 
+(a livello di componente) che rappresentano l'hop count ed il prossimo nodo nel percorso verso 
 il \sink, ma solamente nel caso che il messaggio ricevuto indichi la possibilità di raggiungerlo
 in un numero di hop minore rispetto a quello registrato precedentemente. 
 
@@ -425,7 +433,7 @@ Il processo continua fino a che il componente non viene fermato, tramite
 \texttt{StdControl.stop()}, ed è il codice in \texttt{DmacM.nc} che si occupa di questo.
 
 Le informazioni immagazzinate da questo componente sono accessibili tramite i due comandi 
-definiti nell'interfaccia \treedata, e cioè \texttt{getNextHopToSink()} e \texttt{getNextHopToSink()}. 
+definiti nell'interfaccia \treedata, e cioè \texttt{getHopToSink()} e \texttt{getNextHopToSink()}. 
 Alcune note aggiuntive su questa implementazione:
 \begin{itemize}
 \item{L'implementazione non specifica quale nodo sia il \sink, è il codice che usa questo 
@@ -454,24 +462,29 @@ ed al momento dell'effettivo invio il layer sottostante si troverebbe un riferim
 ad una zona di memoria non valida. }
 \end{itemize}
 
-Infine, va detto che l'evento \texttt{SendMsg.sendDone()} viene richiamato passandogli un argomento che  dovrebbe rappresentare se l'invio è avvenuto correttamente o meno. 
-Nel simulatore questo valore non è affidabile, in quanto il valore \texttt{SUCCESS}, di ovvio significato, è cablato nel codice senza alcuna condizione. 
+Infine, va detto che l'evento \texttt{SendMsg.sendDone()} viene richiamato passandogli un 
+argomento che  dovrebbe indicare se l'invio è avvenuto correttamente o meno. 
+Nel simulatore questo valore non è affidabile, in quanto il valore \texttt{SUCCESS}, di ovvio 
+significato, è cablato nel codice senza alcuna condizione. 
 Purtroppo sembra che in \tos siano state prese numerose scorciatoie di questo tipo, il che 
 rende lo sviluppo usando il simulatore decisamente più problematico. 
 
 
 \section{Il cuore dell'applicazione}
 Il componente Dmac implementa l'algoritmo descritto in \cite{DMAC} sebbene in realtà lo faccia 
-a un livello più alto rispetto a quello corretto. Infatti andare a sostituire i layer di rete 
-più bassi sul simulatore è particolarmente complesso rispetto al farlo su un dispositivop reale, 
-oltre che assolutamente non documentato, ed in effetti non è neanche stato possibile trovare 
+ad un livello più alto rispetto a quello corretto. Infatti andare a sostituire i layer di rete 
+più bassi sul simulatore è complesso rispetto al farlo su un dispositivo reale, 
+e sebbene esistano dei documenti sull'implementazione dello stack in alcuni particolari mote\cite{stackpdf} essi sono vecchi di oltre 3 anni e comunque non danno molte informazioni riguardo la
+possibilità di implementare lo stesso meccanismo nel simulatore. 
+D'altrodne non è stato neanche possibile trovare 
 un'implementazione sostitutiva dei layer basilari di \tos da prendere come esempio. 
 Sebbene quindi il codice sia algoritmicamente corretto e funzionante,
-ci sono dei dettagli che non sono stati considerati, ad esempio il CRC. 
+ci sono dei dettagli che non sono stati considerati, ad esempio il CRC, ed esso risulta 
+subottimale per l'ovvia sovrapposizione delle due logiche. 
 Il modulo fra uso di due timer, del componente \texttt{GenericComm}  che implementa le 
 primitive di invio di messaggi, ed ovviamante del componente \tree. 
 I due timer potrebbero in realtà essere sostituiti da un uno solo, ma sono stati separati 
-per ottenwre una maggiore chiarezza del codice.
+per ottenere una maggiore chiarezza del codice.
 Il ruolo del primo, \texttt{TreeTimer} è di controllare la durata del periodo necessario per
 acquisire i dati sulla topologia dei nodi, al termine del quale il componente \tree, avviato 
 nel momento in cui viene avviato il codice principale, viene fermato.
@@ -488,24 +501,30 @@ In teoria sarebbe stato possibile unire le due cose ottenendo un automa a stati 
 5 stati, ma in assenza di vantaggi significativi si sarebbe aggiunta una complessità maggiore 
 del codice. 
 
+Come già detto in precedenza la correttezza del tutto è strettamente dipendente dalla sincronia 
+nel funzionamento di tutti i mote. Piuttosto che implementare un intero sottosistema 
+di sincronizzazione si è scelto di aggirare il problema supponendo che i nodi si fossero già 
+sincronizzati, indicando al simulatorei di avviarli tutti insieme, o meglio in un intervallo di tempo abbastanza piccolo da essere trascurabile. 
+
 \subsection{La coda di invio e \texttt{MIG}}
 I messaggi ricevuti vengono mantenuti in una struttura del tipo implementato in
- \texttt{MyQueue.h}, 
-basata su una coppia di strutture ed un meccanismo molto semplice di lista collegata. 
+ \texttt{MyQueue.h},
+basata su una coppia di strutture e su un meccanismo molto semplice di lista collegata. 
 In teoria TinyOS non fornisce una primitiva per la funzione \texttt{malloc()} usata in questo 
 file, ne' garantisce una gestione corretta dell'heap, ma si limita a inoltrare la richiesta 
 alla libreria sottostante.  Nel nostro caso però sappiamo che il sistema operativo sottostante 
-(Unix-like o win32) offre questo meccanismo per cui possimo farne uso tranquillamente. 
+(Unix-like o win32) offre questo meccanismo per cui se ne può fare uso tranquillamente. 
 E' mia convinzione che dato che la gestione della memoria dinamica è demandata solamente a 
 questo singolo pezzo dell'applicazione non dovrebbero esserci problemi neanche con un porting 
 diretto, ma in alternativa è possibile sostituire facilmente il codice con uno che utilizzi un 
-array statico. 
+array statico, in quanto l'implementazione della coda è completamente opaca rispetto al 
+resto del codice. 
 L'uso esplicito di una coda per i messaggi in questo componente porta con se anche un 
 vantaggio importante in termini di semplicità di testing dell'applicazione, che a prima vista 
-potrebbe non essere evidente. 
+potrebbe non essere evidente, collegati al funzionamento del protocollo. 
 
-Per permettere l'interazione con i mote \tos viene fornito con una suite di strumenti tra cui due
-mirati specificamente all'invio o ricezione di dati di test al simulatore. 
+Va premesso che per permettere l'interazione con i mote \tos viene fornito con una suite di 
+strumenti tra cui due mirati specificamente all'invio o ricezione di dati di test al simulatore. 
 Il primo di essi, \texttt{SerialForwarder}, è un'applicazione java che si limita a fare da ponte 
 tra il canale di comunicazione (reale o virtuale) e generiche applicazioni nel computer, mentre 
 il secondo, \texttt{MIG} è uno strumento da riga di comando che dovrebbe teoricamente 
@@ -513,13 +532,17 @@ permettere di trasformare la definizione di una \texttt{struct} che definisce il
 necessaria per l'uso di \texttt{SendMsg} e \texttt{ReceiveMsg}, in un file \texttt{Java} che è 
 possibile inviare con le funzionalità del package \texttt{net.tinyos} o tramite l'interprete 
 python integrato in \tv. 
-Purtroppo, \texttt{MIG} sembra non essere in grado di produrre del codice appropriato per il 
-pacchetto usato nel nostro caso, producendo valori senza significato per praticamente qualsiasi 
+La struttura che rappresenta il pacchetto è composta da un campo di tipo \texttt{enum pkt\_type}
+che rappresenta il fatto che un pacchetto sia di tipo \req o \ack, di un campo \texttt{bool} 
+per la flag \texttt{more-to-send} e di due campi da due byte che indicano mittente e dati.
+
+Purtroppo, \texttt{MIG} sembra non essere in grado di produrre del codice appropriato per questo tipo di pacchetto, producendo valori senza significato per praticamente qualsiasi 
 campo della struttura, il che ha richiesto la scrittura da zero di una classe appropriata. 
+ 
+
 Il vero problema è però di natura ancora più banale: affinché l'algoritmo funzioni correttamente 
 i nodi devono scartare un pacchetto ricevuto nello stato di inattività e quindi diventa scomodo
 cercare di cogliere al volo il breve periodo di ricezione. 
-
 Usando la coda di messaggi è invece molto semplice far si che dopo un certo periodo di tempo 
 i dati vengano introdotti in essa facendo si che il nodo si trovi, al seguente stato di invio, 
 nella condizione di dover inoltrare i dati permettendo una simulazione molto più agevole. 
@@ -528,10 +551,16 @@ nella condizione di dover inoltrare i dati permettendo una simulazione molto pi�
 \subsection{L'inoltro delle richieste}
 All'entrata nello stato di invio viene richiamato il task appropriato, 
 \texttt{forwardReq()}, il cui significato è ovvio.
-\texttt{forwardReq()} inoltra il messaggio usando la primitiva di invio \texttt{SendMsg.send()},
-ma non non estrae l'elemento in cima alla coda in quanto questo comando si limita ad inserire 
-il messaggio in una coda di invio, e riporta solamente il successo di questa operazione 
-e non il successo dell'invio, compito demandato all'evento texttt{SendMsg.sendDone()}.
+Questo task si occupa di inoltrare il messaggio usando la primitiva di invio 
+\texttt{SendMsg.send()},
+ma non \emph{non} estrae l'elemento in cima alla coda in quanto questo comando si limita 
+ad inserire il messaggio in una coda di pacchetti da inviare, 
+e riporta solamente il successo di questa operazione 
+e non il successo dell'invio, compito demandato all'evento \texttt{SendMsg.sendDone()}.
+Tra l'altro sembrerebbe che in realtà questa coda di invio sia limitata ad un singolo slot, 
+in quanto dalle simulazioni sembra che sia impossibile ottenere il successo del comando \texttt{send} se non è stato ancora segnalato \texttt{sendDone} per il pacchetto accodato in precedenza. 
+
+
 D'altronde anche se il messaggio fosse inviato correttamente causando la segnalazione di 
 quest'ultimo con un valore \texttt{SUCCESS}  non ci sarebbero garanzie sulla ricezione da 
 parte del prossimo nodo. Dunque per eliminare un messaggio dalla coda aspettiamo di ricevere 
@@ -544,7 +573,12 @@ ma il relativo pacchetto di \ack vada perso, il che introdurrebbe dei duplicati 
 ma questo è un problema che è semplice affrontare aggiungendo dei numeri sequenziali ad un 
 livello più alto dello stack di comunicazione. 
 
-
+Va notato che per questa implementazione i nodi al livello $n$ inviano sempre i propri 
+pacchetti al nodo padre nell'albero tracciato inizialmente. 
+Pre rendere questo MAC del tutto generico rispetto all'implementazione di meccanismi di 
+routing sovrastanti sarebbe sufficiente cambiare \texttt{forwardReq()} in modo che essa 
+non faccia riferimento alla variabile  \texttt{nextNode} ma ad un generico comando 
+\texttt{route()} che scelga il nodo seguente secondo un meccanismo qualsiasi.  
 
 \subsection{Invio e ricezione di \ack}
 La funzione \texttt{sendAck()} si occupa di impostare valori appropriati nel pacchetto di \ack 
@@ -553,13 +587,14 @@ e di inviare il pacchetto tramite le primitive di \texttt{SendMsg}.
 Il destinatario del pacchetto \ack viene inviato basandosi sul valore della variabile 
 globale \texttt{lastSender}, poiché i task non accettano argomenti in input ne' 
 restituiscono valori. 
-Potrebbe sembrare che questo meccanismo introduca una race condition nel caso l'evento 
-\texttt{ReceiveMsg.receive()} venga segnalato più volte prima dell'avvio di \texttt{sendAck()},
+A prima vista potrebbe sembrare che questo meccanismo introduca una race condition nel 
+caso l'evento \texttt{ReceiveMsg.receive()} venga segnalato più volte prima dell'avvio 
+di \texttt{sendAck()},
 ma in realtà non è così. L'evento \texttt{sendDone()} non è un evento hardware, e quindi non 
-è dichiarato come \emph{asincrono}, il che significa che esso non interromperà mai l'esecuzione 
-di un altro evento o task. 
-I task vengono eseguiti in rigido ordine FIFO, il che significa che un task $A$ posto nella coda 
-di scheduling da un task $B$ verrà eseguito sempre dopo di esso a meno di interruzioni asincrone.Ciò fa si che la variabile \texttt{lastSender} funzioni implicitamente come una coda senza 
+è dichiarato come \emph{asincrono} (teoricamente qualsiasi evento può essere dichiarato come asincrono, ma è convenzione non farlo per eventi non hardware in quanto rende più difficile l'analisi del programma) il che significa che esso non interromperà mai l'esecuzione di un altro evento o task. 
+I task vengono eseguiti in rigido ordine FIFO, il che significa che un task $B$ posto nella coda
+di scheduling da un task $A$ verrà eseguito sempre dopo di esso a meno di interruzioni asincrone.
+Ciò fa si che la variabile \texttt{lastSender} funzioni implicitamente come una coda senza 
 bisogno di meccanismi più complessi e dispendiosi. 
 
 La funzione \texttt{gotAck()} è semplicissima, limitandosi ad eliminare il primo elemento 
@@ -580,17 +615,85 @@ attiva, il che significa che l'unico nodo che deve prendere in considerazione la
 condizione è il nodo che effettua la rilevazione dei dati e che si appresta ad inoltrarli. 
 In questa implentazione però la seconda regola non è stata presa in considerazione, in quanto 
 essa avrebbe richiesto l'utilizzo di una ulteriore serie di componenti e strumenti dedicati alla 
-raccolta di dati sia a livello di codice che a livello di simulazione.
+raccolta di dati sia a livello di codice che di simulazione.
 
-L'aggiunta della logica per controllare la seconda condizione sarebbe d'altronde molto semplice, ed il codice è strutturato in modo da renderlo possibile.
+L'aggiunta della logica per controllare la seconda condizione sarebbe d'altronde molto 
+semplice, ed il codice è strutturato in modo da renderlo possibile.
 Si tratterebbe, sostanzialmente, di aggiungere alla funzione \texttt{gotAck()} un controllo sul 
 fatto che si stia attendendo l'arrivo di un \ack per la propria richiesta di aumentare il ritmo,
 possibile tramite una variabile globale o tramite un comando apposito delegato al componente di 
 raccolta dei dati.  
+
+Un problema che non è trattato chiaramente non paper originale\cite{DMAC} è quello di come riallineare il funzionamento dei mote dopo un burst di pacchetti. 
+Infatti un nodo che si trovasse su differenti percorsi verso il \sink dopo un intensificazione 
+del duty cycle si troverebbe si ancora sincronizzato con i nodi su quel percorso, ma sarebbe 
+fuori sincronia rispetto agli altri path. 
+Non è stato possibile ricevere chiarimenti a riguardo dagli autori originali, e quindi è stata 
+adottata una soluzione che sembrerebbe essere sufficiente: quando un nodo esce dal ritmo 
+intensificato esso si riallinea ai tempi originali entrando in uno stato di inattività di 
+lunghezza variabile.
  
 
 \section{La simulazione}
 
+\tos non possiede un'interfaccia grafica, ma si limita a fornire delle funzionalità in stile 
+\texttt{printf} per mettere a schermo delle stringhe di debug. 
+Ogni stringa di debug è associata ad una categoria appropriata (SIM, RADIO, LED etc\ldots), 
+ed il simulatore fa uso della variabile d'ambiente \texttt{DBG} per decidere quale mostrare. 
+
+Per rendere più semplice la simulazione esiste \tv, che non solo permette di avere una 
+rappresentazione grafica, ma tramite l'interprete python integrato nell'ultima versione 
+permette anche di scrivere semplici script per automatizzare l'accensione/spegnimento dei nodi,
+le variazioni nelle percentuali di perdita, l'immissione di pacchetti e molto altro. 
+Anche senza usare script in python è possibile automatizzare le simulazioni utilizzando un file 
+di autorun.
+Nell'utilizzo di \tv purtroppo sono stati incontrati molti problemi:
+\begin{itemize}
+\item{I documenti che indicano come utilizzare l'interprete interattivo sono obsoleti e 
+praticamente tutte le gerarchie dei moduli sono differenti.}
+\item{Per poter impostare dei valori di debug nel file di autorun è necessario  
+cambiare il codice sorgente di \tv altrimenti al simulazione nell'ambiente \emph{cygwin} 
+fallirà sempre per l'erroneo uso di \texttt{Runtime.exec}. Abbiamo inviato una patch 
+agli autori per risolvere questo problema}
+\item{Tra i plugin  che abbiamo utilizzato c'è \texttt{DirectedGraph}, un plugin che fa uso 
+di stringhe di debug formattate secondo una particolare sintassi per rappresentare informazioni 
+grafiche. Questo plugin \emph{non può funzionare} out of the box in quanto invece di esserci 
+una assegnazione ad una variabile globale si trova una ridichiarazione, il che fa si che 
+ad ogni accesso alla variabile globale venga generata un'eccezione.}
+\item{La classe che si occupa di analizzare il file di autorun noon è stata aggiornata insieme 
+al resto del codice, il che fa si che sia possibile impostare da riga di comando alcuni 
+argomenti mentre è impossibile farlo con il file di configurazione.}
+\item{Infine, sembra che \tv cambi sempre in qualche modo la definizione della topologia senza 
+offrire all'utente la possibilità di ripetere una simulazione}
+\end{itemize}
+
+Per tutti questi motivi si è preferito generalmente usare il simulatore in modalità testuale, 
+il che permette oltretutto di effettuare dei test automatizzati semplicemente salvandone
+ l'output e confrontandolo con quello di una precedente simulazione. 
+
+
+\chapter{Conclusioni}
+Le simulazioni effettuate con i nodi disposti in griglie $5x5$, $7x7$ e $10x10$ mostrano il
+comportamento atteso, sebbene esse subiscano dei lievi peggioramenti con il diminuire della 
+lunghezza degli slot, facendo aumentare le collisioni.
+L'impressione è che tale peggioramento sia dovuto all'implementazione del simulatore 
+che impiega un certo tempo per segnalare i numerosi eventi in reti complesse. 
+L'abbassamento dell'intervallo di inattività porta ad un aumento del throughput 
+a scapito dell'efficienza energetica, e la scelta di una durata di $18\mu$ per questo periodo 
+è stata dettata dalle informazioni presenti in \cite{DMAC} riguardo i test nell'ambiente 
+NS2, mentre non sembra esserci una motivazione a priori. L'impresssione è che questo valore 
+possa essere tranquillamente tarato in ogni rete ad hoc in modo da raggiungere compromessi 
+differenti con il risparmi energetico. 
+
+Le simulazioni sono state effettuate usando differenti valori per le probabilità di perdita 
+dei pacchetti dimostrando che la percentuale di pacchetti persi è direttamente collegata  
+alla probabilità di perdita il che fa supporre che i problemi relativi alla contesa del 
+canale siano minimizzati come ci si aspetta. 
+
+
+Il prossimo passo nello studio di questo protocollo sarebbe quello di effettuare il 
+porting dell'algoritmo al livello corretto dello stack, e di effettuare nuovi test in questo 
+ambito, per poi verificare su hardware reale la validità dei meccanismi. 
 
 \appendix
 %\begin{lstlisting}
@@ -617,15 +720,15 @@ raccolta dei dati.
 \section{DMacM.nc}
 \lstinputlisting{DMac.nc}
 
-\chapter{Codice del componente Tree}
-\section{TreeData.nc}
-\lstinputlisting{lib/TreeData.nc}
-\section{Tree.h}
-\lstinputlisting{lib/Tree.h}
-\section{Tree.nc}
-\lstinputlisting{lib/Tree.nc}
-\section{TreeM.nc}
-\lstinputlisting{lib/TreeM.nc}
+%%\chapter{Codice del componente Tree}
+%\section{TreeData.nc}
+%\lstinputlisting{lib/TreeData.nc}
+%\section{Tree.h}
+%\lstinputlisting{lib/Tree.h}
+%\section{Tree.nc}
+%\lstinputlisting{lib/Tree.nc}
+%\section{TreeM.nc}
+%\lstinputlisting{lib/TreeM.nc}
 
 %\end{lstlisting}
 
