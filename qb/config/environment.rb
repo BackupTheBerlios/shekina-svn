@@ -4,7 +4,7 @@
 # (Use only when you can't set environment variables through your web/app server)
 # ENV['RAILS_ENV'] = 'production'
 RAILS_CONNECTION_ADAPTERS = %w(mysql)
-SITE_NAME='ruby-it wiki'
+SITE_NAME='Ruby Italia'
 
 
 # Bootstrap the Rails environment, frameworks, and default configuration
