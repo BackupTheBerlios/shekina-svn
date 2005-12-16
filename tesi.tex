@@ -9,7 +9,7 @@
 \usepackage{newcent}
 \usepackage{fancyhdr}
 \usepackage{listings}
-
+\usepackage{graphicx}
 
 \begin{document}
 \frontmatter
@@ -68,14 +68,36 @@
 \end{center}
 \vspace{0.3in}
 \hspace{\parindent}
-L'intento della tesi è l'implementazione di un protocollo MAC appositamente progettato per 
-rispettare i vincoli imposti da una particolare tipologia di reti wireless, le reti di sensori.
+L'intento della tesi è l'implementazione di un protocollo MAC per reti di sensori 
+multihop ad hoc organizzate in un albero per la raccolta di dati.
+
+Il protocollo DMAC è appositamente progettato per rispettare i vincoli imposti da 
+questa tipologia di reti, e fa uso di fasi alternate di attività/riposo per massimizzare 
+il risparmio energetico e di un meccanismo di auto regolazione dello scheduling per 
+ottenere buoni valori di latenza e throughput.
+Per l'implementazione è stato utilizzato il lingaggio \nesc sulla piattaforma TinyOS, ed il 
+testing dell'applicazione è stato fatto utilizzando il simulatore \tos  e gli strumenti a 
+corredo dello stesso, come l'interfaccia grafica \tv e strumenti per la simulazione di 
+segnali radio.
+
+
+
+
+\subsection{Obiettivi  della tesi}
+%\end{abstract}
+\tableofcontents
+
+\chapter{Le reti di sensori wireless}
+\sectio{I sensori wireless}
+Un sensore wireless è un dispositivo composta da una CPU, un 
+ \emph{data gathering tree},
 Una Wireless Sensor Network (WSN) è composta da un gran numero di dispositivi molto semplici, 
 con limitate risorse computazionali e dotati di strumentazione per rilevare eventi (movimento,
 temperatura, video etc), per effettuare semplici elaborazioni e di eventuali meccanismi per 
-interagire con l'ambiente e per comunicare via radio. 
+i
+ le reti di sensori.
 Un sensore infatti non ha tipicamente le risorse sufficienti a fornire un'elaborazione 
-complessa delle informazioni, e quindi una WSN viene organizzata n un topologia detta \emph{data gathering tree}, cioè come un albero le foglie 
+complessa delle informazioni, e quindi una WSN viene organizzata n un topologia detta cioè come un albero le foglie 
 raccolgono i dati e li inoltrano verso la radice dell'albero attraverso i nodi intermedi, 
 fino a raggiungere un nodo particolare, il \sink, il quale sarà costituito da un elaboratore in 
 grado di gestire le informazioni raccolte in modo utile.
@@ -87,9 +109,7 @@ Per l'implementazione del protocollo è stata utilizzata la piattaforma TinyOS, 
 lo sviluppo di applicazioni per dispositivi embedded che comprende un semplice sistema operativo
 , un linguaggio di programmazione appositamente progettato e vari strumenti come simulatore, 
 visualizzatori grafici, ambienti di scripting e molto altro. 
-%\subsection{Obiettivi  della tesi}
-%\end{abstract}
-\tableofcontents
+%nteragire con l'ambiente e per comunicare via radio. 
 \chapter{Il protocollo DMAC}
 \section{I problemi delle reti di sensori}
 In una topologia di tipo data gathering tree, la parte più rilevante del 
@@ -213,6 +233,7 @@ nodo $X$ al nodo $Y$ vada perso o sia danneggiato nessuno dei nodiche si trovano
 $Y$ al \sink verrà informato della necessità di cambiare il proprio duty cycle, ed essi quindi 
 non sprecheranno risorse inutilmente rimanendo attivi in un periodo in cui non potrebbero 
 comunque ricevere altri dati. 
+\includegraphics{mtseps}
 
 
 Va sottolineato che nel DMAC, quando un nodo riceve un pacchetto \texttt{more-to-send} esso non 
