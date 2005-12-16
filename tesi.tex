@@ -228,8 +228,10 @@ Gli autori del DMAC teorizzano anche un approccio alternativo in cui il pacchett
 una flag MTS,  ed il processo di scheduling è leggermente differente. 
 Implementare questa variazione richiederebbe l'aggiunta di un nuovo stato, di 
 nuove regole di transizione e l'eliminazione di un paio di righe nelle routine di invio dei dati,
-ma non incide molto sul resto del codice e quindi non è stato fatto per non rendere troppo 
-intricata l'ìimplementazione riempiendola di macro . 
+ma sebbene questa modifica non incide molto sulla maggior parte del codice \nesc non offre dei 
+meccanismi di astrazione adatti a permettere il riuso del codice in questa situazione, e dato 
+che l'unico approccio possibile sarebbe stato quello di aggiungere ancora altre macro 
+condizionalia si è preferito non farlo per non rendere i sorgenti troppo intricati. 
 
 
 
@@ -763,14 +765,20 @@ differenti con il risparmio energetico.
 
 
 Le simulazioni sono state effettuate usando differenti valori per le probabilità di perdita 
-dei pacchetti dimostrando che la percentuale di pacchetti persi è direttamente collegata  
-alla probabilità di perdita il che fa supporre che i problemi relativi alla contesa del 
-canale siano minimizzati come ci si aspetta. 
+dei pacchetti i mostrano che la percentuale di pacchetti persi è collegata  
+alla probabilità di perdita specificata a priori, il che fa pensare che i problemi relativi alla contesa del canale siano minimizzati come ci si aspetta. D'altronde nei casi in cui non avvengono
+perdite di dati i dati arrivano al \sink nei tempi attesi (ovvero $n\mu$).  
 
 
 Il prossimo passo nello studio di questo protocollo sarebbe quello di effettuare il 
 porting dell'algoritmo al livello corretto dello stack, e di effettuare nuovi test in questo 
-ambito, per poi verificare su hardware reale la validità dei meccanismi. 
+ambito, per poi verificare su hardware reale la validità del meccanismo, avendo così anche la 
+possibilità di effettuare confronti con altre implementazioni. 
+La piattaforma TinyOS è però nel cuore di una cambiamento radicale\cite{tos2}, il quale 
+si propone di risolvere molti dei problemi riscontrati in questa tesi, sia dal punto di vista 
+del funzionamento che dal punto di vista dello sviluppo; sembrerebbe dunque opportuno 
+iniziare a lavorare direttamente su \emph{TinyOS2} con le nuove versioni di simulatore, 
+compilatore e librerie. 
 
 \appendix
 %\begin{lstlisting}
@@ -811,17 +819,17 @@ ambito, per poi verificare su hardware reale la validità dei meccanismi.
 
 \backmatter
 \begin{thebibliography}{99}
-\bibitem{DMAC} "An Adaptive Energy-Efficient and Low-Latency MAC for Data Gathering in Sensor Networks", \emph{G Lu, B Krishnamachari, C Raghavendra, Workshop on Energy-Efficient Wireless Communications, 2004} 
-\bibitem{TOSSIM} "TOSSIM: Accurate and Scalable Simulation of Entire TinyOS Applications", \emph{Philip Levis, Nelson Lee, Matt Welsh, and David Culler. In Proceedings of the First ACM Conference on Embedded Networked Sensor Systems (SenSys 2003)}.  
-\bibitem{SMAC}   "Medium Access Control with Coordinated, Adaptive Sleeping for Wire-less Sensor Networks", \emph{W. Ye, J. Heidemann, and D. Estrin, IEEE/ACM TRANSACTIONS ON NETWORKING, VOL. 12, NO. 3, giugno 2004}
-\bibitem{TMAC} "An Adaptive Energy-Efficient MAC Protocol for Wireless Sensor Networks", 
-\emph{Tijs van Dam, Koen Langendoen,  ACM Sensys Novembre 2003}
+\bibitem{DMAC} \emph{"An Adaptive Energy-Efficient and Low-Latency MAC for Data Gathering in Sensor Networks"}, G Lu, B Krishnamachari, C Raghavendra, Workshop on Energy-Efficient Wireless Communications, 2004 
+\bibitem{TOSSIM}\emph{"TOSSIM: Accurate and Scalable Simulation of Entire TinyOS Applications"}, Philip Levis, Nelson Lee, Matt Welsh, and David Culler. In Proceedings of the First ACM Conference on Embedded Networked Sensor Systems (SenSys 2003).  
+\bibitem{SMAC}\emph{"Medium Access Control with Coordinated, Adaptive Sleeping for Wire-less Sensor Networks"}, W. Ye, J. Heidemann, and D. Estrin, IEEE/ACM TRANSACTIONS ON NETWORKING, VOL. 12, NO. 3, giugno 2004
+\bibitem{TMAC}\emph{"An Adaptive Energy-Efficient MAC Protocol for Wireless Sensor Networks"},Tijs van Dam, Koen Langendoen,  ACM Sensys Novembre 2003
 
-\bibitem{nesc} "The nesC Language: A Holistic Approach to Networked Embedded Systems", \emph{David Gay, Phil Levis, Rob von Behren, Matt Welsh, Eric Brewer, and David Culler. Proceedings of Programming Language Design and Implementation (PLDI) 2003, Giugno 2003}.
-\bibitem{tython} "Tython: A Dynamic Simulation Environment for Sensor Networks", \emph{Michael Demmer and Phil Levis, Network Embedded Systems Technology Winter 2004 Retreat, gENNAIO 2004}
-\bibitem{stackpdf} "Mica High Speed Radio Stack", \emph{Nelson Lee, Philip Nelson, Jason Hill, http://webs.cs.berkeley.edu/tos/dist-1.1.0/snapshot-1.1.0/doc/stack.pdf}
-\bibitem{tinyos}"TinyOS: An operating system for wireless sensor networks", \emph{Philip Levis, Sam Madden, Joseph Polastre, Robert Szewczyk, Kamin Whitehouse, Alec Woo, David Gay, Jason Hill, Matt Welsh, Eric Brewer, and David Culler, in Ambient Intelligence, Springer-Verlag, New York, NY, 2004.}
-\bibitem{sync} Rong Zheng, Jennifer C. Hou and Lui Sha, "Asynchronous Wakeup For Ad Hoc Networks", in ACM MobiHoc 2003
+\bibitem{nesc}\emph{"The nesC Language: A Holistic Approach to Networked Embedded Systems"}, David Gay, Phil Levis, Rob von Behren, Matt Welsh, Eric Brewer, and David Culler. Proceedings of Programming Language Design and Implementation (PLDI) 2003, Giugno 2003.
+\bibitem{tython}\emph{"Tython: A Dynamic Simulation Environment for Sensor Networks"}, Michael Demmer and Phil Levis, Network Embedded Systems Technology Winter 2004 Retreat, Gennaio 2004
+\bibitem{stackpdf}\emph{"Mica High Speed Radio Stack"}, Nelson Lee, Philip Nelson, Jason Hill, http://webs.cs.berkeley.edu/tos/dist-1.1.0/snapshot-1.1.0/doc/stack.pdf
+\bibitem{tinyos}\emph{"TinyOS: An operating system for wireless sensor networks"}, Philip Levis, Sam Madden, Joseph Polastre, Robert Szewczyk, Kamin Whitehouse, Alec Woo, David Gay, Jason Hill, Matt Welsh, Eric Brewer, and David Culler, in Ambient Intelligence, Springer-Verlag, New York, NY, 2004.
+\bibitem{sync}\emph{"Asynchronous Wakeup For Ad Hoc Networks"}, Rong Zheng, Jennifer C. Hou and Lui Sha,  in ACM MobiHoc 2003
+\bibitem{tos2} \emph{"T2: A Second Generation OS For Embedded Sensor Networks"}, Philip Levis, David Gay, Vlado Handziski, Jan-Hinrich Hauer, Ben Greenstein, Martin Turon, Jonathan Hui, Kevin Klues, Cory Sharp, Robert Szewczyk, Joe Polastre, Philip Buonadonna, Lama Nachman, Gilman Tolle, David Culler, and Adam Wolisz, in attesa di pubblicazione. 
 
 
 \end{thebibliography}
