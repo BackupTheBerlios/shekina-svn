@@ -16,7 +16,7 @@
 
 
 
-\newcommand{\tv}{\texttt{TinyViz}}
+\newcommand{\tv}{\texttt{TinyViz} }
 
 \newcommand{\tos}{\texttt{TOSSIM} }
 
@@ -31,10 +31,11 @@
 \noindent\hspace*{\centeroffset}\makebox[0pt][l]{\begin{minipage}{\textwidth}
 \flushright
 {\fontfamily{helvet}
-  {\Huge\bfseries Implementazione di un MAC energy-efficient per reti di sensori wireless}
+  {\Huge\bfseries Implementazione di un MAC energy efficient per reti di sensori wireless}
   \noindent\rule[-1ex]{\textwidth}{5pt}\\[2.5ex]
   \flushright
-  {\bfseries\Large Gabriele Renzi\\[1.5ex]
+  {\bfseries\Large{ Gabriele Renzi}\\[1.5ex]
+  Università di Roma ``La Sapienza''\\[1.5ex]
   Anno Accademico 2004/2005}
 }
 \end{minipage}}
@@ -56,17 +57,20 @@
     \fancyhead{} % ignora, nello stile plain, le intestazioni
     \renewcommand{\headrulewidth}{0pt} % e la linea
 }
-\newcommand{\sink}[0]{\emph{Sink }}
-\newcommand{\ack}[0]{\texttt{ACK }}
+\newcommand{\sink}[0]{\emph{Sink} }
+\newcommand{\ack}[0]{\texttt{ACK} }
 
-\newcommand{\req}[0]{\texttt{REQ }}
-\newcommand{\nesc}[0]{\texttt{NesC }}
+\newcommand{\req}[0]{\texttt{REQ} }
+\newcommand{\nesc}[0]{\texttt{NesC} }
 \clearpage
 \null\vspace{\stretch{1}}
 \begin{flushright}
- \emph{Ai miei genitori, che dopo tutti questi anni
-       non mi hanno ancora tagliato i viveri.}
+ \emph{Ai miei genitori, che dopo tutti questi anni}
 \end{flushright}
+\begin{flushright}
+ \emph{non mi hanno ancora tagliato i viveri.}
+\end{flushright}
+\
 \vspace{\stretch{2}}
 \mainmatter
 \tableofcontents
@@ -79,7 +83,7 @@ facendo uso di fasi alternate di attività/riposo per massimizzare
 il risparmio energetico e di un meccanismo di autocorrezione dello scheduling per 
 ottenere buoni valori di latenza e throughput.
 Per l'implementazione è stato usato il linguaggio \nesc, un dialetto del \texttt{C}
-con estensioni per la concorrenza e la progrmmazione a componenti, 
+con estensioni per la concorrenza e la programmazione a componenti, 
 appoggiandosi alla piattaforma TinyOS, un sistema operativo pensato per dispositivi embedded di questo tipo.  Il testing dell'applicazione è stato effettuato utilizzando il simulatore \tos  
 e gli strumenti a corredo dello stesso, come l'interfaccia grafica \tv e strumenti 
 per l'iniezione di pacchetti radio nella simulazione.
@@ -143,7 +147,7 @@ rileva fino al \sink
 
 \item \emph{energia}, i sensori sono tipicamente dispositivi a batterie, ed in configurazioni
 in cui il numero di questi dispositivi è molto alto non è fattibile la sostituzione/ricarica ad 
-intervalli frequenti, quindi è necessario ottmizzare i consumi.
+intervalli frequenti, quindi è necessario ottimizzare i consumi.
 
 \end{itemize}
 
@@ -201,10 +205,10 @@ ed in caso questo accada esso manda un \ack al mittente.
 Il nodo ricevente \emph{non inoltra} i dati in questa 
 fase ma li immagazzina in una coda fino a che non si trovi nel suo stato di invio. 
 Quando il nodo entra a sua volta nello stato di invio non fa altro che inoltrare il pacchetto 
-che aveva ricevuto precendetemente ed attendere il relativo \ack.  
+che aveva ricevuto precedentemente ed attendere il relativo \ack.  
 
 Gli stati si susseguono nell'ordine \emph{ricezione, invio, inattività}, il che implica
-che un nodo ad $n$ hop dal sink si troverà in uno stato di invio quando il nodo ad $n-1$ 
+che un nodo ad $n$ hop dal \sink si troverà in uno stato di invio quando il nodo ad $n-1$ 
 hop si trova in stato di ricezione. 
 Nel caso in cui l'\ack  non venga ricevuto il pacchetto 
 inoltrato precedentemente rimane nella coda locale in attesa dello slot di invio seguente. 
@@ -246,7 +250,7 @@ già impostata, esso la imposterà a sua volta nei pacchetti in uscita in modo i
 indicare al nodo seguente che ci sono altri dati in arrivo, e che esso dovrà prepararsi a 
 riceverli. Il meccanismo è chiaramente ricorsivo e fa si che l'informazione si propaghi fino 
 al \sink sulla base di sincronizzazioni locali, il che significa che nel caso un pacchetto dal 
-nodo $X$ al nodo $Y$ vada perso o sia danneggiato nessuno dei nodiche si trovano sull'hop path da
+nodo $X$ al nodo $Y$ vada perso o sia danneggiato nessuno dei nodi che si trovano sull'hop path da
 $Y$ al \sink verrà informato della necessità di cambiare il proprio duty cycle, ed essi quindi 
 non sprecheranno risorse inutilmente rimanendo attivi in un periodo in cui non potrebbero 
 comunque ricevere altri dati. 
@@ -330,7 +334,7 @@ i task possono comunicare solamente tramite variabili condivise, in modo analogo
 interrompersi l'un l'altro non si presentano gli stessi problemi.
 
 Un task può però essere interrotto da un evento asincrono, il che significa che l'evento 
-potrebbe intervenire cambiando i dati manipolati dal task e generaqndo delle inconsistenze.
+potrebbe intervenire cambiando i dati manipolati dal task e generando delle inconsistenze.
 Per minimizzare questo problema ogni programma scritto in  \nesc è soggetto ad 
 un'analisi globale che è teoricamente in grado di individuare possibili race condition e 
 condurre l'autore alla loro eliminazione, riducendo il numero di bug. 
@@ -439,7 +443,7 @@ che gli permette di interoperare con dispositivi esterni, permettendo così l'im
 in componenti separati di tutta una serie di funzionalità come l'analisi dei segnali, 
 la visualizzazione di una topologia, l'iniezione di pacchetti radio e di informazioni per 
 i sensori etc.. 
-Il principale strumento pr fare questo è \tv, un ambiente grafico realizzato in Java che 
+Il principale strumento per fare questo è \tv, un ambiente grafico realizzato in Java che 
 astrae i meccanismi di base di questa 
 interazione con \tos esponendoli tramite un'interfaccia semplificata ad una serie 
 di plugin caricabili a runtime.  
@@ -530,12 +534,12 @@ D'altro canto sarebbe relativamente semplice cambiare una parte dell'implementaz
 \tree utilizzando un algoritmo di mappatura differente mantenendo comunque la stessa 
 interfaccia.}
 
-\item{In questo codice, ed anche nel codice del resto del programma, si può notare la presenza 
+\item{In questo codice, ed anche nel resto del programma, si può notare la presenza 
 di una variabile di tipo \texttt{TOS\_Msg} che è dichiarata globalmente.
 Ciò è necessario poiché il meccanismo di invio di un pacchetto radio è organizzato in due fasi, 
 la prima viene attivata tramite il comando \texttt{SendMsg.send()}, che nonostante il nome 
-fuorviante \emph{non} invia il messaggio ma si limita a metterlo in una una coda di invio.
-La seconda fase viene effettuata dal layer sottostante, che una volta inviato il pacchetto 
+fuorviante \emph{non} invia il messaggio ma si limita a metterlo in una una coda.
+La fase successiva è gestita dal layer sottostante, che una volta inviato il pacchetto 
 richiama l'evento \texttt{SendMsg.sendDone()}. 
 Se quindi la variabile che rappresenta il messaggio fosse dichiarata come locale in 
 \texttt{SinkTimer.fired()} essa verrebbe deallocata quando la funzione terminasse,  
@@ -552,7 +556,7 @@ rende lo sviluppo usando il simulatore decisamente più problematico.
 
 
 \section{Il cuore dell'applicazione}
-Il componente Dmac implementa l'algoritmo descritto in \cite{DMAC} sebbene in realtà lo faccia 
+Il componente DMac implementa l'algoritmo descritto in \cite{DMAC} sebbene in realtà lo faccia 
 ad un livello più alto rispetto a quello corretto. Infatti andare a sostituire i layer di rete 
 più bassi sul simulatore è complesso rispetto al farlo su un dispositivo reale, 
 e sebbene esistano dei documenti sull'implementazione dello stack in alcuni particolari dispositivi\cite{stackpdf} essi sono vecchi di oltre 3 anni e comunque non danno molte informazioni 
@@ -561,11 +565,11 @@ D'altronde non è stato neanche possibile trovare un'implementazione sostitutiva
 basilari di \tos da prendere come esempio. 
 Sebbene quindi il codice sia algoritmicamente corretto e funzionante,
 ci sono dei dettagli che non sono stati considerati, ad esempio il CRC, ed esso risulta 
-subottimale per l'ovvia sovrapposizione delle due logiche. 
+sub ottimale per l'ovvia sovrapposizione delle due logiche. 
 
 Il modulo fa uso di due timer, del componente \texttt{GenericComm}  che implementa le 
-primitive di invio di messaggi, ed ovviamante del componente \tree. 
-Si noti che \texttt{GeneriComm} viene usato anche dal componente \tree, ma le due istanze sono completamente indipendenti.  
+primitive di invio di messaggi, ed ovviamente del componente \tree. 
+Si noti che \texttt{GenericComm} viene usato anche dal componente \tree, ma le due istanze sono completamente indipendenti.  
 
 I due timer potrebbero in realtà essere sostituiti da uno solo poiché si avviano strettamente
 in ordine, ma sono stati separati per ottenere una maggiore chiarezza del codice.
@@ -674,9 +678,8 @@ e di inviare il pacchetto tramite le primitive di \texttt{SendMsg}.
 Il destinatario del pacchetto \ack viene individuato tramite la variabile 
 globale \texttt{lastSender}, poiché i task non accettano argomenti in input ne' 
 restituiscono valori. 
-A prima vista potrebbe sembrare che questo meccanismo introduca una race condition nel 
-caso l'evento \texttt{ReceiveMsg.receive()} venga segnalato più volte prima dell'avvio 
-di \texttt{sendAck()},
+A prima vista potrebbe sembrare che questo meccanismo introduca una race condition, perché nel caso che l'evento \texttt{ReceiveMsg.receive()} venisse segnalato più volte prima dell'avvio 
+di \texttt{sendAck()} alcune delle informazioni andrebbero perse,
 ma in realtà non è così. L'evento \texttt{sendDone()} non è un evento hardware, e quindi non 
 è dichiarato come \emph{asincrono} (teoricamente qualsiasi evento può essere dichiarato come 
 asincrono, ma ciò andrebbe evitato)
@@ -703,7 +706,7 @@ quindi batteria. Ogni nodo però che si trovi lungo l'hop path è però forzato 
 condizione a farlo nel momento in cui riceve un messaggio con la flag \texttt{more-to-send} 
 attiva, il che significa che l'unico nodo che deve prendere in considerazione la seconda 
 condizione è il nodo che effettua la rilevazione dei dati e che si appresta ad inoltrarli. 
-In questa implentazione però la seconda regola non è stata presa in considerazione, in quanto 
+In questa implementazione però la seconda regola non è stata presa in considerazione, in quanto 
 essa avrebbe richiesto l'utilizzo di una ulteriore serie di componenti e strumenti dedicati alla 
 raccolta di dati sia a livello di codice che di simulazione.
 
@@ -738,7 +741,7 @@ permette anche di scrivere semplici script per automatizzare l'accensione/spegni
 le variazioni nelle percentuali di perdita, l'immissione di pacchetti e molto altro. 
 \begin{figure}
 \includegraphics{img/tinyviz}
-\caption{\emph{\tv durante una simulazione, si notano i pacchetti \ack e \req}}
+\caption{\emph{\tv durante una simulazione, le frecce colorate indicano i pacchetti \ack e \req}}
 \end{figure}
 Anche senza usare script in python è possibile automatizzare le simulazioni utilizzando un file 
 di autorun.
@@ -786,8 +789,8 @@ la classe Java \texttt{DataMsg}.
 
 Per l'uso con \tv sono state aggiunte delle informazioni di debug mirate all'interazione con 
 il plugin  \texttt{DirectedGraph}, e sebbene i risultati non siano sempre identici per i 
-motivi già esposti è possibile vedere unaa semplice rappresentazione grafica dell'algoritmo 
-in azione che è comunque utile a verificare il funzionamento cona una veloce occhiata. 
+motivi già esposti è possibile vedere una semplice rappresentazione grafica dell'algoritmo 
+in azione che è comunque utile a verificare il funzionamento con una veloce occhiata. 
 
 \chapter{Conclusioni}
 Le simulazioni effettuate con i nodi disposti in griglie $5x5$, $7x7$ e $10x10$ mostrano il
