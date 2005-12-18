@@ -3,13 +3,22 @@
 \documentclass[twoside,11pt,a4paper,italian,openany]{book}
 \usepackage[italian]{babel}
 %è safe metterlo a 1.6, con 13 pagine arrivo a 16
-\linespread{1.6}
+\linespread{1.3}
 %\renewcommand{\baselinestretch}{1.6}
 \usepackage[utf8]{inputenc}
 \usepackage{newcent}
 \usepackage{fancyhdr}
 \usepackage{listings}
-\usepackage{graphicx}
+\usepackage{comment}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+
+
+\newcommand{\tv}{\texttt{TinyViz}}
+
+\newcommand{\tos}{\texttt{TOSSIM} }
 
 \begin{document}
 \frontmatter
@@ -47,11 +56,11 @@
     \fancyhead{} % ignora, nello stile plain, le intestazioni
     \renewcommand{\headrulewidth}{0pt} % e la linea
 }
-\newcommand{\sink}[0]{\emph{Sink}}
-\newcommand{\ack}[0]{\texttt{ACK}}
+\newcommand{\sink}[0]{\emph{Sink }}
+\newcommand{\ack}[0]{\texttt{ACK }}
 
-\newcommand{\req}[0]{\texttt{REQ}}
-\newcommand{\nesc}[0]{\texttt{NesC}}
+\newcommand{\req}[0]{\texttt{REQ }}
+\newcommand{\nesc}[0]{\texttt{NesC }}
 \clearpage
 \null\vspace{\stretch{1}}
 \begin{flushright}
@@ -60,55 +69,58 @@
 \end{flushright}
 \vspace{\stretch{2}}
 \mainmatter
-
-
-%\chapter{Introduzione}
-\begin{center}
-\large{Introduzione}
-\end{center}
-\vspace{0.3in}
-\hspace{\parindent}
+\tableofcontents
+\chapter{Introduzione}
 L'intento della tesi è l'implementazione di un protocollo MAC per reti di sensori 
 multihop ad hoc organizzate in un albero per la raccolta di dati.
-
-Il protocollo DMAC è appositamente progettato per rispettare i vincoli imposti da 
-questa tipologia di reti, e fa uso di fasi alternate di attività/riposo per massimizzare 
-il risparmio energetico e di un meccanismo di auto regolazione dello scheduling per 
+Il protocollo DMAC è appositamente progettato per funzionare all'interno dei vincoli 
+imposti da questa tipologia di reti e dall'hardware utilizzato, 
+facendo uso di fasi alternate di attività/riposo per massimizzare 
+il risparmio energetico e di un meccanismo di autocorrezione dello scheduling per 
 ottenere buoni valori di latenza e throughput.
-Per l'implementazione è stato utilizzato il lingaggio \nesc sulla piattaforma TinyOS, ed il 
-testing dell'applicazione è stato fatto utilizzando il simulatore \tos  e gli strumenti a 
-corredo dello stesso, come l'interfaccia grafica \tv e strumenti per la simulazione di 
-segnali radio.
+Per l'implementazione è stato usato il linguaggio \nesc, un dialetto del \texttt{C}
+con estensioni per la concorrenza e la progrmmazione a componenti, 
+appoggiandosi alla piattaforma TinyOS, un sistema operativo pensato per dispositivi embedded di questo tipo.  Il testing dell'applicazione è stato effettuato utilizzando il simulatore \tos  
+e gli strumenti a corredo dello stesso, come l'interfaccia grafica \tv e strumenti 
+per l'iniezione di pacchetti radio nella simulazione.
 
 
-
-
-\subsection{Obiettivi  della tesi}
-%\end{abstract}
-\tableofcontents
 
 \chapter{Le reti di sensori wireless}
-\sectio{I sensori wireless}
-Un sensore wireless è un dispositivo composta da una CPU, un 
- \emph{data gathering tree},
-Una Wireless Sensor Network (WSN) è composta da un gran numero di dispositivi molto semplici, 
-con limitate risorse computazionali e dotati di strumentazione per rilevare eventi (movimento,
-temperatura, video etc), per effettuare semplici elaborazioni e di eventuali meccanismi per 
-i
- le reti di sensori.
-Un sensore infatti non ha tipicamente le risorse sufficienti a fornire un'elaborazione 
-complessa delle informazioni, e quindi una WSN viene organizzata n un topologia detta cioè come un albero le foglie 
-raccolgono i dati e li inoltrano verso la radice dell'albero attraverso i nodi intermedi, 
-fino a raggiungere un nodo particolare, il \sink, il quale sarà costituito da un elaboratore in 
-grado di gestire le informazioni raccolte in modo utile.
-Il protocollo implementato per questa tesi, DMAC\cite{DMAC}, è appositamente pensato per una 
-topologia di questo genere, e cerca di sfruttare delle euristiche per limitare sia la 
+\begin{figure}
+\caption{Un sensore wireless}
+\includegraphics{img/sensore}
+\end{figure}
+
+Un sensore wireless è un dispositivo embedded che contiene una CPU, dei componenti di memoria, 
+dei rilevatori ambientali  ed una ricetrasmittente. Un sensore può essere progettato per 
+rilevare qualsiasi tipo di dato, dalla temperatura al movimento, ma non è pensato per l'analisi 
+di questi dati, in quanto tipicamente non possiede le risorse sufficienti a fornire 
+un'elaborazione complessa delle informazioni, e quindi i sensori vengono organizzati 
+in reti articolate dette appunto \emph{Wireless Sensor Network} (WSN).
+Una WSN è costituita da un numero molto grande di sensori, distribuiti su un territorio che può essere anche molto esteso ed i sensori non possono quindi limitarsi a trasmettere 
+le informazioni raccolte verso il nodo demandato all'analisi dei dati, ma devono essere 
+organizzati in percorsi multihop ad hoc, ed in particolare con una topologia caratteristica in 
+cui i pacchetti vengono indirizzati dai nodi periferici verso un nodo particolare, detto \sink, 
+il quale sarà costituito da un elaboratore in grado di gestire le informazioni raccolte 
+in modo utile. Un'organizzazione di questo tipo viene detta \emph{data gathering tree}, 
+in quanto essa assomiglia ad un albero (i nodi che rilevano i dati sono le foglie, e 
+l'informazione si propaga attraverso i nodi intermedi fino alla radice), sebbene in realtà 
+la rete possa essere un grafo più complesso. 
+\begin{figure}
+\caption{\emph{Le WSN sono organizzazioni ad hoc con routing multihop}}
+\includegraphics{img/network}
+\end{figure}
+
+Le reti di sensori wireless hanno molteplici utilizzi tra i quali applicazioni in campo 
+medicale,  rilevazione sismiche,  controllo industriale, localizzazione/tracking e molto altro, 
+il che implica la necessità di definire soluzioni specifiche per ogni problema. 
+Il protocollo implementato per questa tesi, DMAC\cite{DMAC}, è appositamente pensato per gli 
+alberi di raccolta dati, e cerca di sfruttare delle euristiche per limitare sia la 
 possibilità di errore nella trasmissione sia il consumo energetico, garantendo comunque una 
 bassa latenza.
-Per l'implementazione del protocollo è stata utilizzata la piattaforma TinyOS, un ambiente per 
-lo sviluppo di applicazioni per dispositivi embedded che comprende un semplice sistema operativo
-, un linguaggio di programmazione appositamente progettato e vari strumenti come simulatore, 
-visualizzatori grafici, ambienti di scripting e molto altro. 
+
+
 %nteragire con l'ambiente e per comunicare via radio. 
 \chapter{Il protocollo DMAC}
 \section{I problemi delle reti di sensori}
@@ -116,7 +128,9 @@ In una topologia di tipo data gathering tree, la parte più rilevante del
 traffico è costituita dal flusso di pacchetti verso il \sink, mentre le informazioni 
 trasmesse nel verso opposto sono limitate a rari pacchetti di controllo.
 
-Gli autori di \cite{DMAC} hanno dunque preso in considerazione questo punto fondamentale con l'obiettivo di ottenere un compromesso ottimale tra i vari elementi di interesse in una WSN, ovvero:
+Gli autori di \cite{DMAC} hanno dunque preso in considerazione questo punto fondamentale con 
+l'obiettivo di ottenere un compromesso ottimale tra i vari elementi di interesse in una WSN,
+ovvero:
 
 \begin{itemize}
 
@@ -134,7 +148,7 @@ intervalli frequenti, quindi è necessario ottmizzare i consumi.
 \end{itemize}
 
 Il punto principale da cui parte l'analisi del DMAC è l'energia, in quanto si tratta di un 
-vincolo particolarmente importante. DMAC, come già altri protocolli\cite{SMAC}\cite{TMAC} 
+vincolo particolarmente importante. DMAC, come già altri protocolli\cite{SMAC} 
 progettati in precedenza, parte dalla considerazione che il traffico in una WSN è molto leggero 
 per la maggior parte del tempo, e che quindi è 
 possibile ed auspicabile che i nodi non coinvolti nel trasporto di dati rimangano spenti 
@@ -154,7 +168,10 @@ il protocollo DMAC utilizza un meccanismo di scheduling a tre stati per i nodi,
 con l'aggiunta di un meccanismo di \emph{staggered wakeup} per cui i nodi che si trovano ad un 
 hopcount maggiore dal \sink entrano nel ciclo di scheduling prima di quelli più vicini, un 
 approccio che avrebbe numerosi vantaggi.
-
+\begin{figure}
+\includegraphics{img/wakeup}
+\caption{\emph{Nel DMAC I nodi ad un livello hanno un ciclo sfasato rispetto ai livelli vicini}}
+\end{figure} 
  Anzitutto il tempo di attesa per il forwarding di un
 pacchetto è molto limitato, perché quando un nodo si trova in una fase attiva il mote seguente
 nel suo multihop path verso il \sink sarà anch'esso attivo, mentre un pacchetto che si trova 
@@ -164,11 +181,11 @@ volta in uno stato di attività, mentre quelli che hanno già trasmesso possono 
 \`E facile notare che questo approccio è implicitamente scalabile, in quanto all'aumentare della profondità dell'albero non c'è un aumento dell'overhead, ne' un peggioramento dal punto di vista energetico, in quanto un nodo che si trovi distante dall'azione resterà spento finché il 
 pacchetto non gli sia vicino.
 Allo stesso tempo, il fatto che il pacchetto si propaghi in modo "lineare" permette di far si 
-che tutti i nodi nel percorso verso il \sink siano in grado di variare tempestivamente il 
+che tutti i nodi nel percorso verso il \sink  siano in grado di variare tempestivamente il 
 proprio \emph{duty cycle} scheduling se necessario, mentre i nodi non coinvolti nella trasmissione possono mantenere il loro ciclo di attivazione/spegnimento originario. 
 Va notato che questo meccanismo ha senso solamente in una certa classe di configurazioni 
 delle WSN, i \emph{data gathering tree}, in quanto la comunicazione dalla radice alle foglie 
-risulta penalizzata, quindi il protocollo è adatto solo in se i pacchetti di controllo 
+risulta penalizzata, quindi il protocollo è adatto solo se i pacchetti di controllo 
 inviati dal \sink sono rari. 
 
 \section{Stati nel DMAC}
@@ -189,8 +206,8 @@ che aveva ricevuto precendetemente ed attendere il relativo \ack.
 Gli stati si susseguono nell'ordine \emph{ricezione, invio, inattività}, il che implica
 che un nodo ad $n$ hop dal sink si troverà in uno stato di invio quando il nodo ad $n-1$ 
 hop si trova in stato di ricezione. 
-Nel caso in cui che l'\ack  non venga ricevuto il pacchetto o sia danneggiato il pacchetto 
-inoltrato precedentemente rimane nella coda di invioda in attesa dello slot di invio seguente. 
+Nel caso in cui l'\ack  non venga ricevuto il pacchetto 
+inoltrato precedentemente rimane nella coda locale in attesa dello slot di invio seguente. 
 Opportune regole di drop possono essere introdotte in questo schema, ad esempio sarebbe 
 ragionevole abbandonare il tentativo di invio dopo che per un certo numero di volte si è 
 inoltrato un pacchetto senza ricevere il relativo \ack. 
@@ -233,8 +250,10 @@ nodo $X$ al nodo $Y$ vada perso o sia danneggiato nessuno dei nodiche si trovano
 $Y$ al \sink verrà informato della necessità di cambiare il proprio duty cycle, ed essi quindi 
 non sprecheranno risorse inutilmente rimanendo attivi in un periodo in cui non potrebbero 
 comunque ricevere altri dati. 
-\includegraphics{mtseps}
-
+\begin{figure}
+\includegraphics{img/moretosend}
+\caption{\emph{I nodi intensificano il duty cycle quando ricevono un pacchetto MTS}}
+\end{figure}
 
 Va sottolineato che nel DMAC, quando un nodo riceve un pacchetto \texttt{more-to-send} esso non 
 rimane in uno degli stati attivi nello slot immediatamente seguente, entra invece in uno stato di
@@ -249,25 +268,24 @@ Gli autori del DMAC teorizzano anche un approccio alternativo in cui il pacchett
 una flag MTS,  ed il processo di scheduling è leggermente differente. 
 Implementare questa variazione richiederebbe l'aggiunta di un nuovo stato, di 
 nuove regole di transizione e l'eliminazione di un paio di righe nelle routine di invio dei dati,
-ma sebbene questa modifica non incide molto sulla maggior parte del codice \nesc non offre dei 
+ma sebbene questa modifica non incida molto sulla maggior parte del codice \nesc non offre dei 
 meccanismi di astrazione adatti a permettere il riuso del codice in questa situazione, e dato 
 che l'unico approccio possibile sarebbe stato quello di aggiungere ancora altre macro 
-condizionalia si è preferito non farlo per non rendere i sorgenti troppo intricati. 
+per la compilazione condizionale si è preferito non farlo per non rendere i sorgenti troppo 
+intricati. 
 
 
 
 \chapter{La piattaforma TinyOS}
 
 \section{Un sistema operativo per WS}
-Lo sviluppo della tecnologia dei sensori wireless può per alcuni versi 
-essere paragonato a quella delle piattaforme PC domestiche. 
 Con la diffusione di sensori sempre più complessi e vari, esattamente come per 
 l'informatica domestica, sono sorte la possibilità e la necessità di gestire i
-componenti ad un livello più alto di astrazione, pur dovendo comunque che conciliare 
+componenti ad un livello più alto di astrazione, ma dovendo comunque conciliare 
 i vantaggi dell'astrazione (portabilità, velocità nello sviluppo) con le pesanti 
 limitazioni nell'hardware. 
 
-TinyOS\cite{tinyos} rappresenta in questo senso un sistema operativo "\emph{moderno}" per WS, 
+TinyOS\cite{tinyos} rappresenta in questo senso un moderno sistema operativo per WS, 
 che fornisce meccanismi molto utili per la realizzazione di applicazioni, permettendo 
 ad un tempo di raggiungere i vantaggi dell'astrazione ma anche lasciando aperta la possibilità 
 di usufruire delle funzionalità specifiche di ogni hardware in modo da non sprecare risorse. 
@@ -284,7 +302,7 @@ Tra le funzionalità che TinyOS offre ci sono
 \item{un linguaggio di sviluppo (\nesc) che supporti direttamente tutto questo}
 \end{itemize}
 
-TinyOS è software open source, disponibili a tutti  e con una comunità in crescita.
+TinyOS è software open source, disponibile a tutti e con una comunità in crescita.
 Esso offre inoltre alcuni strumenti a corredo interessanti, tra i quali sono presenti 
 simulatori, visualizzatori, database, ed interfacce con vari linguaggi di programmazione. 
 
@@ -297,41 +315,39 @@ netta mancanza per costrutti di alto livello.
 \nesc è basato sul C, sia a livello sintattico che a livello semantico. 
 In effetti il compilatore \nesc è effettivamente implementato come un frontend per il noto compilatore multipiattaforma GCC \cite{nesc}.
 
-\nesc estende però il C in varie direzioni ortogonali, che rispecchiano da un lato le funzionalità
-di TinyOS e dall'altro le necessità dell'hardware particolare su cui esso deve 
+\nesc estende però il C in varie direzioni ortogonali, che rispecchiano da un lato le 
+funzionalità di TinyOS e dall'altro le necessità dell'hardware particolare su cui esso deve 
 funzionare. 
 
 \subsection{Task}
-TinyOS fornisce alcune primitive per la concorrenza che sono replicate nel design di NesC.
+TinyOS fornisce alcune primitive per la concorrenza che sono replicate nel design di \nesc.
 Ogni dispositivo può avere in esecuzione differenti \emph{task}, i quali vengono attivati 
 secondo un meccanismo di scheduling non preemptive, quindi funzionando finché la funzione 
 associata non raggiunge un \texttt{return}. 
 Si tratta di un meccanismo di concorrenza a stato condiviso in cui 
 i task possono comunicare solamente tramite variabili condivise, in modo analogo a 
 \emph{pthread} o ai thread in Java/.NET,  ma poiché i task non sono in grado di 
-interrompersi l'un l'altro non presenta gli stessi problemi.
+interrompersi l'un l'altro non si presentano gli stessi problemi.
 
 Un task può però essere interrotto da un evento asincrono, il che significa che l'evento 
-potrebbe intervenire cambiando i dati manipolati dal task inconsistenze.
-Per minimizzare questo problema ogni programma scritto in  NesC è soggetto ad 
+potrebbe intervenire cambiando i dati manipolati dal task e generaqndo delle inconsistenze.
+Per minimizzare questo problema ogni programma scritto in  \nesc è soggetto ad 
 un'analisi globale che è teoricamente in grado di individuare possibili race condition e 
 condurre l'autore alla loro eliminazione, riducendo il numero di bug. 
-Questo meccanismo no è però infallibile, e può sbagliare producendo false positive 
-, che è comunque possibile ignorare indicando esplicitamente al compilatore 
-l'assenza race condition.
+Questo meccanismo no è però infallibile, e può sbagliare producendo false positive.
 
 
 \subsection{Eventi}
 Lo scheduler di TinyOS può sempre decidere di interrompere il funzionamento di un task 
 se riceve un evento hardware. 
-Per modellare questi casi NesC offre il meccanismo degli eventi, 
+Per modellare questi casi \nesc offre il meccanismo degli eventi, 
 che sono speciali funzioni annotate come tali e che vengono richiamate in numerosi 
 casi, l'arrivo di un segnale radio, l'avvio di un timer, l'inizio della ricezione di dati da un sensore etc...
 Gli eventi non sono necessariamente asincroni, e tipicamente eventi di bassa priorità (per esempio il segnalare che un pacchetto è stato inviato) non lo sono.
 \`E possibile definire propri eventi prependendo la keyword \texttt{event} ad una qualsiasi 
 funzione, a differenza dei task che possono essere solamente a funzioni \texttt{void}.
 
-Poiché un evento asincrono potrebbe interrompere una funzione in un punto qualsiasi della sua esecuzione, NesC offre un meccanismo per garantire che un blocco di codice venga eseguito in 
+Poiché un evento asincrono potrebbe interrompere una funzione in un punto qualsiasi della sua esecuzione, \nesc offre un meccanismo per garantire che un blocco di codice venga eseguito in 
 maniera atomica,  permettendo di annotare una qualsiasi variabile come \texttt{atomic} o 
 di inserire un blocco di codice indicato come tale, in maniera simile a \texttt{synchronized} 
 in Java.
@@ -343,8 +359,12 @@ in Java.
 TinyOS come molti altri SO usa e fornisce delle interfacce per rappresentare gli oggetti del 
 sistema (layer di rete, driver etc...). 
 Mentre però in molte piattaforme classiche (Win32, Linux, BSD) ciò è fatto informalmente 
-usando il linguaggio C, NesC è stato esteso per supportare sintatticamente l'idea di 
+usando il linguaggio C, \nesc è stato esteso per supportare sintatticamente l'idea di 
 programmazione a componenti. 
+\begin{figure}
+\includegraphics{img/moduli}
+\caption{\emph{I moduli in \nesc richiedono e forniscono interfacce, tramite il wiring esse possono essere combinate in modi differenti}}
+\end{figure}
 Un'interfaccia dichiara di fornire un certo numero di 
 \begin{itemize}
 
@@ -358,7 +378,7 @@ Un componente può implementare una o più interfacce (o implementare un'interfa
 con nomi diversi, il che fornisce una qualche similarità con la programmazione ad oggetti), 
 ed è composto principalmente da due parti, una di configurazione 
 (dichiarazione di componenti ed interfacce usati) ed una di implementazione.
-La configurazione è il cuore della parte \emph{Component-Oriented} di NesC, in quanto è 
+La configurazione è il cuore della parte \emph{Component-Oriented} di \nesc, in quanto è 
 il punto in cui viene effettuata l'associazione tra componenti ed interfacce, operazione indicata
  come \emph{wiring}, offrendo una grande flessibilità. 
 La parte di implementazione contiene riferimenti solamente ai nomi indicati nella configurazione
@@ -372,13 +392,7 @@ essere parametrizzati, un qualsiasi valore può essere
 incluso in fase di configurazione effettuando una sorta di \emph{currying} dell'interfaccia. 
 Un esempio è quello delle interfacce per la comunicazione radio, dove è possibile specificare 
 il tipo di segnale AM che si vuole utilizzare una volta sola durante il wiring senza doverlo specificare ogni volta che si usano i comandi forniti dalle interfacce. 
-In versioni più recenti di NesC è possibile avere anche type parameter, ma con la versione della piattaforma usata in questa tesi ciò non è stato possibile. 
-
-
-%[[ ed eventuali dichiarazioni 
-%riguardo i rapporti tra determinate interfacce (è possibile dichiarare che il modulo 
-%\texttt{RedBlackTree} equivale all'interfaccia \texttt{Dictionary} anche se nel primo non 
-%c'è nessun  riferimento alla seconda);  ]]
+In versioni più recenti di \nesc è possibile avere anche type parameter, ma con la versione della piattaforma usata in questa tesi ciò non è stato possibile. 
 
 
 
@@ -397,7 +411,6 @@ Allo stesso tempo grazie alla WPA il compilatore può effettuare il controllo su
 di cui si è già discusso. 
 
 
-\newcommand{\tos}{\texttt{TOSSIM} }
 
 \section{\tos, un simulatore per PC}
 \tos\cite{TOSSIM} è un simulatore per personal computer  in grado di far funzionare lo 
@@ -416,7 +429,6 @@ lo stesso codice che funziona su tutti i nodi, senza la possibilità di programm
 tra due nodi qualunque, o di usare dei modelli euristici predefiniti, ma non comprende ne' 
 informazioni topologiche, ne' modelli di alto livello, i quali possono però essere sempre 
 definiti in termini di probabilità di perdita su un qualsiasi arco.
-\newcommand{\tv}{\texttt{TinyViz}}
 Allo scopo di definire questi modelli, sono stati creati vari strumenti, tra i quali 
 \texttt{LossyBuilder}, un programma in grado di generare file di testo rappresentanti 
 la distribuzione di una rete di nodi in topologia a griglia.
@@ -555,7 +567,8 @@ Il modulo fa uso di due timer, del componente \texttt{GenericComm}  che implemen
 primitive di invio di messaggi, ed ovviamante del componente \tree. 
 Si noti che \texttt{GeneriComm} viene usato anche dal componente \tree, ma le due istanze sono completamente indipendenti.  
 
-I due timer potrebbero in realtà essere sostituiti da un uno solo poiché si avviano strettamente in ordine, ma sono stati separati per ottenere una maggiore chiarezza del codice.
+I due timer potrebbero in realtà essere sostituiti da uno solo poiché si avviano strettamente
+in ordine, ma sono stati separati per ottenere una maggiore chiarezza del codice.
 Il ruolo del primo, \texttt{TreeTimer} è di controllare la durata del periodo necessario per
 acquisire i dati sulla topologia dei nodi, al termine del quale il componente \tree, avviato 
 nel momento in cui viene avviato il codice principale, viene fermato.
@@ -635,8 +648,8 @@ in precedenza.
 
 
 D'altronde anche se il messaggio fosse inviato correttamente causando la segnalazione di 
-\texttt{sendDone()} quest'ultimo con un valore \texttt{SUCCESS} (e se questo valore avesse 
-un vero significato) non ci sarebbero garanzie sulla ricezione da parte del prossimo nodo. 
+\texttt{sendDone()} con un valore \texttt{SUCCESS}  
+non ci sarebbero garanzie sulla ricezione da parte del prossimo nodo. 
 Dunque per eliminare un messaggio dalla coda aspettiamo di ricevere 
 un pacchetto di \ack, sapendo che esso sarà per forza relativo all'ultimo nostro pacchetto 
 inviato, giacché sappiamo che ne viene inviato solamente uno per ogni slot. 
@@ -658,7 +671,7 @@ non faccia riferimento alla variabile  \texttt{nextNode} ma ad un generico coman
 La funzione \texttt{sendAck()} si occupa di impostare valori appropriati nel pacchetto di \ack 
 e di inviare il pacchetto tramite le primitive di \texttt{SendMsg}. 
 
-Il destinatario del pacchetto \ack viene inviato basandosi sul valore della variabile 
+Il destinatario del pacchetto \ack viene individuato tramite la variabile 
 globale \texttt{lastSender}, poiché i task non accettano argomenti in input ne' 
 restituiscono valori. 
 A prima vista potrebbe sembrare che questo meccanismo introduca una race condition nel 
@@ -701,7 +714,8 @@ fatto che si stia attendendo l'arrivo di un \ack per la propria richiesta di aum
 possibile tramite una variabile globale o tramite un comando apposito delegato al componente di 
 raccolta dei dati.  
 
-Un problema che non è trattato chiaramente non paper originale\cite{DMAC} è quello di come riallineare il funzionamento dei mote dopo un burst di pacchetti. 
+Un problema che non è trattato chiaramente nel paper originale\cite{DMAC} è quello di come 
+riallineare il funzionamento dei mote dopo un burst di pacchetti. 
 Infatti un nodo che si trovasse su differenti percorsi verso il \sink dopo un intensificazione 
 del duty cycle si troverebbe ancora sincronizzato con i nodi su quel percorso, ma sarebbe 
 fuori sincronia rispetto agli altri path. 
@@ -722,6 +736,10 @@ Per rendere più semplice la simulazione esiste \tv, che non solo permette di av
 rappresentazione grafica, ma tramite l'interprete python integrato nell'ultima versione 
 permette anche di scrivere semplici script per automatizzare l'accensione/spegnimento dei nodi,
 le variazioni nelle percentuali di perdita, l'immissione di pacchetti e molto altro. 
+\begin{figure}
+\includegraphics{img/tinyviz}
+\caption{\emph{\tv durante una simulazione, si notano i pacchetti \ack e \req}}
+\end{figure}
 Anche senza usare script in python è possibile automatizzare le simulazioni utilizzando un file 
 di autorun.
 Nell'utilizzo di \tv purtroppo sono stati incontrati molti problemi:
@@ -729,14 +747,14 @@ Nell'utilizzo di \tv purtroppo sono stati incontrati molti problemi:
 \item{I documenti che indicano come utilizzare l'interprete interattivo sono obsoleti e 
 praticamente tutte le gerarchie dei moduli sono differenti.}
 \item{Per poter impostare dei valori di debug nel file di autorun è necessario  
-cambiare il codice sorgente di \tv altrimenti al simulazione nell'ambiente \emph{cygwin} 
+cambiare il codice sorgente di \tv altrimenti la simulazione nell'ambiente \emph{cygwin} 
 fallirà sempre per l'erroneo uso di \texttt{Runtime.exec}. Abbiamo inviato una patch 
-agli autori per risolvere questo problema}
+agli autori per risolvere questo problema.}
 \item{Tra i plugin  che abbiamo utilizzato c'è \texttt{DirectedGraph}, un plugin che fa uso 
 di stringhe di debug formattate secondo una particolare sintassi per rappresentare informazioni 
 grafiche. Questo plugin \emph{non può funzionare} out of the box in quanto invece di esserci 
-una assegnazione ad una variabile globale si trova una ridichiarazione, il che fa si che 
-ad ogni accesso alla variabile globale venga generata un'eccezione, anche in questo caso abbiamo inviato una patch}
+un'assegnazione ad una variabile globale si trova una ridichiarazione, il che fa si che 
+ogni accesso alla variabile globale generi un'eccezione, anche in questo caso abbiamo inviato una patch}
 \item{La classe che si occupa di analizzare il file di autorun non è stata aggiornata insieme 
 al resto del codice, il che fa si che sia possibile impostare da riga di comando alcuni 
 argomenti mentre è impossibile farlo con il file di configurazione; 
@@ -776,7 +794,8 @@ Le simulazioni effettuate con i nodi disposti in griglie $5x5$, $7x7$ e $10x10$ 
 comportamento atteso, sebbene esse subiscano dei lievi peggioramenti con il diminuire della 
 lunghezza degli slot, facendo aumentare le collisioni.
 L'impressione è che tale peggioramento sia dovuto all'implementazione del simulatore 
-che impiega un certo tempo per segnalare i numerosi eventi in reti complesse. 
+che impiega un certo tempo per segnalare i numerosi eventi in reti complesse.
+
 L'abbassamento dell'intervallo di inattività porta ad un aumento del throughput 
 a scapito dell'efficienza energetica, e la scelta di una durata di $18\mu$ per questo periodo 
 è stata dettata dalle informazioni presenti in \cite{DMAC} riguardo i test nell'ambiente 
@@ -794,13 +813,13 @@ perdite di dati i dati arrivano al \sink nei tempi attesi (ovvero $n\mu$).
 Il prossimo passo nello studio di questo protocollo sarebbe quello di effettuare il 
 porting dell'algoritmo al livello corretto dello stack, e di effettuare nuovi test in questo 
 ambito, per poi verificare su hardware reale la validità del meccanismo, avendo così anche la 
-possibilità di effettuare confronti con altre implementazioni. 
+possibilità di effettuare confronti con altri protocolli. 
 La piattaforma TinyOS è però nel cuore di una cambiamento radicale\cite{tos2}, il quale 
 si propone di risolvere molti dei problemi riscontrati in questa tesi, sia dal punto di vista 
 del funzionamento che dal punto di vista dello sviluppo; sembrerebbe dunque opportuno 
 iniziare a lavorare direttamente su \emph{TinyOS2} con le nuove versioni di simulatore, 
 compilatore e librerie. 
-
+%\begin{comment}
 \appendix
 %\begin{lstlisting}
 \lstset{
@@ -819,13 +838,13 @@ compilatore e librerie.
   }
 %\addcontentsline{toc}{chapter}{Codice del componente DMac}
 \chapter{Codice del componente DMac}
-\section{DMac.h}
-\lstinputlisting{DMac.h}
+%\section{DMac.h}
+%\lstinputlisting{DMac.h}
 \section{DMac.nc}
 \lstinputlisting{DMac.nc}
 \section{DMacM.nc}
 \lstinputlisting{DMac.nc}
-
+%\end{comment}
 %%\chapter{Codice del componente Tree}
 %\section{TreeData.nc}
 %\lstinputlisting{lib/TreeData.nc}
@@ -839,18 +858,30 @@ compilatore e librerie.
 %\end{lstlisting}
 
 \backmatter
+\chapter{Ringraziamenti}
+Ringrazio il Prof. Andrea Vitaletti per avermi dato la possibilità di imparare qualcosa di nuovo 
+ed interessante con questa tesi, ed il mio collega Antonio Trapani per aver sbattuto la testa 
+insieme a me su quel qualcosa. 
+Un grazie a mio padre ed a mia madre che hanno sempre avuto fiducia in me (tranne una 
+volta in cui sospetto volessero mandarmi al cepu). Uno ad Elena, che in verità non è che mi 
+abbia sopportato molto, ma almeno è riuscita a distrarmi quando serviva. 
+Uno agli amici per le bevute, le mangiate, le sigarette, le chiacchierate e per tutte le 
+cose che hanno fatto per me, che sono davvero tante. Un grazie alle signore della segreteria 
+didattica, che mi hanno fatto recuperare 5 crediti smarriti. Uno al Prof. Troya, perché mi ha
+dato 23 a fisica. Ed infine, grazie alle persone che non mi ricordo più, che non si sa mai. 
+
+
 \begin{thebibliography}{99}
 \bibitem{DMAC} \emph{"An Adaptive Energy-Efficient and Low-Latency MAC for Data Gathering in Sensor Networks"}, G Lu, B Krishnamachari, C Raghavendra, Workshop on Energy-Efficient Wireless Communications, 2004 
 \bibitem{TOSSIM}\emph{"TOSSIM: Accurate and Scalable Simulation of Entire TinyOS Applications"}, Philip Levis, Nelson Lee, Matt Welsh, and David Culler. In Proceedings of the First ACM Conference on Embedded Networked Sensor Systems (SenSys 2003).  
 \bibitem{SMAC}\emph{"Medium Access Control with Coordinated, Adaptive Sleeping for Wire-less Sensor Networks"}, W. Ye, J. Heidemann, and D. Estrin, IEEE/ACM TRANSACTIONS ON NETWORKING, VOL. 12, NO. 3, giugno 2004
-\bibitem{TMAC}\emph{"An Adaptive Energy-Efficient MAC Protocol for Wireless Sensor Networks"},Tijs van Dam, Koen Langendoen,  ACM Sensys Novembre 2003
 
-\bibitem{nesc}\emph{"The nesC Language: A Holistic Approach to Networked Embedded Systems"}, David Gay, Phil Levis, Rob von Behren, Matt Welsh, Eric Brewer, and David Culler. Proceedings of Programming Language Design and Implementation (PLDI) 2003, Giugno 2003.
-\bibitem{tython}\emph{"Tython: A Dynamic Simulation Environment for Sensor Networks"}, Michael Demmer and Phil Levis, Network Embedded Systems Technology Winter 2004 Retreat, Gennaio 2004
+\bibitem{nesc}\emph{"The nesC Language: A Holistic Approach to Networked Embedded Systems"}, David Gay, Phil Levis, Rob von Behren, Matt Welsh, Eric Brewer, and David Culler. Proceedings of Programming Language Design and Implementation (PLDI) 2003, 2003.
+\bibitem{tython}\emph{"Tython: A Dynamic Simulation Environment for Sensor Networks"}, Michael Demmer and Phil Levis, Network Embedded Systems Technology Winter 2004 Retreat, 2004
 \bibitem{stackpdf}\emph{"Mica High Speed Radio Stack"}, Nelson Lee, Philip Nelson, Jason Hill, http://webs.cs.berkeley.edu/tos/dist-1.1.0/snapshot-1.1.0/doc/stack.pdf
 \bibitem{tinyos}\emph{"TinyOS: An operating system for wireless sensor networks"}, Philip Levis, Sam Madden, Joseph Polastre, Robert Szewczyk, Kamin Whitehouse, Alec Woo, David Gay, Jason Hill, Matt Welsh, Eric Brewer, and David Culler, in Ambient Intelligence, Springer-Verlag, New York, NY, 2004.
 \bibitem{sync}\emph{"Asynchronous Wakeup For Ad Hoc Networks"}, Rong Zheng, Jennifer C. Hou and Lui Sha,  in ACM MobiHoc 2003
-\bibitem{tos2} \emph{"T2: A Second Generation OS For Embedded Sensor Networks"}, Philip Levis, David Gay, Vlado Handziski, Jan-Hinrich Hauer, Ben Greenstein, Martin Turon, Jonathan Hui, Kevin Klues, Cory Sharp, Robert Szewczyk, Joe Polastre, Philip Buonadonna, Lama Nachman, Gilman Tolle, David Culler, and Adam Wolisz, in attesa di pubblicazione. 
+\bibitem{tos2} \emph{"T2: A Second Generation OS For Embedded Sensor Networks"}, Philip Levis, David Gay, Vlado Handziski, Jan-Hinrich Hauer, Ben Greenstein, Martin Turon, Jonathan Hui, Kevin Klues, Cory Sharp, Robert Szewczyk, Joe Polastre, Philip Buonadonna, Lama Nachman, Gilman Tolle, David Culler, and Adam Wolisz, unpubliched. 
 
 
 \end{thebibliography}
