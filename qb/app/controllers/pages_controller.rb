@@ -10,5 +10,9 @@ class PagesController < ApplicationController
     headers["Content-Type"] = "application/rss+xml"
     render :layout => false
   end
+  def sitemap   
+    @pages=Page.find_all
+    render :layout => false
+  end
 
 end
