@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+  caches_page :show,:feed,:sitemap,:recent,:index
+  cache_sweeper :page_sweeper
   def show
     if @page = Page.find_by_title(params[:page_title]) and (@page.current_revision != nil)
       render
