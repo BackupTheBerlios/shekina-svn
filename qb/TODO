@@ -5,8 +5,8 @@
 + need tests for login controller
 + need tests for home_controller
 + need MORE tests for version controller, and to find a workaround for cookies
-- can delete home controller completely, massive conceptual simplification
-- add caching for rendered pages.. 
+- can delete home controller completely, massive conceptual simplification?
++ add caching for rendered pages.. 
 - check query to dbms (use piggyback)
 - should add tags as meta keywords 
 - add "new" insertion form
@@ -26,7 +26,7 @@
 + remove caching for titles.. or not? see I2 rev 2859 commit log)
 + remove AnonymousCoward ? [AnonimoRubyista è ok]
 / handle big images in the home (now they mess up the layout on low resolution
-- merge modification for version/new.rhtml (onfocus)
++ merge modification for version/new.rhtml (onfocus)
 + check merging of helper/application_helper.rb from I2/alexey branch (rev 2858)
 - cleanup useless CSS stuff 
 
