@@ -15,9 +15,6 @@ module ApplicationHelper
     </form>
      }% [string, string]
   end
-  def latest_news
-    Page.find( :all, :order=>"updated_at DESC", :limit=> 5)
-  end
   def nlink_to(name, options = {}, html_options = {}, *parameters_for_method_reference)
     link_to(name, options, html_options.update(:class => "navlink"), *parameters_for_method_reference)
   end

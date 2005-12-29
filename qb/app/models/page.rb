@@ -24,13 +24,22 @@ class Page < ActiveRecord::Base
   end
 
   #FIXME: remove one 
-  def self.find_or_create(attributes)
-    find_by_title(attributes[:title]) || create(attributes)
-  end
-  def self.find_or_build(title)
-    find_by_title(title) || create(:title => title)
-  end
-  def self.existing_page_titles
-    connection.select_values("SELECT title FROM pages")
+  class << self
+    
+    def find_or_create(attributes)
+      find_by_title(attributes[:title]) || create(attributes)
+    end
+    def find_or_build(title)
+      find_by_title(title) || create(:title => title)
+    end
+    def existing_page_titles
+      connection.select_values("SELECT title FROM pages")
+    end
+    def latest_news(num=5)
+      find :all, 
+           :order=>"updated_at DESC",
+           :limit=> num
+           
+    end
   end
 end

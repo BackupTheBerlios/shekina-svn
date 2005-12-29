@@ -7,7 +7,7 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
     xml.language "it-it"
     xml.ttl "40"
 
-    latest_news.each do |page|
+    Page.latest_news.each do |page|
       xml.item do
         xml.title(page.title)
         xml.description(markup(page.body)) 

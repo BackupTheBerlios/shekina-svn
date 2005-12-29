@@ -53,7 +53,7 @@
   -->
 </div>
 <div id="newsbar">
-  <% for page in latest_news() %>
+  <% for page in Page.latest_news %>
     <div class="newsitem">
       <h3 ><%= wiki_link page.title %> </h3>
       <!-- has <p> already -->
