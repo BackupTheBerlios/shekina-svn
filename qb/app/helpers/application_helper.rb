@@ -1,5 +1,5 @@
 require 'html_diff/lib/html_diff'
-
+require 'qbcloth'
 module ApplicationHelper
   def search_box_tag
     string="Cerca nel Wiki"
@@ -26,7 +26,8 @@ module ApplicationHelper
     @home ? "Ruby-it" : content_tag("small", SITE_NAME) + tag("br") + @title.to_s
   end
   def markup(body, existing_page_titles = Page.existing_page_titles)
-    RedCloth.new(linkize(auto_link(body), existing_page_titles)).to_html
+#    QbCloth.new(linkize(auto_link(body), existing_page_titles)).to_html
+    QbCloth.new(body, existing_page_titles,self).to_html
   end
 
   def differences(original, new)

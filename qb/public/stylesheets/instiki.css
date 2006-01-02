@@ -258,3 +258,36 @@ table {
   color: grey;
   font-size: 10px;
 }
+
+
+
+/*   This is the stuff for syntax highlight */
+
+span.normal {}
+span.comment { color: #005; font-style: italic; }
+span.keyword { color: #009; font-weight: bold; }
+span.method { color: #077; }
+span.class { 
+  color: #074;
+  font-weight: bold;}
+span.module {  
+  color: #074;
+  font-weight: bold;
+}
+span.constant {
+  color: #074;
+  font-weight: bold;
+}
+span.punct { color: #447; font-weight: bold; }
+span.symbol { color: #099; }
+span.string { color: #944; }
+span.char { color: #F07; }
+span.ident { color: #004; }
+span.constant { color: #07F; }
+span.regex { color: #B66; }
+span.number { color: #D55; }
+span.attribute { color: #377; }
+span.global { color: #3B7; }
+span.expr { color: #227; }
+~
+
