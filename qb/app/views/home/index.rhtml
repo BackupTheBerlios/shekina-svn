@@ -44,19 +44,12 @@
       <% end %>
     </ul>
   </div>
-  <div class="sideitem">
-    <p><em>Si ringrazia <a href="http://www.unbit.it">UnBit.it</a> per l'hosting</em></p>
-  </div>
-  <!--<div class="sideitem">
-   <h3> tutti i bottoncini </h3>
-  </div>
-  -->
+  
 </div>
 <div id="newsbar">
   <% for page in Page.latest_news %>
     <div class="newsitem">
       <h3 ><%= wiki_link page.title %> </h3>
-      <!-- has <p> already -->
         <%= markup(page.current_revision.body) rescue nil%> 
     </div>
   <% end %>

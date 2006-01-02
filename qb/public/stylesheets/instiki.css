@@ -36,6 +36,15 @@ div.sideitem h3{
   text-indent: 5%;
 }
 
+#footer {
+ font-size: 0.8em;
+ font-style: italic;
+ margin-top:6%;
+ text-align: center;
+ float: right;
+ width: 100%; 
+}
+
 #tagline {
   text-indent: 5%;
 }
