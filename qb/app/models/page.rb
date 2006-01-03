@@ -2,35 +2,32 @@ class Page < ActiveRecord::Base
 
   has_many :revisions, :order => "created_at", :dependent => true
   has_one  :current_revision, :class_name => "Revision", :order => "created_at DESC"
-  
+ # has_and_belongs_to_many :tags
+ # acts_as_taggable 
+ 
   def find_or_build_revision(number = nil)
     number ? revisions[number.to_i - 1] : revisions.build(:body => body)
   end
   
-  def body
-    current_revision ? current_revision.body : nil
-  end
-  
-  def author
-   current_revision ? current_revision.author : nil
-  end
-
-  def created_at
-    current_revision ? current_revision.created_at : nil
+  for i in %w{body author created_at}
+    eval %{
+      def #{i}
+        current_revision ? current_revision.#{i} : "Ancora nessuna revisione"
+      end
+    }
   end
 
   def to_param
     title
   end
 
-  #FIXME: remove one 
   class << self
     
     def find_or_create(attributes)
       find_by_title(attributes[:title]) || create(attributes)
     end
     def find_or_build(title)
-      find_by_title(title) || create(:title => title)
+      find_by_title(title) || new(:title => title)
     end
     def existing_page_titles
       connection.select_values("SELECT title FROM pages")
