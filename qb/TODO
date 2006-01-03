@@ -1,24 +1,26 @@
 
 (top priority )
 
+- should add tags (and put them as meta keywords )
+- should add top bar 
+- use a partial view for latest news (i.e "read more")
++ add syntax highlight
 + need tests for version_controller
 + need tests for login controller
 + need tests for home_controller
 + need MORE tests for version controller, and to find a workaround for cookies
-- can delete home controller completely, massive conceptual simplification?
+/ can delete home controller completely, massive conceptual simplification?
 + add caching for rendered pages.. 
 - check query to dbms (use piggyback)
-- should add tags as meta keywords 
 - add "new" insertion form
 - need tests for model, maybe
 + find and delete all FIXMEs
-/ use a partial view for latest news (i.e "read more")
 + fix home/index.rhtml (remove inner div newscontent)
 / fix css for home (replace -moz-border-radius with images)
 + fix css view for wiki/show page (make em more central)
 + fix css view for wiki/edit page (make em stay in line)
 + add search box top-right
-- add feed/validate love-ruby buttons  on the main page
++ add feed/validate love-ruby buttons  on the main page
 + investigate if we can have nested layouts
 + add authentication (before wiki/:edit :authenticate ) [done, but still should handle cookies]
 - change question in something meaningful
