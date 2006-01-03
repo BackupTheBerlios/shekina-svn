@@ -3,11 +3,6 @@ require File.dirname(__FILE__) + '/../test_helper'
 class PageTitleCacheTest < Test::Unit::TestCase
   fixtures :pages, :revisions
 
-  def setup
-  #  PageTitleCache.instance
-
-  end
-
   def test_title_caching
     #FIXME: does not really work ATM, should check both w w/o refresh
     page = Page.create(:title => "Mistakes we make")

@@ -25,7 +25,6 @@ class RevisionTest < Test::Unit::TestCase
         :body => "Lovely voices!"
     )
     assert_kind_of ActiveRecord::Errors, r.errors
-    p r.errors
     assert_equal "can't be blank", r.errors['page']
     p= Page.new :title=>PageName
     assert r=Revision.create(
