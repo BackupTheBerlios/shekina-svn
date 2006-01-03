@@ -20,8 +20,9 @@ class QbCloth < RedCloth
         pretext= @pre_list[$1.to_i]
         pretext=pretext.gsub /&gt;/, ">"
         pretext=pretext.gsub /&lt;/, "<"
-        pretext[0..4]=""
-        Convertor.convert pretext
+        pretag=pretext[/^.*?>/]
+        pretext[/^.*?>/]=""
+        pretag+Convertor.convert(pretext,false)
      end
     end
   end
