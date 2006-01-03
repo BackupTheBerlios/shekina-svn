@@ -12,7 +12,7 @@ class Page < ActiveRecord::Base
   for i in %w{body author created_at}
     eval %{
       def #{i}
-        current_revision ? current_revision.#{i} : "Ancora nessuna revisione"
+        current_revision ? current_revision.#{i} : "Prima revisione: inserisci il tuo testo"
       end
     }
   end
