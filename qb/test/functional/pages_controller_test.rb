@@ -34,8 +34,9 @@ class PagesControllerTest < Test::Unit::TestCase
 
   def test_feed
     get 'feed'
-    print @response.body
+    assert_template 'pages/feed'
     assert_tag :tag=>"rss", :child=>{:tag=>"channel"}
+    assert_tag :tag=>"dc:creator"
   end
 
 end
