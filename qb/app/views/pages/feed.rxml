@@ -16,7 +16,7 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
                   "##{page.current_revision.id}")
         xml.link( page_url(:page_title => page.title) + 
                   "##{page.current_revision.id}")
-        # xml.tag!("dc:creator", page.author_name)
+        xml.tag!("dc:creator", page.author.name)
       end
     end
   end
