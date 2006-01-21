@@ -1,3 +1,21 @@
+#contentWithChanges {
+ float: left;
+ width: 49%;
+ margin-left: 1%;
+ background-color: #cfffcf;
+}
+#contentWithoutChanges {
+ float: left;
+ width: 49%;
+ background-color: #f0d0d0;
+}
+
+
+div.navigation {
+  margin-bottom:5%;
+}
+
+
 #newsbar { 
   float: right;
   width: 65%;

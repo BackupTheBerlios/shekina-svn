@@ -1,7 +1,6 @@
 require 'redcloth'
 require 'syntax/convertors/html'
 class Syntax::Convertors::HTML
- def html_escape(s) s end
 end
 MyHTML =Syntax::Convertors::HTML
 class QbCloth < RedCloth
@@ -20,6 +19,7 @@ class QbCloth < RedCloth
         pretext= @pre_list[$1.to_i]
         pretext=pretext.gsub /&gt;/, ">"
         pretext=pretext.gsub /&lt;/, "<"
+        pretext=pretext.gsub /&amp;/, "&"
         pretag=pretext[/^.*?>/]
         pretext[/^.*?>/]=""
         pretag+Convertor.convert(pretext,false)
