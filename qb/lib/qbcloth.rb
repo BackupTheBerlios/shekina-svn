@@ -16,10 +16,11 @@ class QbCloth < RedCloth
     unless @pre_list.empty?
       ## replace <pre> content
      text.gsub!( /<redpre#(\d+)>/ ) do
+        
         pretext= @pre_list[$1.to_i]
         pretext=pretext.gsub /&gt;/, ">"
         pretext=pretext.gsub /&lt;/, "<"
-        pretext=pretext.gsub /&amp;/, "&"
+        pretext=pretext.gsub /x%x%/, "&"
         pretag=pretext[/^.*?>/]
         pretext[/^.*?>/]=""
         pretag+Convertor.convert(pretext,false)
