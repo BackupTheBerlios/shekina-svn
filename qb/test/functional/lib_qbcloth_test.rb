@@ -1,20 +1,15 @@
 require 'test/unit'
 require 'lib/qbcloth'
+    s=Mock_helper = Object.new 
+    for i in [:auto_link, :link_to, :page_url, :content_tag]
+      eval %{
+        def s.#{i}(*args)
+          "#{i}(%s)"%args
+        end
+      }
+    end
 class TC_QbCloth < Test::Unit::TestCase
   def test_escaping
-    s=mock_helper = Object.new 
-      def s.auto_link(a,b)
-        "autolink(#{a},#{b})"
-      end
-      def s.link_to(*args)
-        "link_to(#{args})"
-      end
-      def s.page_url(*args)
-        "page_url(#{args})"
-      end
-      def s.content_tag(*args)
-        "content_tag(#{args})"
-      end
     t= <<-Eof
         this < > & has to be escaped
         while this should be highlighted
@@ -24,12 +19,18 @@ class TC_QbCloth < Test::Unit::TestCase
           &
         </pre>
     Eof
-    qb=QbCloth.new t,[],mock_helper
+    qb=QbCloth.new t,[],Mock_helper
     html= qb.to_html
-    assert_equal "this &lt; &gt; &#38;",html[0,20]
+    assert_equal "&lt; &gt; &#38;",html[5,15]
     span="<span.*?&%s;.*?</span>"
-    assert html[/#{span%"gt"}/], "missing >"
-    assert html[/#{span%"lt"}/], "missing <"
-    assert html[/#{span%"amp"}/], "missing &"
+    for i in %w{gt lt amp}
+      assert html[/#{span%i}/], "missing #{i}"
+    end
   end
+  def test_object_repr_in_pre
+    qb=QbCloth.new "<pre> #<Object> </pre>", [], Mock_helper
+    assert_equal "<pre> <span class=\"comment\">#&lt;Object&gt; </span></pre>",
+                 qb.to_html
+  end
+
 end
