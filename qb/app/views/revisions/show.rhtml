@@ -1,11 +1,11 @@
 <% @title = "#{@page.title} (revision ##{@revision.number})" %>
 
 <div id="contentWithoutChanges">
-  <%= markup(@revision.body) %>
+  <%= @old_html=markup(@previous.body) %>
 </div>
 
 <div id="contentWithChanges">
-  <%= markup(@revision.body) %>
+  <%= differences(@old_html,markup(@revision.body)) %>
 </div>
 
 <div class="byline">

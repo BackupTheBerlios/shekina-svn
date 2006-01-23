@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class PageTest < Test::Unit::TestCase
-  fixtures :pages, :revisions, :tags
+  fixtures :pages, :revisions#, :tags
 
   def test_new_create_destroy
     assert_equal pages(:home_page), p=Page.find(1)
@@ -14,7 +14,7 @@ class PageTest < Test::Unit::TestCase
     assert_equal [], Page.find(:all)
   end
   
-  def test_tags
+  def xtest_tags
     assert cats=pages(:pretty_cats)
     assert cats.add_tags "cool","cats"
     assert_equal ["cats","cool"],cats.tag_names.sort
