@@ -6,8 +6,9 @@ class RevisionsController < ApplicationController
 
   def show
     @page    = Page.find_by_title(params[:page_title])
-    @revision = @page.revisions[params[:revision_number].to_i - 1]
-    @previous     = @page.revisions[params[:revision_number].to_i - 2]
+    @next = @page.revisions[params[:revision_number].to_i]
+    @revision     = @next.previous_revision
+    
   end
 
   def new

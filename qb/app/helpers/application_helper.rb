@@ -1,6 +1,23 @@
 require 'html_diff/lib/html_diff'
 require 'qbcloth'
 module ApplicationHelper
+
+  def link_to_old_revision(rev)
+      nlink_to( "Back in time",
+              revision_url(:page_title => rev.page.title,
+                           :revision_number => rev.number-1))+
+      " "+
+      content_tag("small", "(#{rev.older_revisions.size} older revisions)")
+  end
+
+  def link_to_new_revision(rev)
+      nlink_to( "Forward in time",
+              revision_url(:page_title => rev.page.title,
+                           :revision_number => rev.number+1))+
+      " "+
+      content_tag("small", "(#{rev.newer_revisions.size} newer revisions)")
+  end
+
   def search_box_tag
     string="Cerca nel Wiki"
      %{

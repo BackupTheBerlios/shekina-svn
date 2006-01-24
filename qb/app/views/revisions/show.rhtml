@@ -1,11 +1,15 @@
-<% @title = "#{@page.title} (revision ##{@revision.number})" %>
+<% @title = "#{@page.title} (diff revisione ##{@revision.number})" %>
 
-<div id="contentWithoutChanges">
-  <%= @old_html=markup(@previous.body) %>
+
+<div>
+ <em>Note per la lettura della pagina: 
+    <del class="diffdel">Testo rimosso </del>&nbsp;  e 
+    <ins class="diffins">Testo aggiunto</ins>
+</em>
 </div>
-
-<div id="contentWithChanges">
-  <%= differences(@old_html,markup(@revision.body)) %>
+<hr/>
+<div >
+  <%= differences(markup(@revision.body),markup(@next.body)) %>
 </div>
 
 <div class="byline">
@@ -14,22 +18,19 @@
 </div>
 
 <div class="navigation">
-  <%= link_to "Rollback", rollback_url(:page_title => @page, :revision_number => @revision.number) %>
+  <%= link_to "Rollback", 
+              rollback_url(:page_title => @page, :revision_number => @revision.number) 
+  %>
 
-  <% if @revision.newer_revisions? && @revision.newer_revisions.size > 1 %>
-    | <%= nlink_to "Forward in time", 
-            revision_url(:page_title => @page.title, :revision_number => @revision.number + 1) %>
-    <small>(<%= @revision.newer_revisions.size %> more)</small>
-
-    | <%= nlink_to "See current", page_url(:page_title => @page) %>
-  <% elsif @revision.newer_revisions? %>
-    | <%= nlink_to "Forward in time", page_url(:page_title => @page) %>
-    <small>(<%= @revision.newer_revisions.size %> more)</small>
+  <% if @revision.newer_revisions? %>
+    <% if @revision.newer_revisions.size > 1 %>
+      | <%= link_to_new_revision(@revision) %>
+    <% else %>
+      | <%= nlink_to "See current", page_url(:page_title => @page) %>
+    <% end %>
   <% end %>
 
   <% if @revision.older_revisions? %>
-    | <%= nlink_to "Back in time", 
-          revision_url(:page_title => @page, :revision_number => @revision.number - 1) %>
-    <small>(<%= @revision.older_revisions.size %> more)</small>
+    | <%=link_to_old_revision(@revision) %>
   <% end %>
 </div>

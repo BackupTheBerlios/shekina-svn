@@ -1,7 +1,8 @@
 <% @title = @page.title %>
 
+<div>
 <%= markup(@page.body) %>
-
+</div>
 <div class="byline">
   <%= @page.revisions.size == 1 ? "Created" : "Updated" %>
   on <%= @page.created_at.to_s(:long) %> 
@@ -13,9 +14,6 @@
 
   <% if @page.revisions.length > 1 %>
     | 
-    <%= link_to("Back in time", 
-          revision_url(:page_title => @page.title, :revision_number => @page.revisions.size - 1),
-          :class => 'navlink') %>
-    <small>(<%= @page.revisions.size - 1 %> older revisions)</small>
+    <%= link_to_old_revision(@page.current_revision) %>
   <% end %>
 </div>
