@@ -1,8 +1,5 @@
 require 'redcloth'
 require 'syntax/convertors/html'
-class Syntax::Convertors::HTML
-end
-MyHTML =Syntax::Convertors::HTML
 class QbCloth < RedCloth
    def initialize(text, existing_wiki_pages, rails_helper)
       super(text)
@@ -10,7 +7,7 @@ class QbCloth < RedCloth
       @rails_helper = rails_helper
    end
 
-  Convertor = MyHTML.for_syntax "ruby"
+  Convertor = Syntax::Convertors::HTML.for_syntax "ruby"
   # uglyish hack, we unescape previously escaped stuff
   def smooth_offtags text
     unless @pre_list.empty?
@@ -20,7 +17,8 @@ class QbCloth < RedCloth
         pretext= @pre_list[$1.to_i]
         pretext=pretext.gsub /&gt;/, ">"
         pretext=pretext.gsub /&lt;/, "<"
-        pretext=pretext.gsub /x%x%/, "&"
+        #vim gets confused if we avoid /x :(
+        pretext=pretext.gsub /x% x % /x, "&"
         pretag=pretext[/^.*?>/]
         pretext[/^.*?>/]=""
         pretag+Convertor.convert(pretext,false)
@@ -31,7 +29,8 @@ class QbCloth < RedCloth
      @rails_helper.auto_link(text, @existing_wiki_pages)
   end
   def refs_insert_wiki_links(text)
-     text.gsub!(Revision::PAGE_LINK) do
+    # p "calling refs_insert"
+     text.gsub!(Revision::PAGE_LINK) do |m|
        page = title = $1
        title = $2 unless $2.empty?
        if @existing_wiki_pages.include?(page)
@@ -41,7 +40,11 @@ class QbCloth < RedCloth
        end
      end
   end
-  
+  def refs_textile(text)
+    #nop
+    text
+  end
+    
   def to_html
      super *(DEFAULT_RULES+[:refs_auto_link, :refs_insert_wiki_links])
   end
