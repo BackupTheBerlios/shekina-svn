@@ -1,8 +1,12 @@
-
+- to do
++ done
+/ sidestepped
 (top priority )
 
-- should add tags (and put them as meta keywords )
-- should add top bar 
+- add yaml dump of the wiki last data
+- add backlinks
+/ add tags (and put them as meta keywords )
+- add top bar 
 - use a partial view for latest news (i.e "read more")
 + add syntax highlight
 + need tests for version_controller
@@ -11,9 +15,9 @@
 + need MORE tests for version controller, and to find a workaround for cookies
 / can delete home controller completely, massive conceptual simplification?
 + add caching for rendered pages.. 
-- check query to dbms (use piggyback)
+/ check query to dbms (use piggyback)
 - add "new" insertion form
-- need tests for model, maybe
++ need tests for model, maybe
 + find and delete all FIXMEs
 + fix home/index.rhtml (remove inner div newscontent)
 / fix css for home (replace -moz-border-radius with images)
