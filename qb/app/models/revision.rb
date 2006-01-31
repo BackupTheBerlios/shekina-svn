@@ -11,6 +11,25 @@ class Revision < ActiveRecord::Base
     @page_links ||= body.scan(PAGE_LINK).flatten.reject { |link| link.empty? }
   end
 
+  def excerpt(length=300)
+    res=""
+    in_tag=false
+    body.each_line do |line|
+     res+=line
+     case line
+      when /^\s*<pre>/
+        in_tag=true
+        next
+      when /^\s*<\/pre>/
+        in_tag=false
+     end
+     next if in_tag
+
+     break if res.size > length
+    end
+    res
+  end
+
   def newer_revisions
     @newer_revisions ||= revisions[revision_index + 1..-1]
   end

@@ -9,7 +9,7 @@ class Page < ActiveRecord::Base
     number ? revisions[number.to_i - 1] : revisions.build(:body => body)
   end
   
-  for i in %w{body author created_at}
+  for i in %w{body author created_at excerpt}
     eval %{
       def #{i}
         current_revision ? current_revision.#{i} : "Prima revisione: inserisci il tuo testo"
