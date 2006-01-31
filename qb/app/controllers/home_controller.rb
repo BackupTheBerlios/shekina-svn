@@ -6,5 +6,6 @@ class HomeController < ApplicationController
     @home=true
     @tagline="La comunità italiana di ruby: fun oriented programming language"
     @title ="Ruby-it"
+    @pages=Page.latest_news(8)
   end
 end

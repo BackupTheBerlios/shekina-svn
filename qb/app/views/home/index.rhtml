@@ -47,10 +47,13 @@
   
 </div>
 <div id="newsbar">
-  <% for page in Page.latest_news %>
+  <% for page in @pages %>
     <div class="newsitem">
       <h3 ><%= wiki_link page.title %> </h3>
-        <%= markup(page.current_revision.body) rescue nil%> 
+        <%= markup(page.excerpt) %> 
+        <p class="readall">
+          <em><%= link_to "[Continua...]",page_url(:page_title=>page.title)%></em>
+        </p>
     </div>
   <% end %>
 </div>

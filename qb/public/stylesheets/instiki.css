@@ -1,15 +1,7 @@
-#contentWithoutChanges {
- float: right;
- width: 49%;
- margin-left: 1%;
- background-color: #cfffcf;
+p.readall {
+  text-align: right;
+  margin-right: 7%;
 }
-#contentWithChanges {
- float: right;
- width: 49%;
- background-color: #f0d0d0;
-}
-
 
 div.navigation {
   margin-bottom:5%;
@@ -90,7 +82,7 @@ body, p, ol, ul, td {
 	line-height: 18px;
 }
 
-a { color: #000; }
+a { color: #55D; }
 a:hover, a.existingWikiWord:hover { color: #666; }
 
 .newWikiWord { background-color: #eee; }
