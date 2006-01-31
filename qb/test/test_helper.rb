@@ -18,9 +18,4 @@ class Test::Unit::TestCase
   self.use_transactional_fixtures = true
   self.use_instantiated_fixtures  = false
 
-  def create_fixtures(*table_names)
-    Fixtures.create_fixtures(File.dirname(__FILE__) + "/fixtures", table_names)
-  end
-
-  # Add more helper methods to be used by all tests here...
 end

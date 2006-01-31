@@ -1,14 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-=begin
-  map.connect  '', :controller => "pages", :action => "show", :page_title => "Home Page"
-
-
-
-
-  map.connect  'pages/:page_title', :controller => "pages", :action => "show"
-  map.connect  'pages/:page_title/:controller/:action/:id'
-=end
-
   map.connect  '', :controller => 'home', :action=>  'index'
   map.rollback 'pages/:page_title/revisions/new/:revision_number', :controller => "revisions", :action => "new", :requirements => { :revision_number => /^\d+$/ }
   map.new      'pages/:page_title/revisions/new', :controller => "revisions", :action => "new"

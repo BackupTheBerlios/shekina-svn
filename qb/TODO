@@ -7,7 +7,7 @@
 - add backlinks
 / add tags (and put them as meta keywords )
 - add top bar 
-- use a partial view for latest news (i.e "read more")
++ use a partial view for latest news (i.e "read more")
 + add syntax highlight
 + need tests for version_controller
 + need tests for login controller

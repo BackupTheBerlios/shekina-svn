@@ -13,7 +13,6 @@ class RevisionsControllerTest < Test::Unit::TestCase
     @response   = ActionController::TestResponse.new
   end
 
-
   def test_create_existing_author
     assert_nil Page.find_by_title("A brave new world")
     authorname='David'
@@ -40,7 +39,6 @@ class RevisionsControllerTest < Test::Unit::TestCase
     assert_equal "So wonderful!", page.revisions.first.body
     assert_equal authors(:david), page.revisions.first.author
   end
-
 
   def test_create_new_author
     assert_nil Page.find_by_title("A brave new world")
@@ -71,5 +69,22 @@ class RevisionsControllerTest < Test::Unit::TestCase
     
     assert_equal "So wonderful!", page.revisions.first.body
     assert_equal author, page.revisions.first.author
+  end
+
+  def test_show_old
+    page=Page.new :title=>"title"
+    for i in 0..3
+      a=Author.find :first
+      r=Revision.new :body=>i.to_s
+      r.author=a
+      page.current_revision=r
+      assert page.save!
+    end
+    get :show, {:page_title=>page.title,:revision_number=>1}
+    assert_template "revisions/show"
+    assert_tag :tag=>'a', :attributes=>{'class'=>'navigation'},:text=>"Forward in time"
+
+#    get :show, {:page_title=>page.title,:revision_number=>2}
+#    assert_tag :tag=>'a', :attributes=>{'class'=>'navigation'},:text=>"Back in time"
   end
 end
