@@ -2,11 +2,7 @@ require 'test/test_helper'
 require 'lib/qbcloth'
     Mock_helper = Object.new 
     for i in [:auto_link, :link_to, :page_url, :content_tag]
-      eval %{
-        def Mock_helper.#{i}(*args)
-          "#{i}(%s)"%args
-        end
-      }
+      eval %{def Mock_helper.#{i}(*args) "#{i}(%s)"%args end}
     end
 class TC_QbCloth < Test::Unit::TestCase
 

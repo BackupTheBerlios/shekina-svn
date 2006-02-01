@@ -49,4 +49,3 @@ class QbCloth < RedCloth
      super *(DEFAULT_RULES+[:refs_auto_link, :refs_insert_wiki_links])
   end
 end
-

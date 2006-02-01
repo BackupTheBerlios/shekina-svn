@@ -19,6 +19,23 @@ class PagesControllerTest < Test::Unit::TestCase
     assert_tag :tag=>'head', :child=>{:tag=>"title", :content=>SITE_NAME}
   end
 
+  def test_show_nonexistent
+    tit="nonexistingpage"
+    get :show, {:page_title=>tit}
+    assert_response :redirect
+    # it seem rails is broken wrt this or I'm just dumb
+    #assert_redirected_to :controller=>'revisions',:action=>'new',:page_title=>tit
+  end
+
+  def test_sitemap
+    get :sitemap
+    assert_template 'pages/sitemap'
+    assert_response :success
+    assert_tag :tag=>'urlset', :children=>{:count=>3,:only=>{:tag=>'url'} }
+    assert_tag :tag=>'url', :child=>{:tag=>'loc'}
+    assert_tag :tag=>'url', :child=>{:tag=>'lastmod'}
+  end
+
   def test_all_pages
     #FIXME: "all"
     get 'index'

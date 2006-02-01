@@ -30,7 +30,7 @@
 - change question in something meaningful
 + fix routes 
 + remove caching for titles.. or not? see I2 rev 2859 commit log)
-+ remove AnonymousCoward ? [AnonimoRubyista è ok]
++ remove AnonymousCoward ? [Ruby Fan]
 / handle big images in the home (now they mess up the layout on low resolution
 + merge modification for version/new.rhtml (onfocus)
 + check merging of helper/application_helper.rb from I2/alexey branch (rev 2858)
