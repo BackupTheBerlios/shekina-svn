@@ -4,8 +4,8 @@ require 'revisions_controller'
 # Re-raise errors caught by the controller.
 class RevisionsController; def rescue_action(e) raise e end; end
 
-class RevisionsControllerTest < Test::Unit::TestCase
-  fixtures :pages, :revisions, :authors
+class RevisionsControllerTest #< Test::Unit::TestCase
+#  fixtures :pages, :revisions, :authors
   
   def setup
     @controller = RevisionsController.new  
@@ -26,7 +26,7 @@ class RevisionsControllerTest < Test::Unit::TestCase
         "authenticated" => true,
         "author_name" =>   authorname
       },
-      {# flashvars }
+      {# flashvars 
       }    
     )
     assert_equal session['author_name'],authorname

@@ -56,4 +56,9 @@ class PagesControllerTest < Test::Unit::TestCase
     assert_tag :tag=>"dc:creator"
   end
 
+  def test_show
+    get 'show', :page_title=>'Pretty cats'
+    assert_template 'pages/show'
+    assert_response :success
+  end
 end

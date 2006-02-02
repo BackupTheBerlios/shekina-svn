@@ -43,7 +43,6 @@ module ApplicationHelper
     @home ? "Ruby-it" : content_tag("small", SITE_NAME) + tag("br") + @title.to_s
   end
   def markup(body, existing_page_titles = Page.existing_page_titles)
-#    QbCloth.new(linkize(auto_link(body), existing_page_titles)).to_html
     QbCloth.new(body, existing_page_titles,self).to_html
   end
 
@@ -62,16 +61,4 @@ module ApplicationHelper
     link_to(page, page_url(:page_title =>page), :class => "existingWikiWord")
   end
 
-  private
-    def linkize(body, existing_titles)
-      body.gsub(Revision::PAGE_LINK) do
-        page = title = $1
-        title = $2 unless $2.empty?
-        if existing_titles.include?(page)
-          link_to(title, page_url(:page_title => page), :class => "existingWikiWord")
-        else
-          content_tag("span", title + link_to("?", page_url(:page_title => page)), :class => "newWikiWord")
-        end
-      end
-    end
 end

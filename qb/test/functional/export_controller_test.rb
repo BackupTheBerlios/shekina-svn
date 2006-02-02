@@ -5,6 +5,7 @@ require 'export_controller'
 class ExportController; def rescue_action(e) raise e end; end
 
 class ExportControllerTest < Test::Unit::TestCase
+  fixtures :pages, :revisions, :authors
   def setup
     @controller = ExportController.new
     @request    = ActionController::TestRequest.new
