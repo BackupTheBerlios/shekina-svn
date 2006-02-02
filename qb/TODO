@@ -4,6 +4,7 @@
 
 (top priority )
 
+ 
 - duplicated entries for authors, check
 - add backlinks
 - need more tests for revision_controller

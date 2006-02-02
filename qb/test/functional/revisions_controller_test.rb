@@ -4,7 +4,7 @@ require 'revisions_controller'
 # Re-raise errors caught by the controller.
 class RevisionsController; def rescue_action(e) raise e end; end
 
-class RevisionsControllerTest #< Test::Unit::TestCase
+class RevisionsControllerTest < Test::Unit::TestCase
 #  fixtures :pages, :revisions, :authors
   
   def setup
