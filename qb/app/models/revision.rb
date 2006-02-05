@@ -59,6 +59,9 @@ class Revision < ActiveRecord::Base
   end
   
   protected
+    def revision_index
+      revisions.index(self)
+    end
     
     def page_was_updated
       page.save
