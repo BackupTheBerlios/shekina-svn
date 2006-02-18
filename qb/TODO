@@ -25,6 +25,8 @@
 - use in-place-editor for wiki (investigate accessibility and interaction with login) 
 - remove useless helpers
 - add ping to google sitemap
+- add ping to technorati
+- add pings to whatever, is just a for loop :) 
 - write reimport system for yaml metadata from dumpall
 
 (least priority )
