@@ -44,6 +44,19 @@ class QbCloth < RedCloth
     #nop
     text
   end
+  def inline_textile_link( text ) 
+    text.gsub!( LINK_RE ) do |m|
+      pre,atts,text,title,url,slash,post = $~[1..7]
+        url, url_title = check_refs( url )
+        title ||= url_title
+        atts = pba( atts )
+        atts = " href=\"#{ url }#{ slash }\"#{ atts }"
+        atts << " title=\"#{ title }\"" if title
+        atts << " class=\"external\""
+        atts = shelve( atts ) if atts
+        "#{ pre }<a#{ atts }>#{ text }</a>#{ post }"
+    end
+  end
     
   def to_html
      super *(DEFAULT_RULES+[:refs_auto_link, :refs_insert_wiki_links])

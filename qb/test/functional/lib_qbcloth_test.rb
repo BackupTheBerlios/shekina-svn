@@ -6,9 +6,12 @@ require 'lib/qbcloth'
     end
 class TC_QbCloth < Test::Unit::TestCase
 
-  def new_qb(str,ary=[])
+  def qb(str,ary=[])
     QbCloth.new str, ary, Mock_helper
 
+  end
+  def assert_html(html, qb,msg=nil)
+    assert_equal html, qb.to_html, msg
   end
   def test_escaping
     t= <<-Eof
@@ -20,8 +23,7 @@ class TC_QbCloth < Test::Unit::TestCase
           &
         </pre>
     Eof
-    qb=new_qb t
-    html= qb.to_html
+    html= qb(t).to_html
     assert_equal "&lt; &gt; &#38;",html[5,15]
     span="<span.*?&%s;.*?</span>"
     for i in %w{gt lt amp}
@@ -29,23 +31,22 @@ class TC_QbCloth < Test::Unit::TestCase
     end
   end
   def test_object_repr_in_pre
-    qb=new_qb "<pre> #<Object> </pre>"
-    assert_equal "<pre> <span class=\"comment\">#&lt;Object&gt; </span></pre>",
-                 qb.to_html
+    assert_html "<pre> <span class=\"comment\">#&lt;Object&gt; </span></pre>",
+                 qb("<pre> #<Object> </pre>")
   end
 
   def test_single_wiki_link
-    t= "[[linkname]]"
-    qb=new_qb  t,%w{linkname}
-    assert_equal  "<p>link_to(linkname)</p>",            
-                  qb.to_html, 
+    assert_html  "<p>link_to(linkname)</p>",           
+                  qb("[[linkname]]",%w[linkname]), 
                   "a single link on a line is swallowed"
   end
 
   def test_wiki_link
-    t= "Foo [[linkname]] *bar*"
-    qb=new_qb  t,%w{linkname}
-    assert_equal  "<p>Foo link_to(linkname) <strong>bar</strong></p>",            
-                  qb.to_html 
+    assert_html  "<p>Foo link_to(link) <strong>bar</strong></p>",            
+                  qb("Foo [[link]] *bar*",%w[link]) 
+  end
+  def test_external_wiki_link
+    assert_html %(<p>foo <a href="http://foo" class="external">bar</a></p>),
+                 qb(%[foo "bar":http://foo])
   end
 end

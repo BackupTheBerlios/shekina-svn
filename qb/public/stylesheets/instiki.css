@@ -82,8 +82,17 @@ body, p, ol, ul, td {
 	line-height: 18px;
 }
 
-a { color: #55D; }
+a {
+	color: #55D; 
+}
 a:hover, a.existingWikiWord:hover { color: #666; }
+
+a.external {
+	padding-right: 1.4em;
+	background-image: url(../images/exturl.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+}
 
 .newWikiWord { background-color: #eee; }
 .newWikiWord a:hover { background-color: white; }
