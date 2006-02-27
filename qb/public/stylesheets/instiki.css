@@ -3,17 +3,15 @@
 *  these are for navigation *
 *****************************/
 
+
 #navbar {
-  margin-top: 0px;
-  padding-top: 0px;
-  width: 100%;
+  font-weight: bold;
   background-color: #dee7ec;
   text-align: center;
   margin-bottom: 1%;
 }
 
 #navlist {
-  margin-left: 0;
   margin-right: 5px;
   padding-left: 0;
   white-space: nowrap;
@@ -28,20 +26,22 @@ li.navitem {
   padding: 5px 10px;
   background-color: #eee;
   color: #000;
-  font-weight: bold;
   text-decoration: none;
   border: 1px solid #8cacbb;
-  }
+}
 
 #navlist form {
   display: inline;
   padding: 5px 10px;
   background-color: #eee;
   color: #000;
-  font-weight: bold;
   text-decoration: none;
   border: 1px solid #8cacbb;
   }
+
+#navlist div {
+  display:inline;
+}
 
 #navlist a:hover {
   color: #000;
@@ -53,10 +53,6 @@ li.navitem {
 p.readall {
   text-align: right;
   margin-right: 7%;
-}
-
-div.navigation {
-  margin-bottom:5%;
 }
 
 
