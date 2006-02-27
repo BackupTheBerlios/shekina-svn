@@ -60,5 +60,6 @@ class PagesControllerTest < Test::Unit::TestCase
     get 'show', :page_title=>'Pretty cats'
     assert_template 'pages/show'
     assert_response :success
+    assert_tag :tag=>'div',:attributes=>{:id=>'header'} 
   end
 end

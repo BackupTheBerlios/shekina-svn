@@ -3,7 +3,7 @@
 <div id="allPages">
   <ul>
     <% for page in Page.find_all %>
-      <li><%= link_to(page.title, page_url(:page_title => page)) %></li>
+      <li><%= wiki_link(page.title) %></li>
     <% end %>
   </ul>
 </div>

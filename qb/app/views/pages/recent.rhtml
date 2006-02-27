@@ -12,7 +12,7 @@
       <ul>
     <% end %>
     <li>
-      <%= link_to(page.title, page_url(:page_title => page)) %>
+      <%= wiki_link(page.title) %>
       <span class="byline">at <%= page.updated_at.to_s(:short) %></span>
     </li>
   <% end %>

@@ -2,6 +2,12 @@ require 'html_diff/lib/html_diff'
 require 'qbcloth'
 module ApplicationHelper
 
+  def menuitem(name, url)
+      content_tag "li",
+        link_to_unless(@title == name,name, url),
+        { :class=>"navitem"}
+  end
+        
   def link_to_old_revision(rev)
       nlink_to( "Back in time",
               revision_url(:page_title => rev.page.title,
@@ -39,8 +45,14 @@ module ApplicationHelper
   def page_title
     @home ? SITE_NAME :  SITE_NAME+": #@title"
   end
-  def page_heading
-    @home ? "Ruby-it" : content_tag("small", SITE_NAME) + tag("br") + @title.to_s
+  def page_header
+    if @home 
+      content_tag("h1", "Ruby-it")+
+      content_tag("h3","La comunità italiana dedicata a ruby")
+    else
+      content_tag("h3", SITE_NAME, {:class=>"red"})+
+      content_tag("h1",@title.to_s)
+    end
   end
   def markup(body, existing_page_titles = Page.existing_page_titles)
     QbCloth.new(body, existing_page_titles,self).to_html

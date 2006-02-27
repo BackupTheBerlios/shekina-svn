@@ -3,9 +3,14 @@ class HomeController < ApplicationController
  caches_page :index
  cache_sweeper :page_sweeper
   def index
+    # FIXME:
+    # this is needed for conditional stuff.. better to refactor
+    # conditional with polymorphism
     @home=true
-    @tagline="La comunità italiana di ruby: fun oriented programming language"
-    @title ="Ruby-it"
+    # needed for menu since home is special cased
+    @title= "Home Page"    
+
+    # actual logic
     @pages=Page.latest_news(8)
   end
 end

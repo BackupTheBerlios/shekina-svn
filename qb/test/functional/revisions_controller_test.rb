@@ -5,7 +5,7 @@ require 'revisions_controller'
 class RevisionsController; def rescue_action(e) raise e end; end
 
 class RevisionsControllerTest < Test::Unit::TestCase
-#  fixtures :pages, :revisions, :authors
+  fixtures :pages, :revisions, :authors
   
   def setup
     @controller = RevisionsController.new  
@@ -71,20 +71,34 @@ class RevisionsControllerTest < Test::Unit::TestCase
     assert_equal author, page.revisions.first.author
   end
 
+  # FIXME: ok, actually testing too much stuff, maybe
   def test_show_old
-    page=Page.new :title=>"title"
+    title= "some random title"+rand.to_s+rand.to_s
+    page=Page.new :title=>title
+    assert page.save
     for i in 0..3
       a=Author.find :first
-      r=Revision.new :body=>i.to_s
+      r=page.revisions.build(:body=>i.to_s)
       r.author=a
-      page.current_revision=r
-      assert page.save!
+      assert r.save, r.errors.full_messages.join("\n")
     end
+    assert_equal 4, Page.find_by_title(title).revisions.size
     get :show, {:page_title=>page.title,:revision_number=>1}
     assert_template "revisions/show"
-    assert_tag :tag=>'a', :attributes=>{'class'=>'navigation'},:text=>"Forward in time"
+    assert_tag :tag=>'a', :attributes=>{'class'=>'navlink'},:content=>"Forward in time"
 
-#    get :show, {:page_title=>page.title,:revision_number=>2}
-#    assert_tag :tag=>'a', :attributes=>{'class'=>'navigation'},:text=>"Back in time"
+    get :show, {:page_title=>page.title,:revision_number=>2}
+    assert_tag :tag=>'a', :attributes=>{'class'=>'navlink'},:content=>"Back in time"
+  end
+  def test_new_no_auth
+    get :new ,{:page_title=>'some title', :revision_number=>1}
+    assert_response :redirect
+  end
+  def test_new_auth
+    get :new ,
+        {:page_title=>'some title', :revision_number=>1},
+        {"authenticated"=>true, "author_name"=>'pippo'}
+    assert_response 200
+    assert_template 'new'
   end
 end

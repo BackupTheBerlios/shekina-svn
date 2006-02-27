@@ -1,3 +1,44 @@
+
+/*****************************
+*  these are for navigation *
+*****************************/
+
+#navbar {
+  margin-top: 0px;
+  padding-top: 0px;
+  width: 100%;
+  background-color: #CCC;
+  text-align: center;
+}
+
+#navlist {
+  margin-left: 0;
+  margin-right: 5px;
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+li.navitem {
+  display: inline;
+  list-style-type: none;
+}
+/*FIXME: come ce lo infilo anche il form??*/
+#navlist a, #navlist div {
+  padding: 3px 10px;
+  color: #fff;
+  background-color: #999;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #CCC;
+  }
+
+#navlist a:hover {
+  color: #000;
+  background-color: #FFF;
+  text-decoration: none;
+  }
+/*****************************/
+
 p.readall {
   text-align: right;
   margin-right: 7%;
@@ -6,6 +47,11 @@ p.readall {
 div.navigation {
   margin-bottom:5%;
 }
+
+
+/***************************
+ * central news bar        *
+ **************************/ 
 
 
 #newsbar { 
@@ -32,6 +78,10 @@ div.newsitem h3 {
 }
 
 
+/****************
+ lateral side bar
+ **************/
+
 #sidebar {
   float: right;
   width: 30%;
@@ -46,7 +96,7 @@ div.sideitem h3{
   text-indent: 5%;
 }
 
-#footer {
+div#footer {
  font-size: 0.8em;
  font-style: italic;
  margin-top:6%;
@@ -55,6 +105,7 @@ div.sideitem h3{
  width: 100%; 
 }
 
+/* FIXME: inutile? */
 #tagline {
   text-indent: 5%;
 }
@@ -102,20 +153,27 @@ h1 { font-size: 28px }
 h2 { font-size: 19px }
 h3 { font-size: 16px }
 
-h1#pageName {
+ /**************************************
+  * this is the stuff for the header   *
+  *************************************/
+#header h1{
   margin: 5px 0 0;
   padding: 0;
   line-height: 28px;
+  color: #393;
 }
 
 
-h1#pageName small {
+#header h3.red{
   color: #DC143C;
-  line-height: 1em;
-  font-size: 0.6em;
-  margin-left: 200px;
+  margin-left: 30%;
 }
 
+#header h3{
+  margin-left: 10%;
+}
+
+/* end */
 
 
 #editbox {
@@ -136,7 +194,7 @@ h1#pageName small {
   margin-top: 5%;
 }
 
-h1#pageName, .newWikiWord a, a.existingWikiWord, .newWikiWord a:hover, #TextileHelp h3 {
+ .newWikiWord a, a.existingWikiWord, .newWikiWord a:hover, #TextileHelp h3 {
       color: #393;
 }
 
@@ -279,8 +337,9 @@ table {
 }
 
 
-
-/*   This is the stuff for syntax highlight */
+ /**********************************************
+ *   This is the stuff for syntax highlight    *
+ **********************************************/
 
 span.normal {}
 span.comment { color: #097; font-style: italic; }

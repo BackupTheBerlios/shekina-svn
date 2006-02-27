@@ -26,19 +26,27 @@
 
 <body>
       
-      <h1 id="pageName"><%= page_heading %></h1>
-      <% unless @home %>
-      <div class="navigation" id="navigationForm">
-        <%= link_to_unless(@page && @page.title == "Home Page", "Home Page", home_url)  { content_tag('b', "Home Page", 'class' => 'navOn') } %> |
-        <%= link_to_unless(@title == "All Pages", "All Pages", pages_url) { content_tag('b', "All Pages", 'class' => 'navOn') } %> |
-        <%= link_to_unless(@title == "Recently Revised", "Recently Revised", recent_url) { content_tag('b', "Recently Revised", 'class' => 'navOn') } %> |
-        <%= link_to("Feed", feed_url) %>
+      
+      <div id="header">
+        <%= page_header %>
       </div>
-      <% end %>
+      
+      <div id="navbar">
+        <ul id="navlist">
+            <%= menuitem "Wiki", page_url(:page_title=>"Wiki") %> |
+            <%= menuitem "Home", home_url  %>          |
+            <%= menuitem "All", pages_url %>          |
+            <%= menuitem "Recent", recent_url %>  |
+            <%= menuitem "Feed", feed_url %>
+            <li class="navitem"><%= search_box_tag %></li> 
+
+        </ul>
+      </div>
+      
       <%= @content_for_layout %>
       <div id="footer">
       
-        Powered by <%=wiki_link "qb"%> on 
+        Powered by <%= wiki_link "qb"%> on 
         <a href="http://www.rubyonrails.com">Rails</a>,  
         Licensed as <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/it/" rel="license">Attribution-ShareAlike</a>,   
       Hosting by <a href="http://unbit.it">UnBit.it</a>
