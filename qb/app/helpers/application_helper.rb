@@ -8,7 +8,21 @@ module ApplicationHelper
         { :class=>"navitem"}
   end
         
-  def link_to_old_revision(rev)
+  def search_box_tag
+    string="Cerca nel Wiki"
+     %{
+    <form action="http://www.google.com/search">
+      <label>
+        <input type="text" name="q" id="query" value="%s" 
+           onclick="this.value == '%s' ? this.value = '' : true"
+        />
+        <input type="hidden" name="domains" value="ruby-it.org" />
+        <input type="hidden" name="sitesearch" value="ruby-it.org" />
+      </label>  
+    </form>
+     }% [string, string]
+   end
+     def link_to_old_revision(rev)
       nlink_to( "Back in time",
               revision_url(:page_title => rev.page.title,
                            :revision_number => rev.number-1))+
@@ -24,20 +38,6 @@ module ApplicationHelper
       content_tag("small", "(#{rev.newer_revisions.size} newer revisions)")
   end
 
-  def search_box_tag
-    string="Cerca nel Wiki"
-     %{
-    <form action="http://www.google.com/search">
-      <div>
-        <input type="text" name="q" id="query" value="%s" size="24" 
-           onclick="this.value == '%s' ? this.value = '' : true"
-        />
-        <input type="hidden" name="domains" value="ruby-it.org" />
-        <input type="hidden" name="sitesearch" value="ruby-it.org" />
-      </div>
-    </form>
-     }% [string, string]
-  end
   def nlink_to(name, options = {}, html_options = {}, *parameters_for_method_reference)
     link_to(name, options, html_options.update(:class => "navlink"), *parameters_for_method_reference)
   end

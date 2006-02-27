@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     # conditional with polymorphism
     @home=true
     # needed for menu since home is special cased
-    @title= "Home Page"    
+    @title= "Home"    
 
     # actual logic
     @pages=Page.latest_news(8)

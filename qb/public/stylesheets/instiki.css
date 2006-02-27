@@ -7,8 +7,9 @@
   margin-top: 0px;
   padding-top: 0px;
   width: 100%;
-  background-color: #CCC;
+  background-color: #dee7ec;
   text-align: center;
+  margin-bottom: 1%;
 }
 
 #navlist {
@@ -22,14 +23,24 @@ li.navitem {
   display: inline;
   list-style-type: none;
 }
-/*FIXME: come ce lo infilo anche il form??*/
-#navlist a, #navlist div {
-  padding: 3px 10px;
-  color: #fff;
-  background-color: #999;
+
+#navlist a {
+  padding: 5px 10px;
+  background-color: #D3D3D3;
+  color: #000;
   font-weight: bold;
   text-decoration: none;
-  border: 1px solid #CCC;
+  border: 1px solid #8cacbb;
+  }
+
+#navlist form {
+  display: inline;
+  padding: 5px 10px;
+  background-color: #D3D3D3;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #8cacbb;
   }
 
 #navlist a:hover {
