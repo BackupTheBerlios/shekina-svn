@@ -14,7 +14,7 @@ module ApplicationHelper
     <form action="http://www.google.com/search">
       <div>
         <input type="text" name="q" id="query" value="%s" 
-           onclick="this.value == '%s' ? this.value = '' : true"
+           onfocus="this.value == '%s' ? this.value = '' : true"
         />
         <input type="hidden" name="domains" value="ruby-it.org" />
         <input type="hidden" name="sitesearch" value="ruby-it.org" />
