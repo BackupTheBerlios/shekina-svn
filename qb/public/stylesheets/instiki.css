@@ -1,32 +1,43 @@
 #content {
- margin-top: 5%;
+ margin-top: 20px;
 }
-
-
-
+div#footer {
+ font-size: 0.8em;
+ font-style: italic;
+ margin-top:6%;
+ text-align: center;
+ float: right;
+ width: 100%; 
+}
+body { 
+  padding: 5%;
+  background-color: #fdfdfd; 
+  color: #333; 
+}
+body, p, ol, ul, td {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:   13px;
+	line-height: 18px;
+}
+a {color: #55D;}
 /*****************************
 *  these are for navigation *
 *****************************/
-
-
 #navbar {
   font-weight: bold;
   background-color: #dee7ec;
   text-align: center;
-  margin-bottom: 1%;
+  margin-bottom: 10px;
 }
-
 #navlist {
   margin-right: 5px;
   padding-left: 0;
   white-space: nowrap;
 }
-
 li.navitem {
   display: inline;
   list-style-type: none;
 }
-
 #navlist a {
   padding: 5px 10px;
   background-color: #eee;
@@ -34,7 +45,6 @@ li.navitem {
   text-decoration: none;
   border: 1px solid #8cacbb;
 }
-
 #navlist form {
   display: inline;
   padding: 5px 10px;
@@ -43,37 +53,23 @@ li.navitem {
   text-decoration: none;
   border: 1px solid #8cacbb;
   }
-
 #navlist div {
   display:inline;
 }
-
 #navlist a:hover {
   color: #000;
   background-color: #FFF;
   text-decoration: none;
   }
-/*****************************/
-
-p.readall {
-  text-align: right;
-  margin-right: 7%;
-}
-
-
 /***************************
  * central news bar        *
  **************************/ 
-
-
 #newsbar { 
   float: right;
   width: 65%;
   padding-right: 5%;
   padding-bottom: 2%;
-  
 }
-
 div.newsitem {
   background-color:  #ffffef;
   border-style: solid;
@@ -84,41 +80,26 @@ div.newsitem {
   padding-left: 3%;
   padding-right: 2%;
 }
-
 div.newsitem h3 {
   text-indent: 10%;
 }
-
-
+/* continua*/
+p.readall {
+  text-align: right;
+  margin-right: 7%;
+}
 /****************
  lateral side bar
  **************/
-
 #sidebar {
   float: right;
   width: 30%;
 }
-
 div.sideitem {
   padding: 3%;
 }
-
 div.sideitem h3{
   color: #DC143C;
-  text-indent: 5%;
-}
-
-div#footer {
- font-size: 0.8em;
- font-style: italic;
- margin-top:6%;
- text-align: center;
- float: right;
- width: 100%; 
-}
-
-/* FIXME: inutile? */
-#tagline {
   text-indent: 5%;
 }
 input, select {
@@ -131,23 +112,6 @@ textarea{
   width: 100%;
 }
 
-
-body { 
-  padding: 5%;
-  background-color: #fdfdfd; 
-  color: #333; 
-
-}
-
-body, p, ol, ul, td {
-	font-family: verdana, arial, helvetica, sans-serif;
-	font-size:   13px;
-	line-height: 18px;
-}
-
-a {
-	color: #55D; 
-}
 a:hover, a.existingWikiWord:hover { color: #666; }
 
 a.external {
@@ -174,13 +138,10 @@ h3 { font-size: 16px }
   line-height: 28px;
   color: #393;
 }
-
-
 #header h3.red{
   color: #DC143C;
   margin-left: 30%;
 }
-
 #header h3{
   margin-left: 10%;
 }
@@ -349,23 +310,16 @@ table {
 }
 
 
- /**********************************************
- *   This is the stuff for syntax highlight    *
- **********************************************/
-
+ /**************************************
+ *   This is the stuff for syntax highlight *
+ **************************************/
 span.normal {}
 span.comment { color: #097; font-style: italic; }
 span.keyword { color: #009; font-weight: bold; }
 span.method { color: #077; }
-span.class { 
-  color: #074;
-}
-span.module {  
-  color: #074;
-}
-span.constant {
-  color: #074;
-}
+span.class {  color: #074;}
+span.module {  color: #074;}
+span.constant { color: #074;}
 span.punct { color: #447; font-weight: bold; }
 span.symbol { color: #099; }
 span.string { color: #944;}
