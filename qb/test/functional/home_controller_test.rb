@@ -29,11 +29,15 @@ class HomeControllerTest < Test::Unit::TestCase
     get 'index'
     assert_tag :ancestor=>{:tag=>'div', :attributes=>{:id => 'sidebar' }},
                :tag => 'a', :content=>'Wiki'
- 
-    assert_tag :ancestor=>{:tag=>'div', :attributes=>{:id => 'sidebar' }},
-               :tag => 'a', :content=>'RSS'
+  end
+  #FIXME: refactor to generale testcase
+  def test_navbar
+    get 'index'
+    tag={:tag=>'li', :attributes=>{:class => 'navitem' }}
+    assert_tag :ancestor=>tag,
+               :tag => 'a', :content=>'Feed'
     
-    assert_tag :ancestor=>{:tag=>'div', :attributes=>{:id => 'sidebar' }},
+    assert_tag :ancestor=>tag,
                :tag => 'form', :attributes=>{:action=>/google/}
   end
 end
