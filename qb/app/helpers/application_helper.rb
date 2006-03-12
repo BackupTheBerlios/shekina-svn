@@ -5,14 +5,22 @@ module ApplicationHelper
 
   def navbar(*ary)
     content_tag "ul",
-      ary.map {|name, url| menuitem(name, url)}.join("\n"),
+      ary.map {|name, url,rgx| 
+        p 'nr: '+rgx.to_s
+        navitem(name, url,rgx)
+      }.join("\n"),
       {:id=>"navlist"}
   end
 
-  def menuitem(name, url)
+  def navitem(name, url,rgx=nil)
       if url
-        condition= /#{@request.path}$/.match(url)
-          content=link_to_unless(condition, name, url)
+      #  p rgx
+      #  p @request.path
+        
+        matcher=rgx || /#{@request.path}$/
+        p 'n2m: url:'+url+" matcher:"+ matcher.inspect
+        condition= matcher.match(url)
+        content=link_to_unless(condition, name, url)
       else
         content=name
       end

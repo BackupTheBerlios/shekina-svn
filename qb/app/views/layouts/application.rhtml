@@ -33,7 +33,7 @@
       
       <div id="navbar">
         <%= navbar (["Home", home_url],     
-                    ["Wiki", page_url(:page_title=>"Wiki")],
+                    ["Wiki", page_url(:page_title=>"Wiki"),%r{/pages/(?!($|recent))}],
                     ["All", pages_url ],
                     ["Recent", recent_url],
                     ["Feed", feed_url ],

@@ -133,6 +133,7 @@ h3 { font-size: 16px }
   * this is the stuff for the header   *
   *************************************/
 #header h1{
+  height: 1%; //fixes bug in subpages
   margin: 5px 0 0;
   padding: 0;
   line-height: 28px;
