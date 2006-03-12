@@ -8,4 +8,7 @@ class ExportController < ApplicationController
     dump['authors']=Author.find :all
     render :text => dump.to_yaml
   end
+  def schema
+      render :text=>((@request.path)+ home_url())
+  end
 end

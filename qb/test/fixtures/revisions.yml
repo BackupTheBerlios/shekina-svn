@@ -1,7 +1,7 @@
 home_page_v1:
   id: 1
   page_id: 1
-  body: Word, word! [[Go There!]]
+  body: Word, word! [[Pretty cats]]
   created_at: 2005-09-21t15:40
   author_id: 1
 
@@ -15,6 +15,6 @@ pretty_cats_v1:
 cool_stuff_v1:
   id: 10
   page_id: 3
-  body: "body from the revision fixture"
+  body: "[[Pretty cats]] body for fixture"
   created_at: 2003-09-21t15:40
   author_id: 1

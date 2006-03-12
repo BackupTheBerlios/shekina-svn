@@ -6,9 +6,10 @@ class Revision < ActiveRecord::Base
   after_save  :page_was_updated
   validates_presence_of :author,:body, :page
   validates_associated :author
+  before_save :prepare_backlinks
 
   def page_links
-    @page_links ||= body.scan(PAGE_LINK).flatten.reject { |link| link.empty? }
+    @page_links ||= body.scan(PAGE_LINK).map{|k,v| k }
   end
 
   def excerpt(length=300)
@@ -65,5 +66,8 @@ class Revision < ActiveRecord::Base
     
     def page_was_updated
       page.save
+    end
+    def prepare_backlinks
+      #backlinks
     end
 end

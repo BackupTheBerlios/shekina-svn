@@ -26,7 +26,7 @@
     <% if @revision.newer_revisions.size > 1 %>
       | <%= link_to_new_revision(@revision) %>
     <% else %>
-      | <%= nlink_to "See current", page_url(:page_title => @page) %>
+      | <%= link_to "See current", page_url(:page_title => @page) %>
     <% end %>
   <% end %>
 

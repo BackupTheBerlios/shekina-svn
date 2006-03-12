@@ -32,15 +32,14 @@
       </div>
       
       <div id="navbar">
-        <ul id="navlist">
-            <%= menuitem "Home", home_url  %>     
-            <%= menuitem "Wiki", page_url(:page_title=>"Wiki") %> 
-            <%= menuitem "All", pages_url %>          
-            <%= menuitem "Recent", recent_url %>  
-            <%= menuitem "Feed", feed_url %>
-            <li class="navitem"><%= search_box_tag %></li> 
+        <%= navbar (["Home", home_url],     
+                    ["Wiki", page_url(:page_title=>"Wiki")],
+                    ["All", pages_url ],
+                    ["Recent", recent_url],
+                    ["Feed", feed_url ],
+                    search_box_tag)
 
-        </ul>
+        %>
       </div>
       
       <div id="content">

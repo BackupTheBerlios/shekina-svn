@@ -2,10 +2,23 @@ require 'html_diff/lib/html_diff'
 require 'qbcloth'
 module ApplicationHelper
 
+
+  def navbar(*ary)
+    content_tag "ul",
+      ary.map {|name, url| menuitem(name, url)}.join("\n"),
+      {:id=>"navlist"}
+  end
+
   def menuitem(name, url)
-      content_tag "li",
-        link_to_unless(@title == name,name, url),
-        { :class=>"navitem"}
+      if url
+        condition= /#{@request.path}$/.match(url)
+          content=link_to_unless(condition, name, url)
+      else
+        content=name
+      end
+        content_tag "li",
+          content,
+          { :class=>"navitem"}
   end
         
   def search_box_tag
@@ -22,8 +35,8 @@ module ApplicationHelper
     </form>
      }% [string, string]
    end
-     def link_to_old_revision(rev)
-      nlink_to( "Back in time",
+  def link_to_old_revision(rev)
+      link_to( "Back in time",
               revision_url(:page_title => rev.page.title,
                            :revision_number => rev.number-1))+
       " "+
@@ -31,16 +44,13 @@ module ApplicationHelper
   end
 
   def link_to_new_revision(rev)
-      nlink_to( "Forward in time",
+      link_to( "Forward in time",
               revision_url(:page_title => rev.page.title,
                            :revision_number => rev.number+1))+
       " "+
       content_tag("small", "(#{rev.newer_revisions.size} newer revisions)")
   end
 
-  def nlink_to(name, options = {}, html_options = {}, *parameters_for_method_reference)
-    link_to(name, options, html_options.update(:class => "navlink"), *parameters_for_method_reference)
-  end
 
   def page_title
     @home ? SITE_NAME :  SITE_NAME+": #@title"

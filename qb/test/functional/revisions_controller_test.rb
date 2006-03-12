@@ -85,10 +85,10 @@ class RevisionsControllerTest < Test::Unit::TestCase
     assert_equal 4, Page.find_by_title(title).revisions.size
     get :show, {:page_title=>page.title,:revision_number=>1}
     assert_template "revisions/show"
-    assert_tag :tag=>'a', :attributes=>{'class'=>'navlink'},:content=>"Forward in time"
+    assert_tag :tag=>'a', :content=>"Forward in time"
 
     get :show, {:page_title=>page.title,:revision_number=>2}
-    assert_tag :tag=>'a', :attributes=>{'class'=>'navlink'},:content=>"Back in time"
+    assert_tag :tag=>'a', :content=>"Back in time"
   end
   def test_new_no_auth
     get :new ,{:page_title=>'some title', :revision_number=>1}
