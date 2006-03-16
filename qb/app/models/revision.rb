@@ -65,6 +65,18 @@ class Revision < ActiveRecord::Base
     end
     
     def page_was_updated
+      page_links.each do |t|
+        if linked=Page.find_by_title(t)
+          p "-------"+__FILE__+"---------"
+          y linked
+          begin
+            linked.connections << self.page #unless linked.connections.include?(self)
+          rescue Exception=>e
+            p ("Expected exception:"+e.inspect)
+            next
+          end
+        end
+      end
       page.save
     end
     def prepare_backlinks

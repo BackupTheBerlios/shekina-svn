@@ -14,7 +14,7 @@ test:
 
 production:
   adapter: mysql
-  database: qb_development
+  database: qb_production
   host: localhost
   username: rff
   password:

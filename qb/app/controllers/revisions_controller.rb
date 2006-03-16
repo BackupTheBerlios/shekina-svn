@@ -24,9 +24,23 @@ class RevisionsController < ApplicationController
       revision = @page.revisions.build(params[:revision])
       author  = Author.find_or_create(@session["author_name"], request.remote_ip)
       revision.author =  author
+=begin
+      revision.page_links.each do |t|
+        if page=Page.find_by_title(t)
+          p "-------"+__FILE__+"---------"
+          y page
+          begin
+            page.connections << @page 
+            page.save
+          rescue Exception=>e
+            logger.info("Expected exception:"+e.inspect)
+            next
+          end  
+        end
+      end
+=end      
       revision.save
     end
-
     redirect_to page_url(:page_title => @page)
   end
  private
