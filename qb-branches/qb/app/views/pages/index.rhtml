@@ -1,0 +1,9 @@
+<% @title = "All Pages" %>
+
+<div id="allPages">
+  <ul>
+    <% for page in Page.find_all %>
+      <li><%= wiki_link(page.title) %></li>
+    <% end %>
+  </ul>
+</div>

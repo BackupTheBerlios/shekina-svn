@@ -1,0 +1,57 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%= page_title %></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="content-language" content="IT"/>
+  <meta name="Rating" content="General"/>
+  <meta name="Keywords" content="ruby italia, programmare ruby, ruby guida italiano, programmazione ruby, tutorial ruby italiano"/>
+  <meta name="Abstract" content="il sito della comunità italiana dedicato alla programmazione con ruby "/>
+  <meta name="Title" content="Ruby Italia Wiki"/>
+  <meta name="revisit-after" content="7"/>
+  <meta name="Robots" content="index,follow"/>
+  <meta name="Description" content="il sito della comunità italiana dedicato alla programmazione con ruby contiene tutorial, guide, documentazione, mailing list ed un wiki. "/>
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+
+
+
+  <%= auto_discovery_link_tag(:rss, feed_url) %>
+  <%= stylesheet_link_tag 'instiki' %>
+</head>
+
+<body>
+      
+      
+      <div id="header">
+        <%= page_header %>
+      
+      
+      <div id="navbar">
+        <%= navbar (["Home", home_url],     
+                    ["Wiki", page_url(:page_title=>"Wiki"),%r{/pages/(?!($|recent))}],
+                    ["All", pages_url ],
+                    ["Recent", recent_url],
+                    ["Feed", feed_url ],
+                    search_box_tag)
+
+        %>
+      </div>
+      </div>
+      
+      <div id="content">
+        <%= @content_for_layout %>
+      </div>
+      <div id="footer">
+      
+        Powered by <%= wiki_link "qb"%> on 
+        <a href="http://www.rubyonrails.com">Rails</a>,  
+        Licensed as <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/it/" rel="license">Attribution-ShareAlike</a>,   
+      Hosting by <a href="http://unbit.it">UnBit.it</a>
+      </div>
+</body>
+</html>
