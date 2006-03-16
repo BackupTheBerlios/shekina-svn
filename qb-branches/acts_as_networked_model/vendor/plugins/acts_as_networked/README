@@ -1,0 +1,39 @@
+acts_as_network
+===============
+
+ This module adds the networking behaviour to an ActiveRecord model.
+ The networking logic will use a support table to create n:m associations
+ between objects.
+
+ Example:
+
+ class User < ActiveRecord::Base
+   acts_as_network :join_table => friends,
+      :source_key => :id_user,
+      :destination_key => :id_friend
+ end
+
+ first = users(:first)
+ second = users(:second)
+
+## Add a new connection
+
+ first.connections << second
+
+## Associate a role to a connection if you
+## have the 'role' column in the join table
+
+ first.connections.push_with_attributes(second, :role => 2)
+ role = first.connections.find(second.id).role
+
+## check for inclusion
+ 
+ first.connections.include?(second)
+
+Enjoy!
+
+Author:
+   Federico Feroldi
+   pix@yahoo.it
+   
+Released under the same license as Ruby. No Support. No Warranty.
