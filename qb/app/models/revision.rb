@@ -69,7 +69,7 @@ class Revision < ActiveRecord::Base
       page_links.each do |t|
         begin  
           if linked=Page.find_by_title(t)
-            linked.connections << page
+            linked.backlinks << page
           end
         rescue Exception=>e
           logger.error("Expected exception: "+e.inspect)

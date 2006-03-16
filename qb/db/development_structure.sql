@@ -5,10 +5,10 @@ CREATE TABLE `authors` (
   PRIMARY KEY  (`id`)
 ) TYPE=InnoDB;
 
-CREATE TABLE `linked_pages` (
+CREATE TABLE `backlinks` (
   `page_id` int(11) NOT NULL default '0',
-  `linked_id` int(11) NOT NULL default '0',
-  PRIMARY KEY  (`page_id`,`linked_id`)
+  `connected_page_id` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`page_id`,`connected_page_id`)
 ) TYPE=InnoDB;
 
 CREATE TABLE `pages` (
@@ -32,4 +32,4 @@ CREATE TABLE `schema_info` (
   `version` int(11) default NULL
 ) TYPE=MyISAM;
 
-INSERT INTO schema_info (version) VALUES (2)
+INSERT INTO schema_info (version) VALUES (3)
