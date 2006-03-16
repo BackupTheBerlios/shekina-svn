@@ -9,7 +9,7 @@ CREATE TABLE `linked_pages` (
   `page_id` int(11) NOT NULL default '0',
   `linked_id` int(11) NOT NULL default '0',
   PRIMARY KEY  (`page_id`,`linked_id`)
-) TYPE=MyISAM;
+) TYPE=InnoDB;
 
 CREATE TABLE `pages` (
   `id` int(11) NOT NULL auto_increment,

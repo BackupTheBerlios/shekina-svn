@@ -6,7 +6,6 @@ class Revision < ActiveRecord::Base
   after_save  :page_was_updated
   validates_presence_of :author,:body, :page
   validates_associated :author
-  before_save :prepare_backlinks
 
   def page_links
     @page_links ||= body.scan(PAGE_LINK).map{|k,v| k }
@@ -65,21 +64,16 @@ class Revision < ActiveRecord::Base
     end
     
     def page_was_updated
+      page.save
+      #p "\n\n\nupdating: #{page.title}, has: #{page_links.size} links"
       page_links.each do |t|
-        if linked=Page.find_by_title(t)
-          p "-------"+__FILE__+"---------"
-          y linked
-          begin
-            linked.connections << self.page #unless linked.connections.include?(self)
-          rescue Exception=>e
-            p ("Expected exception:"+e.inspect)
-            next
+        begin  
+          if linked=Page.find_by_title(t)
+            linked.connections << page
           end
+        rescue Exception=>e
+          logger.error("Expected exception: "+e.inspect)
         end
       end
-      page.save
-    end
-    def prepare_backlinks
-      #backlinks
     end
 end

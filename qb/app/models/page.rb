@@ -4,7 +4,6 @@ class Page < ActiveRecord::Base
   has_one  :current_revision, :class_name => "Revision", :order => "created_at DESC"
 
   acts_as_network   :join_table=>"linked_pages",
-                    :source_key=>"page_id",
                     :destination_key=>"linked_id"
 #  before_save :extract_page_links
 
