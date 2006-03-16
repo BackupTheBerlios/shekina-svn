@@ -2,19 +2,13 @@ class Page < ActiveRecord::Base
 
   has_many :revisions, :order => "created_at", :dependent => true
   has_one  :current_revision, :class_name => "Revision", :order => "created_at DESC"
-  has_and_belongs_to_many :linked_pages,
-                          :class_name=>"Page",
-                          :join_table=>"linked_pages",
-                          :foreign_key=>"page_id",
-                          :association_foreign_key=>"linked_id"
-#  before_save :extract_page_links
-  
-  # FIXME: ok, I'd like to avoid explicit sql, 
-  # but the alternative solutions seems even worse
-  def backlinks
-    connection.select_values "SELECT title FROM pages LEFT JOIN linked_pages ON pages.id = linked_pages.page_id WHERE (linked_pages.linked_id = %s )"%id
-  end
 
+  acts_as_network   :join_table=>"linked_pages",
+                    :source_key=>"page_id",
+                    :destination_key=>"linked_id"
+  #before_save :extract_page_links
+
+  alias backlinks connections
 
   def find_or_build_revision(number = nil)
     number ? revisions[number.to_i - 1] : revisions.build(:body => body)
@@ -52,10 +46,12 @@ class Page < ActiveRecord::Base
   end
  private
   def extract_page_links
-    current_revision.page_links.each do |link|
-      connection.insert(
-        "INSERT INTO linked_pages (page_id,linked_id) VALUES(%s,%s)" %[ id, link.id]
-      )
+    current_revision.page_links.each do |t|
+      if page=Page.find_by_title(t)
+        p "----------------"
+        y page
+        page.connections << self unless page.connections.include?(self)
+      end
     end
   end
 

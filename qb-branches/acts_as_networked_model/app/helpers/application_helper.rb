@@ -3,32 +3,6 @@ require 'qbcloth'
 module ApplicationHelper
 
 
-  def navbar(*ary)
-    content_tag "ul",
-      ary.map {|name, url,rgx| 
-        p 'nr: '+rgx.to_s
-        navitem(name, url,rgx)
-      }.join("\n"),
-      {:id=>"navlist"}
-  end
-
-  def navitem(name, url,rgx=nil)
-      if url
-      #  p rgx
-      #  p @request.path
-        
-        matcher=rgx || /#{@request.path}$/
-        p 'n2m: url:'+url+" matcher:"+ matcher.inspect
-        condition= matcher.match(url)
-        content=link_to_unless(condition, name, url)
-      else
-        content=name
-      end
-        content_tag "li",
-          content,
-          { :class=>"navitem"}
-  end
-        
   def search_box_tag
     string="Cerca nel Wiki"
      %{
