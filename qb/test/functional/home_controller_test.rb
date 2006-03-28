@@ -33,7 +33,7 @@ class HomeControllerTest < Test::Unit::TestCase
   #FIXME: refactor to generale testcase
   def test_navbar
     get 'index'
-    tag={:tag=>'li', :attributes=>{:class => 'navitem' }}
+    tag={:tag=>'li'}
     assert_tag :ancestor=>tag,
                :tag => 'a', :content=>'Feed'
     

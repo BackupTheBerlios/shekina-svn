@@ -17,5 +17,8 @@ class PagesController < ApplicationController
     @pages=Page.find_all
     render :layout => false
   end
-
+  def index
+    @page= Page.find_by_title("Wiki")
+    render :action=>:show
+  end
 end

@@ -31,13 +31,12 @@
         <%= page_header %>
       
       
-      <div id="navbar">
-        <%= navbar (["Home", home_url],     
-                    ["Wiki", page_url(:page_title=>"Wiki"),%r{/pages/(?!($|recent))}],
-                    ["All", pages_url ],
-                    ["Recent", recent_url],
-                    ["Feed", feed_url ],
-                    search_box_tag)
+      <div id="navcontainer">
+        <%= navbar({:name=>"Home",  :url=>home_url  },
+                   {:name=>"Wiki",   :url=>pages_url, :rgx=>/pages/  },
+                   {:name=>"Forum/ML", :url=>LIST_URL},
+                   {:name=>"Feed",  :url=>feed_url  },
+                   {:name=>search_box_tag})
 
         %>
       </div>

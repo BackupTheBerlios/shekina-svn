@@ -23,29 +23,42 @@ a {color: #55D;}
 /*****************************
 *  these are for navigation *
 *****************************/
-#navbar {
+#navcontainer ul {
   font-weight: bold;
   background-color: #dee7ec;
   text-align: center;
   margin-bottom: 10px;
 }
-#navlist {
-  margin-right: 5px;
-  padding-left: 0;
-  white-space: nowrap;
-}
-li.navitem {
+
+#navcontainer li{
   display: inline;
   list-style-type: none;
 }
-#navlist a {
+
+#navcontainer a,
+#navcontainer a:visited {
   padding: 5px 10px;
   background-color: #eee;
   color: #000;
   text-decoration: none;
   border: 1px solid #8cacbb;
 }
-#navlist form {
+
+#navcontainer a:hover,
+#navcontainer li#active a { 
+  background-color: #FFF;
+  text-decoration: none;
+}
+
+
+#navlist {
+  margin-right: 5px;
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+
+#navcontainer form {
   display: inline;
   padding: 5px 10px;
   background-color: #eee;
@@ -56,11 +69,10 @@ li.navitem {
 #navlist div {
   display:inline;
 }
-#navlist a:hover {
-  color: #000;
-  background-color: #FFF;
-  text-decoration: none;
-  }
+
+
+
+
 /***************************
  * central news bar        *
  **************************/ 

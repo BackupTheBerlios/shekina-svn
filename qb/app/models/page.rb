@@ -1,9 +1,9 @@
 class Page < ActiveRecord::Base
 
-  has_many :revisions, :order => "created_at", :dependent => true
+  has_many :revisions, :order=>"created_at", :dependent=>:delete_all # deleted ->delete all
   has_one  :current_revision, :class_name => "Revision", :order => "created_at DESC"
 
-  has_self_references :backlinks
+ # has_self_references :backlinks
 
   def find_or_build_revision(number = nil)
     number ? revisions[number.to_i - 1] : revisions.build(:body => body)

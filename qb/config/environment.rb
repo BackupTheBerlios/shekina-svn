@@ -5,7 +5,7 @@
 #ENV['RAILS_ENV'] = 'production'
 RAILS_CONNECTION_ADAPTERS = %w(mysql)
 SITE_NAME='Ruby Italia'
-
+LIST_URL="http://lists.ruby-it.org/mailman/listinfo/ml"
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')

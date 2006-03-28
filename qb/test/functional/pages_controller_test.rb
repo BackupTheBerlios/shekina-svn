@@ -37,8 +37,7 @@ class PagesControllerTest < Test::Unit::TestCase
   end
 
   def test_all_pages
-    #FIXME: "all"
-    get 'index'
+    get 'all'
     assert_response :success
     assert_tag :tag=>"title", :content=>"All Pages"
   end

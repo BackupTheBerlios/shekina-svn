@@ -1,17 +1,24 @@
 <% @title = @page.title %>
 
 <div>
+  <p id="wikiLinks"> Vedi la lista di 
+      <%=link_to "tutte le pagine", all_pages_url %> o delle 
+      <%=link_to "pagine recent", recent_url %>
+  </p>
+</div>
+<div>
 <%= markup(@page.body) %>
-<hr/>
+<!--<hr/>
   <p class="backlinks">
     <small>
       Pagine che linkano questa:
-      <%= @page.backlinks.map {|p|
+      < @page.backlinks.map {|p|
           wiki_link(p.title)
         }.join(", ")
-      %>
+      >
     </small>
   </p>
+-->
 </div>
 <div class="byline">
   <%= @page.revisions.size == 1 ? "Created" : "Updated" %>

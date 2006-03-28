@@ -66,6 +66,7 @@ class Revision < ActiveRecord::Base
     def page_was_updated
       page.save
       #p "\n\n\nupdating: #{page.title}, has: #{page_links.size} links"
+=begin
       page_links.each do |t|
         begin  
           if linked=Page.find_by_title(t)
@@ -75,5 +76,6 @@ class Revision < ActiveRecord::Base
           logger.error("Expected exception: "+e.inspect)
         end
       end
+=end
     end
 end
