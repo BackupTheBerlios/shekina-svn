@@ -35,7 +35,8 @@ class Page < ActiveRecord::Base
     def latest_news(num=5)
       find :all, 
            :order=>"updated_at DESC",
-           :limit=> num
+           :limit=> num,
+           :conditions=>"title != 'Prova'"
            
     end
   end
