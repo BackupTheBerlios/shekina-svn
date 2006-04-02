@@ -1,4 +1,5 @@
 #content {
+ height: 1%;
  margin-top: 20px;
 }
 div#footer {
@@ -10,9 +11,8 @@ div#footer {
  width: 100%; 
 }
 body { 
-  padding: 3%;
+  padding: 2%;
   background-color: #fdfdfd; 
-  color: #333; 
 }
 body, p, ol, ul, td {
 	font-family: verdana, arial, helvetica, sans-serif;
@@ -20,6 +20,7 @@ body, p, ol, ul, td {
 	line-height: 18px;
 }
 a {color: #55D;}
+
 /*****************************
 *  these are for navigation *
 *****************************/
@@ -29,49 +30,28 @@ a {color: #55D;}
   text-align: center;
   margin-bottom: 10px;
 }
-
 #navcontainer li{
   display: inline;
   list-style-type: none;
 }
-
 #navcontainer a,
-#navcontainer a:visited {
-  padding: 5px 10px;
+#navcontainer a:visited,
+#navcontainer form {
+  display: inline;
+  padding: 5px 5px;
   background-color: #eee;
   color: #000;
   text-decoration: none;
   border: 1px solid #8cacbb;
 }
-
 #navcontainer a:hover,
 #navcontainer li#active a { 
   background-color: #FFF;
   text-decoration: none;
 }
-
-
-#navlist {
-  margin-right: 5px;
-  padding-left: 0;
-  white-space: nowrap;
-}
-
-
-#navcontainer form {
-  display: inline;
-  padding: 5px 10px;
-  background-color: #eee;
-  color: #000;
-  text-decoration: none;
-  border: 1px solid #8cacbb;
-  }
-#navlist div {
+#navcontainer div {
   display:inline;
 }
-
-
-
 
 /***************************
  * central news bar        *
@@ -95,7 +75,7 @@ div.newsitem {
 div.newsitem h3 {
   text-indent: 10%;
 }
-/* continua*/
+/* link "continua" */
 p.readall {
   text-align: right;
   margin-right: 7%;
@@ -137,15 +117,15 @@ a.external {
 .newWikiWord a:hover { background-color: white; }
 
 h1, h2, h3 { color: #333; font-family: georgia, verdana, sans-serif; }
-h1 { font-size: 28px }
-h2 { font-size: 19px }
-h3 { font-size: 16px }
 
  /**************************************
   * this is the stuff for the header   *
   *************************************/
+#header {
+	height: 1%;
+}
 #header { 
-padding-left: 4%;
+	padding-left: 4%;
 }
 #pagename a{
   height: 1%; //fixes bug in subpages
@@ -154,22 +134,13 @@ padding-left: 4%;
   color: #393;
   text-decoration: none;
 }
-
-#header h3.red{
-  color: #DC143C;
-  margin-left: 30%;
-}
 #header h4{
   margin-left: 10%;
 }
-
 /* end */
-
-
 #wikiHeader {
  margin-bottom: 2%;
 }
-
 #wikiHeader h2{
   text-align: center;
   font-weight: bold;
@@ -181,17 +152,11 @@ padding-left: 4%;
   padding-right: 5%;
   padding-bottom: 2%;
 }
-
-
 #markuphelp {
   float: right;
   width: 30%;
 }
 
-#version_body {
-  width: 100%;
-  margin-top: 5%;
-}
 
  .newWikiWord a, a.existingWikiWord, .newWikiWord a:hover, #TextileHelp h3 {
       color: #393;
@@ -214,16 +179,6 @@ code, pre {
   font-family: monospace;
   overflow: auto;
   width: 100%;
-}
-
-ol.setup {
-  font-size: 19px;
-  font-family: georgia, verdana, sans-serif;
-  padding-left: 25px;
-}
-
-ol.setup li {
-  margin-bottom: 20px
 }
 
 .byline, 
@@ -308,25 +263,6 @@ ol.setup li {
   font-size: 10px;
 }
 
-.rightHandSide {
-  float: right;
-  width: 147px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: 1px dotted #ccc;
-}
-
-.rightHandSide p {
-  font-size: 10px;
-}
- 
-.newsList {
-  margin-top: 20px;
-}
-
-.newsList p {
-  margin-bottom:30px
-}
 
 td {border:thin solid grey;}
 table {
@@ -334,12 +270,6 @@ table {
    border-collapse: collapse;
 }
 
-
-/* Affects the display of "category: ..." */
-.property {
-  color: grey;
-  font-size: 10px;
-}
 
 
  /**************************************
