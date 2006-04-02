@@ -1,9 +1,10 @@
 <% @title = @page.title %>
 
-<div>
+<div id="wikiHeader">
   <p id="wikiLinks"> Vedi la lista di 
       <%=link_to "tutte le pagine", all_pages_url %> o delle 
-      <%=link_to "pagine recent", recent_url %>
+      <%=link_to "pagine recenti", recent_url %>
+  <h3><%= @page.title %> </h3>
   </p>
 </div>
 <div>

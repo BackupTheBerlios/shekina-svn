@@ -10,7 +10,7 @@ div#footer {
  width: 100%; 
 }
 body { 
-  padding: 5%;
+  padding: 3%;
   background-color: #fdfdfd; 
   color: #333; 
 }
@@ -144,23 +144,32 @@ h3 { font-size: 16px }
  /**************************************
   * this is the stuff for the header   *
   *************************************/
-#header h1{
+#header { 
+padding-left: 4%;
+}
+#pagename a{
   height: 1%; //fixes bug in subpages
   margin: 5px 0 0;
-  padding: 0;
   line-height: 28px;
   color: #393;
+  text-decoration: none;
 }
+
 #header h3.red{
   color: #DC143C;
   margin-left: 30%;
 }
-#header h3{
+#header h4{
   margin-left: 10%;
 }
 
 /* end */
 
+
+#wikiHeader {
+ background-color: #ffffef;
+ margin-bottom: 2%;
+}
 
 #editbox {
   float: right;
@@ -213,12 +222,21 @@ ol.setup li {
   margin-bottom: 20px
 }
 
-.byline {
+.byline, 
+#wikiLinks {
   font-size: 10px;
   font-style: italic;  
   margin-bottom: 10px;
   color: #999;
 }
+.byline {
+  padding-top: 15px;
+}
+#wikiLinks {
+ text-align: right;
+}
+
+
 
 .references {
   font-size: 10px;
@@ -312,9 +330,6 @@ table {
    border-collapse: collapse;
 }
 
-.byline {
-  padding-top: 15px;
-}
 
 /* Affects the display of "category: ..." */
 .property {

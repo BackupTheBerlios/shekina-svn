@@ -8,43 +8,30 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta http-equiv="content-language" content="IT"/>
-  <meta name="Rating" content="General"/>
-  <meta name="Keywords" content="ruby italia, programmare ruby, ruby guida italiano, programmazione ruby, tutorial ruby italiano"/>
-  <meta name="Abstract" content="il sito della comunità italiana dedicato alla programmazione con ruby "/>
   <meta name="Title" content="Ruby Italia Wiki"/>
-  <meta name="revisit-after" content="7"/>
-  <meta name="Robots" content="index,follow"/>
-  <meta name="Description" content="il sito della comunità italiana dedicato alla programmazione con ruby contiene tutorial, guide, documentazione, mailing list ed un wiki. "/>
-  <meta http-equiv="Cache-Control" content="no-cache"/>
-  <meta http-equiv="Expires" content="0"/>
-
-
 
   <%= auto_discovery_link_tag(:rss, feed_url) %>
-  <%= stylesheet_link_tag 'instiki' %>
+  <%= stylesheet_link_tag 'qb' %>
 </head>
 
 <body>
-      
-      
       <div id="header">
-        <%= page_header %>
-      
+        <h1 id="pagename"> <%=link_to("Ruby Italia", home_url)%> </h1>
+        <h4 id="tagline"> La comunità italiana dedicata a ruby   </h4>
+      </div>
       
       <div id="navcontainer">
         <%= navbar({:name=>"Home",  :url=>home_url  },
-                   {:name=>"Wiki",   :url=>pages_url, :rgx=>/pages/  },
-                   {:name=>"Forum/ML", :url=>LIST_URL},
-                   {:name=>"Feed",  :url=>feed_url  },
-                   {:name=>search_box_tag})
-
+                 {:name=>"Wiki",   :url=>pages_url, :rgx=>/pages/  },
+                 {:name=>"Forum/ML", :url=>LIST_URL},
+                 {:name=>"Feed",  :url=>feed_url  },
+                 {:name=>search_box_tag})
         %>
       </div>
-      </div>
-      
       <div id="content">
         <%= @content_for_layout %>
       </div>
+
       <div id="footer">
       
         Powered by <%= wiki_link "qb"%> on 

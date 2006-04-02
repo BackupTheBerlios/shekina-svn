@@ -37,15 +37,7 @@ module ApplicationHelper
   def page_title
     @home ? SITE_NAME :  SITE_NAME+": #@title"
   end
-  def page_header
-    if @home 
-      content_tag("h1", "Ruby-it")+
-      content_tag("h3","La comunità italiana dedicata a ruby")
-    else
-      content_tag("h3", SITE_NAME, {:class=>"red"})+
-      content_tag("h1",@title.to_s)
-    end
-  end
+
   def markup(body, existing_page_titles = Page.existing_page_titles)
     QbCloth.new(body, existing_page_titles,self).to_html
   end
