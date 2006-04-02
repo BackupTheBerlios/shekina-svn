@@ -2,20 +2,27 @@ require 'html_diff/lib/html_diff'
 require 'qbcloth'
 module ApplicationHelper
 
+  def wiki_page_header
+    %{<div id="wikiHeader">
+        <h2> #{@title} </h2>
+        <p> Vedi 
+          #{link_to "tutte le pagine", all_pages_url} o le 
+          #{link_to "modifiche recenti",recent_url}
+        </p>
+        <hr>
+      </div>}
+  end
 
   def search_box_tag
-    string="Cerca nel Wiki"
-     %{
-    <form action="http://www.google.com/search">
-      <div>
-        <input type="text" name="q" id="query" value="%s" 
-           onfocus="this.value == '%s' ? this.value = '' : true"
-        />
-        <input type="hidden" name="domains" value="ruby-it.org" />
-        <input type="hidden" name="sitesearch" value="ruby-it.org" />
-      </div>  
-    </form>
-     }% [string, string]
+    %{<form action="http://www.google.com/search">
+        <div>
+          <input type="text" name="q" id="query" value="%s" 
+             onfocus="this.value == '%s' ? this.value = '' : true"
+          />
+          <input type="hidden" name="domains" value="ruby-it.org" />
+          <input type="hidden" name="sitesearch" value="ruby-it.org" />
+        </div>  
+      </form>}%( ["Cerca nel Wiki"]*2)
    end
   def link_to_old_revision(rev)
       link_to( "Back in time",

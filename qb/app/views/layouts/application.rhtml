@@ -16,16 +16,19 @@
 
 <body>
       <div id="header">
-        <h1 id="pagename"> <%=link_to("Ruby Italia", home_url)%> </h1>
+        <h1 id="pagename"> 
+          <%=link_to("Ruby Italia", home_url, :title=>"Gruppo Utenti Ruby Italia")%> 
+        </h1>
         <h4 id="tagline"> La comunità italiana dedicata a ruby   </h4>
       </div>
       
       <div id="navcontainer">
-        <%= navbar({:name=>"Home",  :url=>home_url  },
-                 {:name=>"Wiki",   :url=>pages_url, :rgx=>/pages/  },
-                 {:name=>"Forum/ML", :url=>LIST_URL},
-                 {:name=>"Feed",  :url=>feed_url  },
-                 {:name=>search_box_tag})
+        <%= navbar( {:name=>"Home",  :url=>home_url, :rgx=>/\/$/  },
+                    {:name=>"Wiki",   :url=>pages_url, :rgx=>/pages/  },
+                    {:name=>"Forum/ML", :url=>LIST_URL},
+                    #{:name=>"Blogs", :url=>blogs_url},
+                    {:name=>"Feed",  :url=>feed_url  },
+                    {:name=>search_box_tag})
         %>
       </div>
       <div id="content">
