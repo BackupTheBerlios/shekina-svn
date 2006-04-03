@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     end
   end
   def feed
-    headers["Content-Type"] = "application/rss+xml"
+    headers["Content-Type"] = "text/xml"
     render :layout => false
   end
   def sitemap   
