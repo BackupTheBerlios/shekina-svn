@@ -24,6 +24,8 @@ a {color: #55D;}
 /*****************************
 *  these are for navigation *
 *****************************/
+#navcontainer { clear: both; }
+
 #navcontainer ul {
   font-weight: bold;
   background-color: #dee7ec;
@@ -127,7 +129,11 @@ h1, h2, h3 { color: #333; font-family: georgia, verdana, sans-serif; }
 #header { 
 	padding-left: 4%;
 }
-#pagename a{
+#tagline {
+  float: right;
+  
+}
+#header a{
   height: 1%; //fixes bug in subpages
   margin: 5px 0 0;
   line-height: 28px;
@@ -269,12 +275,9 @@ table {
    border:  double black;
    border-collapse: collapse;
 }
-
-
-
- /**************************************
- *   This is the stuff for syntax highlight *
- **************************************/
+/*****************
+ syntax highlight 
+ ****************/
 span.normal {}
 span.comment { color: #097; font-style: italic; }
 span.keyword { color: #009; font-weight: bold; }
