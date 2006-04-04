@@ -24,7 +24,10 @@ a {color: #55D;}
 /*****************************
 *  these are for navigation *
 *****************************/
-#navcontainer { clear: both; }
+#navcontainer { 
+	clear: both; 
+	margin: 0;
+}
 
 #navcontainer ul {
   font-weight: bold;
@@ -55,9 +58,9 @@ a {color: #55D;}
   display:inline;
 }
 
-/***************************
- * central news bar        *
- **************************/ 
+/****************
+  central news bar        
+ ****************/ 
 #newsbar { 
   float: right;
   width: 65%;
@@ -150,6 +153,7 @@ h1, h2, h3 { color: #333; font-family: georgia, verdana, sans-serif; }
 #wikiHeader h2{
   text-align: center;
   font-weight: bold;
+  font-family: verdana, sans-serif; 
 }
 
 #editbox {
