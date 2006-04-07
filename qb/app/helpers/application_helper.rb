@@ -9,7 +9,7 @@ module ApplicationHelper
           #{link_to "tutte le pagine", all_pages_url} o le 
           #{link_to "modifiche recenti",recent_url}
         </p>
-        <hr>
+        <hr/>
       </div>}
   end
 
