@@ -16,13 +16,13 @@ module ApplicationHelper
   def search_box_tag
     %{<form action="http://www.google.com/search">
         <div>
-          <input type="text" name="q" id="query" value="%s" 
+          <input type="text" name="q" id="query" value="%s" alt="%s"
              onfocus="this.value == '%s' ? this.value = '' : true"
           />
           <input type="hidden" name="domains" value="ruby-it.org" />
           <input type="hidden" name="sitesearch" value="ruby-it.org" />
         </div>  
-      </form>}%( ["Cerca nel Wiki"]*2)
+      </form>}%( ["Cerca nel Wiki"]*3)
    end
   def link_to_old_revision(rev)
       link_to( "Back in time",

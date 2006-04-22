@@ -2,14 +2,15 @@
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
 <head>
   <title><%= page_title %></title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta http-equiv="content-language" content="IT"/>
   <meta name="Title" content="Ruby Italia Wiki"/>
-
+  <meta name="description" content="Ruby-it - Il sito del Gruppo Utenti Ruby Italia">
+  
   <%= auto_discovery_link_tag(:rss, feed_url) %>
   <%= stylesheet_link_tag 'qb' %>
 </head>
@@ -27,8 +28,8 @@
       <div id="navcontainer">
         <%= navbar( {:name=>"Home",  :url=>home_url  },
                     {:name=>"Wiki",   :url=>pages_url, :rgx=>/pages/  },
+                    #{:name=>"Documenti", :url=>page_url(:page_title=>"Documentazione")},
                     {:name=>"Forum/ML", :url=>LIST_URL},
-                    #{:name=>"Blogs", :url=>blogs_url},
                     {:name=>"Feed",  :url=>feed_url  },
                     {:name=>search_box_tag})
         %>
