@@ -10,7 +10,11 @@ class Revision < ActiveRecord::Base
   def page_links
     @page_links ||= body.scan(PAGE_LINK).map{|k,v| k }
   end
-
+  
+  def code
+    body.scan(%r|<pre.*?>\w*(?:<code>)?(.*?)(?:</code>)?\w*</pre>|m).join
+  end
+  
   def excerpt(length=300)
     res=""
     in_tag=false

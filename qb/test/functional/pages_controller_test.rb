@@ -31,7 +31,7 @@ class PagesControllerTest < Test::Unit::TestCase
     get :sitemap
     assert_template 'pages/sitemap'
     assert_response :success
-    assert_tag :tag=>'urlset', :children=>{:count=>3,:only=>{:tag=>'url'} }
+    assert_tag :tag=>'urlset', :children=>{:count=>4,:only=>{:tag=>'url'} }
     assert_tag :tag=>'url', :child=>{:tag=>'loc'}
     assert_tag :tag=>'url', :child=>{:tag=>'lastmod'}
   end
@@ -60,5 +60,19 @@ class PagesControllerTest < Test::Unit::TestCase
     assert_template 'pages/show'
     assert_response :success
     assert_tag :tag=>'div',:attributes=>{:id=>'header'} 
+  end
+  def test_code
+    page_title='example code'
+    get 'code', :id =>page_title
+    assert_template nil
+    assert_equal 'text/plain', @response.headers['Content-Type']
+    assert_response :success
+    assert_equal <<Eoc, @response.body
+#{PagesController::CODE_HEADER% "http://test.host/pages/example+code"}
+
+some code
+
+more code
+Eoc
   end
 end

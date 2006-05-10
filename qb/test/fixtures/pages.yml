@@ -16,3 +16,9 @@ cool_stuff:
   created_at: 2005-09-22t15:40
   updated_at: 2005-09-22t15:40
 
+example_code:
+  id: 4
+  title: Example Code
+  created_at: 2005-09-22t15:40
+  updated_at: 2005-09-22t15:40
+  

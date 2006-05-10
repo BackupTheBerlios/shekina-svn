@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
+  CODE_HEADER=<<Eot
+#!/usr/bin/env ruby
+# This code comes from %s
+# Check the page for copyright notice and explanations
 
+Eot
   caches_page :show,:feed,:sitemap,:recent,:index
   cache_sweeper :page_sweeper
   def show
@@ -20,5 +25,12 @@ class PagesController < ApplicationController
   def index
     @page= Page.find_by_title("Wiki")
     render :action=>:show
+  end
+  def code
+    # FIXME: add better url?
+    title=params[:id]
+    @page=Page.find_by_title(title)
+    headers["Content-Type"] = "text/plain"
+    render :text => CODE_HEADER%url_for(:action=>'show',:page_title=>title)+"\n"+@page.code
   end
 end

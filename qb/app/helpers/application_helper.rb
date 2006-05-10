@@ -6,8 +6,9 @@ module ApplicationHelper
     %{<div id="wikiHeader">
         <h2> #{@title} </h2>
         <p> Vedi 
-          #{link_to "tutte le pagine", all_pages_url} o le 
-          #{link_to "modifiche recenti",recent_url}
+          #{link_to "tutte le pagine", all_pages_url} e le 
+          #{link_to "modifiche recenti",recent_url} o
+          #{link_to "scarica i sorgenti nella pagina", :action=>:code,:id=>@title}
         </p>
         <hr/>
       </div>}
