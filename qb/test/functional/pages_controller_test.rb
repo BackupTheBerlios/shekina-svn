@@ -39,13 +39,13 @@ class PagesControllerTest < Test::Unit::TestCase
   def test_all_pages
     get 'all'
     assert_response :success
-    assert_tag :tag=>"title", :content=>"All Pages"
+    assert_tag :tag=>"title", :content=>"Ruby Italia: Tutte le pagine"
   end
   
   def test_recent
     get 'recent'
     assert_response :success
-    assert_tag :tag=>"title", :content=>"Recently Revised"
+    assert_tag :tag=>"title", :content=>"Ruby Italia: Modifiche Recenti"
   end
 
   def test_feed
