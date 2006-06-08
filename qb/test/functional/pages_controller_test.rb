@@ -75,4 +75,10 @@ some code
 more code
 Eoc
   end
+  
+  def test_title_with_dots
+    get  :show, :id=> 'Page. With. Dots'
+    assert_response :success
+    assert_equal 'text/html', @response.headers['Content-Type']
+  end
 end
