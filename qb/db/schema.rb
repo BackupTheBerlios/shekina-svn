@@ -2,20 +2,24 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 3) do
+ActiveRecord::Schema.define(:version => 2) do
 
   create_table "authors", :force => true do |t|
     t.column "name", :string
     t.column "ip", :string
   end
 
-  create_table "backlinks", :id => false, :force => true do |t|
+  create_table "foos", :force => true do |t|
+    t.column "bar", :string, :limit => 50, :default => "", :null => false
+  end
+
+  create_table "linked_pages", :id => false, :force => true do |t|
     t.column "page_id", :integer, :default => 0, :null => false
-    t.column "connected_page_id", :integer, :default => 0, :null => false
+    t.column "linked_id", :integer, :default => 0, :null => false
   end
 
   create_table "pages", :force => true do |t|
-    t.column "title", :string, :default => "", :null => false
+    t.column "title", :string
     t.column "created_at", :datetime
     t.column "updated_at", :datetime
   end

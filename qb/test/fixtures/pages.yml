@@ -22,3 +22,8 @@ example_code:
   created_at: 2005-09-22t15:40
   updated_at: 2005-09-22t15:40
   
+page_with_dot_in_title:
+  id: 5
+  title: Page. With. Dots
+  created_at: 2005-09-22t15:40
+  updated_at: 2005-09-22t15:40  

@@ -39,13 +39,13 @@ class PagesControllerTest < Test::Unit::TestCase
   def test_all_pages
     get 'all'
     assert_response :success
-    assert_tag :tag=>"title", :content=>"Ruby Italia: Tutte le pagine"
+    assert_tag :tag=>"title", :content=>"All Pages"
   end
   
   def test_recent
     get 'recent'
     assert_response :success
-    assert_tag :tag=>"title", :content=>"Ruby Italia: Modifiche Recenti"
+    assert_tag :tag=>"title", :content=>"Recently Revised"
   end
 
   def test_feed
@@ -59,6 +59,7 @@ class PagesControllerTest < Test::Unit::TestCase
     get 'show', :page_title=>'Pretty cats'
     assert_template 'pages/show'
     assert_response :success
+    assert_equal 'text/html', @response.headers['Content-Type'], @response.headers.inspect
     assert_tag :tag=>'div',:attributes=>{:id=>'header'} 
   end
   def test_code
@@ -77,8 +78,9 @@ Eoc
   end
   
   def test_title_with_dots
-    get  :show, :id=> 'Page. With. Dots'
+    get  :show, :page_title=> 'Page. With. Dots'
     assert_response :success
+    assert_template 'pages/show'
     assert_equal 'text/html', @response.headers['Content-Type']
   end
 end

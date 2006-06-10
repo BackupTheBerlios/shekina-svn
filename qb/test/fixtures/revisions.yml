@@ -34,4 +34,11 @@ example_code_v1:
     </code></pre>
   created_at: 2003-09-21t15:40
   author_id: 1
+  
+page_with_dots:
+  id: 500
+  page_id: 5
+  body: this should be rendered as text/html
+  created_at: 2006-06-08t10:34
+  author_id: 1
     
